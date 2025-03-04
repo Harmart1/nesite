@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <style>
+    .bg { fill: #f8f9fa; }
+    .primary { fill: #1A365D; }
+    .accent { fill: #D4AF37; }
+    .shadow { fill: #E9ECEF; }
+    .text { font-family: Arial, sans-serif; font-size: 24px; fill: #1A365D; font-weight: bold; }
+    .scale-books { transform-origin: center; animation: scale 3s infinite alternate ease-in-out; }
+    .search { transform-origin: center; animation: search 3s infinite alternate ease-in-out; }
+    @keyframes scale {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes search {
+      0%, 100% { transform: translateX(0) rotate(0deg); }
+      50% { transform: translateX(10px) rotate(15deg); }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect class="bg" x="0" y="0" width="400" height="300" rx="20" />
+  
+  <!-- Shadow/Platform -->
+  <ellipse class="shadow" cx="200" cy="260" rx="150" ry="20" />
+  
+  <!-- Stack of Books -->
+  <g class="scale-books">
+    <!-- Book 1 -->
+    <rect class="primary" x="110" y="150" width="180" height="30" rx="3" />
+    <rect class="primary" x="110" y="150" width="20" height="30" rx="3" opacity="0.8" />
+    
+    <!-- Book 2 -->
+    <rect class="accent" x="115" y="120" width="170" height="30" rx="3" />
+    <rect class="accent" x="115" y="120" width="20" height="30" rx="3" opacity="0.8" />
+    
+    <!-- Book 3 -->
+    <rect class="primary" x="125" y="90" width="150" height="30" rx="3" />
+    <rect class="primary" x="125" y="90" width="20" height="30" rx="3" opacity="0.8" />
+  </g>
+  
+  <!-- Magnifying Glass -->
+  <g class="search">
+    <circle cx="260" cy="80" r="30" fill="white" stroke="#1A365D" stroke-width="6" />
+    <line x1="280" y1="100" x2="310" y2="130" stroke="#1A365D" stroke-width="8" stroke-linecap="round" />
+  </g>
+  
+  <!-- Text -->
+  <text x="200" y="210" text-anchor="middle" class="text">Page Not Found</text>
+</svg>

@@ -1,0 +1,123 @@
+/**
+ * Accessibility Enhancements
+ * Improving website usability for everyone
+ */
+
+/* Focus Styles */
+:focus {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Skip Link - becomes visible on focus */
+.skip-to-content {
+  position: absolute;
+  top: -9999px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--navy);
+  color: white;
+  padding: var(--space-3) var(--space-5);
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Button and interactive element focus states */
+button:focus,
+.btn:focus,
+.nav-link:focus,
+.dropdown-link:focus,
+select:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* For users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .card:hover, .btn:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode improvements */
+@media (forced-colors: active) {
+  .btn, .card, .nav-link, .dropdown-menu {
+    border: 1px solid;
+  }
+  
+  .btn-primary, .btn-gold {
+    border: 2px solid;
+  }
+}
+
+/* Improve form field accessibility */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: var(--space-2);
+}
+
+.form-field {
+  margin-bottom: var(--space-5);
+}
+
+/* Error states for form validation */
+.form-field.error input,
+.form-field.error select,
+.form-field.error textarea {
+  border-color: #dc3545;
+}
+
+.form-field .error-message {
+  color: #dc3545;
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
+}
+
+/* ARIA support */
+[aria-hidden="true"] {
+  display: none;
+}
+
+[aria-expanded="true"] .icon-expand {
+  transform: rotate(180deg);
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Color contrast helper classes */
+.high-contrast {
+  color: var(--navy-dark);
+}
+
+/* Better form label connection */
+label[for] {
+  cursor: pointer;
+}

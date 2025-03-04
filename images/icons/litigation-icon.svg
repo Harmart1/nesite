@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+  <defs>
+    <linearGradient id="litigationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A365D" />
+      <stop offset="100%" stop-color="#2A4A7F" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#litigationGradient)" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm7 10c0 4.52-2.98 8.69-7 9.93-4.02-1.24-7-5.41-7-9.93V6.3l7-3.11 7 3.11V11z"/>
+  <path fill="#D4AF37" d="M12 7c-1.1 0-2 .9-2 2v2h-1v5h6v-5h-1V9c0-1.1-.9-2-2-2zm0 2h0v2h0V9z"/>
+</svg>

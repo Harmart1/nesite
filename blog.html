@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore legal insights on fringe science and cutting-edge technology at NorthernEdge Legal Solutions.">
+  <meta name="keywords" content="fringe science, cutting-edge technology, legal issues, business implications, law blog">
+  <title>Blog - NorthernEdge Legal Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Blog Page Layout Enhancements */
+    .blog-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .blog-main {
+      flex: 3;
+    }
+    .sidebar {
+      flex: 1;
+      padding-left: 1rem;
+      border-left: 1px solid #ccc;
+    }
+    .post-date {
+      color: #999;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    /* Ensure the subscribe form elements match overall styles */
+    .subscribe input[type="email"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+    }
+    .subscribe button {
+      background-color: #1e90ff;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .subscribe button:hover {
+      background-color: #0d74d1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/index.html" class="logo">
+        <img src="/images/logo.png" alt="NorthernEdge Legal Solutions Logo" width="150">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/attorneys.html">Attorneys</a></li>
+          <li><a href="/blog.html" class="active">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Legal Insights Blog</h1>
+        <p>Stay informed on fringe science, technology, and business law.</p>
+        <img src="/images/computer-desk.jpg" alt="Computer at Desk" class="hero-image">
+      </div>
+    </section>
+
+    <section class="blog-content">
+      <div class="container">
+        <div class="blog-main">
+          <div class="post-grid">
+            <!-- Sample Post: Replace with new posts as they become available -->
+            <article class="post-item">
+              <h2>AI Regulation in 2023</h2>
+              <p class="post-date">October 5, 2023</p>
+              <p>Exploring the legal challenges and emerging regulations surrounding artificial intelligence advancements. <strong>Coming Soon</strong></p>
+              <a href="/blog/ai-regulation-2023.html" class="read-more">Read More</a>
+            </article>
+            <article class="post-item">
+              <h2>Quantum Computing Patents</h2>
+              <p class="post-date">September 20, 2023</p>
+              <p>An analysis of how businesses can safeguard their innovations in the realm of quantum technology. <strong>Coming Soon</strong></p>
+              <a href="/blog/quantum-computing-patents.html" class="read-more">Read More</a>
+            </article>
+            <!-- Additional posts can be added here in reverse chronological order -->
+          </div>
+        </div>
+        <aside class="sidebar">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Fringe Science</a></li>
+            <li><a href="#">Tech Law</a></li>
+            <li><a href="#">Business Implications</a></li>
+          </ul>
+          <h3>Archive</h3>
+          <ul>
+            <li><a href="#">October 2023</a></li>
+            <li><a href="#">September 2023</a></li>
+            <li><a href="#">August 2023</a></li>
+            <!-- Additional archive links -->
+          </ul>
+          <div class="subscribe">
+            <h3>Subscribe</h3>
+            <p>Get the latest insights delivered directly to your inbox.</p>
+            <form action="/subscribe" method="post">
+              <input type="email" name="subscriber-email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <img src="/images/scales.png" alt="Custom Scales Icon" width="50" class="footer-icon">
+      <p>© 2023 NorthernEdge Legal Solutions. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

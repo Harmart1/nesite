@@ -1,0 +1,274 @@
+/* NorthernEdge Legal Solutions - Typography Styles
+ *
+ * This stylesheet defines typographic styles for the website
+ * including font families, sizes, weights, and spacing.
+ */
+
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Font families */
+  --font-heading: 'Libre Baskerville', Georgia, serif;
+  --font-body: 'Open Sans', Helvetica, Arial, sans-serif;
+  
+  /* Font sizes */
+  --fs-xs: 0.75rem;    /* 12px */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-base: 1rem;     /* 16px */
+  --fs-md: 1.125rem;   /* 18px */
+  --fs-lg: 1.25rem;    /* 20px */
+  --fs-xl: 1.5rem;     /* 24px */
+  --fs-2xl: 1.875rem;  /* 30px */
+  --fs-3xl: 2.25rem;   /* 36px */
+  --fs-4xl: 3rem;      /* 48px */
+  
+  /* Line heights */
+  --lh-tight: 1.2;
+  --lh-snug: 1.375;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.625;
+  --lh-loose: 1.75;
+  
+  /* Font weights */
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+/* Base Typography */
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-normal);
+  line-height: var(--lh-normal);
+  color: var(--neutral-dark);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: var(--heading-color);
+}
+
+h1 {
+  font-size: var(--fs-3xl);
+}
+
+h2 {
+  font-size: var(--fs-2xl);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+}
+
+h4 {
+  font-size: var(--fs-lg);
+}
+
+h5 {
+  font-size: var(--fs-md);
+}
+
+h6 {
+  font-size: var(--fs-base);
+}
+
+/* Paragraph */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+p.lead {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-relaxed);
+  color: var(--neutral-dark);
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Lists */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Styled lists (used in practice areas) */
+ul.styled-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+ul.styled-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+ul.styled-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+/* Blockquote */
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  border: none;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-light);
+  color: white;
+  border-color: var(--primary-light);
+}
+
+/* Small helper text */
+.text-muted {
+  color: var(--neutral-medium);
+  font-size: var(--fs-sm);
+}
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Font weights */
+.font-light {
+  font-weight: var(--fw-light);
+}
+
+.font-normal {
+  font-weight: var(--fw-normal);
+}
+
+.font-semibold {
+  font-weight: var(--fw-semibold);
+}
+
+.font-bold {
+  font-weight: var(--fw-bold);
+}
+
+/* Address styling */
+address {
+  font-style: normal;
+  line-height: var(--lh-relaxed);
+  margin-bottom: 1rem;
+}
+
+/* Article typography */
+article h2 {
+  margin-top: 2rem;
+}
+
+article h3 {
+  margin-top: 1.5rem;
+}
+
+article p {
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile typography adjustments */
+@media (max-width: 768px) {
+  :root {
+    --fs-3xl: 2rem;
+    --fs-2xl: 1.75rem;
+  }
+  
+  h1 {
+    font-size: var(--fs-3xl);
+  }
+  
+  h2 {
+    font-size: var(--fs-2xl);
+  }
+  
+  p.lead {
+    font-size: var(--fs-md);
+  }
+  
+  .btn {
+    padding: 0.625rem 1.25rem;
+  }
+}

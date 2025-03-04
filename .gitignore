@@ -1,0 +1,42 @@
+# IDE and editor files
+.vscode/*
+!.vscode/settings.json
+*.sublime-project
+*.sublime-workspace
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node modules if you use any npm packages
+node_modules/
+
+# Build directories if you have any
+dist/
+build/
+
+# Local development server
+.tmp/
+.cache/
+
+# Personal notes/files
+notes.txt
+TODO.md
+planning/
+
+# Environment variables
+.env
+.env.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

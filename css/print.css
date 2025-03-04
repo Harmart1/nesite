@@ -1,0 +1,203 @@
+/* Print Stylesheet for NorthernEdge Legal Solutions
+ *
+ * This stylesheet activates when a user tries to print a page from the website.
+ * It hides unnecessary elements and optimizes the layout for printing.
+ */
+
+@media print {
+  /* Reset all backgrounds and text to black and white for better printing */
+  * {
+    background: transparent !important;
+    color: #000 !important; /* Black text */
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  
+  /* Set basic page layout */
+  @page {
+    margin: 2cm;
+  }
+  
+  /* Ensure text is sharp */
+  body {
+    font: 12pt Georgia, "Times New Roman", Times, serif;
+    line-height: 1.4;
+  }
+  
+  /* Format headings */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  h1 {
+    font-size: 24pt;
+  }
+  
+  h2 {
+    font-size: 20pt;
+  }
+  
+  h3 {
+    font-size: 16pt;
+  }
+  
+  /* Format paragraphs, lists, and images */
+  p, ul, ol, dl, blockquote, img {
+    page-break-inside: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  /* Prevent orphans and widows */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  /* Show link URLs */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    color: #333 !important;
+  }
+  
+  /* Don't show URLs for internal links or javascript */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  
+  /* Elements to hide when printing */
+  .site-header,
+  .site-footer,
+  .mobile-menu-toggle,
+  .nav-menu,
+  .cta-section,
+  .btn,
+  .social-icons,
+  .approach-grid,
+  .cookie-consent-banner,
+  .back-to-top,
+  form {
+    display: none !important;
+  }
+  
+  /* Improve layout for printing */
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+  }
+  
+  /* Ensure content grids display properly */
+  .content-grid {
+    display: block;
+  }
+  
+  .content-grid > * {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /* Reorganize cards for print */
+  .card, .service-item, .info-card {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em 0;
+  }
+  
+  /* Add company info at the top of each printed page */
+  body:before {
+    content: "NorthernEdge Legal Solutions | 67 Hugill St., Sault Ste. Marie, Ontario | (705) 123-4567";
+    display: block;
+    text-align: center;
+    font-size: 10pt;
+    margin-bottom: 2cm;
+    border-bottom: 1pt solid #ccc;
+    padding-bottom: 5mm;
+  }
+  
+  /* Add page numbers */
+  @page {
+    @bottom-right {
+      content: counter(page);
+    }
+  }
+  
+  /* Special handling for resource documents */
+  .resource-document {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+  
+  .resource-document blockquote {
+    border-left: 2pt solid #ccc;
+    padding-left: 1cm;
+    margin-left: 0;
+  }
+  
+  .resource-document h2 {
+    border-bottom: 0.5pt solid #ccc;
+  }
+  
+  .resource-document table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+  }
+  
+  .resource-document table th,
+  .resource-document table td {
+    border: 0.5pt solid #ccc;
+    padding: 0.5em;
+    text-align: left;
+  }
+  
+  /* Blog post specific print styles */
+  .blog-post {
+    max-width: none;
+  }
+  
+  .blog-post .blog-meta {
+    color: #666 !important;
+    font-style: italic;
+  }
+  
+  .blog-post .blog-featured-image {
+    max-height: 250pt;
+    margin: 1em auto;
+    display: block;
+  }
+  
+  /* Legal document specific styles */
+  .legal-document {
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+  
+  .legal-document section {
+    margin-bottom: 1em;
+  }
+  
+  .legal-document h2 {
+    font-size: 14pt;
+  }
+  
+  .legal-document h3 {
+    font-size: 12pt;
+  }
+}

@@ -1,0 +1,132 @@
+/* Base Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #000;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Hero Section */
+.hero {
+    background: #f5f5f5;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+/* Attorney Grid */
+.attorney-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.attorney-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.learn-more {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Blog Styling Additions */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.post-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.read-more {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar {
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+/* Additional Enhancements */
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0d74d1;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+}
+
+/**
+ * Compatibility stylesheet - redirects old references to new stylesheets
+ */
+
+@import 'main.css';
+@import 'responsive.css';
+@import 'typography.css';
+@import 'visual-enhancements.css';

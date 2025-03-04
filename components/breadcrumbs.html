@@ -1,0 +1,41 @@
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../{{parent-page}}.html">{{Parent Page}}</a></li>
+            <li aria-current="page">{{Current Page}}</li>
+        </ol>
+    </div>
+</nav>
+
+<!-- Instructions for Implementation -->
+<!--
+HOW TO USE THIS COMPONENT:
+
+1. Copy this breadcrumb navigation into your page after the header
+2. Replace {{parent-page}} with the slug of the parent page (e.g., "practice-areas")
+3. Replace {{Parent Page}} with the display name of the parent page (e.g., "Practice Areas")
+4. Replace {{Current Page}} with the title of the current page
+
+Example for Business Law page:
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="practice-areas.html">Practice Areas</a></li>
+            <li aria-current="page">Business Law</li>
+        </ol>
+    </div>
+</nav>
+
+For blog post pages (deeper nesting):
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog/index.html">Blog</a></li>
+            <li aria-current="page">Post Title</li>
+        </ol>
+    </div>
+</nav>
+-->

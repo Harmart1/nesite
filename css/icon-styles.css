@@ -1,0 +1,66 @@
+/**
+ * Icon styling for consistent display across the site
+ */
+
+/* Standard icon sizing for practice-icon container */
+.practice-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  height: 60px; /* Fixed height container for consistency */
+}
+
+.practice-icon img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Icon sizing for expertise cards on homepage */
+.expertise-card .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  height: 50px;
+}
+
+.expertise-card .icon-container img {
+  width: 42px;
+  height: 42px;
+}
+
+/* Icon sizing for approach/value sections */
+.approach-card .approach-icon,
+.value-card .value-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  height: 55px;
+}
+
+.approach-card .approach-icon svg,
+.value-card .value-icon svg {
+  width: 45px;
+  height: 45px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .practice-icon img {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .expertise-card .icon-container img {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .approach-card .approach-icon svg,
+  .value-card .value-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}

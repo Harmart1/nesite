@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthernEdge Legal Solutions | Modern Law Firm in Sault Ste. Marie, ON</title>
+    <meta name="description" content="NorthernEdge Legal Solutions provides expert legal services in civil litigation, business law, and technology law throughout Northern Ontario.">
+    
+    <!-- Favicon References -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a3c5a">
+    <meta name="msapplication-TileColor" content="#1a3c5a">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/visual-enhancements.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/navigation-enhancements.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/cookie-consent.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <!-- Add the icon styles CSS -->
+    <link rel="stylesheet" href="css/icon-styles.css">
+    <!-- Splash Video Styling -->
+    <style>lash Video Styling -->
+        /* Splash screen container styling */
+        #splash-container {ntainer styling */
+        #splash-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Updated background color to match site palette */
+            background-color: #f5f8fb; /* Light blue-gray that matches website theme */
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s;
+        }
+        
+        #splash-container video {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            /* Add subtle shadow for depth */
+            filter: drop-shadow(0 10px 15px rgba(26, 60, 90, 0.15));
+        }
+        
+        /* Hide main content initially */
+        body.splash-active main, 
+        body.splash-active header,
+        body.splash-active footer {
+            display: none;
+        }
+        
+        /* Skip splash link for accessibility */
+        .skip-splash {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.85);
+            padding: 8px 15px;
+            border-radius: 4px;
+            color: #1a3c5a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            z-index: 10000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .skip-splash:focus, 
+        .skip-splash:hover {
+            background: #fff;
+            text-decoration: underline;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Progress indicator for video */
+        .video-progress {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #e8963a; /* Use accent color from website */
+            transition: width 0.1s linear;
+        }
+    </style>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+</head>
+<body class="splash-active">
+    <!-- Splash Screen with Video -->
+    <div id="splash-container">
+        <a href="#skip-to-content" class="skip-splash" id="skip-splash">Skip Intro</a>
+        <video id="logo-animation" autoplay muted playsinline>
+            <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
+            <!-- Replace with actual filename in the videos directory -->
+            Your browser does not support the video tag.
+        </video>
+        <!-- Added progress indicator -->
+        <div class="video-progress">
+            <div class="progress-bar" id="videoProgress"></div>
+        </div>
+    </div>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </a>
+    
+    <header class="site-header" id="skip-to-content">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html"><img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions Logo"></a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="practice-areas.html">Practice Areas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>Modern Legal Solutions for Today's Challenges</h1>
+                    <p class="lead">Expert legal guidance in Civil Litigation, Business Law, and Technology Law, serving clients throughout Northern Ontario and beyond.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-primary pulse">Schedule a Consultation</a>
+                        <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page navigation dots - side navigation -->
+        <div class="page-navigation-dots">
+            <a href="#hero" class="dot active" data-section="hero" aria-label="Hero section"></a>
+            <a href="#services" class="dot" data-section="services" aria-label="Services section"></a>
+            <a href="#about" class="dot" data-section="about" aria-label="About section"></a>
+            <a href="#approach" class="dot" data-section="approach" aria-label="Approach section"></a>
+            <a href="#testimonials" class="dot" data-section="testimonials" aria-label="Testimonials section"></a>
+            <a href="#contact" class="dot" data-section="contact" aria-label="Contact section"></a>
+        </div>
+
+        <!-- Services Section -->
+        <section id="services" class="page-section services-section">
+            <div class="container">
+                <h2 class="section-title text-center">Our Practice Areas</h2>
+                <p class="section-description text-center">Specialized legal services tailored to your specific needs.</p>
+                
+                <div class="services-grid staggered-fade-in">
+                    <a href="civil-litigation.html" class="practice-card float-on-hover">
+                        <div class="practice-icon">
+                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon">
+                        </div>
+                        <h3>Civil Litigation</h3>
+                        <p>Strategic representation in disputes, lawsuits, and negotiations to protect your rights and achieve favorable outcomes.</p>
+                        <div class="card-action">
+                            <span class="btn-text">Learn More</span>
+                        </div>
+                    </a>
+                    
+                    <a href="business-law.html" class="practice-card float-on-hover">
+                        <div class="practice-icon">
+                            <img src="images/icons/business-icon.svg" alt="Business Law Icon">
+                        </div>
+                        <h3>Business Law</h3>
+                        <p>Comprehensive legal support for businesses at every stage, from formation to growth, transactions, and compliance.</p>
+                        <div class="card-action">
+                            <span class="btn-text">Learn More</span>
+                        </div>
+                    </a>
+                    
+                    <a href="technology-law.html" class="practice-card float-on-hover">
+                        <div class="practice-icon">
+                            <img src="images/icons/technology-icon.svg" alt="Technology Law Icon">
+                        </div>
+                        <h3>Technology Law</h3>
+                        <p>Expert legal services for technology companies, including intellectual property, data protection, and regulatory compliance.</p>
+                        <div class="card-action">
+                            <span class="btn-text">Learn More</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <!-- Value proposition section -->
+        </section>
+
+        <!-- Replace testimonials with industry expertise section -->
+        <section class="industry-expertise">
+            <div class="container">
+                <h2>Our Industry Expertise</h2>
+                <p class="section-intro">NorthernEdge Legal Solutions brings specialized knowledge to complex legal challenges across multiple industries.</p>
+                
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <div class="icon-container">
+                            <img src="images/icons/technology-icon.svg" alt="Technology Icon">
+                        </div>
+                        <h3>Technology & Software</h3>
+                        <p>Navigating intellectual property, data protection, and regulatory compliance for tech companies.</p>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <div class="icon-container">
+                            <img src="images/icons/business-icon.svg" alt="Business Icon">
+                        </div>
+                        <h3>Business & Startups</h3>
+                        <p>Guiding businesses from formation through growth with strategic legal counsel.</p>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <div class="icon-container">
+                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon">
+                        </div>
+                        <h3>Civil Litigation</h3>
+                        <p>Resolving disputes with strategic representation focused on achieving optimal outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-posts">
+            <!-- Blog preview -->
+        </section>
+
+        <section class="cta-section">
+            <!-- Call to action -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <!-- Footer content -->
+    </footer>
+
+    <!-- Cookie Consent JavaScript -->
+    <script src="js/cookie-consent.js" defer></script>
+    <script src="js/cookie-consent-fixed.js"></script>
+    <script src="js/back-to-top.js"></script>
+
+    <!-- Splash Video Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get references to elements
+            const splashContainer = document.getElementById('splash-container');
+            const logoAnimation = document.getElementById('logo-animation');
+            const skipSplash = document.getElementById('skip-splash');
+            const progressBar = document.getElementById('videoProgress');
+            
+            // Function to end splash and show main content
+            function endSplash() {
+                splashContainer.style.opacity = '0';
+                document.body.classList.remove('splash-active');
+                
+                // Remove splash container after fade out
+                setTimeout(() => {
+                    splashContainer.remove();
+                }, 1000);
+            }
+            
+            // End splash when video ends
+            logoAnimation.addEventListener('ended', endSplash);
+            
+            // Allow users to skip the splash
+            skipSplash.addEventListener('click', function(e) {
+                e.preventDefault();
+                endSplash();
+            });
+            
+            // If video fails to load, show the site immediately
+            logoAnimation.addEventListener('error', endSplash);
+            
+            // Update progress bar
+            logoAnimation.addEventListener('timeupdate', function() {
+                if (logoAnimation.duration) {
+                    const percent = (logoAnimation.currentTime / logoAnimation.duration) * 100;
+                    progressBar.style.width = percent + '%';
+                }
+            });
+            
+            // Check if user prefers reduced motion
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                endSplash();
+            }
+            
+            // Set a maximum wait time (exactly 10 seconds as recommended)
+            setTimeout(endSplash, 10000);
+
+            // Log video duration for reference
+            logoAnimation.addEventListener('loadedmetadata', function() {
+                console.log('Video duration:', logoAnimation.duration, 'seconds');
+                
+                // Add warning if video is significantly longer than recommended 10 seconds
+                if (logoAnimation.duration > 12) {
+                    console.warn('Video duration exceeds recommended 10 seconds. Consider shortening for better user experience.');
+                }
+            });
+        });
+    </script>- Add this script right before the closing </body> tag -->
+</body>    <script>
+
+
+</html>      document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        if (backToTopButton) {
+          // Hide initially
+          backToTopButton.style.opacity = 0;
+          backToTopButton.style.visibility = 'hidden';
+          
+          // Show only when scrolled down
+          window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+              backToTopButton.style.opacity = 1;
+              backToTopButton.style.visibility = 'visible';
+            } else {
+              backToTopButton.style.opacity = 0;
+              backToTopButton.style.visibility = 'hidden';
+            }
+          });
+          
+          // Scroll to top when clicked
+          backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+          });
+        }
+      });
+    </script>
+</body>
+</html>

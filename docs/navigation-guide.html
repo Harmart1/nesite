@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Implementation Guide | NorthernEdge Legal Solutions</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            color: #1a3c5a;
+            border-bottom: 2px solid #e8963a;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: #1a3c5a;
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            color: #e8963a;
+        }
+        
+        code {
+            background-color: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            font-size: 0.9rem;
+        }
+        
+        pre {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-left: 4px solid #1a3c5a;
+            border-radius: 3px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        
+        .note {
+            background-color: #e6f7ff;
+            border-left: 4px solid #1890ff;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .warning {
+            background-color: #fff7e6;
+            border-left: 4px solid #fa8c16;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Navigation Implementation Guide</h1>
+    <p>This document provides a comprehensive guide for implementing and maintaining the navigation features of the NorthernEdge Legal Solutions website.</p>
+    
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#overview">Overview of Navigation Components</a></li>
+        <li><a href="#main-nav">Main Navigation Setup</a></li>
+        <li><a href="#page-nav">On-Page Navigation Setup</a></li>
+        <li><a href="#breadcrumb">Breadcrumb Implementation</a></li>
+        <li><a href="#scroll-nav">Continuous Scroll Navigation</a></li>
+        <li><a href="#mobile">Mobile Navigation Considerations</a></li>
+    </ol>
+    
+    <h2 id="overview">1. Overview of Navigation Components</h2>
+    <p>The website utilizes several navigation components working together:</p>
+    <ul>
+        <li><strong>Main Navigation</strong>: The primary site navigation in the header.</li>
+        <li><strong>Jump Navigation</strong>: On-page navigation for practice area pages.</li>
+        <li><strong>Breadcrumb Navigation</strong>: For clear hierarchy display and backward navigation.</li>
+        <li><strong>Continuous Scroll Navigation</strong>: Including progress bar and "Continue Reading" buttons.</li>
+        <li><strong>Footer Navigation</strong>: Supplementary navigation links organized by category.</li>
+    </ul>
+    
+    <h2 id="main-nav">2. Main Navigation Setup</h2>
+    <p>The main navigation is implemented in the site header across all pages:</p>
+    
+    <h3>HTML Structure</h3>
+    <pre><code>&lt;nav class="main-nav"&gt;
+    &lt;button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu"&gt;
+        &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="nav-menu"&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+            &lt;a href="practice-areas.html"&gt;Practice Areas&lt;/a&gt;
+            &lt;ul class="dropdown-menu"&gt;
+                &lt;li&gt;&lt;a href="civil-litigation.html"&gt;Civil Litigation&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="business-law.html"&gt;Business Law&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="technology-law.html"&gt;Technology Law&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="general-practice.html"&gt;General Practice&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="resources.html"&gt;Resources&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="blog/index.html"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+    
+    <h3>Adding New Items</h3>
+    <p>To add a new top-level navigation item:</p>
+    <ol>
+        <li>Create the new page in the root directory</li>
+        <li>Add a new <code>&lt;li&gt;</code> element to the <code>.nav-menu</code> list</li>
+        <li>For dropdown menus, follow the pattern of the "Practice Areas" item</li>
+    </ol>
+    
+    <div class="note">
+        <p><strong>Note:</strong> The <code>nav-highlight.js</code> script will automatically add the <code>active</code> class to the current page's navigation item.</p>
+    </div>
+    
+    <h2 id="page-nav">3. On-Page Navigation Setup</h2>
+    <p>For content-heavy pages like practice areas, on-page navigation is implemented via jump links:</p>
+    
+    <h3>Jump Navigation HTML</h3>
+    <pre><code>&lt;div class="jump-nav"&gt;
+    &lt;div class="container"&gt;
+        &lt;ul class="jump-nav-links"&gt;
+            &lt;li&gt;&lt;a href="#overview" class="active"&gt;Overview&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#approach"&gt;Our Approach&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#industries"&gt;Industries&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#faq"&gt;FAQ&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    
+    <h3>Section IDs</h3>
+    <p>Each section referenced in the jump navigation must have a matching ID:</p>
+    <pre><code>&lt;section id="overview" class="page-section"&gt;
+    &lt;!-- Section content --&gt;
+&lt;/section&gt;</code></pre>
+    
+    <div class="warning">
+        <p><strong>Important:</strong> Always ensure that section IDs exactly match the href attribute values in your jump navigation links (minus the # prefix).</p>
+    </div>
+    
+    <h2 id="breadcrumb">4. Breadcrumb Implementation</h2>
+    <p>Breadcrumbs should be added to all inner pages to provide hierarchical context:</p>
+    
+    <h3>How to Add Breadcrumbs</h3>
+    <ol>
+        <li>Copy the breadcrumb component from <code>/components/breadcrumbs.html</code></li>
+        <li>Paste it immediately after the header in your page</li>
+        <li>Update the path and title values to reflect the page's position in the site hierarchy</li>
+    </ol>
+    
+    <p>Example implementation:</p>
+    <pre><code>&lt;nav aria-label="Breadcrumb" class="breadcrumbs"&gt;
+    &lt;div class="container"&gt;
+        &lt;ol class="breadcrumb-list"&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="practice-areas.html"&gt;Practice Areas&lt;/a&gt;&lt;/li&gt;
+            &lt;li aria-current="page"&gt;Business Law&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+    
+    <h3>CSS Requirements</h3>
+    <p>Ensure the <code>breadcrumbs.css</code> file is included in the page's head:</p>
+    <pre><code>&lt;link rel="stylesheet" href="css/breadcrumbs.css"&gt;</code></pre>
+    
+    <h2 id="scroll-nav">5. Continuous Scroll Navigation</h2>
+    <p>Practice area pages use continuous scroll navigation with progress tracking:</p>
+    
+    <h3>Progress Bar</h3>
+    <p>Add this code immediately after the opening <code>&lt;body&gt;</code> tag:</p>
+    <pre><code>&lt;!-- Page progress indicator --&gt;
+&lt;div class="page-progress"&gt;
+    &lt;div class="page-progress-bar" id="progressBar"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    
+    <h3>Continue Reading Buttons</h3>
+    <p>Add these buttons at the end of each section to encourage scrolling to the next section:</p>
+    <pre><code>&lt;div class="continue-reading"&gt;
+    &lt;button class="continue-button" aria-label="Continue to Next Section" data-target="#next-section-id"&gt;
+        &lt;span&gt;Continue to Next Section&lt;/span&gt;
+        &lt;svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"&gt;
+            &lt;path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    
+    <div class="note">
+        <p><strong>Note:</strong> Replace <code>#next-section-id</code> with the actual ID of the next section.</p>
+    </div>
+    
+    <h3>Required JavaScript</h3>
+    <p>Ensure these scripts are included before the closing <code>&lt;/body&gt;</code> tag:</p>
+    <pre><code>&lt;script src="js/scroll-navigation.js" defer&gt;&lt;/script&gt;
+&lt;script src="js/nav-highlight.js" defer&gt;&lt;/script&gt;</code></pre>
+    
+    <h2 id="mobile">6. Mobile Navigation Considerations</h2>
+    <p>Mobile navigation has special requirements:</p>
+    
+    <h3>Mobile Menu Toggle</h3>
+    <p>The mobile menu toggle button is already part of the main navigation structure. Its functionality is provided by <code>mobile-navigation.js</code>.</p>
+    
+    <h3>Horizontal Scrolling Jump Navigation</h3>
+    <p>On mobile devices, the jump navigation becomes horizontally scrollable:</p>
+    <ul>
+        <li>No additional code is needed as this is handled by CSS in <code>responsive.css</code></li>
+        <li>The <code>nav-highlight.js</code> script will automatically scroll the active link into view</li>
+    </ul>
+    
+    <h3>Touch-Friendly Navigation</h3>
+    <p>Mobile-specific touch handling is implemented in <code>mobile-navigation.js</code>. This script enables:</p>
+    <ul>
+        <li>Touch-based scrolling for horizontal jump navigation</li>
+        <li>Improved tap targets for dropdown navigation</li>
+        <li>Optimized scroll offsets for mobile viewport heights</li>
+    </ul>
+    
+    <div class="note">
+        <p><strong>Tip:</strong> Always test navigation changes on mobile devices to ensure touch interactions work properly.</p>
+    </div>
+</body>
+</html>

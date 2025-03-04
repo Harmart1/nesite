@@ -1,0 +1,364 @@
+/* NorthernEdge Legal Solutions - Main CSS File
+ *
+ * This is the primary CSS file that imports all other style modules
+ * and contains core styling for the website.
+ */
+
+/* Import font files */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+/* Variables and base styles */
+:root {
+  /* Primary palette - based on color psychology for legal profession */
+  --primary-dark: #0d2c54;     /* Deep navy blue: authority, trustworthiness */
+  --primary: #1a3c5a;          /* Rich blue: stability, confidence */
+  --primary-light: #3a6b99;    /* Lighter blue: approachability */
+  
+  /* Secondary palette - complementary to primary */
+  --accent: #e8963a;           /* Gold/amber: wisdom, prestige */
+  --accent-dark: #c67b23;      /* Darker gold: tradition, reliability */
+  --accent-light: #f5b765;     /* Light gold: warmth, optimism */
+  
+  /* Neutral palette - for backgrounds and text */
+  --neutral-darkest: #2c3033;  /* Near-black: for important text */
+  --neutral-dark: #4a4f54;     /* Dark gray: for body text */
+  --neutral-medium: #8a9199;   /* Medium gray: for secondary text */
+  --neutral-light: #e0e5eb;    /* Light gray: for dividers, borders */
+  --neutral-lightest: #f7f9fc; /* Off-white: for backgrounds */
+  
+  /* Feedback colors */
+  --success: #2e7d32;          /* Green: success messages */
+  --warning: #f9a825;          /* Amber: warning messages */
+  --error: #c62828;            /* Red: error messages */
+  --info: #0277bd;             /* Blue: information messages */
+  
+  /* General site colors */
+  --background: white;
+  --text-color: var(--neutral-dark);
+  --heading-color: var(--primary-dark);
+  --link-color: var(--primary);
+  --link-hover-color: var(--accent);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Base reset and general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: var(--lh-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container for page content */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Site Header Styling */
+.site-header {
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  max-width: 220px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation Menu */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: var(--neutral-dark);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--accent);
+}
+
+/* Dropdown Menus */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-medium);
+  z-index: 10;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 20;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--neutral-dark);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Page Header Section */
+.page-header {
+  background-color: var(--neutral-lightest);
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--neutral-lightest);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .lead {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent);
+}
+
+.text-center .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Media Queries (only basic ones here, more are in responsive.css) */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 320px;
+    background-color: white;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 15;
+    transform: translateX(100%);
+    transition: transform var(--transition-medium);
+  }
+  
+  .nav-menu.active {
+    transform: translateX(0);
+    display: flex;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    padding-left: 1rem;
+  }
+  
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero {
+    padding: 4rem 0;
+  }
+  
+  .page-header {
+    padding: 3rem 0;
+  }
+}

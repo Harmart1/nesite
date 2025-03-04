@@ -1,0 +1,7 @@
+# GitHub Pages configuration file
+title: NorthernEdge Legal Solutions
+description: Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario
+url: "https://northernedgelegal.com"
+theme: jekyll-theme-minimal
+show_downloads: false
+google_analytics: 

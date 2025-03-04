@@ -1,0 +1,174 @@
+/* NorthernEdge Legal Solutions - Accessibility Enhancements
+ *
+ * This stylesheet improves accessibility across the website,
+ * helping to ensure WCAG compliance and better usability for all users.
+ */
+
+/* ===== Focus States ===== */
+/* Ensure all interactive elements have visible focus indicators */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  transition: outline-offset 0.1s ease;
+}
+
+/* Skip to main content link - hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ===== Screen Reader Text ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ===== Enhanced Form Accessibility ===== */
+/* Connect labels and inputs programmatically */
+label[for] {
+  cursor: pointer;
+}
+
+/* Increased contrast for placeholder text */
+::placeholder {
+  color: var(--neutral-dark);
+  opacity: 0.8;
+}
+
+/* Error states with enhanced accessibility */
+.error-message {
+  color: var(--error);
+  font-weight: bold;
+}
+
+/* ===== Keyboard Navigation ===== */
+/* Ensure dropdown menus are keyboard accessible */
+.dropdown-menu li:focus-within > a {
+  background-color: var(--neutral-lightest);
+}
+
+/* ===== Motion Sensitivity ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .fade-in, .slide-in-left, .slide-in-right, .slide-up {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ===== High Contrast Mode ===== */
+@media (forced-colors: active) {
+  /* Override colors with system colors */
+  .btn {
+    border: 1px solid ButtonText;
+  }
+  
+  /* Ensure icons remain visible */
+  svg {
+    forced-color-adjust: none;
+  }
+  
+  /* Ensure focus states remain visible */
+  *:focus {
+    outline: 2px solid Highlight;
+  }
+}
+
+/* ===== Text Scaling ===== */
+/* Support for users who have increased their browser text size */
+html {
+  font-size: 100%; /* Use percentage for better scaling */
+}
+
+body {
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+/* ===== Table Accessibility ===== */
+/* Make tables more accessible */
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+th[scope="col"] {
+  border-bottom: 2px solid var(--neutral-light);
+}
+
+th[scope="row"] {
+  border-right: 2px solid var(--neutral-light);
+}
+
+/* ===== Link Accessibility ===== */
+/* Ensure links are identifiable beyond color */
+main a:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+main a:not(.btn):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ===== Keyboard Navigation Indicators ===== */
+body:not(.user-is-using-mouse) *:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Add this script to main.js to detect mouse users:
+document.body.addEventListener('mousedown', function() {
+  document.body.classList.add('user-is-using-mouse');
+});
+
+document.body.addEventListener('keydown', function(e) {
+  if (e.key === 'Tab') {
+    document.body.classList.remove('user-is-using-mouse');
+  }
+});
+*/
+
+/* ===== ARIA Enhanced Components ===== */
+/* Style for ARIA attributes */
+[aria-invalid="true"] {
+  border-color: var(--error);
+  background-color: rgba(198, 40, 40, 0.05);
+}
+
+[aria-expanded="true"] .dropdown-toggle::after {
+  transform: rotate(180deg);
+}

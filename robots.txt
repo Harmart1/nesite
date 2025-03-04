@@ -1,0 +1,32 @@
+# robots.txt for NorthernEdge Legal Solutions
+
+User-agent: *
+Allow: /
+
+# Disallow admin or system directories 
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /includes/
+Disallow: /cgi-bin/
+Disallow: /_temp/
+Disallow: /backend/
+
+# Disallow specific file types
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$
+Disallow: /*.zip$
+
+# Allow images for image search
+Allow: /images/
+
+# Disallow duplicate/printer-friendly versions
+Disallow: /print/
+Disallow: /*?print=
+
+# Sitemap location
+Sitemap: https://www.northernedgelegal.com/sitemap.xml

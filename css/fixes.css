@@ -1,0 +1,39 @@
+/**
+ * CSS fixes for cross-browser compatibility and validation issues
+ */
+
+/* Fix for older browsers that don't support CSS variables */
+:root {
+  --primary: #1A365D;
+  --primary-light: #2A4A7F;
+  --primary-dark: #0D2340;
+  --primary-lightest: #E1E9F5;
+  --accent: #D4AF37;
+  --neutral-lightest: #F8F9FA;
+  --neutral-light: #E9ECEF;
+  --neutral-medium: #ADB5BD;
+  --neutral-dark: #495057;
+  --neutral-darkest: #212529;
+}
+
+/* Add fallbacks for browsers without variable support */
+.btn-primary {
+  background-color: #1A365D; /* Fallback */
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Fix potential overflow issues */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve form control accessibility */
+input:focus, 
+textarea:focus, 
+select:focus,
+button:focus {
+  outline: 2px solid #1A365D;
+  outline: 2px solid var(--primary);
+}

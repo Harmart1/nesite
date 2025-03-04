@@ -1,0 +1,862 @@
+/* Visual Enhancements - NorthernEdge Legal Solutions
+ * 
+ * This CSS implements modern design principles with careful attention to:
+ * 1. Color theory - using a professional color palette with strategic accents
+ * 2. Typography scale - establishing clear visual hierarchy
+ * 3. White space - improving readability and focusing attention
+ * 4. Micro-interactions - adding subtle feedback for improved UX
+ */
+
+/* ===== Color Theory Implementation ===== */
+:root {
+  /* Primary palette - based on color psychology for legal profession */
+  --primary-dark: #0d2c54;     /* Deep navy blue: authority, trustworthiness */
+  --primary: #1a3c5a;          /* Rich blue: stability, confidence */
+  --primary-light: #3a6b99;    /* Lighter blue: approachability */
+  
+  /* Secondary palette - complementary to primary */
+  --accent: #e8963a;           /* Gold/amber: wisdom, prestige */
+  --accent-dark: #c67b23;      /* Darker gold: tradition, reliability */
+  --accent-light: #f5b765;     /* Light gold: warmth, optimism */
+  
+  /* Neutral palette - for backgrounds and text */
+  --neutral-darkest: #2c3033;  /* Near-black: for important text */
+  --neutral-dark: #4a4f54;     /* Dark gray: for body text */
+  --neutral-medium: #8a9199;   /* Medium gray: for secondary text */
+  --neutral-light: #e0e5eb;    /* Light gray: for dividers, borders */
+  --neutral-lightest: #f7f9fc; /* Off-white: for backgrounds */
+  
+  /* Feedback colors */
+  --success: #2e7d32;          /* Green: success messages */
+  --warning: #f9a825;          /* Amber: warning messages */
+  --error: #c62828;            /* Red: error messages */
+  --info: #0277bd;             /* Blue: information messages */
+}
+
+/* ===== Typography Enhancement ===== */
+/* Implementing a modular scale for better visual hierarchy */
+html {
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--neutral-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-dark);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+/* Modular scale - 1.25 ratio */
+h1 {
+  font-size: 3rem;      /* 48px */
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 2.25rem;   /* 36px */
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.25px;
+}
+
+h3 {
+  font-size: 1.75rem;   /* 28px */
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.375rem;  /* 22px */
+  margin-bottom: 0.75rem;
+}
+
+h5 {
+  font-size: 1.125rem;  /* 18px */
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  font-size: 1rem;      /* 16px */
+  margin-bottom: 0.5rem;
+}
+
+p, ul, ol {
+  margin-bottom: 1.5rem;
+}
+
+/* Improved readability for body text */
+p {
+  max-width: 70ch; /* Optimal line length for readability */
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* Small text */
+small, .text-small {
+  font-size: 0.875rem;
+}
+
+/* ===== Enhanced Visual Elements ===== */
+/* Card styling with subtle shadows */
+.card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Practice Area Cards */
+.practice-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  height: 100%;
+  transition: all var(--transition-medium);
+  display: flex;
+  flex-direction: column;
+}
+
+.practice-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-lightest);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.practice-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Float on hover effect */
+.float-on-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Value Cards */
+.value-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform var(--transition-medium);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon svg {
+  width: 40px;
+  height: 40px;
+  color: var(--accent);
+}
+
+/* Value Points in About Page */
+.value-points {
+  margin-top: 2rem;
+}
+
+.value-point {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.value-point .value-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+.value-point .value-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.value-content {
+  flex: 1;
+}
+
+.value-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Approach Cards */
+.approach-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  height: 100%;
+  transition: all var(--transition-medium);
+}
+
+.approach-card .approach-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--neutral-lightest);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.approach-card .approach-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+
+.approach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.approach-card:hover .approach-icon {
+  background-color: var(--primary-light);
+}
+
+.approach-card:hover .approach-icon svg {
+  color: white;
+}
+
+/* Industry Cards */
+.industry-card, .tech-industry-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  transition: all var(--transition-medium);
+}
+
+.industry-card:hover, .tech-industry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  background-color: var(--primary);
+  color: white;
+}
+
+.tech-industry-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--neutral-lightest);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all var(--transition-medium);
+}
+
+.tech-industry-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+
+.tech-industry-card:hover .tech-industry-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tech-industry-card:hover .tech-industry-icon svg {
+  color: white;
+}
+
+/* Sidebar Cards */
+.sidebar > div {
+  margin-bottom: 2rem;
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+}
+
+.service-areas-card h3, 
+.testimonial-card h3,
+.cta-card h3 {
+  margin-top: 0;
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.service-areas-card h3::after, 
+.testimonial-card h3::after,
+.cta-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.testimonial-card .case-result {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.testimonial-card .case-result::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--accent-light);
+  border-radius: 3px;
+}
+
+.testimonial-card h4 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+
+/* Resource links */
+.resource-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.resource-links li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.resource-links li::before {
+  content: '📄'; /* Document emoji */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Location card */
+.location-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  height: 100%;
+}
+
+.location-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.location-contact {
+  margin: 1.5rem 0;
+}
+
+.location-hours {
+  margin-bottom: 1.5rem;
+}
+
+.location-hours h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+/* Form styling enhancements */
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(26, 60, 90, 0.15);
+}
+
+/* Contact info cards */
+.info-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform var(--transition-medium);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.info-card .icon-container {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.info-card .icon-container svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.info-card h3 {
+  margin-bottom: 1rem;
+}
+
+.info-card address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/* Pulse animation for CTA buttons */
+.pulse {
+  position: relative;
+}
+
+.pulse::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 0 0 rgba(26, 60, 90, 0.7);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(26, 60, 90, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(26, 60, 90, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(26, 60, 90, 0);
+  }
+}
+
+/* Accordion styling */
+.accordion {
+  margin: 2rem 0;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+  border: 1px solid var(--neutral-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--neutral-dark);
+  transition: all var(--transition-fast);
+}
+
+.accordion-header:hover {
+  background-color: var(--neutral-lightest);
+  color: var(--primary);
+}
+
+.accordion-header.active {
+  background-color: var(--primary-lightest);
+  color: var(--primary-dark);
+}
+
+.accordion-header .accordion-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.accordion-header.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-medium), padding var(--transition-medium);
+}
+
+.accordion-header.active + .accordion-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Map container */
+.map-container {
+  height: 450px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+/* Founder card in about page */
+.founder-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.founder-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 3px solid var(--accent-light);
+}
+
+.founder-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-title {
+  color: var(--primary);
+  font-weight: var(--fw-semibold);
+  margin-bottom: 0.25rem;
+}
+
+.founder-credentials {
+  color: var(--neutral-medium);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Service items in practice area pages */
+.service-item {
+  margin-bottom: 2.5rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-item h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+/* Resources section styling */
+.resource-card {
+  display: flex;
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-medium);
+  height: 100%;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.resource-icon {
+  width: 48px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.resource-content {
+  flex: 1;
+}
+
+.resource-tag {
+  display: inline-block;
+  background-color: var(--accent-lightest);
+  color: var(--accent-dark);
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.resource-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.resource-card .btn {
+  margin-top: 1rem;
+}
+
+/* Legal Link Cards */
+.legal-link-card {
+  background-color: white;
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  transition: transform var(--transition-medium);
+}
+
+.legal-link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary);
+  font-weight: var(--fw-semibold);
+  margin-top: 1rem;
+}
+
+.external-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .practice-card,
+  .value-card,
+  .approach-card,
+  .info-card,
+  .service-item {
+    padding: 1.25rem;
+  }
+  
+  .resource-card {
+    flex-direction: column;
+  }
+  
+  .resource-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Button enhancements */
+.btn {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Primary button - accent color */
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Secondary button - outlined */
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Button click effect */
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* ===== Micro-interactions ===== */
+/* Smooth hover state for links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Underline animation for main navigation links */
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* Form element focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(26, 60, 90, 0.2);
+}
+
+/* ===== White Space & Layout ===== */
+.section {
+  padding: 5rem 0;
+}
+
+.section-sm {
+  padding: 3rem 0;
+}
+
+.section-lg {
+  padding: 8rem 0;
+}
+
+/* Responsive container margins */
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Improve spacing in typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+/* ===== Accessibility Enhancements ===== */
+/* Focus styles for keyboard navigation */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ===== Specific Components ===== */
+/* Section dividers */
+.section-divider {
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, var(--neutral-light), transparent);
+  margin: 4rem 0;
+  border: none;
+}
+
+/* Quote styling */
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  color: var(--neutral-dark);
+}
+
+/* Lists with custom bullets */
+ul.styled-list {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+ul.styled-list li {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+ul.styled-list li:before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
+  position: absolute;
+  left: -1.5rem;
+  width: 1.5rem;
+  text-align: center;
+}

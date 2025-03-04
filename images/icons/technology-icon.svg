@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+  <defs>
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A365D" />
+      <stop offset="100%" stop-color="#2A4A7F" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#techGradient)" d="M4 5c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V5zm14 0H6v10h12V5zM7 16v1h10v-1H7zm3-8h4v1h-4V8zm0 2h4v1h-4v-1zm0 2h4v1h-4v-1z"/>
+  <circle fill="#D4AF37" cx="18" cy="8" r="1.5"/>
+  <circle fill="#D4AF37" cx="6" cy="8" r="1.5"/>
+</svg>

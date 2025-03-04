@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url>
+    <loc>https://www.northernedgelegal.com/</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/about.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/contact.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/practice-areas.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/resources.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Practice Areas -->
+  <url>
+    <loc>https://www.northernedgelegal.com/civil-litigation.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/business-law.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/technology-law.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/general-practice.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Blog Section -->
+  <url>
+    <loc>https://www.northernedgelegal.com/blog/index.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/blog/posts/ai-regulation-implications.html</loc>
+    <lastmod>2024-04-15</lastmod>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/blog/posts/virtual-courts-future.html</loc>
+    <lastmod>2024-03-28</lastmod>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/blog/posts/contract-negotiation-tips.html</loc>
+    <lastmod>2024-02-12</lastmod>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  
+  <!-- Legal Documents -->
+  <url>
+    <loc>https://www.northernedgelegal.com/privacy-policy.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/terms-of-use.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.northernedgelegal.com/cookie-policy.html</loc>
+    <lastmod>2024-05-01</lastmod>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+</urlset>
