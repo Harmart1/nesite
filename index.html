@@ -109,6 +109,15 @@
             background-color: #e8963a; /* Use accent color from website */
             transition: width 0.1s linear;
         }
+
+        /* Hero section video styling */
+        .hero-section video {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
     
     <!-- JavaScript -->
@@ -142,7 +151,7 @@
     <header class="site-header" id="skip-to-content">
         <div class="container">
             <div class="logo-container">
-                <a href="index.html"><img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo" onerror="this.onerror=null; this.src='videos/NorthernEdge Legal Logo.jpg'"></a>
+                <a href="index.html"><img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions Logo"></a>
             </div>
             <nav class="main-nav">
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
@@ -180,6 +189,8 @@
                         <a href="contact.html" class="btn btn-primary pulse" aria-label="Schedule a Consultation" onclick="window.location.href='contact.html'; return false;" id="consultation-btn">Schedule a Consultation</a>
                         <a href="#services" class="btn btn-secondary" aria-label="Explore Our Services">Explore Our Services</a>
                     </div>
+                    <!-- Embedded video -->
+                    <video src="videos/DynamicLogoAnimation.mp4" autoplay muted loop></video>
                 </div>
             </div>
         </section>
@@ -297,7 +308,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                    <img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions Logo">
                     <p class="footer-tagline">Sophisticated legal solutions for modern challenges.</p>
                     <div class="footer-social">
                         <a href="#" class="social-icon">
