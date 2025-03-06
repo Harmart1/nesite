@@ -31,6 +31,11 @@
   .text-sm-left { text-align: left; }
   .text-sm-center { text-align: center; }
   .text-sm-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .sm-mb-0 { margin-bottom: 0; }
+  .sm-mt-0 { margin-top: 0; }
+  .sm-p-0 { padding: 0; }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -92,6 +97,11 @@
   .text-md-left { text-align: left; }
   .text-md-center { text-align: center; }
   .text-md-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .md-mb-0 { margin-bottom: 0; }
+  .md-mt-0 { margin-top: 0; }
+  .md-p-0 { padding: 0; }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -142,6 +152,11 @@
   .text-lg-left { text-align: left; }
   .text-lg-center { text-align: center; }
   .text-lg-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .lg-mb-0 { margin-bottom: 0; }
+  .lg-mt-0 { margin-top: 0; }
+  .lg-p-0 { padding: 0; }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -171,17 +186,11 @@
   .text-xl-left { text-align: left; }
   .text-xl-center { text-align: center; }
   .text-xl-right { text-align: right; }
-}
-
-/* Print styles reference */
-@media print {
-  /* Print styles are in their own file: print.css */
-  /* This reference helps developers know where to find them */
-}
-
-/* Dark mode reference */
-@media (prefers-color-scheme: dark) {
-  /* Dark mode styles can be added here or in a separate dark-mode.css file */
+  
+  /* Spacing utilities */
+  .xl-mb-0 { margin-bottom: 0; }
+  .xl-mt-0 { margin-top: 0; }
+  .xl-p-0 { padding: 0; }
 }
 
 /* High contrast mode adjustments */
@@ -207,10 +216,9 @@
 
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  /* These styles are also included in performance-fixes.css */
-  /* Included here for reference and to catch any missed transitions */
   * {
     transition-duration: 0.001ms !important;
     animation-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
