@@ -4,6 +4,10 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Make sure we're not duplicating initialization
+  if (window.backToTopInitialized) return;
+  window.backToTopInitialized = true;
+  
   const backToTopButton = document.querySelector('.back-to-top');
   
   if (!backToTopButton) {
@@ -53,12 +57,21 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   
   // Show again when mouse moves
-  document.addEventListener('mousemove', () => {
+  const handleMouseMove = () => {
     if (window.scrollY > scrollThreshold) {
       backToTopButton.style.opacity = '';
       startAutoHideTimer();
     }
-  });
+  };
+  
+  document.addEventListener('mousemove', handleMouseMove);
+  
+  // Update threshold on window resize
+  const updateThreshold = () => {
+    scrollThreshold = window.innerHeight * 0.7;
+  };
+  
+  window.addEventListener('resize', updateThreshold);
   
   // Check scroll position on page load
   toggleBackToTopButton();
@@ -71,5 +84,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.propertyName === 'opacity' && backToTopButton.classList.contains('visible')) {
       startAutoHideTimer();
     }
+  });
+  
+  // Clean up function to prevent memory leaks
+  window.addEventListener('beforeunload', () => {
+    document.removeEventListener('mousemove', handleMouseMove);
+    window.removeEventListener('resize', updateThreshold);
+    window.removeEventListener('scroll', toggleBackToTopButton);
   });
 });
