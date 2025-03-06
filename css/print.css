@@ -175,21 +175,6 @@
     padding: 0;
   }
   
-  /* QR code for digital version */
-  .print-footer {
-    text-align: center;
-    margin-top: 2cm;
-    border-top: 1pt solid #ccc;
-    padding-top: 0.5cm;
-    font-size: 9pt;
-  }
-  
-  .print-footer:after {
-    content: "Scan to view this document online:";
-    display: block;
-    margin: 0.5cm 0;
-  }
-  
   /* Company footer on each page */
   #print-company-info {
     position: running(footer);
@@ -246,20 +231,3 @@
   .legal-document h3 {
     font-size: 12pt;
   }
-  
-  /* Make sure forms print with visible borders */
-  .form-field {
-    border: 1pt solid #999;
-    padding: 0.3cm;
-    margin-bottom: 0.5cm;
-  }
-  
-  /* Force page breaks where needed */
-  .page-break-before {
-    page-break-before: always;
-  }
-  
-  .page-break-after {
-    page-break-after: always;
-  }
-}
