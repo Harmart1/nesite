@@ -1,445 +1,131 @@
-/* NorthernEdge Legal Solutions - Main CSS File
- *
- * This is the primary CSS file that imports all other style modules
- * and contains core styling for the website.
+/* NorthernEdge Legal Solutions - CSS Variables
+ * 
+ * A comprehensive set of CSS variables that serve as the foundation
+ * for consistent styling across the entire website.
+ * 
  * Last updated: 2025-03-06
  */
 
-/* Import font files */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
-
-/* Import CSS modules in the correct order */
-@import 'variables.css';    /* First: CSS variables and custom properties */
-@import 'fixes.css';        /* Second: Cross-browser compatibility fixes */
-
-/* Core styles */
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: var(--background);
-  color: var(--text-color);
-  font-family: var(--font-body);
-  line-height: var(--lh-body);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: var(--link-color);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-a:hover {
-  color: var(--link-hover-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--heading-color);
-  line-height: var(--lh-heading);
-  margin-bottom: 0.75em;
-}
-
-h1 {
-  font-size: var(--text-4xl);
-}
-
-h2 {
-  font-size: var(--text-3xl);
-}
-
-h3 {
-  font-size: var(--text-2xl);
-}
-
-h4 {
-  font-size: var(--text-xl);
-}
-
-h5 {
-  font-size: var(--text-lg);
-}
-
-h6 {
-  font-size: var(--text-md);
-}
-
-p {
-  margin-bottom: 1em;
-}
-
-/* Container for page content */
-.container {
-  width: 100%;
-  max-width: var(--container-xl);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* Section spacing */
-.section {
-  padding: var(--space-10) 0;
-}
-
-.section-sm {
-  padding: var(--space-6) 0;
-}
-
-.section-lg {
-  padding: var(--space-12) 0;
-}
-
-/* Button styles */
-.btn {
-  display: inline-block;
-  font-weight: 600;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
-  border: 2px solid transparent;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
-}
-
-.btn-secondary {
-  background-color: transparent;
-  border-color: var(--primary);
-  color: var(--primary);
-}
-
-.btn-secondary:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
-.btn-accent {
-  background-color: var(--accent);
-  border-color: var(--accent);
-  color: white;
-}
-
-.btn-accent:hover {
-  background-color: var(--accent-dark);
-  border-color: var(--accent-dark);
-}
-
-.btn-lg {
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
-}
-
-.btn-sm {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-}
-
-/* Site Header Styling */
-.site-header {
-  background-color: white;
-  box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 1rem 0;
-}
-
-.site-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-container {
-  max-width: 220px;
-}
-
-.logo-container img {
-  width: 100%;
-  height: auto;
-}
-
-/* Navigation Menu */
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.nav-menu a {
-  color: var(--neutral-dark);
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem 0;
-  transition: color var(--transition-fast);
-  position: relative;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-  color: var(--accent);
-}
-
-/* Dropdown Menus */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  min-width: 200px;
-  box-shadow: var(--shadow-md);
-  border-radius: var(--radius-sm);
-  padding: 0.5rem 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all var(--transition-normal);
-  z-index: 10;
-  list-style: none;
-}
-
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 0.75rem 1.5rem;
-}
-
-/* Mobile Menu Toggle */
-.mobile-menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 20;
-}
-
-.mobile-menu-toggle span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: var(--neutral-dark);
-  border-radius: 3px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Page Header Section */
-.page-header {
-  background-color: var(--neutral-lightest);
-  padding: 4rem 0;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.page-header h1 {
-  margin-bottom: 1rem;
-  color: var(--heading-color);
-}
-
-/* Hero Section */
-.hero {
-  background-color: var(--neutral-lightest);
-  padding: 6rem 0;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: var(--text-4xl);
-  margin-bottom: 1.5rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero .lead {
-  font-size: var(--text-lg);
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  line-height: 1.5;
-}
-
-/* CTA Section */
-.cta-section {
-  background-color: var(--primary-dark);
-  color: white;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.cta-section h2 {
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.cta-section p {
-  margin-bottom: 2rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Utility classes */
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-left { text-align: left; }
-
-.mb-0 { margin-bottom: 0; }
-.mb-1 { margin-bottom: var(--space-1); }
-.mb-2 { margin-bottom: var(--space-2); }
-.mb-3 { margin-bottom: var(--space-3); }
-.mb-4 { margin-bottom: var(--space-4); }
-.mb-5 { margin-bottom: var(--space-5); }
-
-.mt-0 { margin-top: 0; }
-.mt-1 { margin-top: var(--space-1); }
-.mt-2 { margin-top: var(--space-2); }
-.mt-3 { margin-top: var(--space-3); }
-.mt-4 { margin-top: var(--space-4); }
-.mt-5 { margin-top: var(--space-5); }
-
-/* Section title styling */
-.section-title {
-  margin-bottom: 2rem;
-  position: relative;
-  display: inline-block;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -0.75rem;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background-color: var(--accent);
-}
-
-.text-center .section-title::after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Mobile navigation styles */
-@media (max-width: 1024px) {
-  .nav-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 80%;
-    max-width: 320px;
-    background-color: white;
-    flex-direction: column;
-    padding: 5rem 2rem;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    z-index: 15;
-    transform: translateX(100%);
-    transition: transform var(--transition-medium);
-  }
+:root {
+  /* Primary palette - based on color psychology for legal profession */
+  --primary-dark: #0d2c54;     /* Deep navy blue: authority, trustworthiness */
+  --primary: #1a3c5a;          /* Rich blue: stability, confidence */
+  --primary-light: #3a6b99;    /* Lighter blue: approachability */
+  --primary-lightest: #E1E9F5; /* Very light blue: subtle backgrounds */
   
-  .nav-menu.active {
-    transform: translateX(0);
-    display: flex;
-  }
+  /* Secondary/Accent Colors */
+  --accent: #e8963a;           /* Gold/amber: wisdom, prestige */
+  --accent-dark: #c67b23;      /* Darker gold: tradition, reliability */
+  --accent-light: #f5b765;     /* Light gold: warmth, optimism */
   
-  .mobile-menu-toggle {
-    display: flex;
-  }
+  /* Neutral palette */
+  --neutral-darkest: #2c3033;  /* Near-black: for important text */
+  --neutral-dark: #4a4f54;     /* Dark gray: for body text */
+  --neutral-medium: #8a9199;   /* Medium gray: for secondary text */
+  --neutral-light: #e0e5eb;    /* Light gray: for dividers, borders */
+  --neutral-lightest: #f7f9fc; /* Off-white: for backgrounds */
   
-  .mobile-menu-toggle.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
+  /* Common colors */
+  --white: #ffffff;
+  --black: #000000;
+  --background: var(--white);
+  --background-light: var(--neutral-lightest);
   
-  .mobile-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
+  /* Legacy variable compatibility */
+  --navy: var(--primary-dark);
+  --light-gray: var(--neutral-light); 
+  --medium-gray: var(--neutral-medium);
+  --dark-gray: var(--neutral-dark);
   
-  .mobile-menu-toggle.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
+  /* Semantic colors */
+  --success: #2e7d32;          /* Green: success messages */
+  --warning: #f9a825;          /* Amber: warning messages */
+  --error: #c62828;            /* Red: error messages */
+  --info: #0277bd;             /* Blue: information messages */
   
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    display: none;
-    padding-left: 1rem;
-  }
+  /* RGB versions for opacity/alpha operations */
+  --primary-rgb: 26, 60, 90;
+  --primary-light-rgb: 58, 107, 153;
+  --primary-dark-rgb: 13, 44, 84;
+  --accent-rgb: 232, 150, 58;
+  --neutral-dark-rgb: 74, 79, 84;
   
-  .dropdown.active .dropdown-menu {
-    display: block;
-  }
+  /* Text colors */
+  --text-color: var(--neutral-dark);
+  --heading-color: var(--primary-dark);
+  --link-color: var(--primary);
+  --link-hover-color: var(--accent);
+  
+  /* Typography */
+  --font-body: 'Open Sans', sans-serif;
+  --font-heading: 'Libre Baskerville', serif;
+  --lh-body: 1.6;
+  --lh-heading: 1.2;
+  
+  /* Font sizes */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-md: 1.125rem;   /* 18px */
+  --text-lg: 1.25rem;    /* 20px */
+  --text-xl: 1.5rem;     /* 24px */
+  --text-2xl: 1.875rem;  /* 30px */
+  --text-3xl: 2.25rem;   /* 36px */
+  --text-4xl: 3rem;      /* 48px */
+  
+  /* Spacing */
+  --space-1: 0.25rem;    /* 4px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.5rem;     /* 24px */
+  --space-6: 2rem;       /* 32px */
+  --space-8: 3rem;       /* 48px */
+  --space-10: 4rem;      /* 64px */
+  --space-12: 5rem;      /* 80px */
+  
+  /* Aliases for spacing */
+  --spacing-xs: var(--space-1);
+  --spacing-sm: var(--space-2);
+  --spacing-md: var(--space-4);
+  --spacing-lg: var(--space-6);
+  --spacing-xl: var(--space-10);
+  
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-medium: 0.3s ease; /* alias for normal for consistency */
+  --transition-slow: 0.5s ease;
+  
+  /* Container sizes */
+  --container-sm: 540px;
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1200px;
+  
+  /* Z-index layers */
+  --z-negative: -1;
+  --z-normal: 1;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-modal-backdrop: 40;
+  --z-modal: 50;
+  --z-popover: 60;
+  --z-tooltip: 70;
+  
+  /* Focus styles */
+  --focus-ring-width: 3px;
+  --focus-ring-color: rgba(var(--primary-rgb), 0.25);
 }
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: var(--text-2xl);
-  }
-  
-  .hero {
-    padding: 4rem 0;
-  }
-  
-  .page-header {
-    padding: 3rem 0;
-  }
-}
-
-/* Import remaining module styles */
-@import 'blog.css';        /* Blog styling */
-@import 'forms.css';       /* Forms styling */
-@import 'footer.css';      /* Footer styling */
-@import 'print.css';       /* Print styles */
