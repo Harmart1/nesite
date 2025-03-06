@@ -29,9 +29,8 @@
     <!-- Add the icon styles CSS -->
     <link rel="stylesheet" href="css/icon-styles.css">
     <!-- Splash Video Styling -->
-    <style>lash Video Styling -->
+    <style>
         /* Splash screen container styling */
-        #splash-container {ntainer styling */
         #splash-container {
             position: fixed;
             top: 0;
@@ -112,7 +111,7 @@
 <body class="splash-active">
     <!-- Splash Screen with Video -->
     <div id="splash-container">
-        <a href="#skip-to-content" class="skip-splash" id="skip-splash">Skip Intro</a>
+        <a href="#skip-to-content" class="skip-splash" id="skip-splash" aria-label="Skip Intro">Skip Intro</a>
         <video id="logo-animation" autoplay muted playsinline>
             <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
             <!-- Replace with actual filename in the videos directory -->
@@ -171,8 +170,8 @@
                     <h1>Modern Legal Solutions for Today's Challenges</h1>
                     <p class="lead">Expert legal guidance in Civil Litigation, Business Law, and Technology Law, serving clients throughout Northern Ontario and beyond.</p>
                     <div class="hero-buttons">
-                        <a href="contact.html" class="btn btn-primary pulse">Schedule a Consultation</a>
-                        <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+                        <a href="contact.html" class="btn btn-primary pulse" aria-label="Schedule a Consultation">Schedule a Consultation</a>
+                        <a href="#services" class="btn btn-secondary" aria-label="Explore Our Services">Explore Our Services</a>
                     </div>
                 </div>
             </div>
@@ -345,36 +344,34 @@
                 }
             });
         });
-    </script>- Add this script right before the closing </body> tag -->
-</body>    <script>
-
-
-</html>      document.addEventListener('DOMContentLoaded', function() {
-        const backToTopButton = document.querySelector('.back-to-top');
-        
-        if (backToTopButton) {
-          // Hide initially
-          backToTopButton.style.opacity = 0;
-          backToTopButton.style.visibility = 'hidden';
-          
-          // Show only when scrolled down
-          window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-              backToTopButton.style.opacity = 1;
-              backToTopButton.style.visibility = 'visible';
-            } else {
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            
+            if (backToTopButton) {
+              // Hide initially
               backToTopButton.style.opacity = 0;
               backToTopButton.style.visibility = 'hidden';
+              
+              // Show only when scrolled down
+              window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                  backToTopButton.style.opacity = 1;
+                  backToTopButton.style.visibility = 'visible';
+                } else {
+                  backToTopButton.style.opacity = 0;
+                  backToTopButton.style.visibility = 'hidden';
+                }
+              });
+              
+              // Scroll to top when clicked
+              backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+              });
             }
-          });
-          
-          // Scroll to top when clicked
-          backToTopButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
-          });
-        }
-      });
+        });
     </script>
 </body>
 </html>
