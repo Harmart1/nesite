@@ -8,7 +8,7 @@
 /* Import font files */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
-/* Import modular CSS files in the correct order */
+/* Import CSS modules in the correct order */
 @import 'variables.css';    /* First: CSS variables and custom properties */
 @import 'fixes.css';        /* Second: Cross-browser compatibility fixes */
 
@@ -111,4 +111,335 @@ p {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  user ▋
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Site Header Styling */
+.site-header {
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  max-width: 220px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation Menu */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: var(--neutral-dark);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--accent);
+}
+
+/* Dropdown Menus */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-normal);
+  z-index: 10;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 20;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--neutral-dark);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Page Header Section */
+.page-header {
+  background-color: var(--neutral-lightest);
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--neutral-lightest);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: var(--text-4xl);
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .lead {
+  font-size: var(--text-lg);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-5 { margin-bottom: var(--space-5); }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-5 { margin-top: var(--space-5); }
+
+/* Section title styling */
+.section-title {
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent);
+}
+
+.text-center .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Mobile navigation styles */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 320px;
+    background-color: white;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 15;
+    transform: translateX(100%);
+    transition: transform var(--transition-medium);
+  }
+  
+  .nav-menu.active {
+    transform: translateX(0);
+    display: flex;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    padding-left: 1rem;
+  }
+  
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: var(--text-2xl);
+  }
+  
+  .hero {
+    padding: 4rem 0;
+  }
+  
+  .page-header {
+    padding: 3rem 0;
+  }
+}
+
+/* Import remaining module styles */
+@import 'blog.css';        /* Blog styling */
+@import 'forms.css';       /* Forms styling */
+@import 'footer.css';      /* Footer styling */
+@import 'print.css';       /* Print styles */
