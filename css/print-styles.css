@@ -1,172 +1,233 @@
-/**
- * Print Styles
- * Optimizes website content for printing
+/* Print Stylesheet for NorthernEdge Legal Solutions
+ *
+ * Enhanced print stylesheet for better paper output
+ * Last updated: 2025-03-06
  */
 
 @media print {
-  /* Reset basic elements */
-  body {
-    background-color: white;
-    color: black;
-    font-size: 12pt;
-    line-height: 1.5;
-    font-family: 'Playfair Display', Georgia, serif;
+  /* Reset all backgrounds and text to optimize for printing */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+    background-image: none !important;
   }
   
-  /* Layout adjustments */
-  .container {
-    max-width: 100%;
+  /* Set basic page layout */
+  @page {
+    margin: 2cm;
+    size: portrait;
+  }
+  
+  /* Ensure text is sharp and readable */
+  body {
+    font: 12pt Georgia, "Times New Roman", Times, serif;
+    line-height: 1.4;
+    color: #000 !important;
+    background: #fff !important;
+  }
+  
+  /* Format headings */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #000 !important;
+    margin-top: 1cm;
+  }
+  
+  h1 {
+    font-size: 24pt;
+  }
+  
+  h2 {
+    font-size: 20pt;
+  }
+  
+  h3 {
+    font-size: 16pt;
+  }
+  
+  /* Format paragraphs, lists, and images */
+  p, ul, ol, dl, blockquote, img {
+    page-break-inside: avoid;
+    margin-bottom: 0.75cm;
+  }
+  
+  /* Optimize images */
+  img {
+    max-width: 100% !important;
+    display: block;
+    margin: 0.5cm auto;
+    filter: grayscale(100%); /* Save color ink */
+  }
+  
+  /* Prevent orphans and widows */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  /* Optimize links for print */
+  a {
+    text-decoration: underline;
+  }
+  
+  /* Show URL after links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    color: #333 !important;
+    word-wrap: break-word;
+  }
+  
+  /* Don't show URLs for internal links or javascript */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after,
+  a[href^="tel:"]:after,
+  a[href^="mailto:"]:after {
+    content: "";
+  }
+  
+  /* Enhance URLs for people to actually type them */
+  article a[href^="http"]:after, 
+  article a[href^="https"]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    display: inline-block;
+    word-break: break-all;
+  }
+  
+  /* Abbreviations get their title printed */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  
+  /* Elements to hide when printing */
+  .site-header,
+  .site-footer,
+  .mobile-menu-toggle,
+  .nav-menu,
+  .cta-section,
+  .btn,
+  .social-icons,
+  .approach-grid,
+  .cookie-consent-banner,
+  .back-to-top,
+  form,
+  .subscribe-section,
+  .pagination,
+  nav,
+  .blog-sidebar,
+  .related-posts,
+  .author-bio,
+  .blog-navigation,
+  video,
+  audio,
+  iframe,
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Ensure tables display properly */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1cm 0;
+    page-break-inside: avoid;
+  }
+  
+  th, td {
+    border: 1pt solid #999;
+    padding: 0.25cm;
+    text-align: left;
+  }
+  
+  /* Improve layout for printing */
+  main {
+    width: 100%;
     margin: 0;
     padding: 0;
   }
   
-  /* Hide unnecessary elements */
-  header.site-header,
-  footer.site-footer,
-  .mobile-nav-toggle,
-  .back-to-top,
-  .cta-section,
-  nav.breadcrumbs,
-  .skip-to-content,
-  video,
-  .video-container,
-  .social-sharing,
-  form,
-  .newsletter-signup,
-  .cookie-banner {
-    display: none !important;
+  .container, .content-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: none;
   }
   
-  /* Show the site logo on printed page */
-  .print-header {
+  /* Ensure content grids display properly */
+  .content-grid, .row, .grid, .blog-grid {
     display: block;
-    margin-bottom: 20px;
   }
   
-  .print-logo {
-    display: block;
-    max-width: 200px;
-    margin-bottom: 20px;
+  .content-grid > *, 
+  .row > *,
+  .grid > *,
+  .col, 
+  .column {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0;
   }
   
-  /* Avoid breaks inside important elements */
-  h1, h2, h3, 
-  .contact-info, 
-  blockquote,
-  .practice-card {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  /* Company footer on each page */
+  #print-company-info {
+    position: running(footer);
+    font-size: 9pt;
+    text-align: center;
+    color: #666 !important;
   }
   
-  /* Ensure all text is visible (not hidden in dropdowns etc) */
-  .dropdown-menu {
-    display: block !important;
-    position: static !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    box-shadow: none !important;
-  }
-  
-  /* Add page numbers */
   @page {
-    margin: 2cm;
-  }
-  
-  /* Remove decorative effects */
-  .card, 
-  .practice-card,
-  .btn,
-  .nav-link,
-  blockquote {
-    box-shadow: none !important;
-    border: 1px solid #ccc;
-    background: none !important;
-    color: black !important;
-    text-decoration: none !important;
-  }
-  
-  /* Make links more useful in print */
-  a[href]:after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    color: #666;
-  }
-  
-  /* Don't show URL for internal links and anchors */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after,
-  a[href^="/"]:after,
-  a.no-print-url:after {
-    content: "";
-  }
-  
-  /* Improve contrast */
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-  
-  /* Special elements for print only */
-  .print-only {
-    display: block !important;
-  }
-  
-  /* Expand width for content */
-  .main-content,
-  .blog-content,
-  article {
-    width: 100% !important;
-    float: none !important;
-  }
-  
-  /* Fix table printing */
-  table {
-    break-inside: auto;
-  }
-  
-  tr, td, th {
-    break-inside: avoid;
-    break-after: auto;
-  }
-  
-  /* Auto-insert URLs for external links, except those with images */
-  a[href^="http"]:not(:has(img)):after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    color: #666;
-  }
-  
-  /* Improve image handling */
-  img {
-    max-width: 100% !important;
-    page-break-inside: avoid;
-  }
-  
-  /* Add footer with contact info on each page */
-  @page {
-    @bottom-left {
-      content: "NorthernEdge Legal Solutions";
+    @bottom-center {
+      content: element(footer);
     }
+    
     @bottom-right {
       content: "Page " counter(page) " of " counter(pages);
     }
   }
   
-  /* Ensure practice area cards print well */
-  .practice-card, 
-  .service-item,
-  .team-card {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
+  /* Add company info at the top of first printed page */
+  body::before {
+    content: "NorthernEdge Legal Solutions | 67 Hugill St., Sault Ste. Marie, Ontario | (705) 123-4567";
+    display: block;
+    text-align: center;
+    font-size: 10pt;
+    margin-bottom: 2cm;
+    border-bottom: 1pt solid #ccc;
+    padding-bottom: 5mm;
   }
   
-  /* QR code generation for contact info */
-  .print-contact:after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="white"/><text x="10" y="20" font-size="6">Scan to visit our website</text></svg>');
-    display: block;
-    margin: 20px 0;
+  /* Ensure page breaks don't happen in awkward spots */
+  h1, h2, h3, h4, h5, h6, img, table, figure, blockquote {
+    page-break-inside: avoid;
   }
-}
+  
+  h1, h2, h3, h4, section {
+    page-break-after: avoid;
+  }
+  
+  /* Ensure links don't break across lines */
+  a {
+    white-space: nowrap;
+  }
+  
+  /* Special handling for legal documents */
+  .legal-document {
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+  
+  .legal-document h2 {
+    font-size: 14pt;
+  }
+  
+  .legal-document h3 {
+    font-size: 12pt;
+  }
