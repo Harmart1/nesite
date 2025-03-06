@@ -1,35 +1,42 @@
 /* Print Stylesheet for NorthernEdge Legal Solutions
  *
- * This stylesheet activates when a user tries to print a page from the website.
- * It hides unnecessary elements and optimizes the layout for printing.
+ * Enhanced print stylesheet for better paper output
+ * Last updated: 2025-03-06
  */
 
 @media print {
-  /* Reset all backgrounds and text to black and white for better printing */
+  /* Reset all backgrounds and text to optimize for printing */
   * {
     background: transparent !important;
-    color: #000 !important; /* Black text */
+    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
     filter: none !important;
     -ms-filter: none !important;
+    background-image: none !important;
   }
   
   /* Set basic page layout */
   @page {
     margin: 2cm;
+    size: portrait;
   }
   
-  /* Ensure text is sharp */
+  /* Ensure text is sharp and readable */
   body {
     font: 12pt Georgia, "Times New Roman", Times, serif;
     line-height: 1.4;
+    color: #000 !important;
+    background: #fff !important;
   }
   
   /* Format headings */
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
     page-break-inside: avoid;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #000 !important;
+    margin-top: 1cm;
   }
   
   h1 {
@@ -47,10 +54,15 @@
   /* Format paragraphs, lists, and images */
   p, ul, ol, dl, blockquote, img {
     page-break-inside: avoid;
+    margin-bottom: 0.75cm;
   }
   
+  /* Optimize images */
   img {
     max-width: 100% !important;
+    display: block;
+    margin: 0.5cm auto;
+    filter: grayscale(100%); /* Save color ink */
   }
   
   /* Prevent orphans and widows */
@@ -59,17 +71,39 @@
     widows: 3;
   }
   
-  /* Show link URLs */
+  /* Optimize links for print */
+  a {
+    text-decoration: underline;
+  }
+  
+  /* Show URL after links */
   a[href]:after {
     content: " (" attr(href) ")";
     font-size: 90%;
     color: #333 !important;
+    word-wrap: break-word;
   }
   
   /* Don't show URLs for internal links or javascript */
   a[href^="#"]:after,
-  a[href^="javascript:"]:after {
+  a[href^="javascript:"]:after,
+  a[href^="tel:"]:after,
+  a[href^="mailto:"]:after {
     content: "";
+  }
+  
+  /* Enhance URLs for people to actually type them */
+  article a[href^="http"]:after, 
+  article a[href^="https"]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    display: inline-block;
+    word-break: break-all;
+  }
+  
+  /* Abbreviations get their title printed */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
   }
   
   /* Elements to hide when printing */
@@ -83,8 +117,33 @@
   .approach-grid,
   .cookie-consent-banner,
   .back-to-top,
-  form {
+  form,
+  .subscribe-section,
+  .pagination,
+  nav,
+  .blog-sidebar,
+  .related-posts,
+  .author-bio,
+  .blog-navigation,
+  video,
+  audio,
+  iframe,
+  .no-print {
     display: none !important;
+  }
+  
+  /* Ensure tables display properly */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1cm 0;
+    page-break-inside: avoid;
+  }
+  
+  th, td {
+    border: 1pt solid #999;
+    padding: 0.25cm;
+    text-align: left;
   }
   
   /* Improve layout for printing */
@@ -94,7 +153,7 @@
     padding: 0;
   }
   
-  .container {
+  .container, .content-container {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -102,26 +161,55 @@
   }
   
   /* Ensure content grids display properly */
-  .content-grid {
+  .content-grid, .row, .grid, .blog-grid {
     display: block;
   }
   
-  .content-grid > * {
+  .content-grid > *, 
+  .row > *,
+  .grid > *,
+  .col, 
+  .column {
     width: 100%;
     margin: 1em 0;
     padding: 0;
   }
   
-  /* Reorganize cards for print */
-  .card, .service-item, .info-card {
-    break-inside: avoid;
-    border: 1px solid #ccc;
-    padding: 1em;
-    margin: 1em 0;
+  /* QR code for digital version */
+  .print-footer {
+    text-align: center;
+    margin-top: 2cm;
+    border-top: 1pt solid #ccc;
+    padding-top: 0.5cm;
+    font-size: 9pt;
   }
   
-  /* Add company info at the top of each printed page */
-  body:before {
+  .print-footer:after {
+    content: "Scan to view this document online:";
+    display: block;
+    margin: 0.5cm 0;
+  }
+  
+  /* Company footer on each page */
+  #print-company-info {
+    position: running(footer);
+    font-size: 9pt;
+    text-align: center;
+    color: #666 !important;
+  }
+  
+  @page {
+    @bottom-center {
+      content: element(footer);
+    }
+    
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+    }
+  }
+  
+  /* Add company info at the top of first printed page */
+  body::before {
     content: "NorthernEdge Legal Solutions | 67 Hugill St., Sault Ste. Marie, Ontario | (705) 123-4567";
     display: block;
     text-align: center;
@@ -131,66 +219,24 @@
     padding-bottom: 5mm;
   }
   
-  /* Add page numbers */
-  @page {
-    @bottom-right {
-      content: counter(page);
-    }
+  /* Ensure page breaks don't happen in awkward spots */
+  h1, h2, h3, h4, h5, h6, img, table, figure, blockquote {
+    page-break-inside: avoid;
   }
   
-  /* Special handling for resource documents */
-  .resource-document {
-    font-size: 11pt;
-    line-height: 1.5;
+  h1, h2, h3, h4, section {
+    page-break-after: avoid;
   }
   
-  .resource-document blockquote {
-    border-left: 2pt solid #ccc;
-    padding-left: 1cm;
-    margin-left: 0;
+  /* Ensure links don't break across lines */
+  a {
+    white-space: nowrap;
   }
   
-  .resource-document h2 {
-    border-bottom: 0.5pt solid #ccc;
-  }
-  
-  .resource-document table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 1em 0;
-  }
-  
-  .resource-document table th,
-  .resource-document table td {
-    border: 0.5pt solid #ccc;
-    padding: 0.5em;
-    text-align: left;
-  }
-  
-  /* Blog post specific print styles */
-  .blog-post {
-    max-width: none;
-  }
-  
-  .blog-post .blog-meta {
-    color: #666 !important;
-    font-style: italic;
-  }
-  
-  .blog-post .blog-featured-image {
-    max-height: 250pt;
-    margin: 1em auto;
-    display: block;
-  }
-  
-  /* Legal document specific styles */
+  /* Special handling for legal documents */
   .legal-document {
     font-size: 10pt;
     line-height: 1.4;
-  }
-  
-  .legal-document section {
-    margin-bottom: 1em;
   }
   
   .legal-document h2 {
@@ -199,5 +245,21 @@
   
   .legal-document h3 {
     font-size: 12pt;
+  }
+  
+  /* Make sure forms print with visible borders */
+  .form-field {
+    border: 1pt solid #999;
+    padding: 0.3cm;
+    margin-bottom: 0.5cm;
+  }
+  
+  /* Force page breaks where needed */
+  .page-break-before {
+    page-break-before: always;
+  }
+  
+  .page-break-after {
+    page-break-after: always;
   }
 }
