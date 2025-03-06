@@ -54,6 +54,11 @@
             filter: drop-shadow(0 10px 15px rgba(26, 60, 90, 0.15));
         }
         
+        #splash-container .fallback-logo {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
         /* Hide main content initially */
         body.splash-active main, 
         body.splash-active header,
@@ -112,10 +117,10 @@
     <!-- Splash Screen with Video -->
     <div id="splash-container">
         <a href="#skip-to-content" class="skip-splash" id="skip-splash" aria-label="Skip Intro">Skip Intro</a>
-        <video id="logo-animation" autoplay muted playsinline>
+        <video id="logo-animation" autoplay muted playsinline preload="auto">
             <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
-            <!-- Replace with actual filename in the videos directory -->
-            Your browser does not support the video tag.
+            <!-- Fallback for when video cannot be played -->
+            <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions" class="fallback-logo">
         </video>
         <!-- Added progress indicator -->
         <div class="video-progress">
@@ -136,7 +141,7 @@
     <header class="site-header" id="skip-to-content">
         <div class="container">
             <div class="logo-container">
-                <a href="index.html"><img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions Logo"></a>
+                <a href="index.html"><img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo" onerror="this.onerror=null; this.src='videos/NorthernEdge Legal Logo.jpg'"></a>
             </div>
             <nav class="main-nav">
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
@@ -196,7 +201,7 @@
                 <div class="services-grid staggered-fade-in">
                     <a href="civil-litigation.html" class="practice-card float-on-hover">
                         <div class="practice-icon">
-                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon">
+                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
                         </div>
                         <h3>Civil Litigation</h3>
                         <p>Strategic representation in disputes, lawsuits, and negotiations to protect your rights and achieve favorable outcomes.</p>
@@ -207,7 +212,7 @@
                     
                     <a href="business-law.html" class="practice-card float-on-hover">
                         <div class="practice-icon">
-                            <img src="images/icons/business-icon.svg" alt="Business Law Icon">
+                            <img src="images/icons/business-icon.svg" alt="Business Law Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
                         </div>
                         <h3>Business Law</h3>
                         <p>Comprehensive legal support for businesses at every stage, from formation to growth, transactions, and compliance.</p>
@@ -218,7 +223,7 @@
                     
                     <a href="technology-law.html" class="practice-card float-on-hover">
                         <div class="practice-icon">
-                            <img src="images/icons/technology-icon.svg" alt="Technology Law Icon">
+                            <img src="images/icons/technology-icon.svg" alt="Technology Law Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
                         </div>
                         <h3>Technology Law</h3>
                         <p>Expert legal services for technology companies, including intellectual property, data protection, and regulatory compliance.</p>
@@ -243,7 +248,7 @@
                 <div class="expertise-grid">
                     <div class="expertise-card">
                         <div class="icon-container">
-                            <img src="images/icons/technology-icon.svg" alt="Technology Icon">
+                            <img src="images/icons/technology-icon.svg" alt="Technology Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
                         </div>
                         <h3>Technology & Software</h3>
                         <p>Navigating intellectual property, data protection, and regulatory compliance for tech companies.</p>
@@ -251,7 +256,7 @@
                     
                     <div class="expertise-card">
                         <div class="icon-container">
-                            <img src="images/icons/business-icon.svg" alt="Business Icon">
+                            <img src="images/icons/business-icon.svg" alt="Business Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
                         </div>
                         <h3>Business & Startups</h3>
                         <p>Guiding businesses from formation through growth with strategic legal counsel.</p>
@@ -259,7 +264,7 @@
                     
                     <div class="expertise-card">
                         <div class="icon-container">
-                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon">
+                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
                         </div>
                         <h3>Civil Litigation</h3>
                         <p>Resolving disputes with strategic representation focused on achieving optimal outcomes.</p>
@@ -278,7 +283,50 @@
     </main>
 
     <footer class="site-footer">
-        <!-- Footer content -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Practice Areas</h3>
+                        <ul>
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="blog/index.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <address>
+                            67 Hugill St.<br>
+                            Sault Ste. Marie, Ontario<br>
+                            P6A 4E6
+                        </address>
+                        <p>Phone: <a href="tel:+17051234567">(705) 123-4567</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Cookie Consent JavaScript -->
@@ -294,6 +342,20 @@
             const logoAnimation = document.getElementById('logo-animation');
             const skipSplash = document.getElementById('skip-splash');
             const progressBar = document.getElementById('videoProgress');
+            
+            // Function to check if video exists and is accessible
+            function checkVideoExists() {
+                const videoSrc = logoAnimation.querySelector('source').src;
+                const http = new XMLHttpRequest();
+                http.open('HEAD', videoSrc, false);
+                try {
+                    http.send();
+                    return http.status !== 404;
+                } catch(e) {
+                    console.error("Error checking video file:", e);
+                    return false;
+                }
+            }
             
             // Function to end splash and show main content
             function endSplash() {
@@ -316,7 +378,18 @@
             });
             
             // If video fails to load, show the site immediately
-            logoAnimation.addEventListener('error', endSplash);
+            logoAnimation.addEventListener('error', function() {
+                console.warn("Video error detected, showing fallback logo or ending splash");
+                // Check if we have a fallback logo
+                const fallbackLogo = document.querySelector('.fallback-logo');
+                if (fallbackLogo) {
+                    fallbackLogo.style.display = 'block';
+                    // Wait 3 seconds then end splash
+                    setTimeout(endSplash, 3000);
+                } else {
+                    endSplash();
+                }
+            });
             
             // Update progress bar
             logoAnimation.addEventListener('timeupdate', function() {
@@ -343,6 +416,18 @@
                     console.warn('Video duration exceeds recommended 10 seconds. Consider shortening for better user experience.');
                 }
             });
+            
+            // If video doesn't exist, show fallback or end splash
+            if (!checkVideoExists()) {
+                console.warn("Video file not found, showing fallback");
+                const fallbackLogo = document.createElement('img');
+                fallbackLogo.src = 'videos/NorthernEdge%20Legal%20Logo.jpg';
+                fallbackLogo.alt = 'NorthernEdge Legal Solutions';
+                fallbackLogo.className = 'fallback-logo';
+                logoAnimation.parentNode.replaceChild(fallbackLogo, logoAnimation);
+                // Wait 3 seconds then end splash
+                setTimeout(endSplash, 3000);
+            }
         });
     </script>
     <script>
