@@ -1,0 +1,136 @@
+/* NorthernEdge Legal Solutions - Performance Optimizations
+ *
+ * CSS optimizations to improve rendering performance and reduce repaints
+ * Last updated: 2025-03-06
+ */
+
+/* GPU Acceleration - Use for elements that animate frequently */
+.will-change-transform,
+.back-to-top,
+.navbar-sticky,
+.dropdown-menu,
+.modal,
+.carousel-slide {
+  will-change: transform;
+}
+
+.will-change-opacity,
+.fade-element,
+.tooltip,
+.hover-fade {
+  will-change: opacity;
+}
+
+/* Use transform for animations instead of properties that trigger reflows */
+.optimized-animation {
+  transition: transform var(--transition-normal) !important; 
+}
+
+/* CSS containment for complex components - improves layout performance */
+.blog-card,
+.service-card,
+.team-member,
+.testimonial-card,
+.feature-box {
+  contain: content;
+}
+
+/* Performance optimization for fixed/sticky headers */
+.site-header.sticky {
+  contain: layout style;
+}
+
+/* Reduce animation durations on reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize box-shadow animations */
+.optimize-shadows {
+  transition: transform var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.optimize-shadows:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md); /* Apply different shadow on hover without animating it */
+}
+
+/* Optimize image loading */
+.lazy-image {
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* Force GPU rendering for smoother animations */
+.force-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Content visibility for off-screen content */
+.content-below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px; /* Approximate dimensions */
+}
+
+/* Reduce paint operations for page transitions */
+.page-transition {
+  transition: opacity var(--transition-normal);
+  opacity: 0;
+}
+
+.page-transition.visible {
+  opacity: 1;
+}
+
+/* Avoid layout shifts during image loading */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio - adjust as needed */
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text rendering optimization */
+.optimize-text {
+  text-rendering: optimizeSpeed;
+}
+
+.important-text {
+  text-rendering: optimizeLegibility;
+}
+
+/* Optimize transitions */
+.smooth-transform {
+  transition-property: transform;
+}
+
+.smooth-opacity {
+  transition-property: opacity;
+}
+
+.smooth-colors {
+  transition-property: color, background-color, border-color;
+}
