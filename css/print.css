@@ -231,3 +231,128 @@
   .legal-document h3 {
     font-size: 12pt;
   }
+/**
+ * Legacy Compatibility stylesheet
+ * This file redirects all legacy references to our new modular CSS system
+ * Last updated: 2025-03-06
+ */
+
+/* Import main CSS file which imports all other required styles */
+@import 'main.css';
+
+/* Preserve basic legacy selectors for backward compatibility */
+/* Base Styles */
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Legacy Header - map to new styling */
+header {
+    background: var(--primary-dark);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+}
+
+/* Legacy Hero Section - map to new styling */
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    border-radius: var(--radius-md);
+}
+
+/* Legacy Attorney Grid - map to new component styles */
+.attorney-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.attorney-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Legacy link styles */
+.learn-more,
+.read-more {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Legacy Footer - map to new styling */
+footer {
+    background: var(--primary-dark);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Legacy Blog Styling - map to new blog styles */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.post-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar {
+    padding: 2rem;
+    background: var(--neutral-lightest);
+    border-radius: var(--radius-md);
+}
+
+/* Legacy Link Hover - ensure consistent behavior */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Legacy Button Styling - map to new button styles */
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color var(--transition-fast);
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Legacy Form Element Styling - map to new form styles */
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid var(--neutral-light);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+}
