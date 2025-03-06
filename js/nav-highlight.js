@@ -34,11 +34,21 @@ function highlightCurrentPageInNav() {
     
     // Check each link to see if it matches current path
     navLinks.forEach(link => {
-        // Clean the href attribute similarly for fair comparison
-        const linkPath = link.getAttribute('href').replace(/\.[^/.]+$/, "").replace(/\/$/, "");
+        const href = link.getAttribute('href');
+        if (!href) return;
         
-        // If this is the current page, add active class
-        if (cleanPath.endsWith(linkPath) && linkPath !== "") {
+        // Clean the href attribute similarly for fair comparison
+        const linkPath = href.replace(/\.[^/.]+$/, "").replace(/\/$/, "");
+        
+        // Improved matching logic to handle relative and absolute paths
+        if (
+            // Exact match
+            cleanPath === linkPath || 
+            // Current path ends with link path (for subdirectories)
+            (linkPath !== "" && cleanPath.endsWith(linkPath)) ||
+            // Match the filename if it's the index page
+            (linkPath.endsWith('index') && cleanPath.endsWith(linkPath.replace('/index', '')))
+        ) {
             // Remove active class from all links
             navLinks.forEach(l => l.classList.remove('active'));
             
@@ -48,7 +58,7 @@ function highlightCurrentPageInNav() {
             // If in dropdown, activate parent
             const parentDropdown = link.closest('.dropdown');
             if (parentDropdown) {
-                const parentLink = parentDropdown.querySelector('a');
+                const parentLink = parentDropdown.querySelector(':scope > a');
                 if (parentLink) {
                     parentLink.classList.add('active');
                 }
@@ -66,10 +76,19 @@ function initSectionHighlighting() {
     if (jumpNavLinks.length === 0) return;
     
     // Get all sections that can be navigated to
-    const sections = Array.from(jumpNavLinks).map(link => {
-        const targetId = link.getAttribute('href').substring(1); // Remove # from href
-        return document.getElementById(targetId);
-    }).filter(Boolean); // Filter out any null values
+    const sections = [];
+    jumpNavLinks.forEach(link => {
+        const targetId = link.getAttribute('href');
+        if (!targetId || !targetId.startsWith('#')) return;
+        
+        const sectionId = targetId.substring(1); // Remove # from href
+        const section = document.getElementById(sectionId);
+        if (section) {
+            sections.push(section);
+        }
+    });
+    
+    if (sections.length === 0) return;
     
     // Function to determine which section is currently in view
     function getCurrentSection() {
@@ -77,7 +96,7 @@ function initSectionHighlighting() {
         const offset = 100;
         
         // Default to first section
-        let current = sections[0]?.id;
+        let current = sections[0]?.id || '';
         
         // Check each section's position
         for (const section of sections) {
@@ -128,8 +147,8 @@ function initSectionHighlighting() {
     // Initial update
     updateActiveSection();
     
-    // Update on scroll
-    window.addEventListener('scroll', updateActiveSection);
+    // Update on scroll (use passive for better performance)
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
 }
 
 /**
@@ -143,7 +162,17 @@ function initPracticeAreaNavigation() {
     // Initialize progress bar if present
     const progressBar = document.getElementById('progressBar');
     if (progressBar) {
-        window.addEventListener('scroll', updateProgressBar);
+        const updateProgressBar = () => {
+            const windowHeight = window.innerHeight;
+            const fullHeight = document.body.offsetHeight;
+            const scrolled = window.pageYOffset;
+            
+            // Calculate percentage scrolled
+            const scrollPercent = (scrolled / (fullHeight - windowHeight)) * 100;
+            progressBar.style.width = Math.min(100, Math.max(0, scrollPercent)) + '%';
+        };
+        
+        window.addEventListener('scroll', updateProgressBar, { passive: true });
         updateProgressBar(); // Initial update
     }
     
@@ -169,17 +198,4 @@ function initPracticeAreaNavigation() {
             }
         });
     });
-    
-    // Update progress bar function
-    function updateProgressBar() {
-        if (!progressBar) return;
-        
-        const windowHeight = window.innerHeight;
-        const fullHeight = document.body.offsetHeight;
-        const scrolled = window.pageYOffset;
-        
-        // Calculate percentage scrolled
-        const scrollPercent = (scrolled / (fullHeight - windowHeight)) * 100;
-        progressBar.style.width = scrollPercent + '%';
-    }
 }
