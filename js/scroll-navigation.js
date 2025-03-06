@@ -18,17 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Progress bar functionality - updates as user scrolls
     if (progressBar) {
-        window.addEventListener('scroll', updateProgressBar);
+        const updateProgressBar = () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (height <= 0) return; // Prevent division by zero
+            
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = Math.min(100, Math.max(0, scrolled)) + "%";
+        };
+        
+        window.addEventListener('scroll', updateProgressBar, { passive: true });
         
         // Initial call to set progress bar on page load
         updateProgressBar();
-        
-        function updateProgressBar() {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            progressBar.style.width = scrolled + "%";
-        }
     }
     
     // Continue reading buttons - smooth scroll to next section
@@ -49,7 +51,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Jump navigation active state management
     if (jumpLinks.length > 0 && sections.length > 0) {
         // Update active link on scroll
-        window.addEventListener('scroll', updateActiveLink);
+        const updateActiveLink = () => {
+            const currentSection = getCurrentSection();
+            
+            if (currentSection) {
+                jumpLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Also update pagination dots if they exist
+                if (paginationDots.length > 0) {
+                    updatePaginationDots(currentSection);
+                }
+            }
+        };
+        
+        window.addEventListener('scroll', updateActiveLink, { passive: true });
         
         // Initial call to set active link on page load
         updateActiveLink();
@@ -59,14 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Update active state visually
-                jumpLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Smooth scroll to target section
                 const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                if (!targetId || targetId === '#') return;
                 
+                const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     smoothScrollTo(targetElement);
                 }
@@ -74,113 +90,61 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Side pagination dots (if present)
+    // Pagination dots functionality
     if (paginationDots.length > 0) {
-        // Update active dot on scroll
-        window.addEventListener('scroll', updateActiveDot);
-        
-        // Initial call to set active dot on page load
-        updateActiveDot();
-        
-        // Handle click events for pagination dots
         paginationDots.forEach(dot => {
-            dot.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const sectionId = this.getAttribute('data-section');
-                
-                let targetElement;
+            dot.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
                 if (targetId) {
-                    targetElement = document.querySelector(targetId);
-                } else if (sectionId) {
-                    targetElement = document.querySelector('#' + sectionId);
-                }
-                
-                if (targetElement) {
-                    smoothScrollTo(targetElement);
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        smoothScrollTo(targetElement);
+                    }
                 }
             });
         });
+    }
+    
+    // Helper function to get the current visible section
+    function getCurrentSection() {
+        const scrollPosition = window.scrollY + 100; // Add offset for header
+        
+        // Find the section that's currently in view
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
+            
+            // If we've scrolled at least to the section
+            if (scrollPosition >= section.offsetTop) {
+                return section.id;
+            }
+        }
+        
+        // Default to first section if nothing else matches
+        return sections[0]?.id;
     }
     
     // Helper function to smoothly scroll to an element
     function smoothScrollTo(element) {
-        // Get header height for offset if fixed header exists
+        if (!element) return;
+        
+        // Get header height for offset
         const header = document.querySelector('.site-header');
         const headerOffset = header ? header.offsetHeight : 0;
         
-        // Calculate position with offset
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 20;
-        
-        // Smooth scroll
+        const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
         window.scrollTo({
-            top: offsetPosition,
+            top: targetPosition - headerOffset - 20,
             behavior: 'smooth'
         });
     }
     
-    // Helper function to check which section is currently in view
-    function getCurrentSection() {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150;
-            const sectionHeight = section.clientHeight;
-            
-            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
+    // Helper function to update pagination dots
+    function updatePaginationDots(currentSectionId) {
+        paginationDots.forEach(dot => {
+            dot.classList.remove('active');
+            if (dot.getAttribute('data-target') === '#' + currentSectionId) {
+                dot.classList.add('active');
             }
-        });
-        
-        return current;
-    }
-    
-    // Update active link in the jump navigation
-    function updateActiveLink() {
-        const current = getCurrentSection();
-        
-        if (current) {
-            jumpLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    }
-    
-    // Update active dot in the side pagination
-    function updateActiveDot() {
-        const current = getCurrentSection();
-        
-        if (current) {
-            paginationDots.forEach(dot => {
-                dot.classList.remove('active');
-                if (dot.getAttribute('href') === '#' + current || dot.getAttribute('data-section') === current) {
-                    dot.classList.add('active');
-                }
-            });
-        }
-    }
-    
-    // Handle Back-to-top button
-    const backToTop = document.querySelector('.back-to-top');
-    if (backToTop) {
-        // Show button when scrolled down
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
-        
-        // Scroll to top when clicked
-        backToTop.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 });
