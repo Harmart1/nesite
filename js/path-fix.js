@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!href) return;
       
       if (href.startsWith('/')) {
-        const newPath = href.substring(1); // Remove leading slash
+        const newPath = basePath + href.substring(1); // Apply basePath
         console.log(`Fixing CSS path: ${href} → ${newPath}`);
         link.setAttribute('href', newPath);
       }
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!src) return;
       
       if (src.startsWith('/')) {
-        const newPath = src.substring(1); // Remove leading slash
+        const newPath = basePath + src.substring(1); // Apply basePath
         console.log(`Fixing script path: ${src} → ${newPath}`);
         script.setAttribute('src', newPath);
       }
@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!src) return;
       
       if (src.startsWith('/')) {
-        const newPath = src.substring(1); // Remove leading slash
+        const newPath = basePath + src.substring(1); // Apply basePath
         console.log(`Fixing image path: ${src} → ${newPath}`);
         img.setAttribute('src', newPath);
         
         // Add error handler to use placeholder if image not found
         img.addEventListener('error', function() {
           console.warn(`Failed to load image: ${newPath}, using placeholder`);
-          this.src = 'images/placeholder.html';
+          this.src = basePath + 'images/placeholder.jpg'; // Changed to JPG format
         });
       }
     });
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!href) return;
       
       if (href.startsWith('/') && !href.startsWith('//') && !href.includes('://')) {
-        const newPath = href.substring(1); // Remove leading slash
+        const newPath = basePath + href.substring(1); // Apply basePath
         console.log(`Fixing anchor path: ${href} → ${newPath}`);
         a.setAttribute('href', newPath);
       }
