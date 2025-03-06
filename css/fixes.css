@@ -1,39 +1,190 @@
-/**
- * CSS fixes for cross-browser compatibility and validation issues
+/* 
+ * Main Stylesheet for NEsite
+ * Author: Harmart1
+ * Version: 2.0.0
+ * This file imports all modular CSS components
  */
 
-/* Fix for older browsers that don't support CSS variables */
-:root {
-  --primary: #1A365D;
-  --primary-light: #2A4A7F;
-  --primary-dark: #0D2340;
-  --primary-lightest: #E1E9F5;
-  --accent: #D4AF37;
-  --neutral-lightest: #F8F9FA;
-  --neutral-light: #E9ECEF;
-  --neutral-medium: #ADB5BD;
-  --neutral-dark: #495057;
-  --neutral-darkest: #212529;
+/* Import CSS modules */
+@import 'reset.css';
+@import 'variables.css';
+@import 'typography.css';
+@import 'layout.css';
+@import 'components.css';
+@import 'utilities.css';
+@import 'animations.css';
+
+/* Additional custom styles that are specific to the site and don't fit in the modules */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for same-page links */
 }
 
-/* Add fallbacks for browsers without variable support */
-.btn-primary {
-  background-color: #1A365D; /* Fallback */
-  background-color: var(--primary);
-  color: white;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures footer stays at the bottom */
 }
 
-/* Fix potential overflow issues */
-img {
-  max-width: 100%;
-  height: auto;
+main {
+  flex: 1; /* Allows main content to grow and push footer down */
 }
 
-/* Improve form control accessibility */
-input:focus, 
-textarea:focus, 
-select:focus,
-button:focus {
-  outline: 2px solid #1A365D;
+/* Add any site-specific overrides or custom components below */
+
+/* Dark mode detection and automatic switching */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Add any specific dark mode variable overrides here */
+  }
+  
+  img {
+    /* Slightly reduce brightness of images in dark mode for better viewing */
+    filter: brightness(0.9);
+  }
+}
+
+/* Print styles for better document printing */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+  
+  .container, .row, .col, main {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+/**
+ * CSS fixes for cross-browser compatibility and validation issues
+ * Last updated: 2025-03-06
+ */
+
+/* Fix for focus visibility across browsers */
+:focus {
   outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Fix for Firefox form controls */
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+/* Fix for iOS input zooming */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Fix for sticky hover on mobile devices */
+@media (hover: hover) {
+  .hover-effect:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Fix for Safari button styling */
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Fix for Internet Explorer flexbox issues */
+.flex-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* Fix for object-fit in older browsers */
+.object-fit-cover {
+  object-fit: cover;
+}
+.object-fit-polyfill {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Fix for smooth scrolling with anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on header height */
+}
+
+/* Fix for page jumps when modals open */
+.modal-open {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width, 17px); /* Prevents layout shift */
+}
+
+/* Fix for animations causing layout shifts */
+.animated-element {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Fix for responsive embedded content */
+.responsive-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-embed iframe,
+.responsive-embed object,
+.responsive-embed embed,
+.responsive-embed video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fix for Safari border radius overflow */
+.overflow-hidden {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+/* Fix for white-space in older browsers */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Fix for sticky headers in Safari */
+.sticky-header {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+/* Fix for flexbox gap in Safari */
+.flex-gap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-gap > * {
+  margin: 0.5rem;
 }
