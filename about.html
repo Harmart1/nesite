@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/visual-enhancements.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/elegant-navigation.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/breadcrumbs.css">
     <script src="js/main.js" defer></script>
+    <script src="js/back-to-top.js" defer></script>
+    <script src="js/visual-integration.js" defer></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -80,6 +85,15 @@
         </div>
     </header>
 
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li aria-current="page">About</li>
+            </ol>
+        </div>
+    </nav>
+
     <main>
         <!-- Main content remains the same - just updating image references -->
         <section class="page-header fade-in">
@@ -92,6 +106,12 @@
         <!-- Content continues as before -->
 
     </main>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </button>
 
     <footer class="site-footer">
         <div class="container">

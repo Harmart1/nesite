@@ -47,6 +47,10 @@ function initMobileNavigation() {
                 this.classList.toggle('active-dropdown');
                 const dropdownMenu = this.nextElementSibling;
                 dropdownMenu.classList.toggle('active');
+                
+                // Toggle aria-expanded
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
             }
         });
     });
@@ -60,6 +64,34 @@ function initMobileNavigation() {
             menuToggle.classList.remove('active');
             body.classList.remove('menu-open');
             menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+    
+    // Enhance touch targets for mobile menu items
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.style.padding = 'var(--space-3) var(--space-4)';
+    });
+    
+    // Implement keyboard navigation support
+    navMenu.addEventListener('keydown', function(e) {
+        const activeElement = document.activeElement;
+        if (e.key === 'Tab') {
+            if (e.shiftKey) {
+                if (activeElement === navMenu.firstElementChild) {
+                    e.preventDefault();
+                    menuToggle.focus();
+                }
+            } else {
+                if (activeElement === menuToggle) {
+                    e.preventDefault();
+                    navMenu.firstElementChild.focus();
+                }
+            }
+        } else if (e.key === 'Enter') {
+            if (activeElement.classList.contains('dropdown-link')) {
+                activeElement.click();
+            }
         }
     });
 }
