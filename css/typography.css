@@ -272,3 +272,55 @@ article p {
     padding: 0.625rem 1.25rem;
   }
 }
+
+/* Lawyer Profiles */
+.lawyers {
+  padding: 4rem 0;
+  background-color: var(--neutral-lightest);
+}
+
+.lawyer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.lawyer-item {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.lawyer-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.lawyer-item h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.lawyer-item .title {
+  font-size: var(--fs-md);
+  color: var(--neutral-medium);
+  margin-bottom: 1rem;
+}
+
+.lawyer-item p {
+  margin-bottom: 1.5rem;
+}
+
+.lawyer-item .learn-more {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.lawyer-item .learn-more:hover {
+  color: var(--accent);
+}
