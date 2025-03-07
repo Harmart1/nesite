@@ -204,6 +204,11 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Enhanced touch targets for mobile menu items */
+.nav-link {
+  padding: var(--space-3) var(--space-4);
+}
+
 /* Secondary Navigation (e.g., breadcrumbs) */
 .breadcrumbs {
   background-color: var(--off-white);
@@ -326,7 +331,7 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
 }
 
 .footer-nav-link:hover {
-  color: var(--gold);
+  color: var (--gold);
 }
 
 /* Back to Top Button */
