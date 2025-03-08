@@ -324,3 +324,74 @@ article p {
 .lawyer-item .learn-more:hover {
   color: var(--accent);
 }
+
+/* Enhanced typography for visual appeal and professional polish */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: var(--lh-relaxed);
+}
+
+blockquote {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+}
+
+.btn {
+  font-size: var(--fs-base);
+  padding: 0.875rem 1.75rem;
+}
+
+.btn-primary, .btn-secondary {
+  letter-spacing: 0.05em;
+}
+
+/* Adjust font sizes for better readability on mobile devices */
+@media (max-width: 600px) {
+  :root {
+    --fs-base: 0.875rem;
+    --fs-lg: 1rem;
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 1.75rem;
+  }
+
+  body {
+    font-size: var(--fs-base);
+  }
+
+  h1 {
+    font-size: var(--fs-3xl);
+  }
+
+  h2 {
+    font-size: var(--fs-2xl);
+  }
+
+  h3 {
+    font-size: var(--fs-xl);
+  }
+
+  h4 {
+    font-size: var(--fs-lg);
+  }
+
+  h5 {
+    font-size: var(--fs-md);
+  }
+
+  h6 {
+    font-size: var(--fs-base);
+  }
+
+  p.lead {
+    font-size: var(--fs-lg);
+  }
+
+  .btn {
+    font-size: var(--fs-sm);
+    padding: 0.75rem 1.5rem;
+  }
+}
