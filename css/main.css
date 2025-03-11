@@ -2,15 +2,17 @@
  *
  * This is the primary CSS file that imports all other style modules
  * and contains core styling for the website.
- * Last updated: 2025-03-06
+ * Last updated: 2025-03-11
  */
 
-/* Import font files */
+/* Import font files and CSS modules */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
-
-/* Import CSS modules in the correct order */
-@import 'variables.css';    /* First: CSS variables and custom properties */
-@import 'fixes.css';        /* Second: Cross-browser compatibility fixes */
+@import 'variables.css';
+@import 'fixes.css';
+@import 'blog.css';
+@import 'forms.css';
+@import 'footer.css';
+@import 'print.css';
 
 /* Core styles */
 html {
@@ -437,12 +439,6 @@ p {
     padding: 3rem 0;
   }
 }
-
-/* Import remaining module styles */
-@import 'blog.css';        /* Blog styling */
-@import 'forms.css';       /* Forms styling */
-@import 'footer.css';      /* Footer styling */
-@import 'print.css';       /* Print styles */
 
 /* Styles for lawyer profiles */
 .lawyers {
