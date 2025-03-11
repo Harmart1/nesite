@@ -18,17 +18,17 @@
  * ----------------------------- */
 :root {
   /* Colors */
-  --primary-color: #3498db;
-  --secondary-color: #2c3e50;
-  --text-color: #333;
+  --primary-color: #1a3c5a; /* Updated to a more modern blue */
+  --secondary-color: #0d2c54; /* Updated to a deeper navy */
+  --text-color: #2c3e50; /* Updated to a darker shade */
   --light-text: #f8f9fa;
   --light-bg: #f8f9fa;
   --dark-bg: #343a40;
   --border-color: #e0e0e0;
   
   /* Typography */
-  --font-main: 'Arial', sans-serif;
-  --font-heading: 'Georgia', serif;
+  --font-main: 'Open Sans', sans-serif; /* Updated to a more modern font */
+  --font-heading: 'Libre Baskerville', serif; /* Updated to a more modern font */
   
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -443,17 +443,17 @@ select:focus {
  * ----------------------------- */
 :root {
   /* Colors */
-  --primary-color: #3498db;
-  --secondary-color: #2c3e50;
-  --text-color: #333;
+  --primary-color: #1a3c5a; /* Updated to a more modern blue */
+  --secondary-color: #0d2c54; /* Updated to a deeper navy */
+  --text-color: #2c3e50; /* Updated to a darker shade */
   --light-text: #f8f9fa;
   --light-bg: #f8f9fa;
   --dark-bg: #343a40;
   --border-color: #e0e0e0;
   
   /* Typography */
-  --font-main: 'Arial', sans-serif;
-  --font-heading: 'Georgia', serif;
+  --font-main: 'Open Sans', sans-serif; /* Updated to a more modern font */
+  --font-heading: 'Libre Baskerville', serif; /* Updated to a more modern font */
   
   /* Spacing */
   --spacing-xs: 0.25rem;
