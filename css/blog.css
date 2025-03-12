@@ -406,11 +406,6 @@
 .pagination-button:hover:not(.active) {
   background-color: var(--primary-lightest);
   border-color: var(--primary-light);
-  color: var(--/* Continuing from where we left off */
-.pagination-links a:hover,
-.pagination-button:hover:not(.active) {
-  background-color: var(--primary-lightest);
-  border-color: var(--primary-light);
   color: var(--primary);
 }
 
