@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Add window resize handler for responsive elements
   window.addEventListener('resize', handleWindowResize);
+
+  // Add dynamic icon size adjustment
+  adjustIconSizes();
+  window.addEventListener('resize', adjustIconSizes);
 });
 
 /**
@@ -371,5 +375,17 @@ function initializeContactForm() {
         errorMsg.remove();
       }
     });
+  });
+}
+
+/**
+ * Adjust icon sizes dynamically based on container size
+ */
+function adjustIconSizes() {
+  const icons = document.querySelectorAll('.icon');
+  
+  icons.forEach(icon => {
+    const containerWidth = icon.parentElement.offsetWidth;
+    icon.style.width = `${containerWidth * 0.5}px`; // Adjust the multiplier as needed
   });
 }
