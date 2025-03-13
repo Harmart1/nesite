@@ -6,7 +6,7 @@
  */
 
 /* Import font files and CSS modules */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700&display=swap');
 @import 'variables.css';
 @import 'fixes.css';
 @import 'blog.css';
@@ -124,36 +124,36 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--primary);
-  border-color: var(--primary);
+  background-color: var(--navy);
+  border-color: var(--navy);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background-color: var(--navy-dark);
+  border-color: var(--navy-dark);
 }
 
 .btn-secondary {
   background-color: transparent;
-  border-color: var(--primary);
-  color: var(--primary);
+  border-color: var(--navy);
+  color: var(--navy);
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary);
+  background-color: var(--navy);
   color: white;
 }
 
 .btn-accent {
-  background-color: var(--accent);
-  border-color: var(--accent);
+  background-color: var(--gold);
+  border-color: var(--gold);
   color: white;
 }
 
 .btn-accent:hover {
-  background-color: var(--accent-dark);
-  border-color: var(--accent-dark);
+  background-color: var(--gold-dark);
+  border-color: var(--gold-dark);
 }
 
 .btn-lg {
@@ -462,7 +462,7 @@ p {
 
 .lawyer-item:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var (--shadow-md);
 }
 
 .lawyer-item h3 {
