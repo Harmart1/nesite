@@ -14,7 +14,7 @@
   --primary-lightest: #E1E9F5; /* Very light blue: subtle backgrounds */
   
   /* Secondary/Accent Colors */
-  --accent: #FF5733;           /* Updated to new color */
+  --accent: #D4AF37;           /* Updated to new color */
   --accent-dark: #c67b23;      /* Darker gold: tradition, reliability */
   --accent-light: #f5b765;     /* Light gold: warmth, optimism */
   
@@ -47,7 +47,7 @@
   --primary-rgb: 26, 60, 90;
   --primary-light-rgb: 58, 107, 153;
   --primary-dark-rgb: 13, 44, 84;
-  --accent-rgb: 255, 87, 51;   /* Updated to new color */
+  --accent-rgb: 212, 175, 55;   /* Updated to new color */
   --neutral-dark-rgb: 74, 79, 84;
   
   /* Text colors */
