@@ -222,3 +222,22 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Responsive logo scaling */
+@media (max-width: 768px) {
+  .logo-container {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-container {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .logo-container {
+    max-width: 250px;
+  }
+}
