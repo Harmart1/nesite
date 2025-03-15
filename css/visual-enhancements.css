@@ -10,14 +10,14 @@
 /* ===== Color Theory Implementation ===== */
 :root {
   /* Primary palette - based on color psychology for legal profession */
-  --primary-dark: #0d2c54;     /* Deep navy blue: authority, trustworthiness */
-  --primary: #1a3c5a;          /* Rich blue: stability, confidence */
-  --primary-light: #3a6b99;    /* Lighter blue: approachability */
+  --primary-dark: #000000;     /* Black */
+  --primary: #4a4f54;          /* Grey/blue */
+  --primary-light: #8a9199;    /* Lighter grey/blue */
   
   /* Secondary palette - complementary to primary */
-  --accent: #e8963a;           /* Gold/amber: wisdom, prestige */
-  --accent-dark: #c67b23;      /* Darker gold: tradition, reliability */
-  --accent-light: #f5b765;     /* Light gold: warmth, optimism */
+  --accent: #90ee90;           /* Light green */
+  --accent-dark: #32cd32;      /* Darker green */
+  --accent-light: #98fb98;     /* Light green */
   
   /* Neutral palette - for backgrounds and text */
   --neutral-darkest: #2c3033;  /* Near-black: for important text */
@@ -650,7 +650,7 @@ founder-image img {
 /* Legal Link Cards */
 .legal-link-card {
   background-color: white;
-  border-radius: var(--radius-sm);
+  border-radius: var (--radius-sm);
   padding: 1.5rem;
   box-shadow: var(--shadow-sm);
   height: 100%;

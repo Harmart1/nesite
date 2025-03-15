@@ -53,6 +53,8 @@
 
 .footer-social {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: var(--space-3);
 }
 
@@ -65,6 +67,8 @@
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color var(--transition-normal);
+  padding: var(--space-2);
+  margin: var(--space-2);
 }
 
 .social-icon:hover {

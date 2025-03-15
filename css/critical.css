@@ -15,12 +15,12 @@
 /* Critical Variables */
 :root {
   /* Only most essential variables used in above-fold content */
-  --primary-dark: #0d2c54;
-  --primary: #1a3c5a;
+  --primary-dark: #000000;
+  --primary: #4a4f54;
   --neutral-dark: #4a4f54;
   --neutral-light: #e0e5eb;
   --neutral-lightest: #f7f9fc;
-  --accent: #e8963a;
+  --accent: #90ee90;
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --radius-sm: 4px;
   --transition-fast: 0.2s ease;
