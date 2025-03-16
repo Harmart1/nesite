@@ -15,15 +15,15 @@
   --primary-light: #3a6b99;    /* Lighter blue: approachability */
   
   /* Secondary palette - complementary to primary */
-  --accent: #e8963a;           /* Gold/amber: wisdom, prestige */
+  --accent: #D4AF37;           /* Gold/amber: wisdom, prestige */
   --accent-dark: #c67b23;      /* Darker gold: tradition, reliability */
   --accent-light: #f5b765;     /* Light gold: warmth, optimism */
   
   /* Neutral palette - for backgrounds and text */
   --neutral-darkest: #2c3033;  /* Near-black: for important text */
-  --neutral-dark: #4a4f54;     /* Dark gray: for body text */
-  --neutral-medium: #8a9199;   /* Medium gray: for secondary text */
-  --neutral-light: #e0e5eb;    /* Light gray: for dividers, borders */
+  --neutral-dark: #3EB489;     /* Dark gray: for body text */
+  --neutral-medium: #8FC1A9;   /* Medium gray: for secondary text */
+  --neutral-light: #E0F2E9;    /* Light gray: for dividers, borders */
   --neutral-lightest: #f7f9fc; /* Off-white: for backgrounds */
   
   /* Feedback colors */
@@ -153,7 +153,7 @@ small, .text-small {
 /* Float on hover effect */
 .float-on-hover:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var (--shadow-lg);
 }
 
 /* Value Cards */
