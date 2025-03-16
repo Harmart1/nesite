@@ -17,8 +17,8 @@
   /* Only most essential variables used in above-fold content */
   --primary-dark: #0d2c54;
   --primary: #1A365D; /* Updated to #1A365D */
-  --neutral-dark: #4a4f54;
-  --neutral-light: #e0e5eb;
+  --neutral-dark: #3EB489; /* Mint green */
+  --neutral-light: #E0F2E9; /* Mint green */
   --neutral-lightest: #f7f9fc;
   --accent: #D4AF37; /* Updated to gold */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
