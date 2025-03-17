@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "build": "echo \"No build process defined for this repository.\"",
-    "test": "echo \"No test scripts or frameworks are defined in this repository.\""
+    "build": "Npm run build ",
+    "test": "Npm run test",
+    "launch": "Npm run start"
   }
 }
