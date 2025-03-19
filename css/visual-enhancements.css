@@ -21,9 +21,9 @@
   
   /* Neutral palette - for backgrounds and text */
   --neutral-darkest: #2c3033;  /* Near-black: for important text */
-  --neutral-dark: #3EB489;     /* Dark gray: for body text */
-  --neutral-medium: #8FC1A9;   /* Medium gray: for secondary text */
-  --neutral-light: #E0F2E9;    /* Light gray: for dividers, borders */
+  --neutral-dark: #000000;     /* Replaced mint green with black */
+  --neutral-medium: #000000;   /* Replaced mint green with black */
+  --neutral-light: #000000;    /* Replaced mint green with black */
   --neutral-lightest: #f7f9fc; /* Off-white: for backgrounds */
   
   /* Feedback colors */
@@ -270,7 +270,7 @@ small, .text-small {
 
 .industry-card:hover, .tech-industry-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var (--shadow-md);
   background-color: var(--primary);
   color: white;
 }
@@ -591,7 +591,7 @@ founder-image img {
   margin-bottom: 2.5rem;
   background-color: white;
   padding: 1.5rem;
-  border-radius: var(--radius-sm);
+  border-radius: var (--radius-sm);
   box-shadow: var(--shadow-sm);
 }
 

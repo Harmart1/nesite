@@ -23,9 +23,9 @@
   
   --white: #FFFFFF;
   --off-white: #F8F9FA;
-  --light-gray: #000000; /* Replaced mint green with black */
-  --medium-gray: #000000; /* Replaced mint green with black */
-  --dark-gray: #000000; /* Replaced mint green with black */
+  --light-gray: #D3D3D3; /* Updated for consistency */
+  --medium-gray: #A9A9A9; /* Updated for consistency */
+  --dark-gray: #696969; /* Updated for consistency */
   --charcoal: #343A40;
   --black: #212529;
   
@@ -290,7 +290,7 @@ input:focus, textarea:focus, select:focus {
 
 label {
   display: block;
-  margin-bottom: var(--space-2);
+  margin-bottom: var (--space-2);
   font-weight: 600;
   color: var (--navy);
 }
