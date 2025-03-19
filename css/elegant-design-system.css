@@ -204,7 +204,7 @@ a:hover {
 
 .btn-secondary:hover {
   background-color: var(--navy);
-  color: var(--white);
+  color: var (--white);
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
 }
@@ -224,7 +224,7 @@ a:hover {
 .btn-outline {
   background-color: transparent;
   color: var (--navy);
-  border: 2px solid var(--navy);
+  border: 2px solid var (--navy);
 }
 
 .btn-outline:hover {
