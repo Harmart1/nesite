@@ -15,15 +15,15 @@
   --primary-light: #3a6b99;    /* Lighter blue: approachability */
   
   /* Secondary palette - complementary to primary */
-  --accent: #e8963a;           /* Gold/amber: wisdom, prestige */
+  --accent: #D4AF37;           /* Gold/amber: wisdom, prestige */
   --accent-dark: #c67b23;      /* Darker gold: tradition, reliability */
   --accent-light: #f5b765;     /* Light gold: warmth, optimism */
   
   /* Neutral palette - for backgrounds and text */
   --neutral-darkest: #2c3033;  /* Near-black: for important text */
-  --neutral-dark: #4a4f54;     /* Dark gray: for body text */
-  --neutral-medium: #8a9199;   /* Medium gray: for secondary text */
-  --neutral-light: #e0e5eb;    /* Light gray: for dividers, borders */
+  --neutral-dark: #3EB489;     /* Dark gray: for body text */
+  --neutral-medium: #8FC1A9;   /* Medium gray: for secondary text */
+  --neutral-light: #E0F2E9;    /* Light gray: for dividers, borders */
   --neutral-lightest: #f7f9fc; /* Off-white: for backgrounds */
   
   /* Feedback colors */
@@ -153,7 +153,7 @@ small, .text-small {
 /* Float on hover effect */
 .float-on-hover:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var (--shadow-lg);
 }
 
 /* Value Cards */
@@ -698,217 +698,92 @@ founder-image img {
 
 /* Button enhancements */
 .btn {
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
   font-weight: 600;
-  border-radius: 5px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.875rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
   text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Primary button - accent color */
 .btn-primary {
-  background-color: var(--accent);
+  background-color: #1A365D;
+  border-color: #1A365D;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-dark);
+  background-color: #0D2340;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Secondary button - outlined */
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  border-color: #1A365D;
+  color: #1A365D;
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary);
+  background-color: #1A365D;
   color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Button click effect */
 .btn:active {
-  transform: translateY(1px);
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Micro-interactions ===== */
-/* Smooth hover state for links */
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color 0.2s ease;
+/* Icon Styles */
+.icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  fill: #D4AF37;
+  transition: fill 0.3s ease;
+}
+
+.icon:hover {
+  fill: #1A365D;
+}
+
+/* Typography for headings and paragraphs */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #1A365D;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
   position: relative;
 }
 
-a:hover {
-  color: var(--accent);
-}
-
-/* Underline animation for main navigation links */
-.nav-menu a::after {
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   content: '';
   position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
+  bottom: -0.75rem;
   left: 0;
-  background-color: var(--accent);
-  transition: width 0.3s ease;
+  width: 60px;
+  height: 3px;
+  background-color: #D4AF37;
 }
 
-.nav-menu a:hover::after,
-.nav-menu a.active::after {
-  width: 100%;
-}
-
-/* Form element focus states */
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--primary-light);
-  box-shadow: 0 0 0 3px rgba(26, 60, 90, 0.2);
-}
-
-/* ===== White Space & Layout ===== */
-.section {
-  padding: 5rem 0;
-}
-
-.section-sm {
-  padding: 3rem 0;
-}
-
-.section-lg {
-  padding: 8rem 0;
-}
-
-/* Responsive container margins */
-.container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-/* Improve spacing in typography */
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 2.5rem;
+p {
   margin-bottom: 1rem;
+  color: #4A4F54;
 }
 
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-  margin-top: 0;
-}
-
-/* ===== Accessibility Enhancements ===== */
-/* Focus styles for keyboard navigation */
-:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* ===== Specific Components ===== */
-/* Section dividers */
-.section-divider {
-  height: 1px;
-  background-image: linear-gradient(to right, transparent, var(--neutral-light), transparent);
-  margin: 4rem 0;
-  border: none;
-}
-
-/* Quote styling */
-blockquote {
-  border-left: 4px solid var(--accent);
-  padding-left: 1.5rem;
-  margin-left: 0;
-  margin-right: 0;
-  font-style: italic;
-  color: var(--neutral-dark);
-}
-
-/* Lists with custom bullets */
-ul.styled-list {
-  list-style: none;
-  padding-left: 1.5rem;
-}
-
-ul.styled-list li {
-  position: relative;
-  margin-bottom: 0.75rem;
-}
-
-ul.styled-list li:before {
-  content: "•";
-  color: var(--accent);
-  font-weight: bold;
-  position: absolute;
-  left: -1.5rem;
-  width: 1.5rem;
-  text-align: center;
-}
-
-/* Lawyer Profiles */
-.lawyers {
-  padding: 4rem 0;
-  background-color: var(--neutral-lightest);
-}
-
-.lawyer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.lawyer-item {
-  background-color: white;
-  padding: 2rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
-}
-
-.lawyer-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-}
-
-.lawyer-item h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: var(--primary-dark);
-}
-
-.lawyer-item .title {
-  font-size: var(--fs-md);
-  color: var(--neutral-medium);
-  margin-bottom: 1rem;
-}
-
-.lawyer-item p {
-  margin-bottom: 1.5rem;
-}
-
-.lawyer-item .learn-more {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color var(--transition-fast);
-}
-
-.lawyer-item .learn-more:hover {
-  color: var(--accent);
+p.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5;
 }

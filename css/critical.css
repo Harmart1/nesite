@@ -16,11 +16,11 @@
 :root {
   /* Only most essential variables used in above-fold content */
   --primary-dark: #0d2c54;
-  --primary: #1a3c5a;
-  --neutral-dark: #4a4f54;
-  --neutral-light: #e0e5eb;
-  --neutral-lightest: #f7f9fc;
-  --accent: #e8963a;
+  --primary: #1A365D; /* Updated to #1A365D */
+  --neutral-dark: #000000; /* Replaced mint green with black */
+  --neutral-light: #000000; /* Replaced mint green with black */
+  --neutral-lightest: #000000; /* Replaced mint green with black */
+  --accent: #D4AF37; /* Updated to gold */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --radius-sm: 4px;
   --transition-fast: 0.2s ease;
@@ -32,7 +32,7 @@ html, body {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif; /* Updated to Raleway */
   line-height: 1.6;
   color: var(--neutral-dark);
   background-color: #ffffff;
@@ -110,6 +110,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.2;
+  font-family: 'Playfair Display', serif; /* Updated to Playfair Display */
 }
 
 .hero .lead {

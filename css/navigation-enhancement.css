@@ -285,3 +285,21 @@
         content: "−";
     }
 }
+
+/* Icon Styling */
+.nav-menu > li > a > svg,
+.dropdown-menu a > svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: fill 0.2s ease;
+}
+
+.nav-menu > li > a:hover > svg,
+.nav-menu > li > a:focus > svg,
+.nav-menu > li > a.active > svg,
+.dropdown-menu a:hover > svg,
+.dropdown-menu a:focus > svg,
+.dropdown-menu a.active > svg {
+    fill: var(--primary);
+}
