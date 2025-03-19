@@ -287,3 +287,13 @@
     scroll-margin-top: 120px;
   }
 }
+
+/* Custom styles for navigation buttons on resources page */
+.nav-menu a {
+  color: #1A365D; /* Change color to a different color than black */
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #D4AF37; /* Change hover and active color to a different color than black */
+}
