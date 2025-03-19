@@ -11,17 +11,43 @@
   <link rel="stylesheet" href="/css/blog.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="container">
-      <a href="/index.html" class="logo">
-        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" width="150">
-      </a>
-      <nav>
-        <!-- Navigation content -->
+      <div class="logo-container">
+        <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </div>
+      <nav class="main-nav">
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="practice-areas.html">Practice Areas</a>
+            <ul class="dropdown-menu">
+              <li><a href="civil-litigation.html">Civil Litigation</a></li>
+              <li><a href="business-law.html">Business Law</a></li>
+              <li><a href="technology-law.html">Technology Law</a></li>
+              <li><a href="general-practice.html">General Practice</a></li>
+            </ul>
+          </li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="blog/index.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
-      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
     </div>
   </header>
+
+  <nav aria-label="Breadcrumb" class="breadcrumbs">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Blog</li>
+      </ol>
+    </div>
+  </nav>
 
   <main>
     <!-- Main content -->
