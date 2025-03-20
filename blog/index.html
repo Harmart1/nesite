@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/visual-enhancements.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/back-to-top.css">
+    <link rel="stylesheet" href="../css/breadcrumbs.css">
     <script src="../js/main.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
+    <script src="../js/visual-integration.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -36,6 +43,15 @@
             </nav>
         </div>
     </header>
+
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="../index.html">Home</a></li>
+                <li aria-current="page">Blog</li>
+            </ol>
+        </div>
+    </nav>
 
     <main>
         <section class="page-header">
@@ -119,6 +135,12 @@
             </div>
         </div>
     </footer>
+
+    <div class="back-to-top" aria-label="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </div>
 
     <script>
         // Simple blog filtering functionality
