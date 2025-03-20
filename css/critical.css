@@ -17,9 +17,9 @@
   /* Only most essential variables used in above-fold content */
   --primary-dark: #0d2c54;
   --primary: #1A365D; /* Updated to #1A365D */
-  --neutral-dark: #000000; /* Replaced mint green with black */
-  --neutral-light: #000000; /* Replaced mint green with black */
-  --neutral-lightest: #000000; /* Replaced mint green with black */
+  --neutral-dark: #4a4f54;
+  --neutral-light: #e0e5eb;
+  --neutral-lightest: #f7f9fc;
   --accent: #D4AF37; /* Updated to gold */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --radius-sm: 4px;
