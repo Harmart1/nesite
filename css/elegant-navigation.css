@@ -480,13 +480,13 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
 }
 
 .btn-secondary {
-  background-color: transparent;
-  border-color: #1A365D;
-  color: #1A365D;
+  background-color: #D4AF37;
+  border-color: #D4AF37;
+  color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #1A365D;
+  background-color: #BF9B30;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
