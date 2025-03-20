@@ -146,24 +146,24 @@ p.lead {
 }
 
 .btn-primary {
-  background-color: #1A365D;
-  border-color: #1A365D;
+  background-color: #3a6b99; /* Changed to lighter color */
+  border-color: #3a6b99; /* Changed to lighter color */
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #0D2340;
+  background-color: #2c3e50; /* Changed to lighter color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
-  background-color: transparent;
-  border-color: #1A365D;
-  color: #1A365D;
+  background-color: #3a6b99; /* Changed to lighter color */
+  border-color: #3a6b99; /* Changed to lighter color */
+  color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #1A365D;
+  background-color: #2c3e50; /* Changed to lighter color */
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -492,7 +492,7 @@ p.lead {
   color: var (--primary);
   text-decoration: none;
   font-weight: 600;
-  transition: color var(--transition-fast);
+  transition: color var (--transition-fast);
 }
 
 .lawyer-item .learn-more:hover {
@@ -519,24 +519,24 @@ p.lead {
 }
 
 .btn-primary {
-  background-color: #1A365D;
-  border-color: #1A365D;
+  background-color: #3a6b99; /* Changed to lighter color */
+  border-color: #3a6b99; /* Changed to lighter color */
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #0D2340;
+  background-color: #2c3e50; /* Changed to lighter color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
-  background-color: transparent;
-  border-color: #1A365D;
-  color: #1A365D;
+  background-color: #3a6b99; /* Changed to lighter color */
+  border-color: #3a6b99; /* Changed to lighter color */
+  color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #1A365D;
+  background-color: #2c3e50; /* Changed to lighter color */
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
