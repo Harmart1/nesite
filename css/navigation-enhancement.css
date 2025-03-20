@@ -40,8 +40,8 @@
 .nav-menu > li > a:hover,
 .nav-menu > li > a:focus,
 .nav-menu > li > a.active {
-    background-color: var(--primary-lightest);
-    color: var(--primary);
+    background-color: #1A365D;
+    color: #D4AF37;
 }
 
 /* Dropdown Menu */
@@ -104,8 +104,8 @@
 .dropdown-menu a:hover,
 .dropdown-menu a:focus,
 .dropdown-menu a.active {
-    background-color: var(--primary-lightest);
-    color: var(--primary);
+    background-color: #1A365D;
+    color: #D4AF37;
 }
 
 /* Mobile Menu Button */
@@ -186,8 +186,8 @@
 
 .side-navigation a:hover,
 .side-navigation a.active {
-    background-color: var(--primary-lightest);
-    color: var(--primary);
+    background-color: #1A365D;
+    color: #D4AF37;
 }
 
 /* Back to Top Button */
