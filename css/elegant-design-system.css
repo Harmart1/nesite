@@ -273,7 +273,7 @@ a:hover {
 input, textarea, select {
   width: 100%;
   padding: var(--space-3);
-  margin-bottom: var(--space-4);
+  margin-bottom: var (--space-4);
   font-family: 'Raleway', sans-serif;
   font-size: var(--text-base);
   border: 2px solid var(--light-gray);

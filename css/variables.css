@@ -9,7 +9,7 @@
 :root {
   /* Primary palette - based on color psychology for legal profession */
   --primary-dark: #0d2c54;     /* Deep navy blue: authority, trustworthiness */
-  --primary: #1a3c5a;          /* Rich blue: stability, confidence */
+  --primary: #1A365D;          /* Updated to a more modern blue */
   --primary-light: #3a6b99;    /* Lighter blue: approachability */
   --primary-lightest: #E1E9F5; /* Very light blue: subtle backgrounds */
   
