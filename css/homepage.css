@@ -1,0 +1,54 @@
+/* Homepage-specific styles */
+
+/* Enhanced visual hierarchy */
+.home-section .site-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1A365D;
+  margin-bottom: 1.5rem;
+}
+
+.home-section .site-description {
+  font-size: 1.25rem;
+  color: #4A4F54;
+  margin-bottom: 2rem;
+}
+
+/* More whitespace around sections */
+.home-section {
+  padding: 4rem 0;
+}
+
+/* Contrasting colors for buttons and links */
+.home-section .btn-primary {
+  background-color: #1A365D;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.home-section .btn-primary:hover {
+  background-color: #0D2340;
+}
+
+.home-section .btn-secondary {
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.home-section .btn-secondary:hover {
+  background-color: #BF9B30;
+}
+
+/* Organize content into clear sections with descriptive headings */
+.home-section .links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
