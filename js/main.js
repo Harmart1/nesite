@@ -167,8 +167,7 @@ function initializeBlogFilters() {
       
       // Add active class to clicked tag
       this.classList.add('active');
-      
-      const selectedCategory = this.getAttribute('data-category');
+            const selectedCategory = this.getAttribute('data-category');
       
       // If "All" is selected, show all cards
       if (!selectedCategory || this.classList.contains('all')) {

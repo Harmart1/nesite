@@ -16,12 +16,12 @@
 :root {
   /* Only most essential variables used in above-fold content */
   --primary-dark: #0d2c54;
-  --primary: #1a3c5a;
+  --primary: #1a3c5a; /* Updated to #1a3c5a */
   --neutral-dark: #4a4f54;
   --neutral-light: #e0e5eb;
   --neutral-lightest: #f7f9fc;
   --accent: #D4AF37; /* Updated to gold */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 05);
   --radius-sm: 4px;
   --transition-fast: 0.2s ease;
 }

@@ -8,37 +8,53 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/visual-enhancements.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/back-to-top.css">
+    <link rel="stylesheet" href="../css/breadcrumbs.css">
     <script src="../js/main.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
+    <script src="../js/visual-integration.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
-                <a href="../index.html"><img src="../NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
+                <img src="../NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
             </div>
             <nav class="main-nav">
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
                     <span></span><span></span><span></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../index.html" style="color: #3498db;">Home</a></li>
+                    <li><a href="../about.html" style="color: #3498db;">About</a></li>
                     <li class="dropdown">
-                        <a href="../practice-areas.html">Practice Areas</a>
+                        <a href="../practice-areas.html" style="color: #3498db;">Practice Areas</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="../business-law.html">Business Law</a></li>
-                            <li><a href="../technology-law.html">Technology Law</a></li>
-                            <li><a href="../general-practice.html">General Practice</a></li>
+                            <li><a href="../civil-litigation.html" style="color: #3498db;">Civil Litigation</a></li>
+                            <li><a href="../business-law.html" style="color: #3498db;">Business Law</a></li>
+                            <li><a href="../technology-law.html" style="color: #3498db;">Technology Law</a></li>
+                            <li><a href="../general-practice.html" style="color: #3498db;">General Practice</a></li>
                         </ul>
                     </li>
-                    <li><a href="../resources.html">Resources</a></li>
-                    <li><a href="index.html" class="active">Blog</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../resources.html" style="color: #3498db;">Resources</a></li>
+                    <li><a href="index.html" class="active" style="color: #3498db;">Blog</a></li>
+                    <li><a href="../contact.html" style="color: #3498db;">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="../index.html">Home</a></li>
+                <li aria-current="page">Blog</li>
+            </ol>
+        </div>
+    </nav>
 
     <main>
         <section class="page-header">
@@ -82,9 +98,6 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="../NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
-                </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h3>Practice Areas</h3>
@@ -125,6 +138,12 @@
             </div>
         </div>
     </footer>
+
+    <div class="back-to-top" aria-label="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </div>
 
     <script>
         // Simple blog filtering functionality

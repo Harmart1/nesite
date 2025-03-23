@@ -3,60 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NorthernEdge Legal Solutions | Modern Law Firm in Sault Ste. Marie, ON</title>
-    <meta name="description" content="NorthernEdge Legal Solutions provides expert legal services in civil litigation, business law, and technology law throughout Northern Ontario.">
-    
-    <!-- Favicon References -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a3c5a">
-    <meta name="msapplication-TileColor" content="#1a3c5a">
-    <meta name="theme-color" content="#ffffff">
-    
-    <!-- CSS Files -->
+    <title>NorthernEdge Legal Solutions</title>
+    <meta name="description" content="Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/visual-enhancements.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/accessibility.css">
-    <link rel="stylesheet" href="css/navigation-enhancements.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
-    <link rel="stylesheet" href="css/cookie-consent.css">
+    <link rel="stylesheet" href="css/breadcrumbs.css">
     <link rel="stylesheet" href="css/back-to-top.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/icon-styles.css">
-    
-    <!-- JavaScript -->
+    <link rel="stylesheet" href="css/elegant-navigation.css">
     <script src="js/main.js" defer></script>
+    <script src="js/path-fix.js" defer></script>
+    <script src="js/back-to-top.js" defer></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, rgba(58, 83, 155, 0.8), rgba(135, 206, 250, 0.8)), url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .home-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .site-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .site-description {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .links {
+            margin-top: 2rem;
+        }
+
+        .links a {
+            margin: 0 0.5rem;
+        }
+
+        .site-header {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .site-footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-        </svg>
-    </a>
-    
-    <header class="site-header" id="skip-to-content">
+    <header class="site-header">
         <div class="container">
             <div class="logo-container">
-                <video id="header-video" autoplay muted loop style="max-width: 100%; height: auto;">
-                    <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" class="responsive-logo">
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Main Navigation">
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
                     <span></span><span></span><span></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="dropdown">
                         <a href="practice-areas.html">Practice Areas</a>
@@ -64,7 +82,6 @@
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
                             <li><a href="business-law.html">Business Law</a></li>
                             <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
                         </ul>
                     </li>
                     <li><a href="resources.html">Resources</a></li>
@@ -75,126 +92,15 @@
         </div>
     </header>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
+    <main>
+        <section class="home-section">
             <div class="container">
-                <div class="hero-content fade-in">
-                    <h1>Modern Legal Solutions for Today's Challenges</h1>
-                    <p class="lead">Expert legal guidance in Civil Litigation, Business Law, and Technology Law, serving clients throughout Northern Ontario and beyond.</p>
-                    <div class="hero-buttons">
-                        <a href="contact.html" class="btn btn-primary pulse" aria-label="Schedule a Consultation" onclick="window.location.href='contact.html'; return false;" id="consultation-btn">Schedule a Consultation</a>
-                        <a href="#services" class="btn btn-secondary" aria-label="Explore Our Services">Explore Our Services</a>
-                    </div>
-                    <!-- Embedded video -->
-                    <video src="videos/DynamicLogoAnimation.mp4" autoplay muted loop style="max-width: 80%; height: auto;"></video>
-                </div>
-            </div>
-        </section>
-
-        <!-- Page navigation dots - side navigation -->
-        <div class="page-navigation-dots">
-            <a href="#hero" class="dot active" data-section="hero" aria-label="Hero section"></a>
-            <a href="#services" class="dot" data-section="services" aria-label="Services section"></a>
-            <a href="#about" class="dot" data-section="about" aria-label="About section"></a>
-            <a href="#approach" class="dot" data-section="approach" aria-label="Approach section"></a>
-            <a href="#testimonials" class="dot" data-section="testimonials" aria-label="Testimonials section"></a>
-            <a href="#contact" class="dot" data-section="contact" aria-label="Contact section"></a>
-        </div>
-
-        <!-- Services Section -->
-        <section id="services" class="page-section services-section">
-            <div class="container">
-                <h2 class="section-title text-center">Our Practice Areas</h2>
-                <p class="section-description text-center">Specialized legal services tailored to your specific needs.</p>
-                
-                <div class="services-grid staggered-fade-in">
-                    <a href="civil-litigation.html" class="practice-card float-on-hover">
-                        <div class="practice-icon">
-                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Civil Litigation</h3>
-                        <p>Strategic representation in disputes, lawsuits, and negotiations to protect your rights and achieve favorable outcomes.</p>
-                        <div class="card-action">
-                            <span class="btn-text">Learn More</span>
-                        </div>
-                    </a>
-                    
-                    <a href="business-law.html" class="practice-card float-on-hover">
-                        <div class="practice-icon">
-                            <img src="images/icons/business-icon.svg" alt="Business Law Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Business Law</h3>
-                        <p>Comprehensive legal support for businesses at every stage, from formation to growth, transactions, and compliance.</p>
-                        <div class="card-action">
-                            <span class="btn-text">Learn More</span>
-                        </div>
-                    </a>
-                    
-                    <a href="technology-law.html" class="practice-card float-on-hover">
-                        <div class="practice-icon">
-                            <img src="images/icons/technology-icon.svg" alt="Technology Law Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Technology Law</h3>
-                        <p>Expert legal services for technology companies, including intellectual property, data protection, and regulatory compliance.</p>
-                        <div class="card-action">
-                            <span class="btn-text">Learn More</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="why-choose-us">
-            <!-- Value proposition section -->
-        </section>
-
-        <section class="industry-expertise">
-            <div class="container">
-                <h2>Our Industry Expertise</h2>
-                <p class="section-intro">NorthernEdge Legal Solutions brings specialized knowledge to complex legal challenges across multiple industries.</p>
-                
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <div class="icon-container">
-                            <img src="images/icons/technology-icon.svg" alt="Technology Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Technology & Software</h3>
-                        <p>Navigating intellectual property, data protection, and regulatory compliance for tech companies.</p>
-                    </div>
-                    
-                    <div class="expertise-card">
-                        <div class="icon-container">
-                            <img src="images/icons/business-icon.svg" alt="Business Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Business & Startups</h3>
-                        <p>Guiding businesses from formation through growth with strategic legal counsel.</p>
-                    </div>
-                    
-                    <div class="expertise-card">
-                        <div class="icon-container">
-                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Civil Litigation</h3>
-                        <p>Resolving disputes with strategic representation focused on achieving optimal outcomes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="recent-posts">
-            <!-- Blog preview -->
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content fade-in">
-                    <h2>Ready to Discuss Your Legal Needs?</h2>
-                    <p>Our team provides expert guidance tailored to your unique situation.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary" id="cta-consultation-btn" onclick="window.location.href='contact.html'; return false;">Schedule a Consultation</a>
-                        <a href="tel:+17059993657" class="btn btn-secondary">(705) 999-3657</a>
-                    </div>
+                <h1 class="site-title">NorthernEdge Legal Solutions</h1>
+                <p class="site-description">Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario</p>
+                <div class="links">
+                    <a href="about.html" class="btn btn-primary">About Us</a>
+                    <a href="practice-areas.html" class="btn btn-secondary">Our Services</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -203,21 +109,6 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo" width="50">
-                    <p class="footer-tagline">Sophisticated legal solutions for modern challenges.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zM9 19h-2v-9h2v9zm-1-10.25c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm12 10.25h-2v-4.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v4.5h-2v-9h2v1.375c.553-.819 1.477-1.375 2.5-1.375 1.933 0 3.5 1.567 3.5 3.5v5.5z"/></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.896-.957-2.173-1.555-3.591-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .385.044.76.128 1.122-4.087-.205-7.717-2.164-10.141-5.144-.424.729-.666 1.577-.666 2.482 0 1.712.871 3.223 2.188 4.108-.809-.026-1.569-.248-2.232-.617 0 .021 0 .043 0 .064 0 2.388 1.698 4.381 3.946 4.832-.414.113-.849.174-1.296.174-.318 0-.627-.031-.929-.088.628 1.956 2.448 3.379 4.604 3.42-1.686 1.319-3.809 2.104-6.115 2.104-.398 0-.79-.023-1.172-.069 2.179 1.396 4.768 2.212 7.548 2.212 9.053 0 14-7.496 14-13.986 0-.213-.005-.426-.014-.637.961-.695 1.796-1.562 2.457-2.549z"/></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.837 1.238 1.837 1.238 1.07 1.835 2.809 1.305 3.492.998.108-.774.418-1.305.761-1.605-2.665-.305-5.466-1.332-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.123-.304-.535-1.529.117-3.183 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.405 1.019.006 2.047.139 3.006.405 2.29-1.552 3.297-1.23 3.297-1.23.653 1.654.241 2.879.118 3.183.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 5.623-5.475 5.92.431.372.814 1.104.814 2.226v3.307c0 .319.192.694.797.576 4.765-1.589 8.198-6.086 8.198-11.385 0-6.627-5.373-12-12-12z"/></svg>
-                        </a>
-                    </div>
-                </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h3>Practice Areas</h3>
@@ -225,7 +116,6 @@
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
                             <li><a href="business-law.html">Business Law</a></li>
                             <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -258,5 +148,11 @@
             </div>
         </div>
     </footer>
+
+    <div class="back-to-top" aria-label="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </div>
 </body>
 </html>

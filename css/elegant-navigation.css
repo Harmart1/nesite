@@ -447,3 +447,64 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
     right: var(--space-2);
   }
 }
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #1A365D;
+  border-color: #1A365D;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0D2340;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: #D4AF37;
+  border-color: #D4AF37;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #BF9B30;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styles */
+.icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  fill: #D4AF37;
+  transition: fill 0.3s ease;
+}
+
+.icon:hover {
+  fill: #1A365D;
+}

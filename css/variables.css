@@ -9,7 +9,7 @@
 :root {
   /* Primary palette - based on color psychology for legal profession */
   --primary-dark: #0d2c54;     /* Deep navy blue: authority, trustworthiness */
-  --primary: #1a3c5a;          /* Rich blue: stability, confidence */
+  --primary: #1A365D;          /* Updated to a more modern blue */
   --primary-light: #3a6b99;    /* Lighter blue: approachability */
   --primary-lightest: #E1E9F5; /* Very light blue: subtle backgrounds */
   
@@ -20,9 +20,9 @@
   
   /* Neutral palette */
   --neutral-darkest: #2c3033;  /* Near-black: for important text */
-  --neutral-dark: #4a4f54;     /* Dark gray: for body text */
-  --neutral-medium: #8a9199;   /* Medium gray: for secondary text */
-  --neutral-light: #e0e5eb;    /* Light gray: for dividers, borders */
+  --neutral-dark: #2c3e50;     /* Darker shade for text */
+  --neutral-medium: #4a4f54;   /* Medium shade for text */
+  --neutral-light: #d3d3d3;    /* Light gray for backgrounds */
   --neutral-lightest: #f7f9fc; /* Off-white: for backgrounds */
   
   /* Common colors */
@@ -48,7 +48,7 @@
   --primary-light-rgb: 58, 107, 153;
   --primary-dark-rgb: 13, 44, 84;
   --accent-rgb: 212, 175, 55;   /* Updated to new color */
-  --neutral-dark-rgb: 74, 79, 84;
+  --neutral-dark-rgb: 44, 62, 80;  /* Darker shade for text */
   
   /* Text colors */
   --text-color: var(--neutral-dark);
@@ -57,8 +57,8 @@
   --link-hover-color: var(--accent);
   
   /* Typography */
-  --font-body: 'Open Sans', sans-serif;
-  --font-heading: 'Libre Baskerville', serif;
+  --font-body: 'Raleway', sans-serif; /* Updated to a more modern font */
+  --font-heading: 'Playfair Display', serif; /* Updated to a more modern font */
   --lh-body: 1.6;
   --lh-heading: 1.2;
   

@@ -222,3 +222,50 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Responsive logo scaling */
+@media (max-width: 768px) {
+  .logo-container {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-container {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .logo-container {
+    max-width: 250px;
+  }
+}
+
+/* Responsive header scaling */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .site-header {
+    padding: 2rem;
+  }
+}
+
+/* Consistent container and section classes */
+.container {
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}

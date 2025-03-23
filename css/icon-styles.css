@@ -14,6 +14,7 @@
 .practice-icon img {
   width: 48px;
   height: 48px;
+  fill: var(--gold); /* Updated color */
 }
 
 /* Icon sizing for expertise cards on homepage */
@@ -28,6 +29,7 @@
 .expertise-card .icon-container img {
   width: 48px; /* Updated width for consistency */
   height: 48px; /* Updated height for consistency */
+  fill: var(--gold); /* Updated color */
 }
 
 /* Icon sizing for approach/value sections */
@@ -44,6 +46,7 @@
 .value-card .value-icon svg {
   width: 48px; /* Updated width for consistency */
   height: 48px; /* Updated height for consistency */
+  fill: var(--gold); /* Updated color */
 }
 
 /* Responsive adjustments */
@@ -51,16 +54,19 @@
   .practice-icon img {
     width: 42px;
     height: 42px;
+    fill: var(--gold); /* Updated color */
   }
   
   .expertise-card .icon-container img {
     width: 42px; /* Updated width for consistency */
     height: 42px; /* Updated height for consistency */
+    fill: var(--gold); /* Updated color */
   }
   
   .approach-card .approach-icon svg,
   .value-card .value-icon svg {
     width: 42px; /* Updated width for consistency */
     height: 42px; /* Updated height for consistency */
+    fill: var(--gold); /* Updated color */
   }
 }
