@@ -21,9 +21,9 @@
   
   /* Neutral palette - for backgrounds and text */
   --neutral-darkest: #2c3033;  /* Near-black: for important text */
-  --neutral-dark: #000000;     /* Replaced mint green with black */
-  --neutral-medium: #000000;   /* Replaced mint green with black */
-  --neutral-light: #000000;    /* Replaced mint green with black */
+  --neutral-dark: #4a4f54;     /* Darker shade for text */
+  --neutral-medium: #a9a9a9;   /* Medium shade for text */
+  --neutral-light: #d3d3d3;    /* Light gray for backgrounds */
   --neutral-lightest: #f7f9fc; /* Off-white: for backgrounds */
   
   /* Feedback colors */
