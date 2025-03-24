@@ -179,12 +179,24 @@ label {
 .hero-section {
     padding: 8rem 0 6rem;
     position: relative;
-    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark)), url('images/hero-background.jpg') no-repeat center center;
+    background-size: cover;
     color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
     max-width: 800px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-section h1 {
@@ -197,6 +209,21 @@ label {
     margin-bottom: 2.5rem;
     font-weight: 300;
     line-height: 1.6;
+}
+
+.cta-button {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-dark);
 }
 
 /* Call to Action Enhancement */
@@ -313,6 +340,31 @@ img {
 
 .breadcrumb-list li:last-child:after {
     display: none;
+}
+
+/* Video Play Button and Thumbnail */
+.video-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.video-container .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: url('images/play-button.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
 }
 
 /* Responsive Tweaks */
