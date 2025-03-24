@@ -395,3 +395,63 @@
     transition-delay: 0s !important;
   }
 }
+
+/* Subtle hover effects and transitions for buttons and links */
+.btn:hover,
+a:hover {
+  transition: color var(--animation-speed-fast) ease, 
+              background-color var(--animation-speed-fast) ease, 
+              box-shadow var(--animation-speed-fast) ease;
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation classes for elements appearing on the page */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--animation-speed-medium) ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp var(--animation-speed-medium) ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomIn var(--animation-speed-medium) ease forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

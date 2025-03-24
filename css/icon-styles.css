@@ -49,6 +49,34 @@
   fill: var(--gold); /* Updated color */
 }
 
+/* Icon styles for highlighting key points or sections */
+.key-point-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  fill: var(--primary);
+}
+
+.key-point-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon styles for hero section */
+.hero-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  fill: var(--accent);
+}
+
+.hero-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .practice-icon img {
