@@ -29,7 +29,7 @@ body {
   background-color: var(--background);
   color: var(--text-color);
   font-family: 'Raleway', sans-serif;
-  line-height: 1.6;
+  line-height: 1.8; /* Updated for better readability */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -107,7 +107,7 @@ p {
 p.lead {
   font-size: 1.25rem;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.6; /* Updated for better readability */
 }
 
 /* Container for page content */
