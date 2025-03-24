@@ -104,6 +104,19 @@ function initializeDropdownMenus() {
       });
     }
   });
+
+  // Add keyboard navigation support for dropdown menus
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    if (link) {
+      link.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        }
+      });
+    }
+  });
 }
 
 /**

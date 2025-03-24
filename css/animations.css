@@ -194,6 +194,7 @@
 .btn:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #0D2340;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 /* Click Animation for Buttons */
@@ -202,9 +203,26 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Transition Effects for Smooth Animations */
+/* Smooth Transitions for Button States */
 .btn {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Keyframe Animations for Button Clicks */
+@keyframes button-click {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn:active {
+  animation: button-click 0.2s ease;
 }
 
 /* ===== Icon Animations ===== */
