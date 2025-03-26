@@ -40,8 +40,8 @@
 .nav-menu > li > a:hover,
 .nav-menu > li > a:focus,
 .nav-menu > li > a.active {
-    background-color: #1A365D;
-    color: #D4AF37;
+    background-color: var(--primary);
+    color: var(--accent);
 }
 
 /* Dropdown Menu */
@@ -104,8 +104,8 @@
 .dropdown-menu a:hover,
 .dropdown-menu a:focus,
 .dropdown-menu a.active {
-    background-color: #1A365D;
-    color: #D4AF37;
+    background-color: var(--primary);
+    color: var(--accent);
 }
 
 /* Mobile Menu Button */
@@ -187,8 +187,8 @@
 
 .side-navigation a:hover,
 .side-navigation a.active {
-    background-color: #1A365D;
-    color: #D4AF37;
+    background-color: var(--primary);
+    color: var(--accent);
 }
 
 /* Back to Top Button */
