@@ -13,6 +13,193 @@
     <script src="js/main.js" defer></script>
     <script src="js/back-to-top.js" defer></script>
     <script src="js/visual-integration.js" defer></script>
+    <style>
+        /* Date/Time and User Login Bar */
+        .user-info-bar {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .user-info-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .datetime, .user-welcome {
+            display: flex;
+            align-items: center;
+        }
+        
+        .datetime i, .user-welcome i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+        
+        #username {
+            font-weight: 600;
+            color: var(--accent);
+            margin-left: 4px;
+        }
+        
+        /* Enhanced Typography */
+        .hero-tagline {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.4;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -0.5rem;
+            margin-bottom: 3rem;
+            color: var(--neutral-medium);
+        }
+        
+        .eyebrow-text {
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        /* Enhanced Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+        
+        .pulse-btn {
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 0 rgba(212, 175, 55, 0.4);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+        
+        .glow-btn:hover {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+        
+        .slide-btn {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: color 0.3s ease;
+        }
+        
+        .slide-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .slide-btn:hover {
+            color: white;
+        }
+        
+        .slide-btn:hover::before {
+            left: 0;
+        }
+        
+        /* Value Props Section */
+        .value-props {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .value-props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .value-prop {
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .value-prop:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--neutral-lightest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary);
+        }
+        
+        .icon-circle i {
+            font-size: 2rem;
+        }
+        
+        .card-icon {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .user-info-bar .container {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- User info and date/time bar -->
@@ -20,7 +207,7 @@
         <div class="container">
             <div class="datetime">
                 <i class="far fa-clock"></i> 
-                <span id="current-datetime">2025-03-26 22:44:37</span>
+                <span id="current-datetime">2025-03-26 22:59:14</span>
             </div>
             <div class="user-welcome">
                 <i class="far fa-user"></i> 
@@ -110,7 +297,7 @@
                     </div>
                     <div class="practice-area-content">
                         <h3>Business Law & Corporate Governance</h3>
-                        <p>Navigate the complexities of modern business with confidence. Our expert team provides strategic guidance on mergers and acquisitions, regulatory compliance, contract negotiations, and corporate structuring. We deliver practical solutions that protect your interests while facilitating sustainable growth and operational efficiency.</p>
+                        <p>Navigate the complexities of modern business with confidence. Our expert team provides strategic guidance on mergers and acquisitions, regulatory compliance, contract negotiations, intellectual property protection, and corporate structuring. We help businesses of all sizes establish solid foundations for sustainable growth.</p>
                         <a href="business-law.html" class="btn btn-secondary slide-btn">Explore Business Services <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -121,7 +308,7 @@
                     </div>
                     <div class="practice-area-content">
                         <h3>Civil Litigation & Dispute Resolution</h3>
-                        <p>When conflicts arise, our strategic litigation team stands ready to protect your interests. We combine thorough case preparation with persuasive advocacy to achieve favorable outcomes. Our approach emphasizes early risk assessment, practical solutions, and when necessary, vigorous courtroom representation to resolve complex disputes efficiently.</p>
+                        <p>When conflicts arise, our strategic litigation team stands ready to protect your interests. We combine thorough case preparation with persuasive advocacy to achieve favorable outcomes in commercial disputes, contract breaches, property matters, and professional liability cases. Our focus remains on efficient resolution and minimizing business disruption.</p>
                         <a href="civil-litigation.html" class="btn btn-secondary slide-btn">Learn About Litigation <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -132,7 +319,7 @@
                     </div>
                     <div class="practice-area-content">
                         <h3>Technology Law & Cybersecurity</h3>
-                        <p>In today's digital economy, legal protection for your technology assets is essential. Our specialized team provides guidance on data privacy regulations, intellectual property protection, technology transactions, and cybersecurity compliance. We help you navigate the rapidly evolving digital landscape with confidence and security.</p>
+                        <p>In today's digital economy, legal protection for your technology assets is essential. Our specialized team provides guidance on data privacy regulations, intellectual property rights, software licensing, technology contracts, and cybersecurity compliance frameworks. We help you navigate the rapidly evolving legal landscape of the digital world.</p>
                         <a href="technology-law.html" class="btn btn-secondary slide-btn">Discover Tech Solutions <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -144,8 +331,8 @@
                 <div class="about-content">
                     <span class="eyebrow-text">WHO WE ARE</span>
                     <h2>Northern Ontario's Premier Legal Partner</h2>
-                    <p>At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to delivering exceptional legal services that address your specific needs with clarity, efficiency, and precision.</p>
-                    <p>We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, negotiating critical contracts, or navigating regulatory challenges, our team provides the strategic guidance and practical solutions you need.</p>
+                    <p>At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to delivering exceptional legal services that help our clients succeed in an increasingly complex regulatory landscape.</p>
+                    <p>We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation challenges, navigating business transactions, or protecting your technological innovations, our comprehensive approach ensures that all your legal needs are met with precision and care.</p>
                     <a href="about.html" class="btn btn-primary glow-btn">Discover Our Story <i class="fas fa-users"></i></a>
                 </div>
             </div>
