@@ -512,7 +512,7 @@ input:focus, textarea:focus, select:focus {
 
 .accordion-header:hover {
   background-color: var(--neutral-lightest);
-  color: var(--primary);
+  color: var (--primary);
 }
 
 .accordion-header.active {
@@ -786,4 +786,129 @@ p.lead {
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.5;
+}
+
+/* Hero Section Enhancement */
+.hero-section {
+    padding: 8rem 0 6rem;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark)), url('images/new-hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-section .lead {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: 'Raleway', sans-serif;
+}
+
+.cta-button {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Practice Area Cards */
+.practice-area-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.practice-area-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    margin-right: 2rem;
+}
+
+.practice-area-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.practice-area-content {
+    flex-grow: 1;
+}
+
+.practice-area-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.practice-area-content p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Homepage Copy */
+.home-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.site-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.links {
+    margin-top: 2rem;
+}
+
+.links a {
+    margin: 0 0.5rem;
 }
