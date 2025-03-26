@@ -6,289 +6,12 @@
     <title>NorthernEdge Legal Solutions</title>
     <meta name="description" content="Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/elegant-design-system.css">
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/elegant-navigation.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
-    <script src="js/path-fix.js" defer></script>
     <script src="js/back-to-top.js" defer></script>
     <script src="js/visual-integration.js" defer></script>
-    <script src="js/performance-optimize.js" defer></script>
-    <style>
-        body {
-            background: linear-gradient(135deg, rgba(26, 54, 93, 0.8), rgba(212, 175, 55, 0.8)), url('images/new-background.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        .home-section {
-            text-align: center;
-            padding: 6rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .site-title {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .site-description {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .links {
-            margin-top: 2rem;
-        }
-
-        .links a {
-            margin: 0 0.5rem;
-        }
-
-        .site-header {
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .site-footer {
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero {
-            position: relative;
-            background: url('images/new-hero-background.jpg') no-repeat center center;
-            background-size: cover;
-            padding: 8rem 2rem;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            font-family: 'Raleway', sans-serif;
-        }
-
-        .hero .cta-button {
-            font-size: 1.25rem;
-            padding: 1rem 2rem;
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .hero .cta-button:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .video-container {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .video-container video {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .video-container .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: url('images/play-button.png') no-repeat center center;
-            background-size: contain;
-            cursor: pointer;
-        }
-
-        .practice-areas-overview {
-            padding: 4rem 0;
-            background-color: var(--neutral-lightest);
-        }
-
-        .practice-area-card {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .practice-area-icon {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            margin-right: 2rem;
-        }
-
-        .practice-area-icon img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .practice-area-content {
-            flex-grow: 1;
-        }
-
-        .practice-area-content h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .practice-area-content p {
-            font-size: 1.125rem;
-            margin-bottom: 1.5rem;
-            font-family: 'Raleway', sans-serif;
-        }
-
-        .about-section {
-            padding: 4rem 0;
-            background-color: var(--neutral-lightest);
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .about-content p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            font-family: 'Raleway', sans-serif;
-        }
-
-        .contact-section {
-            padding: 4rem 0;
-            background-color: var(--neutral-lightest);
-        }
-
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .contact-content p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            font-family: 'Raleway', sans-serif;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .contact-info-card {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-            width: 100%;
-            max-width: 300px;
-        }
-
-        .contact-info-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .contact-info-card p {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            font-family: 'Raleway', sans-serif;
-        }
-
-        .contact-info-card a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-info-card a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-info-card .cta-button {
-            font-size: 1rem;
-            padding: 0.75rem 1.5rem;
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-info-card .cta-button:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .separator {
-            width: 100%;
-            height: 2px;
-            background-color: var(--neutral-light);
-            margin: 2rem 0;
-        }
-    </style>
 </head>
 <body>
     <header class="site-header">
@@ -301,7 +24,7 @@
                     <span></span><span></span><span></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="dropdown">
                         <a href="practice-areas.html">Practice Areas</a>
@@ -309,6 +32,7 @@
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
                             <li><a href="business-law.html">Business Law</a></li>
                             <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
                         </ul>
                     </li>
                     <li><a href="resources.html">Resources</a></li>
@@ -322,42 +46,24 @@
     <main>
         <section class="hero">
             <div class="hero-overlay"></div>
-            <div class="hero-content">
+            <div class="hero-content container">
                 <h1>Welcome to NorthernEdge Legal Solutions</h1>
                 <p>Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario</p>
-                <a href="contact.html" class="cta-button">Get a Consultation</a>
+                <a href="contact.html" class="btn btn-primary">Get a Consultation</a>
             </div>
-        </section>
-
-        <section class="home-section">
-            <div class="container">
-                <h1 class="site-title">NorthernEdge Legal Solutions</h1>
-                <p class="site-description">Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario</p>
-                <div class="links">
-                    <a href="about.html" class="btn btn-primary">About Us</a>
-                    <a href="practice-areas.html" class="btn btn-secondary">Our Services</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="video-container">
-            <video width="800" height="450" autoplay muted playsinline>
-                <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="play-button"></div>
         </section>
 
         <section class="practice-areas-overview">
             <div class="container">
+                <h2 class="section-title text-center">Our Practice Areas</h2>
+                
                 <div class="practice-area-card">
                     <div class="practice-area-icon">
                         <img src="images/icons/business-icon.svg" alt="Business Law Icon">
                     </div>
                     <div class="practice-area-content">
-                        <h2>Business Law & Corporate Governance</h2>
-                        <p>We advise on matters ranging from mergers and acquisitions to regulatory compliance. Our seasoned counsel guides businesses through complex commercial transactions and corporate governance challenges, ensuring robust legal strategies for sustainable growth.</p>
+                        <h3>Business Law & Corporate Governance</h3>
+                        <p>We advise on matters ranging from mergers and acquisitions to regulatory compliance. Our seasoned counsel guides businesses through complex commercial transactions and corporate governance requirements.</p>
                         <a href="business-law.html" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
@@ -367,8 +73,8 @@
                         <img src="images/icons/litigation-icon.svg" alt="Civil Litigation Icon">
                     </div>
                     <div class="practice-area-content">
-                        <h2>Civil Litigation & Dispute Resolution</h2>
-                        <p>With a focus on resolution and risk management, our litigation team is committed to providing vigorous representation in complex civil disputes. We strive to achieve favorable outcomes through negotiation, mediation, or trial, tailored to your unique circumstances.</p>
+                        <h3>Civil Litigation & Dispute Resolution</h3>
+                        <p>With a focus on resolution and risk management, our litigation team is committed to providing vigorous representation in complex civil disputes. We strive to achieve favorable outcomes for our clients efficiently and effectively.</p>
                         <a href="civil-litigation.html" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
@@ -378,48 +84,23 @@
                         <img src="images/icons/technology-icon.svg" alt="Technology Law Icon">
                     </div>
                     <div class="practice-area-content">
-                        <h2>Technology Law & Cybersecurity</h2>
-                        <p>In today's rapidly evolving digital landscape, our firm provides expert legal guidance on technology transactions, cybersecurity risk management, and regulatory compliance. We help clients protect their digital assets and navigate the intricate intersection of law and technology.</p>
+                        <h3>Technology Law & Cybersecurity</h3>
+                        <p>In today's rapidly evolving digital landscape, our firm provides expert legal guidance on technology transactions, cybersecurity risk management, and regulatory compliance for businesses of all sizes.</p>
                         <a href="technology-law.html" class="btn btn-secondary">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="practice-area-card">
-                    <div class="practice-area-icon">
-                        <img src="images/icons/intellectual-property-icon.svg" alt="Intellectual Property Icon">
-                    </div>
-                    <div class="practice-area-content">
-                        <h2>Intellectual Property & Innovation</h2>
-                        <p>Our intellectual property practice is dedicated to protecting the creativity and innovation of our clients. We handle everything from trademark and copyright registration to strategic litigation, ensuring your competitive edge in the market remains uncompromised.</p>
-                        <a href="intellectual-property.html" class="btn btn-secondary">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="practice-area-card">
-                    <div class="practice-area-icon">
-                        <img src="images/icons/general-practice-icon.svg" alt="General Practice Icon">
-                    </div>
-                    <div class="practice-area-content">
-                        <h2>General Practice</h2>
-                        <p>Our General Practice area covers a wide range of legal services designed to meet the diverse needs of our clients. Whether you require assistance with family law, real estate transactions, estate planning, or other common legal matters, our experienced team is here to provide expert guidance and representation.</p>
-                        <a href="general-practice.html" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <div class="separator"></div>
 
         <section class="about-section">
             <div class="container">
                 <div class="about-content">
                     <h2>About NorthernEdge Legal Solutions</h2>
-                    <p>At NorthernEdge Legal Solutions, we are committed to providing exceptional legal services with a focus on client satisfaction. Our mission is to deliver innovative and effective legal solutions that meet the unique needs of each client. We value integrity, professionalism, and a client-centered approach in all our endeavors.</p>
+                    <p>At NorthernEdge Legal Solutions, we are committed to providing exceptional legal services with a focus on client satisfaction. Our mission is to deliver innovative and effective legal solutions tailored to meet the unique needs of our clients throughout Northern Ontario.</p>
+                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
                 </div>
             </div>
         </section>
-
-        <div class="separator"></div>
 
         <section class="contact-section">
             <div class="container">
@@ -443,8 +124,8 @@
                             <h3>Office Hours</h3>
                             <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
                         </div>
-                        <div class="contact-info-card">
-                            <a href="contact.html" class="cta-button">Schedule a Consultation</a>
+                        <div class="contact-info-card cta-card">
+                            <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
                         </div>
                     </div>
                 </div>
@@ -462,6 +143,7 @@
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
                             <li><a href="business-law.html">Business Law</a></li>
                             <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -486,7 +168,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
                     <a href="privacy-policy.html">Privacy Policy</a> | 
                     <a href="terms-of-use.html">Terms of Use</a>
@@ -500,5 +182,32 @@
             <path d="M12 4l-8 8h6v8h4v-8h6z"/>
         </svg>
     </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Add dropdown functionality for mobile
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                if (window.innerWidth <= 1024) {
+                    dropdown.addEventListener('click', function(e) {
+                        if (e.target.parentNode.classList.contains('dropdown')) {
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
