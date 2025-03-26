@@ -9,11 +9,26 @@
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/visual-enhancements.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/main.js" defer></script>
     <script src="js/back-to-top.js" defer></script>
     <script src="js/visual-integration.js" defer></script>
 </head>
 <body>
+    <!-- User info and date/time bar -->
+    <div class="user-info-bar">
+        <div class="container">
+            <div class="datetime">
+                <i class="far fa-clock"></i> 
+                <span id="current-datetime">2025-03-26 22:44:37</span>
+            </div>
+            <div class="user-welcome">
+                <i class="far fa-user"></i> 
+                Welcome, <span id="username">Harmart1</span>
+            </div>
+        </div>
+    </div>
+
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
@@ -47,15 +62,47 @@
         <section class="hero">
             <div class="hero-overlay"></div>
             <div class="hero-content container">
-                <h1>Welcome to NorthernEdge Legal Solutions</h1>
-                <p>Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario</p>
-                <a href="contact.html" class="btn btn-primary">Get a Consultation</a>
+                <h1>Trusted Legal Expertise for Northern Ontario</h1>
+                <p class="hero-tagline">Innovative solutions for complex legal challenges in today's rapidly evolving business landscape</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary pulse-btn">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
+                    <a href="practice-areas.html" class="btn btn-secondary glow-btn">Explore Our Services <i class="fas fa-briefcase"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-props">
+            <div class="container">
+                <div class="value-props-grid">
+                    <div class="value-prop">
+                        <div class="icon-circle">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Expert Counsel</h3>
+                        <p>Backed by years of specialized experience in multiple practice areas</p>
+                    </div>
+                    <div class="value-prop">
+                        <div class="icon-circle">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Client-Focused</h3>
+                        <p>Your priorities are our priorities—we listen and deliver results</p>
+                    </div>
+                    <div class="value-prop">
+                        <div class="icon-circle">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovative Approach</h3>
+                        <p>Combining traditional expertise with modern legal solutions</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="practice-areas-overview">
             <div class="container">
-                <h2 class="section-title text-center">Our Practice Areas</h2>
+                <h2 class="section-title text-center">Specialized Legal Expertise</h2>
+                <p class="section-subtitle text-center">Comprehensive legal solutions tailored to your specific needs</p>
                 
                 <div class="practice-area-card">
                     <div class="practice-area-icon">
@@ -63,8 +110,8 @@
                     </div>
                     <div class="practice-area-content">
                         <h3>Business Law & Corporate Governance</h3>
-                        <p>We advise on matters ranging from mergers and acquisitions to regulatory compliance. Our seasoned counsel guides businesses through complex commercial transactions and corporate governance requirements.</p>
-                        <a href="business-law.html" class="btn btn-secondary">Learn More</a>
+                        <p>Navigate the complexities of modern business with confidence. Our expert team provides strategic guidance on mergers and acquisitions, regulatory compliance, contract negotiations, and corporate structuring. We deliver practical solutions that protect your interests while facilitating sustainable growth and operational efficiency.</p>
+                        <a href="business-law.html" class="btn btn-secondary slide-btn">Explore Business Services <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
                 
@@ -74,8 +121,8 @@
                     </div>
                     <div class="practice-area-content">
                         <h3>Civil Litigation & Dispute Resolution</h3>
-                        <p>With a focus on resolution and risk management, our litigation team is committed to providing vigorous representation in complex civil disputes. We strive to achieve favorable outcomes for our clients efficiently and effectively.</p>
-                        <a href="civil-litigation.html" class="btn btn-secondary">Learn More</a>
+                        <p>When conflicts arise, our strategic litigation team stands ready to protect your interests. We combine thorough case preparation with persuasive advocacy to achieve favorable outcomes. Our approach emphasizes early risk assessment, practical solutions, and when necessary, vigorous courtroom representation to resolve complex disputes efficiently.</p>
+                        <a href="civil-litigation.html" class="btn btn-secondary slide-btn">Learn About Litigation <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
                 
@@ -85,8 +132,8 @@
                     </div>
                     <div class="practice-area-content">
                         <h3>Technology Law & Cybersecurity</h3>
-                        <p>In today's rapidly evolving digital landscape, our firm provides expert legal guidance on technology transactions, cybersecurity risk management, and regulatory compliance for businesses of all sizes.</p>
-                        <a href="technology-law.html" class="btn btn-secondary">Learn More</a>
+                        <p>In today's digital economy, legal protection for your technology assets is essential. Our specialized team provides guidance on data privacy regulations, intellectual property protection, technology transactions, and cybersecurity compliance. We help you navigate the rapidly evolving digital landscape with confidence and security.</p>
+                        <a href="technology-law.html" class="btn btn-secondary slide-btn">Discover Tech Solutions <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -95,9 +142,11 @@
         <section class="about-section">
             <div class="container">
                 <div class="about-content">
-                    <h2>About NorthernEdge Legal Solutions</h2>
-                    <p>At NorthernEdge Legal Solutions, we are committed to providing exceptional legal services with a focus on client satisfaction. Our mission is to deliver innovative and effective legal solutions tailored to meet the unique needs of our clients throughout Northern Ontario.</p>
-                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                    <span class="eyebrow-text">WHO WE ARE</span>
+                    <h2>Northern Ontario's Premier Legal Partner</h2>
+                    <p>At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to delivering exceptional legal services that address your specific needs with clarity, efficiency, and precision.</p>
+                    <p>We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, negotiating critical contracts, or navigating regulatory challenges, our team provides the strategic guidance and practical solutions you need.</p>
+                    <a href="about.html" class="btn btn-primary glow-btn">Discover Our Story <i class="fas fa-users"></i></a>
                 </div>
             </div>
         </section>
@@ -105,27 +154,32 @@
         <section class="contact-section">
             <div class="container">
                 <div class="contact-content">
-                    <h2>Contact Us</h2>
-                    <p>Get in touch with our team to discuss how we can help with your legal needs. We aim to respond to all inquiries within 1 business day.</p>
+                    <span class="eyebrow-text">GET IN TOUCH</span>
+                    <h2>Ready to Discuss Your Legal Needs?</h2>
+                    <p>Our team is available to answer your questions and provide the expert guidance you're looking for. We're committed to responding to all inquiries within one business day.</p>
                     <div class="contact-info">
                         <div class="contact-info-card">
-                            <h3>Address</h3>
+                            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h3>Our Location</h3>
                             <p>67 Hugill St.<br>Sault Ste. Marie, Ontario<br>P6A 4E6</p>
                         </div>
                         <div class="contact-info-card">
-                            <h3>Email</h3>
+                            <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                            <h3>Email Us</h3>
                             <p><a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
                         </div>
                         <div class="contact-info-card">
-                            <h3>Phone</h3>
+                            <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
+                            <h3>Call Us</h3>
                             <p><a href="tel:+17059993657">(705) 999-3657</a></p>
                         </div>
                         <div class="contact-info-card">
+                            <div class="card-icon"><i class="far fa-clock"></i></div>
                             <h3>Office Hours</h3>
                             <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
                         </div>
                         <div class="contact-info-card cta-card">
-                            <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                            <a href="contact.html" class="btn btn-primary pulse-btn">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
                         </div>
                     </div>
                 </div>
@@ -207,6 +261,23 @@
                     });
                 }
             });
+            
+            // Keep the current date and time updated
+            function updateDateTime() {
+                const now = new Date();
+                const year = now.getUTCFullYear();
+                const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+                const day = String(now.getUTCDate()).padStart(2, '0');
+                const hours = String(now.getUTCHours()).padStart(2, '0');
+                const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+                const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+                
+                const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+                document.getElementById('current-datetime').textContent = formattedDateTime;
+            }
+            
+            // Update the time every second
+            setInterval(updateDateTime, 1000);
         });
     </script>
 </body>
