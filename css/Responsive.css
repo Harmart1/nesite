@@ -1,0 +1,182 @@
+/* Responsive Styles for NorthernEdge Legal Website */
+
+/* Base responsive container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Responsive logo */
+.responsive-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Hero section responsive styles */
+.hero {
+    position: relative;
+    background: url('../images/new-hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 8rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 54, 93, 0.7);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Practice areas responsive styles */
+.practice-areas-overview {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.practice-area-card {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact section responsive styles */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact-info-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.contact-info-card.cta-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .site-header {
+        padding: 1rem 0;
+    }
+    
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 80%;
+        max-width: 320px;
+        background-color: white;
+        flex-direction: column;
+        padding: 5rem 2rem;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 15;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-menu.active {
+        transform: translateX(0);
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .practice-area-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .practice-area-icon {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .contact-info-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .practice-area-content h3 {
+        font-size: 1.5rem;
+    }
+}
