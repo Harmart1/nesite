@@ -208,6 +208,89 @@
             margin-bottom: 2rem;
             font-family: 'Raleway', sans-serif;
         }
+
+        .contact-section {
+            padding: 4rem 0;
+            background-color: var(--neutral-lightest);
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .contact-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .contact-info-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .contact-info-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .contact-info-card p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .contact-info-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info-card .cta-button {
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-info-card .cta-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .separator {
+            width: 100%;
+            height: 2px;
+            background-color: var(--neutral-light);
+            margin: 2rem 0;
+        }
     </style>
 </head>
 <body>
@@ -328,11 +411,45 @@
             </div>
         </section>
 
+        <div class="separator"></div>
+
         <section class="about-section">
             <div class="container">
                 <div class="about-content">
                     <h2>About NorthernEdge Legal Solutions</h2>
                     <p>At NorthernEdge Legal Solutions, we are committed to providing exceptional legal services with a focus on client satisfaction. Our mission is to deliver innovative and effective legal solutions that meet the unique needs of each client. We value integrity, professionalism, and a client-centered approach in all our endeavors.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with our team to discuss how we can help with your legal needs. We aim to respond to all inquiries within 1 business day.</p>
+                    <div class="contact-info">
+                        <div class="contact-info-card">
+                            <h3>Address</h3>
+                            <p>67 Hugill St.<br>Sault Ste. Marie, Ontario<br>P6A 4E6</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                        </div>
+                        <div class="contact-info-card">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+17059993657">(705) 999-3657</a></p>
+                        </div>
+                        <div class="contact-info-card">
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <a href="contact.html" class="cta-button">Schedule a Consultation</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
