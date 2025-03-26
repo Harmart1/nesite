@@ -2,15 +2,17 @@
  *
  * This stylesheet defines typographic styles for the website
  * including font families, sizes, weights, and spacing.
+ * Last updated: 2025-03-26
  */
 
 /* Import fonts from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
 
 :root {
   /* Font families */
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Raleway', Helvetica, Arial, sans-serif;
+  --font-accent: 'Montserrat', sans-serif;
   
   /* Font sizes */
   --fs-xs: 0.875rem;    /* 14px */
@@ -22,6 +24,7 @@
   --fs-2xl: 2.25rem;   /* 36px */
   --fs-3xl: 3rem;      /* 48px */
   --fs-4xl: 3.75rem;   /* 60px */
+  --fs-5xl: 4.5rem;    /* 72px */
   
   /* Line heights */
   --lh-tight: 1.3;
@@ -33,8 +36,17 @@
   /* Font weights */
   --fw-light: 300;
   --fw-normal: 400;
+  --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
+
+  /* Letter spacing */
+  --ls-tighter: -0.05em;
+  --ls-tight: -0.025em;
+  --ls-normal: 0;
+  --ls-wide: 0.025em;
+  --ls-wider: 0.05em;
+  --ls-widest: 0.1em;
 }
 
 /* Base Typography */
@@ -50,11 +62,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: var(--fw-bold);
-  line-height: 1.3;
+  line-height: 1.2;
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: #1A365D;
-  letter-spacing: -0.025em;
+  letter-spacing: var(--ls-tight);
   position: relative;
 }
 
@@ -66,58 +78,141 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   width: 60px;
   height: 3px;
   background-color: #D4AF37;
+  transition: width 0.3s ease-out;
+}
+
+h1:hover::after, h2:hover::after, h3:hover::after {
+  width: 80px;
+}
+
+.text-center h1::after, 
+.text-center h2::after, 
+.text-center h3::after, 
+.text-center h4::after, 
+.text-center h5::after, 
+.text-center h6::after,
+h1.text-center::after,
+h2.text-center::after,
+h3.text-center::after,
+h4.text-center::after,
+h5.text-center::after,
+h6.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 h1 {
-  font-size: var(--fs-4xl);
+  font-size: var(--fs-5xl);
+  margin-bottom: 1.75rem;
 }
 
 h2 {
   font-size: var(--fs-3xl);
+  margin-bottom: 1.5rem;
 }
 
 h3 {
   font-size: var(--fs-2xl);
+  margin-bottom: 1.25rem;
 }
 
 h4 {
   font-size: var(--fs-xl);
+  margin-bottom: 1rem;
 }
 
 h5 {
   font-size: var(--fs-lg);
+  margin-bottom: 0.75rem;
 }
 
 h6 {
   font-size: var(--fs-md);
+  margin-bottom: 0.75rem;
+}
+
+/* Hero Typography */
+.hero h1 {
+  font-size: var(--fs-5xl);
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  margin-bottom: 1rem;
+  letter-spacing: var(--ls-tighter);
+  line-height: 1.1;
+}
+
+.hero-tagline {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-light);
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Paragraph */
 p {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
   color: #4A4F54;
 }
 
 p.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-light);
   line-height: var(--lh-relaxed);
   color: var(--neutral-dark);
+  margin-bottom: 2rem;
+}
+
+/* Section Styling */
+.section-title {
+  font-size: var(--fs-3xl);
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.section-subtitle {
+  font-size: var(--fs-lg);
+  color: var(--neutral-medium);
+  margin-bottom: 3rem;
+  font-weight: var(--fw-light);
+}
+
+.eyebrow-text {
+  font-family: var(--font-accent);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--accent);
+  display: block;
+  margin-bottom: 1rem;
 }
 
 /* Links */
 a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
+  position: relative;
 }
 
 a:hover {
   color: var(--link-hover-color);
+}
+
+/* Navigation */
+.nav-menu a {
+  font-family: var(--font-accent);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
 }
 
 /* Lists */
@@ -128,7 +223,7 @@ ul, ol {
 }
 
 li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Styled lists (used in practice areas) */
@@ -141,7 +236,8 @@ ul.styled-list {
 ul.styled-list li {
   position: relative;
   padding-left: 1.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: var(--fs-base);
 }
 
 ul.styled-list li::before {
@@ -153,24 +249,51 @@ ul.styled-list li::before {
   height: 0.5rem;
   background-color: var(--accent);
   border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+ul.styled-list li:hover::before {
+  transform: scale(1.5);
 }
 
 /* Blockquote */
 blockquote {
-  margin: 1.5rem 0;
-  padding-left: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
   border-left: 4px solid var(--accent);
+  background-color: rgba(212, 175, 55, 0.05);
+  border-radius: 0 4px 4px 0;
   font-style: italic;
+  position: relative;
+}
+
+blockquote::before {
+  content: '"';
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  position: absolute;
+  left: 0.5rem;
+  top: -1rem;
+  color: rgba(212, 175, 55, 0.2);
 }
 
 blockquote p {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
+}
+
+blockquote cite {
+  font-size: var(--fs-sm);
+  font-style: normal;
+  color: var(--neutral-medium);
+  display: block;
+  margin-top: 1rem;
+  font-weight: var(--fw-medium);
 }
 
 /* Buttons */
 .btn {
   display: inline-block;
-  font-family: var(--font-body);
+  font-family: var(--font-accent);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-sm);
   text-align: center;
@@ -179,12 +302,24 @@ blockquote p {
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.875rem 1.75rem;
   border-radius: 4px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   border: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn i {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover i {
+  transform: translateX(4px);
 }
 
 .btn-primary {
@@ -195,18 +330,142 @@ blockquote p {
 .btn-primary:hover {
   background-color: var(--primary-dark);
   color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
   background-color: white;
   color: var(--primary);
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary-light);
+  background-color: var(--primary);
   color: white;
-  border-color: var(--primary-light);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+/* Button Variations */
+.pulse-btn {
+  position: relative;
+}
+
+.pulse-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.3);
+  opacity: 0;
+  transform: scale(1);
+}
+
+.pulse-btn:hover::after {
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.glow-btn {
+  position: relative;
+}
+
+.glow-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #D4AF37, #1A365D, #D4AF37);
+  border-radius: 6px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-btn:hover::before {
+  opacity: 1;
+  animation: glowing 2s infinite;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.slide-btn {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+.slide-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.slide-btn:hover {
+  color: white;
+}
+
+.slide-btn:hover::before {
+  transform: scaleX(1);
+}
+
+/* User info and date styles */
+.user-info-bar {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 0.5rem 0;
+  font-size: var(--fs-xs);
+  font-family: var(--font-accent);
+}
+
+.user-info-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.datetime, .user-welcome {
+  display: flex;
+  align-items: center;
+}
+
+.datetime i, .user-welcome i {
+  margin-right: 0.5rem;
+  color: var(--accent);
+}
+
+#username {
+  font-weight: var(--fw-semibold);
+  color: var(--accent);
 }
 
 /* Small helper text */
@@ -237,12 +496,34 @@ blockquote p {
   font-weight: var(--fw-normal);
 }
 
+.font-medium {
+  font-weight: var(--fw-medium);
+}
+
 .font-semibold {
   font-weight: var(--fw-semibold);
 }
 
 .font-bold {
   font-weight: var(--fw-bold);
+}
+
+/* Text transforms */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Text decoration */
+.underline {
+  text-decoration: underline;
+}
+
+.no-underline {
+  text-decoration: none;
 }
 
 /* Address styling */
@@ -252,32 +533,90 @@ address {
   margin-bottom: 1rem;
 }
 
-/* Article typography */
-article h2 {
-  margin-top: 2rem;
+/* Card Typography */
+.card-title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  margin-bottom: 0.75rem;
 }
 
-article h3 {
-  margin-top: 1.5rem;
+.card-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--neutral-medium);
+  margin-bottom: 1rem;
 }
 
-article p {
+/* Practice area content */
+.practice-area-content h3 {
+  font-size: var(--fs-xl);
+  color: var(--primary);
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.practice-area-content h3:hover {
+  color: var(--accent);
+}
+
+.practice-area-content p {
+  font-size: var(--fs-base);
   margin-bottom: 1.5rem;
+}
+
+/* Value Proposition Typography */
+.value-prop h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+.value-prop p {
+  font-size: var(--fs-base);
+  text-align: center;
+  color: var(--neutral-medium);
+}
+
+/* Contact Info Card Typography */
+.contact-info-card h3 {
+  font-size: var(--fs-md);
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.contact-info-card p {
+  font-size: var(--fs-sm);
+  color: var(--neutral-medium);
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 /* Mobile typography adjustments */
 @media (max-width: 768px) {
   :root {
-    --fs-3xl: 2.5rem;
-    --fs-2xl: 2rem;
+    --fs-5xl: 3rem;
+    --fs-4xl: 2.75rem;
+    --fs-3xl: 2.25rem;
+    --fs-2xl: 1.875rem;
+    --fs-xl: 1.5rem;
   }
   
-  h1 {
+  .hero h1 {
     font-size: var(--fs-3xl);
   }
   
-  h2 {
+  .hero-tagline {
+    font-size: var(--fs-md);
+  }
+  
+  .section-title {
     font-size: var(--fs-2xl);
+  }
+  
+  .section-subtitle {
+    font-size: var(--fs-base);
+    margin-bottom: 2rem;
   }
   
   p.lead {
@@ -285,58 +624,53 @@ article p {
   }
   
   .btn {
-    padding: 0.625rem 1.25rem;
+    padding: 0.75rem 1.5rem;
+    font-size: var(--fs-xs);
   }
 }
 
-/* Lawyer Profiles */
-.lawyers {
-  padding: 4rem 0;
-  background-color: var(--neutral-lightest);
+/* Highlight text effect */
+.highlight {
+  position: relative;
+  display: inline-block;
 }
 
-.lawyer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  background-color: rgba(212, 175, 55, 0.2);
+  z-index: -1;
+  transition: height 0.2s ease;
 }
 
-.lawyer-item {
-  background-color: white;
-  padding: 2rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+.highlight:hover::after {
+  height: 100%;
 }
 
-.lawyer-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-}
-
-.lawyer-item h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: var(--primary-dark);
-}
-
-.lawyer-item .title {
+/* Footer typography */
+.footer-column h3 {
+  font-family: var(--font-accent);
   font-size: var(--fs-md);
-  color: var(--neutral-medium);
-  margin-bottom: 1rem;
+  color: white;
+  margin-bottom: 1.25rem;
+  font-weight: var(--fw-medium);
 }
 
-.lawyer-item p {
-  margin-bottom: 1.5rem;
+.footer-column h3::after {
+  width: 40px;
+  height: 2px;
 }
 
-.lawyer-item .learn-more {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color var(--transition-fast);
+.footer-column ul li a {
+  font-size: var(--fs-sm);
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
 }
 
-.lawyer-item .learn-more:hover {
-  color: var(--accent);
+.footer-column ul li a:hover {
+  transform: translateX(5px);
 }
