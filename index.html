@@ -57,6 +57,10 @@
         .site-header {
             background-color: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         .site-footer {
@@ -136,6 +140,68 @@
             background-size: contain;
             cursor: pointer;
         }
+
+        .practice-areas-overview {
+            padding: 4rem 0;
+            background-color: var(--neutral-lightest);
+        }
+
+        .practice-area-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .practice-area-icon {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            margin-right: 2rem;
+        }
+
+        .practice-area-icon img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .practice-area-content {
+            flex-grow: 1;
+        }
+
+        .practice-area-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .practice-area-content p {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-section {
+            padding: 4rem 0;
+            background-color: var(--neutral-lightest);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -195,6 +261,74 @@
                 Your browser does not support the video tag.
             </video>
             <div class="play-button"></div>
+        </section>
+
+        <section class="practice-areas-overview">
+            <div class="container">
+                <div class="practice-area-card">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/business-icon.svg" alt="Business Law Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2>Business Law & Corporate Governance</h2>
+                        <p>We advise on matters ranging from mergers and acquisitions to regulatory compliance. Our seasoned counsel guides businesses through complex commercial transactions and corporate governance challenges, ensuring robust legal strategies for sustainable growth.</p>
+                        <a href="business-law.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="practice-area-card">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/litigation-icon.svg" alt="Civil Litigation Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2>Civil Litigation & Dispute Resolution</h2>
+                        <p>With a focus on resolution and risk management, our litigation team is committed to providing vigorous representation in complex civil disputes. We strive to achieve favorable outcomes through negotiation, mediation, or trial, tailored to your unique circumstances.</p>
+                        <a href="civil-litigation.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="practice-area-card">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/technology-icon.svg" alt="Technology Law Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2>Technology Law & Cybersecurity</h2>
+                        <p>In today's rapidly evolving digital landscape, our firm provides expert legal guidance on technology transactions, cybersecurity risk management, and regulatory compliance. We help clients protect their digital assets and navigate the intricate intersection of law and technology.</p>
+                        <a href="technology-law.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="practice-area-card">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/intellectual-property-icon.svg" alt="Intellectual Property Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2>Intellectual Property & Innovation</h2>
+                        <p>Our intellectual property practice is dedicated to protecting the creativity and innovation of our clients. We handle everything from trademark and copyright registration to strategic litigation, ensuring your competitive edge in the market remains uncompromised.</p>
+                        <a href="intellectual-property.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="practice-area-card">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/general-practice-icon.svg" alt="General Practice Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2>General Practice</h2>
+                        <p>Our General Practice area covers a wide range of legal services designed to meet the diverse needs of our clients. Whether you require assistance with family law, real estate transactions, estate planning, or other common legal matters, our experienced team is here to provide expert guidance and representation.</p>
+                        <a href="general-practice.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About NorthernEdge Legal Solutions</h2>
+                    <p>At NorthernEdge Legal Solutions, we are committed to providing exceptional legal services with a focus on client satisfaction. Our mission is to deliver innovative and effective legal solutions that meet the unique needs of each client. We value integrity, professionalism, and a client-centered approach in all our endeavors.</p>
+                </div>
+            </div>
         </section>
     </main>
 
