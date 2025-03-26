@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
     letter-spacing: -0.01em;
     font-weight: 600;
+    color: var(--primary-dark);
 }
 
 h1 {
@@ -27,6 +28,7 @@ h2 {
 
 p {
     margin-bottom: 1.5rem;
+    color: var(--neutral-dark);
 }
 
 /* Increased White Space */
@@ -61,6 +63,7 @@ section {
     padding: 0.7rem 1rem;
     border-radius: 4px;
     transition: all 0.2s ease;
+    color: var(--neutral-dark);
 }
 
 .nav-menu a:hover,
@@ -84,6 +87,7 @@ section {
     min-width: 10rem;
     text-align: center;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Raleway', sans-serif;
 }
 
 .btn-primary {
@@ -202,6 +206,7 @@ label {
 .hero-section h1 {
     font-size: 3.2rem;
     margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
 }
 
 .hero-section .lead {
@@ -209,6 +214,7 @@ label {
     margin-bottom: 2.5rem;
     font-weight: 300;
     line-height: 1.6;
+    font-family: 'Raleway', sans-serif;
 }
 
 .cta-button {
@@ -452,11 +458,13 @@ img {
 .practice-area-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .practice-area-content p {
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Styles for the brief introduction to the firm */
@@ -474,11 +482,13 @@ img {
 .about-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .about-content p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Styles for the fixed navigation bar */
