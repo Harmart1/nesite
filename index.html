@@ -45,129 +45,6 @@
             margin-left: 4px;
         }
         
-        /* Enhanced Navigation */
-        .site-header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .site-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.8rem 2rem;
-        }
-        
-        .main-nav {
-            display: flex;
-            align-items: center;
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 1.5rem;
-        }
-        
-        .nav-menu li {
-            position: relative;
-        }
-        
-        .nav-menu a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            padding: 0.5rem 0;
-            display: block;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-menu a:hover, 
-        .nav-menu a.active {
-            color: #1A365D;
-        }
-        
-        .nav-menu a.active::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 3px;
-            background-color: var(--accent);
-            position: absolute;
-            bottom: -0.5rem;
-            left: 0;
-            border-radius: 2px;
-        }
-        
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            min-width: 200px;
-            border-radius: 5px;
-            padding: 0.5rem 0;
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        
-        .dropdown-menu li {
-            margin: 0;
-        }
-        
-        .dropdown-menu a {
-            padding: 0.7rem 1.5rem;
-        }
-        
-        .dropdown-menu a:hover {
-            background-color: #f8f9fa;
-        }
-        
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            z-index: 1001;
-        }
-        
-        .mobile-menu-toggle span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background-color: #333;
-            margin: 5px 0;
-            transition: all 0.3s ease;
-        }
-        
-        .mobile-menu-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        
-        .mobile-menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-        
         /* Enhanced Typography */
         .hero-tagline {
             font-size: 1.4rem;
@@ -199,99 +76,12 @@
             margin-bottom: 1rem;
         }
         
-        /* Hero Section with Video */
-        .hero {
-            position: relative;
-            overflow: hidden;
-            color: white;
-        }
-        
-        .hero-video-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .hero-video-container video {
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            z-index: 2;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            text-align: center;
-            padding: 8rem 0;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        /* Button Styles */
+        /* Enhanced Buttons */
         .hero-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-        }
-        
-        .btn-primary {
-            background-color: var(--accent);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background-color: darken(var(--accent), 10%);
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background-color: white;
-            color: #1A365D;
-            border: 2px solid #1A365D;
-        }
-        
-        .btn-secondary:hover {
-            background-color: #1A365D;
-            color: white;
-            transform: translateY(-2px);
         }
         
         .btn i {
@@ -351,122 +141,6 @@
             left: 0;
         }
         
-        /* Featured Video Section */
-        .featured-video-section {
-            padding: 5rem 0;
-            background-color: #f8f9fa;
-            text-align: center;
-        }
-        
-        .featured-video-container {
-            position: relative;
-            width: 100%;
-            max-width: 1000px;
-            margin: 2rem auto;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .video-responsive {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            background-color: #000;
-        }
-        
-        .video-responsive iframe, 
-        .video-responsive video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        
-        .video-overlay:hover {
-            background: rgba(0, 0, 0, 0.5);
-        }
-        
-        .play-button {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .play-button i {
-            color: #1A365D;
-            font-size: 3rem;
-            margin-left: 8px; /* To center the triangle icon */
-        }
-        
-        .video-overlay:hover .play-button {
-            transform: scale(1.1);
-        }
-        
-        .video-controls {
-            display: flex;
-            justify-content: center;
-            margin-top: 1.5rem;
-            gap: 1rem;
-        }
-        
-        .video-control-btn {
-            background-color: #1A365D;
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .video-control-btn:hover {
-            background-color: var(--accent);
-            transform: scale(1.1);
-        }
-        
-        .video-title {
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: #1A365D;
-        }
-        
-        .video-description {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            color: #555;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        
         /* Value Props Section */
         .value-props {
             padding: 4rem 0;
@@ -507,6 +181,60 @@
             font-size: 2rem;
         }
         
+        .card-icon {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Video Section */
+        .video-section {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-title {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #1A365D;
+        }
+        
+        .video-description {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #555;
+        }
+        
         /* Enhanced Logo Display */
         .logo-container {
             display: flex;
@@ -540,11 +268,6 @@
         }
         
         /* Practice Area Cards */
-        .practice-areas-overview {
-            padding: 5rem 0;
-            background-color: white;
-        }
-        
         .practice-area-card {
             display: grid;
             grid-template-columns: 80px 1fr;
@@ -568,8 +291,7 @@
             align-items: flex-start;
         }
         
-        .practice-area-icon img,
-        .practice-area-icon i {
+        .practice-area-icon img {
             width: 100%;
             max-width: 60px;
             height: auto;
@@ -585,6 +307,51 @@
             color: #555;
         }
         
+        /* Contact Section */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1 1 200px;
+            max-width: 250px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Footer Enhancements */
+        .footer-logo {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .footer-logo img {
+            max-width: 200px;
+            height: auto;
+        }
+        
         /* Responsive fixes */
         @media (max-width: 991px) {
             .practice-area-card {
@@ -596,60 +363,23 @@
                 justify-content: center;
                 margin-bottom: 1rem;
             }
+            
+            .contact-info-card {
+                flex: 1 1 45%;
+                max-width: 100%;
+            }
         }
         
         @media (max-width: 768px) {
-            .site-header .container {
-                padding: 1rem;
-            }
-            
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background-color: white;
+            .hero-buttons {
                 flex-direction: column;
-                gap: 0;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
+                gap: 1rem;
+                align-items: center;
             }
             
-            .nav-menu.active {
-                display: block;
-            }
-            
-            .nav-menu li {
-                margin: 0;
-            }
-            
-            .nav-menu a {
-                padding: 1rem;
-                border-bottom: 1px solid #eee;
-            }
-            
-            .dropdown-menu {
-                position: static;
-                box-shadow: none;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                display: none;
-                padding: 0;
-            }
-            
-            .dropdown.active .dropdown-menu {
-                display: block;
-            }
-            
-            .dropdown-menu a {
-                padding-left: 2rem;
-                background-color: #f8f9fa;
-            }
-            
-            .mobile-menu-toggle {
-                display: block;
+            .user-info-bar .container {
+                flex-direction: column;
+                gap: 5px;
             }
             
             .hero h1 {
@@ -661,16 +391,6 @@
                 padding: 0 1rem;
             }
             
-            .hero-content {
-                padding: 6rem 0;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-            
             .logo-text {
                 display: none;
             }
@@ -679,22 +399,54 @@
                 max-height: 50px;
             }
             
-            .user-info-bar .container {
-                flex-direction: column;
-                gap: 5px;
+            .contact-info-card {
+                flex: 1 1 100%;
             }
             
-            .play-button {
-                width: 70px;
-                height: 70px;
+            .site-header .container {
+                padding: 0.5rem 1rem;
             }
             
-            .play-button i {
-                font-size: 2rem;
+            .nav-menu {
+                width: 100%;
+                display: none;
             }
             
-            .video-title {
-                font-size: 1.5rem;
+            .nav-menu.active {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+            
+            .nav-menu li {
+                display: block;
+                margin: 0;
+            }
+            
+            .nav-menu li a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                display: none;
+                box-shadow: none;
+                background-color: #f8f9fa;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
             }
         }
         
@@ -704,13 +456,8 @@
                 padding: 0 1rem;
             }
             
-            .hero-content {
-                padding: 5rem 0;
-            }
-            
-            .video-controls {
-                flex-wrap: wrap;
-                justify-content: center;
+            .section-title {
+                font-size: 1.8rem;
             }
             
             .value-props-grid {
@@ -725,7 +472,7 @@
         <div class="container">
             <div class="datetime">
                 <i class="far fa-clock"></i> 
-                <span id="current-datetime">2025-03-27 00:39:20</span>
+                <span id="current-datetime">2025-03-27 01:21:47</span>
             </div>
             <div class="user-welcome">
                 <i class="far fa-user"></i> 
@@ -770,14 +517,7 @@
     </header>
 
     <main>
-        <!-- Hero section with video background -->
         <section class="hero">
-            <div class="hero-video-container">
-                <video id="hero-video" poster="images/hero-poster.jpg" autoplay muted loop>
-                    <source src="videos/northern-legal-hero.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
             <div class="hero-overlay"></div>
             <div class="hero-content container">
                 <h1>Trusted Legal Expertise for Northern Ontario</h1>
@@ -789,49 +529,8 @@
             </div>
         </section>
 
-        <!-- Featured Video Section -->
-        <section class="featured-video-section">
-            <div class="container">
-                <h2 class="section-title">Our Legal Approach</h2>
-                <p class="video-description">Discover how NorthernEdge Legal Solutions delivers innovative legal strategies tailored specifically for businesses in Northern Ontario.</p>
-                
-                <div class="featured-video-container">
-                    <div class="video-responsive">
-                        <video id="featured-video" poster="images/video-poster.jpg">
-                            <source src="videos/northernedge-intro.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-overlay" id="video-overlay">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="video-controls">
-                    <button class="video-control-btn" id="play-btn" title="Play">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button class="video-control-btn" id="pause-btn" title="Pause">
-                        <i class="fas fa-pause"></i>
-                    </button>
-                    <button class="video-control-btn" id="restart-btn" title="Restart">
-                        <i class="fas fa-redo"></i>
-                    </button>
-                    <button class="video-control-btn" id="mute-btn" title="Mute/Unmute">
-                        <i class="fas fa-volume-up"></i>
-                    </button>
-                </div>
-                
-                <h3 class="video-title">NorthernEdge Legal: Your Northern Ontario Legal Partner</h3>
-                <p class="video-description">Our team combines deep legal knowledge with a profound understanding of Northern Ontario's unique business environment to deliver tailored legal solutions that address your specific challenges and opportunities.</p>
-            </div>
-        </section>
-
         <section class="value-props">
             <div class="container">
-                <h2 class="section-title text-center">Why Choose NorthernEdge Legal</h2>
                 <div class="value-props-grid">
                     <div class="value-prop">
                         <div class="icon-circle">
@@ -855,6 +554,23 @@
                         <p>Combining traditional expertise with modern legal solutions</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Updated video section using YouTube embed for reliability -->
+        <section class="video-section">
+            <div class="container">
+                <h2 class="section-title text-center">See Our Expertise in Action</h2>
+                <p class="video-description">Learn how NorthernEdge Legal Solutions can help navigate complex legal challenges for your business.</p>
+                
+                <div class="video-container">
+                    <div class="video-responsive">
+                        <!-- Using YouTube embed for reliable video playback -->
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" title="NorthernEdge Legal: Your Northern Ontario Legal Partner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <h4 class="video-title">NorthernEdge Legal: Your Northern Ontario Legal Partner</h4>
+                <p class="video-description">Our team combines deep legal knowledge with a profound understanding of Northern Ontario's unique business environment to deliver tailored legal solutions.</p>
             </div>
         </section>
 
@@ -893,6 +609,53 @@
                         <h3>Technology Law & Cybersecurity</h3>
                         <p>In today's digital economy, legal protection for your technology assets is essential. Our specialized team provides guidance on data privacy regulations, intellectual property protection, and cybersecurity compliance to safeguard your digital operations.</p>
                         <a href="technology-law.html" class="btn btn-secondary slide-btn">Discover Tech Solutions <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <span class="eyebrow-text">WHO WE ARE</span>
+                    <h2>Northern Ontario's Premier Legal Partner</h2>
+                    <p>At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to providing innovative legal strategies that address your specific challenges and opportunities.</p>
+                    <p>We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, navigating regulatory requirements, or planning for future growth, we're here to guide you every step of the way.</p>
+                    <a href="about.html" class="btn btn-primary glow-btn">Discover Our Story <i class="fas fa-users"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <span class="eyebrow-text">GET IN TOUCH</span>
+                    <h2>Ready to Discuss Your Legal Needs?</h2>
+                    <p>Our team is available to answer your questions and provide the expert guidance you're looking for. We're committed to responding to all inquiries within one business day.</p>
+                    <div class="contact-info">
+                        <div class="contact-info-card">
+                            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h3>Our Location</h3>
+                            <p>67 Hugill St.<br>Sault Ste. Marie, Ontario<br>P6A 4E6</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                            <h3>Email Us</h3>
+                            <p><a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+17059993657">(705) 999-3657</a></p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="card-icon"><i class="far fa-clock"></i></div>
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
+                        </div>
+                        <div class="contact-info-card cta-card">
+                            <a href="contact.html" class="btn btn-primary pulse-btn">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -967,7 +730,7 @@
             const dropdowns = document.querySelectorAll('.dropdown');
             
             dropdowns.forEach(dropdown => {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 1024) {
                     dropdown.addEventListener('click', function(e) {
                         if (e.target.parentNode.classList.contains('dropdown')) {
                             e.preventDefault();
@@ -976,58 +739,6 @@
                     });
                 }
             });
-            
-            // Featured video player functionality
-            const videoOverlay = document.getElementById('video-overlay');
-            const featuredVideo = document.getElementById('featured-video');
-            const playBtn = document.getElementById('play-btn');
-            const pauseBtn = document.getElementById('pause-btn');
-            const restartBtn = document.getElementById('restart-btn');
-            const muteBtn = document.getElementById('mute-btn');
-            
-            if (videoOverlay && featuredVideo) {
-                videoOverlay.addEventListener('click', function() {
-                    featuredVideo.play();
-                    this.style.display = 'none';
-                });
-                
-                featuredVideo.addEventListener('pause', function() {
-                    if (!featuredVideo.seeking) {
-                        videoOverlay.style.display = 'flex';
-                    }
-                });
-                
-                featuredVideo.addEventListener('ended', function() {
-                    videoOverlay.style.display = 'flex';
-                });
-            }
-            
-            // Video control buttons
-            if (playBtn && featuredVideo) {
-                playBtn.addEventListener('click', function() {
-                    featuredVideo.play();
-                    videoOverlay.style.display = 'none';
-                });
-                
-                pauseBtn.addEventListener('click', function() {
-                    featuredVideo.pause();
-                });
-                
-                restartBtn.addEventListener('click', function() {
-                    featuredVideo.currentTime = 0;
-                    featuredVideo.play();
-                    videoOverlay.style.display = 'none';
-                });
-                
-                muteBtn.addEventListener('click', function() {
-                    featuredVideo.muted = !featuredVideo.muted;
-                    if (featuredVideo.muted) {
-                        muteBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
-                    } else {
-                        muteBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
-                    }
-                });
-            }
             
             // Keep the current date and time updated
             function updateDateTime() {
@@ -1039,4 +750,13 @@
                 const minutes = String(now.getUTCMinutes()).padStart(2, '0');
                 const seconds = String(now.getUTCSeconds()).padStart(2, '0');
                 
-                const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes
+                const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+                document.getElementById('current-datetime').textContent = formattedDateTime;
+            }
+            
+            // Update the time every second
+            setInterval(updateDateTime, 1000);
+        });
+    </script>
+</body>
+</html>
