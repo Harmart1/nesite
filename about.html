@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | NorthernEdge Legal Solutions</title>
     <meta name="description" content="Learn about NorthernEdge Legal Solutions, a modern law firm serving Ontario with expertise in civil litigation, business law, and technology law.">
-    <base href="/">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/typography.css">
@@ -14,6 +13,7 @@
     <link rel="stylesheet" href="css/elegant-navigation.css">
     <link rel="stylesheet" href="css/back-to-top.css">
     <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/main.js" defer></script>
     <script src="js/back-to-top.js" defer></script>
     <script src="js/visual-integration.js" defer></script>
@@ -55,12 +55,107 @@
         ] 
     }
     </script>
+    <style>
+        /* Date/Time and User Login Bar */
+        .user-info-bar {
+            background-color: #1A365D;
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .user-info-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .datetime, .user-welcome {
+            display: flex;
+            align-items: center;
+        }
+        
+        .datetime i, .user-welcome i {
+            margin-right: 8px;
+            color: #D4AF37; /* Gold accent color */
+        }
+        
+        #username {
+            font-weight: 600;
+            color: #D4AF37;
+            margin-left: 4px;
+        }
+        
+        /* Lawyer Profile Enhancements */
+        .lawyer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .lawyer-item {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .lawyer-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .lawyer-item h3 {
+            color: #1A365D;
+            margin-bottom: 0.5rem;
+        }
+        
+        .title {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .lawyer-item p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .lawyer-item .btn {
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .user-info-bar .container {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- User info and date/time bar -->
+    <div class="user-info-bar">
+        <div class="container">
+            <div class="datetime">
+                <i class="far fa-clock"></i> 
+                <span id="current-datetime">2025-03-27 00:29:31</span>
+            </div>
+            <div class="user-welcome">
+                <i class="far fa-user"></i> 
+                Welcome, <span id="username">Harmart1</span>
+            </div>
+        </div>
+    </div>
+
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
-                <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                <a href="index.html">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" class="responsive-logo">
+                </a>
             </div>
             <nav class="main-nav" aria-label="Main Navigation">
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
@@ -95,8 +190,7 @@
         </div>
     </nav>
 
-    <main class="container">
-        <!-- Main content remains the same - just updating image references -->
+    <main>
         <section class="page-header fade-in">
             <div class="container">
                 <h1>About Our Firm</h1>
@@ -104,24 +198,89 @@
             </div>
         </section>
 
-        <!-- New section for lawyer profiles -->
-        <section class="lawyers">
+        <section class="firm-overview">
             <div class="container">
-                <h2>Our Lawyers</h2>
-                <div class="lawyer-grid">
-                    <!-- Tim J. Harmar Profile -->
-                    <div class="lawyer-item">
-                        <h3>Tim J. Harmar, BA (HONS), JD, MBA, LLM, LLM, M.Eng., CAPP</h3>
-                        <p class="title">Founder &amp; Principal Lawyer – Corporate, Intellectual Property &amp; Technology Law</p>
-                        <p>Tim J. Harmar is an award-winning lawyer and the driving force behind NorthernEdge Legal Solutions. With a distinguished record in corporate, intellectual property, and technology law—including landmark cases before the Supreme Court of Canada—Tim also educates future legal professionals as a professor at Sault College of Applied Arts and Technology.</p>
-                        <p>Throughout his career, Tim has built a reputation for innovative problem-solving, persuasive advocacy, and a commitment to excellence. His experience ranges from high-profile civil litigation, including appearances before the Supreme Court of Canada, to advising on complex corporate transactions and intellectual property matters. Tim has also contributed to academic institutions as a professor, enriching the field of law through teaching and community engagement.</p>
-                        <p>At NorthernEdge Legal Solutions, Tim provides all legal services personally, ensuring that every client benefits from his direct involvement and a highly personalized approach. His practice is founded on the principles of integrity, diligence, and a relentless pursuit of favorable outcomes for every client, no matter the complexity of their case.</p>
-                        <a href="team/tim-harmar.html" target="_blank" class="btn btn-primary" aria-label="Learn more about Tim J. Harmar">Learn More</a>
+                <div class="two-column-layout">
+                    <div class="text-column fade-in">
+                        <h2>Our Approach</h2>
+                        <p>At NorthernEdge Legal Solutions, we believe in delivering legal services differently. As a modern boutique firm serving Northern Ontario, we combine deep legal expertise with personalized service and innovative technology to provide efficient, cost-effective representation for our clients.</p>
+                        
+                        <p>Our practice is built around understanding our clients' unique challenges and opportunities in the Northern Ontario business landscape. We take the time to listen, to understand your objectives, and to craft strategic legal solutions that help you achieve your goals.</p>
+                        
+                        <p>Whether you're facing a complex business transaction, navigating regulatory requirements, or need representation in litigation, our approach remains consistent: we provide thoughtful, pragmatic counsel with a focus on delivering tangible results.</p>
+                    </div>
+                    <div class="image-column fade-in-delay">
+                        <img src="images/office-interior.jpg" alt="NorthernEdge Legal Solutions office" class="rounded-image shadow">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Lawyer profile section -->
+        <section class="lawyers">
+            <div class="container">
+                <h2 class="section-title">Our Lawyers</h2>
+                <div class="lawyer-grid">
+                    <!-- Tim J. Harmar Profile -->
+                    <div class="lawyer-item fade-in">
+                        <h3>Tim J. Harmar, BA (HONS), JD, MBA, LLM, LLM, M.Eng., CAPP</h3>
+                        <p class="title">Founder &amp; Principal Lawyer – Corporate, Intellectual Property &amp; Technology Law</p>
+                        <p>Tim J. Harmar is an award-winning lawyer and the driving force behind NorthernEdge Legal Solutions. With a distinguished record in corporate, intellectual property, and technology law, Tim brings a unique combination of legal expertise and business acumen to every client matter.</p>
+                        <p>Throughout his career, Tim has built a reputation for innovative problem-solving, persuasive advocacy, and a commitment to excellence. His experience ranges from high-profile litigation cases to complex business transactions and cutting-edge technology law matters.</p>
+                        <p>At NorthernEdge Legal Solutions, Tim provides all legal services personally, ensuring that every client benefits from his direct involvement and a highly personalized approach to legal representation.</p>
+                        <a href="team/tim-harmar.html" class="btn btn-primary" aria-label="Learn more about Tim J. Harmar">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values section -->
+        <section class="our-values">
+            <div class="container">
+                <h2 class="section-title">Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card fade-in">
+                        <div class="value-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Integrity</h3>
+                        <p>We uphold the highest ethical standards in all our interactions, providing honest counsel and transparent communication.</p>
+                    </div>
+                    <div class="value-card fade-in-delay">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Client Focus</h3>
+                        <p>We place our clients' needs and objectives at the center of everything we do, tailoring our approach to deliver the best possible outcomes.</p>
+                    </div>
+                    <div class="value-card fade-in-delay-2">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>We embrace technology and creative thinking to solve legal challenges efficiently and effectively.</p>
+                    </div>
+                    <div class="value-card fade-in-delay-3">
+                        <div class="value-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3>Northern Perspective</h3>
+                        <p>Our deep understanding of Northern Ontario's unique business environment allows us to provide contextually relevant legal guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content fade-in">
+                    <h2>Ready to Work With Us?</h2>
+                    <p>Schedule a consultation to discuss how we can assist with your legal needs.</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <button class="back-to-top" aria-label="Back to top">
@@ -133,6 +292,9 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h3>Practice Areas</h3>
@@ -165,7 +327,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
                     <a href="privacy-policy.html" aria-label="Read our privacy policy">Privacy Policy</a> | 
                     <a href="terms-of-use.html" aria-label="Read our terms of use">Terms of Use</a>
@@ -173,5 +335,49 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Add dropdown functionality for mobile
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                if (window.innerWidth <= 1024) {
+                    dropdown.addEventListener('click', function(e) {
+                        if (e.target.parentNode.classList.contains('dropdown')) {
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                        }
+                    });
+                }
+            });
+            
+            // Keep the current date and time updated
+            function updateDateTime() {
+                const now = new Date();
+                const year = now.getUTCFullYear();
+                const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+                const day = String(now.getUTCDate()).padStart(2, '0');
+                const hours = String(now.getUTCHours()).padStart(2, '0');
+                const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+                const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+                
+                const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+                document.getElementById('current-datetime').textContent = formattedDateTime;
+            }
+            
+            // Update the time every second
+            setInterval(updateDateTime, 1000);
+        });
+    </script>
 </body>
 </html>
