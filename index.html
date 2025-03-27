@@ -187,16 +187,320 @@
             margin-bottom: 1rem;
         }
         
+        /* Video Section */
+        .video-section {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-responsive iframe, 
+        .video-responsive video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .video-overlay:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .play-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .play-button i {
+            color: #1A365D;
+            font-size: 2rem;
+            margin-left: 5px; /* To center the triangle icon */
+        }
+        
+        .video-overlay:hover .play-button {
+            transform: scale(1.1);
+        }
+        
+        .video-title {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #1A365D;
+        }
+        
+        .video-description {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #555;
+        }
+        
+        /* Enhanced Logo Display */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .responsive-logo {
+            max-height: 70px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        .logo-text {
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1A365D;
+            line-height: 1.2;
+        }
+        
+        .logo-tagline {
+            font-size: 0.8rem;
+            color: #555;
+            font-style: italic;
+        }
+        
+        /* Practice Area Cards */
+        .practice-area-card {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .practice-area-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .practice-area-icon {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .practice-area-icon img {
+            width: 100%;
+            max-width: 60px;
+            height: auto;
+        }
+        
+        .practice-area-content h3 {
+            color: #1A365D;
+            margin-bottom: 1rem;
+        }
+        
+        .practice-area-content p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1 1 200px;
+            max-width: 250px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Footer Enhancements */
+        .footer-logo {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .footer-logo img {
+            max-width: 200px;
+            height: auto;
+        }
+        
         /* Responsive fixes */
+        @media (max-width: 991px) {
+            .practice-area-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .practice-area-icon {
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+            
+            .contact-info-card {
+                flex: 1 1 45%;
+                max-width: 100%;
+            }
+        }
+        
         @media (max-width: 768px) {
             .hero-buttons {
                 flex-direction: column;
                 gap: 1rem;
+                align-items: center;
             }
             
             .user-info-bar .container {
                 flex-direction: column;
                 gap: 5px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+            
+            .logo-text {
+                display: none;
+            }
+            
+            .responsive-logo {
+                max-height: 50px;
+            }
+            
+            .contact-info-card {
+                flex: 1 1 100%;
+            }
+            
+            .site-header .container {
+                padding: 0.5rem 1rem;
+            }
+            
+            .nav-menu {
+                width: 100%;
+                display: none;
+            }
+            
+            .nav-menu.active {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+            
+            .nav-menu li {
+                display: block;
+                margin: 0;
+            }
+            
+            .nav-menu li a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                display: none;
+                box-shadow: none;
+                background-color: #f8f9fa;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+                padding: 0 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .value-props-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -207,7 +511,7 @@
         <div class="container">
             <div class="datetime">
                 <i class="far fa-clock"></i> 
-                <span id="current-datetime">2025-03-26 22:59:14</span>
+                <span id="current-datetime">2025-03-27 00:33:29</span>
             </div>
             <div class="user-welcome">
                 <i class="far fa-user"></i> 
@@ -219,7 +523,13 @@
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
-                <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" class="responsive-logo">
+                <a href="index.html">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" class="responsive-logo">
+                </a>
+                <div class="logo-text">
+                    <span class="logo-name">NorthernEdge Legal</span>
+                    <span class="logo-tagline">Innovative Legal Solutions</span>
+                </div>
             </div>
             <nav class="main-nav" aria-label="Main Navigation">
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
@@ -286,6 +596,30 @@
             </div>
         </section>
 
+        <!-- New video section -->
+        <section class="video-section">
+            <div class="container">
+                <h2 class="section-title text-center">See Our Expertise in Action</h2>
+                <p class="video-description">Learn how NorthernEdge Legal Solutions can help navigate complex legal challenges for your business.</p>
+                
+                <div class="video-container">
+                    <div class="video-responsive">
+                        <video id="firm-video" poster="images/video-poster.jpg">
+                            <source src="videos/northernedge-intro.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay" id="video-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="video-title">NorthernEdge Legal: Your Northern Ontario Legal Partner</h4>
+                <p class="video-description">Our team combines deep legal knowledge with a profound understanding of Northern Ontario's unique business environment to deliver tailored legal solutions.</p>
+            </div>
+        </section>
+
         <section class="practice-areas-overview">
             <div class="container">
                 <h2 class="section-title text-center">Specialized Legal Expertise</h2>
@@ -293,33 +627,33 @@
                 
                 <div class="practice-area-card">
                     <div class="practice-area-icon">
-                        <img src="images/icons/business-icon.svg" alt="Business Law Icon">
+                        <i class="fas fa-building" style="font-size: 2.5rem; color: #1A365D;"></i>
                     </div>
                     <div class="practice-area-content">
                         <h3>Business Law & Corporate Governance</h3>
-                        <p>Navigate the complexities of modern business with confidence. Our expert team provides strategic guidance on mergers and acquisitions, regulatory compliance, contract negotiations, intellectual property protection, and corporate structuring. We help businesses of all sizes establish solid foundations for sustainable growth.</p>
+                        <p>Navigate the complexities of modern business with confidence. Our expert team provides strategic guidance on mergers and acquisitions, regulatory compliance, contract negotiations, and all aspects of corporate governance to help your business thrive.</p>
                         <a href="business-law.html" class="btn btn-secondary slide-btn">Explore Business Services <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
                 
                 <div class="practice-area-card">
                     <div class="practice-area-icon">
-                        <img src="images/icons/litigation-icon.svg" alt="Civil Litigation Icon">
+                        <i class="fas fa-gavel" style="font-size: 2.5rem; color: #1A365D;"></i>
                     </div>
                     <div class="practice-area-content">
                         <h3>Civil Litigation & Dispute Resolution</h3>
-                        <p>When conflicts arise, our strategic litigation team stands ready to protect your interests. We combine thorough case preparation with persuasive advocacy to achieve favorable outcomes in commercial disputes, contract breaches, property matters, and professional liability cases. Our focus remains on efficient resolution and minimizing business disruption.</p>
+                        <p>When conflicts arise, our strategic litigation team stands ready to protect your interests. We combine thorough case preparation with persuasive advocacy to achieve favorable outcomes whether through negotiation, mediation, or in the courtroom.</p>
                         <a href="civil-litigation.html" class="btn btn-secondary slide-btn">Learn About Litigation <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
                 
                 <div class="practice-area-card">
                     <div class="practice-area-icon">
-                        <img src="images/icons/technology-icon.svg" alt="Technology Law Icon">
+                        <i class="fas fa-laptop-code" style="font-size: 2.5rem; color: #1A365D;"></i>
                     </div>
                     <div class="practice-area-content">
                         <h3>Technology Law & Cybersecurity</h3>
-                        <p>In today's digital economy, legal protection for your technology assets is essential. Our specialized team provides guidance on data privacy regulations, intellectual property rights, software licensing, technology contracts, and cybersecurity compliance frameworks. We help you navigate the rapidly evolving legal landscape of the digital world.</p>
+                        <p>In today's digital economy, legal protection for your technology assets is essential. Our specialized team provides guidance on data privacy regulations, intellectual property protection, and cybersecurity compliance to safeguard your digital operations.</p>
                         <a href="technology-law.html" class="btn btn-secondary slide-btn">Discover Tech Solutions <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -331,8 +665,8 @@
                 <div class="about-content">
                     <span class="eyebrow-text">WHO WE ARE</span>
                     <h2>Northern Ontario's Premier Legal Partner</h2>
-                    <p>At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to delivering exceptional legal services that help our clients succeed in an increasingly complex regulatory landscape.</p>
-                    <p>We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation challenges, navigating business transactions, or protecting your technological innovations, our comprehensive approach ensures that all your legal needs are met with precision and care.</p>
+                    <p>At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to providing innovative legal strategies that address your specific challenges and opportunities.</p>
+                    <p>We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, navigating regulatory requirements, or planning for future growth, we're here to guide you every step of the way.</p>
                     <a href="about.html" class="btn btn-primary glow-btn">Discover Our Story <i class="fas fa-users"></i></a>
                 </div>
             </div>
@@ -377,6 +711,9 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h3>Practice Areas</h3>
@@ -448,6 +785,25 @@
                     });
                 }
             });
+            
+            // Video player functionality
+            const videoOverlay = document.getElementById('video-overlay');
+            const video = document.getElementById('firm-video');
+            
+            if (videoOverlay && video) {
+                videoOverlay.addEventListener('click', function() {
+                    video.play();
+                    this.style.display = 'none';
+                });
+                
+                video.addEventListener('pause', function() {
+                    videoOverlay.style.display = 'flex';
+                });
+                
+                video.addEventListener('ended', function() {
+                    videoOverlay.style.display = 'flex';
+                });
+            }
             
             // Keep the current date and time updated
             function updateDateTime() {
