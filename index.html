@@ -191,48 +191,98 @@
         .video-section {
             padding: 4rem 0;
             background-color: #f8f9fa;
-        }
-        
-        .video-container {
             position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
-        .video-responsive {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            background-color: #000;
-        }
-        
-        .video-responsive iframe {
+        .video-section::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background-color: rgba(26, 54, 93, 0.05);
+            z-index: 0;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .video-responsive {
+            width: 100%;
+            background-color: #000;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .video-responsive video {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+        
+        .video-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+        
+        .video-btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #1A365D;
+            width: 50px;
+            height: 50px;
             border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-btn:hover {
+            background-color: rgba(255, 255, 255, 1);
+            transform: scale(1.1);
+        }
+        
+        .video-btn i {
+            font-size: 1.2rem;
         }
         
         .video-title {
             text-align: center;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
             font-weight: 600;
             color: #1A365D;
+            position: relative;
+            z-index: 1;
         }
         
         .video-description {
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: #555;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            color: #444;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
         }
         
         /* Enhanced Logo Display */
@@ -352,6 +402,142 @@
             height: auto;
         }
         
+        /* Enhanced Navigation */
+        .nav-menu {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            position: relative;
+            margin-left: 1.5rem;
+        }
+        
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0;
+            display: inline-block;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1A365D;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #1A365D;
+        }
+        
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: -20px;
+            background-color: white;
+            min-width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 0;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            padding: 0.75rem 1.5rem;
+            display: block;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .dropdown-menu a:hover,
+        .dropdown-menu a.active {
+            background-color: #f8f9fa;
+        }
+        
+        .dropdown-menu a::after {
+            display: none;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: relative;
+        }
+        
+        .mobile-menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #1A365D;
+            position: absolute;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .mobile-menu-toggle span:nth-child(1) {
+            top: 30%;
+            transform: translateY(-50%);
+        }
+        
+        .mobile-menu-toggle span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .mobile-menu-toggle span:nth-child(3) {
+            top: 70%;
+            transform: translateY(-50%);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        
         /* Responsive fixes */
         @media (max-width: 991px) {
             .practice-area-card {
@@ -367,6 +553,10 @@
             .contact-info-card {
                 flex: 1 1 45%;
                 max-width: 100%;
+            }
+            
+            .video-container {
+                max-width: 90%;
             }
         }
         
@@ -407,46 +597,72 @@
                 padding: 0.5rem 1rem;
             }
             
-            .nav-menu {
-                width: 100%;
-                display: none;
+            .mobile-menu-toggle {
+                display: block;
             }
             
-            .nav-menu.active {
-                display: block;
+            .nav-menu {
+                display: none;
+                flex-direction: column;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
                 background-color: white;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
+                z-index: 100;
+                padding: 0;
+            }
+            
+            .nav-menu.active {
+                display: block;
             }
             
             .nav-menu li {
-                display: block;
                 margin: 0;
             }
             
-            .nav-menu li a {
+            .nav-menu a {
+                padding: 1rem 1.5rem;
                 display: block;
-                padding: 1rem;
                 border-bottom: 1px solid #eee;
             }
             
             .dropdown-menu {
                 position: static;
-                display: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
                 box-shadow: none;
-                background-color: #f8f9fa;
+                display: none;
+                padding: 0;
             }
             
             .dropdown.active .dropdown-menu {
                 display: block;
             }
             
-            .mobile-menu-toggle {
-                display: block;
+            .dropdown-menu a {
+                padding: 1rem 3rem;
+                background-color: #f8f9fa;
+            }
+            
+            .video-controls {
+                bottom: 10px;
+            }
+            
+            .video-btn {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .video-title {
+                font-size: 1.5rem;
+            }
+            
+            .video-description {
+                font-size: 1rem;
+                padding: 0 1rem;
             }
         }
         
@@ -463,6 +679,15 @@
             .value-props-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .video-controls {
+                gap: 10px;
+            }
+            
+            .video-btn {
+                width: 36px;
+                height: 36px;
+            }
         }
     </style>
 </head>
@@ -472,7 +697,7 @@
         <div class="container">
             <div class="datetime">
                 <i class="far fa-clock"></i> 
-                <span id="current-datetime">2025-03-27 01:21:47</span>
+                <span id="current-datetime">2025-03-27 01:26:18</span>
             </div>
             <div class="user-welcome">
                 <i class="far fa-user"></i> 
@@ -529,6 +754,37 @@
             </div>
         </section>
 
+        <!-- Featured Video Section - Placed more prominently after the hero section -->
+        <section class="video-section">
+            <div class="container">
+                <h2 class="section-title text-center">Our Dynamic Legal Solutions</h2>
+                <p class="video-description">Watch how NorthernEdge Legal Solutions brings innovation and expertise to your legal challenges</p>
+                
+                <div class="video-container">
+                    <div class="video-responsive">
+                        <!-- Using the specific video file from videos directory -->
+                        <video id="firm-video" controls autoplay muted loop>
+                            <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-controls">
+                            <button class="video-btn" id="play-pause-btn" aria-label="Play or pause video">
+                                <i class="fas fa-pause" id="play-pause-icon"></i>
+                            </button>
+                            <button class="video-btn" id="mute-unmute-btn" aria-label="Mute or unmute video">
+                                <i class="fas fa-volume-mute" id="mute-icon"></i>
+                            </button>
+                            <button class="video-btn" id="fullscreen-btn" aria-label="Toggle fullscreen">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="video-title">NorthernEdge Legal: Modern Approach to Traditional Law</h3>
+                <p class="video-description">Witness our commitment to excellence and innovation through our dynamic visual identity. Our logo represents the intersection of traditional legal expertise and modern problem-solving strategies.</p>
+            </div>
+        </section>
+
         <section class="value-props">
             <div class="container">
                 <div class="value-props-grid">
@@ -554,23 +810,6 @@
                         <p>Combining traditional expertise with modern legal solutions</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Updated video section using YouTube embed for reliability -->
-        <section class="video-section">
-            <div class="container">
-                <h2 class="section-title text-center">See Our Expertise in Action</h2>
-                <p class="video-description">Learn how NorthernEdge Legal Solutions can help navigate complex legal challenges for your business.</p>
-                
-                <div class="video-container">
-                    <div class="video-responsive">
-                        <!-- Using YouTube embed for reliable video playback -->
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" title="NorthernEdge Legal: Your Northern Ontario Legal Partner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <h4 class="video-title">NorthernEdge Legal: Your Northern Ontario Legal Partner</h4>
-                <p class="video-description">Our team combines deep legal knowledge with a profound understanding of Northern Ontario's unique business environment to deliver tailored legal solutions.</p>
             </div>
         </section>
 
@@ -740,23 +979,18 @@
                 }
             });
             
-            // Keep the current date and time updated
-            function updateDateTime() {
-                const now = new Date();
-                const year = now.getUTCFullYear();
-                const month = String(now.getUTCMonth() + 1).padStart(2, '0');
-                const day = String(now.getUTCDate()).padStart(2, '0');
-                const hours = String(now.getUTCHours()).padStart(2, '0');
-                const minutes = String(now.getUTCMinutes()).padStart(2, '0');
-                const seconds = String(now.getUTCSeconds()).padStart(2, '0');
-                
-                const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-                document.getElementById('current-datetime').textContent = formattedDateTime;
-            }
+            // Video player enhanced functionality
+            const video = document.getElementById('firm-video');
+            const playPauseBtn = document.getElementById('play-pause-btn');
+            const playPauseIcon = document.getElementById('play-pause-icon');
+            const muteBtn = document.getElementById('mute-unmute-btn');
+            const muteIcon = document.getElementById('mute-icon');
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
             
-            // Update the time every second
-            setInterval(updateDateTime, 1000);
-        });
-    </script>
-</body>
-</html>
+            if (video && playPauseBtn && muteBtn && fullscreenBtn) {
+                // Play/Pause functionality
+                playPauseBtn.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                        playPauseIcon.classList.remove('fa-play');
+                        playP
