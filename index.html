@@ -6,9 +6,6 @@
     <title>NorthernEdge Legal Solutions</title>
     <meta name="description" content="Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/main.js" defer></script>
     <script src="js/back-to-top.js" defer></script>
@@ -993,4 +990,41 @@
                     if (video.paused) {
                         video.play();
                         playPauseIcon.classList.remove('fa-play');
-                        playP
+                        playPauseIcon.classList.add('fa-pause');
+                    } else {
+                        video.pause();
+                        playPauseIcon.classList.remove('fa-pause');
+                        playPauseIcon.classList.add('fa-play');
+                    }
+                });
+                
+                // Mute/Unmute functionality
+                muteBtn.addEventListener('click', function() {
+                    if (video.muted) {
+                        video.muted = false;
+                        muteIcon.classList.remove('fa-volume-mute');
+                        muteIcon.classList.add('fa-volume-up');
+                    } else {
+                        video.muted = true;
+                        muteIcon.classList.remove('fa-volume-up');
+                        muteIcon.classList.add('fa-volume-mute');
+                    }
+                });
+                
+                // Fullscreen functionality
+                fullscreenBtn.addEventListener('click', function() {
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    } else if (video.mozRequestFullScreen) { /* Firefox */
+                        video.mozRequestFullScreen();
+                    } else if (video.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                        video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) { /* IE/Edge */
+                        video.msRequestFullscreen();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -8,11 +8,12 @@
 /* Import font files and CSS modules */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 @import 'variables.css';
-@import 'fixes.css';
-@import 'blog.css';
-@import 'forms.css';
-@import 'footer.css';
-@import 'print.css';
+@import 'typography.css';
+@import 'elegant-design-system.css';
+@import 'elegant-navigation.css';
+@import 'responsive.css';
+@import 'visual-enhancement.css';
+@import 'animations.css';
 
 /* Core styles */
 :root {
