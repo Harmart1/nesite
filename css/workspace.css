@@ -145,8 +145,6 @@
   transform: translateY(0);
   animation: fadeIn 0.3s ease;
   /* Accessibility improvements */
-  role="dialog";
-  aria-live="polite";
 }
 
 /* Close button for location info */
