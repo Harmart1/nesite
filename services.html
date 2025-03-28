@@ -13,6 +13,18 @@
   <link rel="manifest" href="/site.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/visual-enhancements.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <link rel="stylesheet" href="css/navigation-enhancements.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <link rel="stylesheet" href="css/cookie-consent.css">
+  <link rel="stylesheet" href="css/back-to-top.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/icon-styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,11 +46,8 @@
 <body>
   <header class="sticky">
     <div class="container">
-      <div class="video-container">
-        <video autoplay muted playsinline>
-          <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div class="logo-container">
+        <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
       </div>
       <nav>
         <ul>
@@ -57,38 +66,38 @@
     <section class="hero fade-in">
       <div class="container">
         <h1>Our Legal Services</h1>
-        <p>Expert solutions tailored to your needs. Trust NorthernEdge Legal Solutions for exceptional legal guidance.</p>
-        <a href="#contact-form" class="cta-button">Get a Consultation</a>
+        <p class="lead">Expert solutions tailored to your needs. Trust NorthernEdge Legal Solutions for exceptional legal guidance.</p>
+        <a href="#contact-form" class="btn btn-primary pulse" aria-label="Get a Consultation">Get a Consultation</a>
       </div>
     </section>
 
     <section class="services fade-in">
       <div class="container">
-        <h2>Practice Areas</h2>
+        <h2 class="section-title text-center">Practice Areas</h2>
         <div class="service-grid">
           <div class="service-item">
             <img src="/images/scales.png" alt="Corporate Law Icon" class="service-icon">
             <h3>Corporate Law</h3>
             <p>Strategic guidance for business formation, contracts, and compliance.</p>
-            <a href="/services/corporate-law" class="learn-more">Learn More</a>
+            <a href="/services/corporate-law" class="btn btn-secondary" aria-label="Learn More">Learn More</a>
           </div>
           <div class="service-item">
             <img src="/images/scales.png" alt="Intellectual Property Icon" class="service-icon">
             <h3>Intellectual Property</h3>
             <p>Protect your innovations with comprehensive IP services.</p>
-            <a href="/services/intellectual-property" class="learn-more">Learn More</a>
+            <a href="/services/intellectual-property" class="btn btn-secondary" aria-label="Learn More">Learn More</a>
           </div>
           <div class="service-item">
             <img src="/images/scales.png" alt="Litigation Icon" class="service-icon">
             <h3>Litigation</h3>
             <p>Robust representation in disputes from negotiation through trial.</p>
-            <a href="/services/litigation" class="learn-more">Learn More</a>
+            <a href="/services/litigation" class="btn btn-secondary" aria-label="Learn More">Learn More</a>
           </div>
           <div class="service-item">
             <img src="/images/scales.png" alt="Employment Law Icon" class="service-icon">
             <h3>Employment Law</h3>
             <p>Expert advice on workplace policies and labor regulations.</p>
-            <a href="/services/employment-law" class="learn-more">Learn More</a>
+            <a href="/services/employment-law" class="btn btn-secondary" aria-label="Learn More">Learn More</a>
           </div>
         </div>
       </div>
@@ -96,15 +105,21 @@
 
     <section class="contact-form fade-in" id="contact-form">
       <div class="container">
-        <h2>Contact Us</h2>
+        <h2 class="section-title text-center">Contact Us</h2>
         <form action="/submit" method="POST">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-          <label for="message">How Can We Help?</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <button type="submit" class="cta-button">Submit</button>
+          <div class="form-group form-field">
+            <label for="name" class="form-required">Name</label>
+            <input type="text" id="name" name="name" required aria-required="true" data-validate="required">
+          </div>
+          <div class="form-group form-field">
+            <label for="email" class="form-required">Email</label>
+            <input type="email" id="email" name="email" required aria-required="true" data-validate="required email">
+          </div>
+          <div class="form-group form-field">
+            <label for="message" class="form-required">How Can We Help?</label>
+            <textarea id="message" name="message" rows="4" required aria-required="true" data-validate="required"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary pulse" aria-label="Submit">Submit</button>
         </form>
       </div>
     </section>
@@ -112,7 +127,7 @@
 
   <footer>
     <div class="container">
-      <img src="/images/logo.png" alt="NorthernEdge Footer Logo" width="100" class="footer-logo">
+      <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Footer Logo" width="100" class="footer-logo">
       <p>© 2023 NorthernEdge Legal Solutions. All rights reserved.</p>
       <ul class="social-links">
         <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>

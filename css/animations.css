@@ -192,19 +192,14 @@
 
 /* Hover Animation for Buttons */
 .btn:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #0D2340;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Click Animation for Buttons */
 .btn:active {
   transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Transition Effects for Smooth Animations */
-.btn {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
 
 /* ===== Icon Animations ===== */
@@ -256,15 +251,6 @@
   40%, 60% {
     transform: translate3d(3px, 0, 0);
   }
-}
-
-/* Hover Effects for Icons */
-.icon {
-  transition: fill 0.3s ease;
-}
-
-.icon:hover {
-  fill: #1A365D;
 }
 
 /* ===== Loading States ===== */

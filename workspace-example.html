@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Panning Example</title>
+  <link rel="stylesheet" href="css/workspace.css">
+</head>
+<body>
+  <h1>Workspace Panning Example</h1>
+  <p>Click and drag to pan around the workspace</p>
+  
+  <div class="workspace-container">
+    <div id="workspace" class="workspace">
+      <div class="workspace-content">
+        <!-- Add your content here -->
+        <div style="position: absolute; left: 100px; top: 100px; background: blue; width: 100px; height: 100px;"></div>
+        <div style="position: absolute; left: 400px; top: 300px; background: red; width: 150px; height: 150px;"></div>
+        <div style="position: absolute; left: 800px; top: 500px; background: green; width: 200px; height: 200px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/workspace-pan.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const workspace = document.getElementById('workspace');
+      const workspacePan = new WorkspacePan(workspace);
+    });
+  </script>
+</body>
+</html>
