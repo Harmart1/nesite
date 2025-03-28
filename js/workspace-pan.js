@@ -15,14 +15,23 @@ class WorkspacePan {
   
   init() {
     // Mouse events
-    this.workspace.addEventListener('mousedown', this.onMouseDown.bind(this));
-    document.addEventListener('mousemove', this.onMouseMove.bind(this));
-    document.addEventListener('mouseup', this.onMouseUp.bind(this));
+    // Store bound event handlers
+    this.boundMouseDown = this.onMouseDown.bind(this);
+    this.boundMouseMove = this.onMouseMove.bind(this);
+    this.boundMouseUp = this.onMouseUp.bind(this);
+    this.boundTouchStart = this.onTouchStart.bind(this);
+    this.boundTouchMove = this.onTouchMove.bind(this);
+    this.boundTouchEnd = this.onTouchEnd.bind(this);
+
+    // Mouse events
+    this.workspace.addEventListener('mousedown', this.boundMouseDown);
+    document.addEventListener('mousemove', this.boundMouseMove);
+    document.addEventListener('mouseup', this.boundMouseUp);
     
     // Touch events
-    this.workspace.addEventListener('touchstart', this.onTouchStart.bind(this));
-    document.addEventListener('touchmove', this.onTouchMove.bind(this));
-    document.addEventListener('touchend', this.onTouchEnd.bind(this));
+    this.workspace.addEventListener('touchstart', this.boundTouchStart);
+    document.addEventListener('touchmove', this.boundTouchMove);
+    document.addEventListener('touchend', this.boundTouchEnd);
     
     // Change cursor to indicate the workspace is pannable
     this.workspace.style.cursor = 'grab';
@@ -90,6 +99,25 @@ class WorkspacePan {
   
   onTouchEnd() {
     this.isDragging = false;
+  }
+
+  /**
+   * Cleanup method to remove event listeners and prevent memory leaks
+   */
+  destroy() {
+    // Remove mouse events
+    // Remove mouse events
+    this.workspace.removeEventListener('mousedown', this.boundMouseDown);
+    document.removeEventListener('mousemove', this.boundMouseMove);
+    document.removeEventListener('mouseup', this.boundMouseUp);
+
+    // Remove touch events
+    this.workspace.removeEventListener('touchstart', this.boundTouchStart);
+    document.removeEventListener('touchmove', this.boundTouchMove);
+    document.removeEventListener('touchend', this.boundTouchEnd);
+
+    // Reset cursor style
+    this.workspace.style.cursor = '';
   }
 }
 
