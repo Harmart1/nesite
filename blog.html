@@ -17,22 +17,47 @@
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/elegant-design-system.css">
+    <link rel="stylesheet" href="css/navigation-enhancements.css">
+    <link rel="stylesheet" href="css/icon-styles.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/visual-enhancement.css">
+    <link rel="stylesheet" href="css/responsive.css">
     
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header">
-        <nav class="main-nav">
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="practice-areas.html">Practice Areas</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="blog/index.html" class="active">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="practice-areas.html">Practice Areas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="blog/index.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main id="main-content">
@@ -51,6 +76,12 @@
             </div>
         </section>
     </main>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </button>
 
     <footer class="site-footer">
         <div class="container">
