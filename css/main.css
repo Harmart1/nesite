@@ -263,6 +263,8 @@ p.lead {
   z-index: 1000;
   padding: 1rem 0;
   width: 100%;
+  margin-top: 50px;
+  transition: height 0.3s ease;
 }
 
 .site-header .container {
