@@ -185,7 +185,7 @@ p.lead {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 1rem 0;
+  padding: 0.5rem 0; /* Reduced from 1rem */
 }
 
 .site-header .container {
@@ -195,12 +195,13 @@ p.lead {
 }
 
 .logo-container {
-  max-width: 220px;
+  max-width: 180px; /* Reduced from 220px */
 }
 
 .logo-container img {
   width: 100%;
   height: auto;
+  max-height: 40px; /* Added max-height control */
 }
 
 /* Navigation Menu */
@@ -288,7 +289,7 @@ p.lead {
 /* Page Header Section */
 .page-header {
   background-color: var(--neutral-lightest);
-  padding: 4rem 0;
+  padding: 4.5rem 0 2rem; /* Adjusted to account for smaller header */
   text-align: center;
   margin-bottom: 2rem;
 }

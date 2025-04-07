@@ -134,7 +134,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Reduced from 1rem */
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -150,7 +150,7 @@
 }
 
 .logo-container img {
-    max-height: 50px;
+    max-height: 40px; /* Reduced from 50px */
     width: auto;
 }
 
