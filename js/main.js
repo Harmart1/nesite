@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeContactForm();
   // Back-to-top button is now handled by back-to-top.js
   initializeResourceFilters();
-  initializeBlogFilters();
   initializeAccordions();
   initializeHeaderResize(); // Initialize header resize functionality
   
@@ -155,48 +154,6 @@ function initializeResourceFilters() {
         
         if (cardCategories && cardCategories.includes(selectedCategory)) {
           card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-/**
- * Blog Filters
- * For the blog listings page category filtering
- */
-function initializeBlogFilters() {
-  const categoryTags = document.querySelectorAll('.blog-categories .category-tag');
-  const blogCards = document.querySelectorAll('.blog-card');
-  
-  if (categoryTags.length === 0 || blogCards.length === 0) return;
-  
-  categoryTags.forEach(tag => {
-    tag.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Remove active class from all tags
-      categoryTags.forEach(t => t.classList.remove('active'));
-      
-      // Add active class to clicked tag
-      this.classList.add('active');
-            const selectedCategory = this.getAttribute('data-category');
-      
-      // If "All" is selected, show all cards
-      if (!selectedCategory || this.classList.contains('all')) {
-        blogCards.forEach(card => {
-          card.style.display = 'block';
-        });
-        return;
-      }
-      
-      // Otherwise, filter cards
-      blogCards.forEach(card => {
-        const cardCategories = card.getAttribute('data-categories');
-        if (cardCategories && cardCategories.includes(selectedCategory)) {
-          card.style.display = 'block';
         } else {
           card.style.display = 'none';
         }
