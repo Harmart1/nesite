@@ -1,182 +1,312 @@
-/* Responsive Styles for NorthernEdge Legal Website */
+/* NorthernEdge Legal Solutions - Responsive Styles
+ *
+ * Standardized media queries for consistent responsive behavior
+ * Last updated: 2025-03-06
+ */
 
-/* Base responsive container */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+/* Base (Mobile First) Styles
+ * Default styles target mobile devices - no media query needed
+ */
+
+/* Small devices (larger phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+  
+  .sm-show {
+    display: block !important;
+  }
+  
+  .sm-hide {
+    display: none !important;
+  }
+  
+  /* Grid utilities */
+  .grid-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Text utilities */
+  .text-sm-left { text-align: left; }
+  .text-sm-center { text-align: center; }
+  .text-sm-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .sm-mb-0 { margin-bottom: 0; }
+  .sm-mt-0 { margin-top: 0; }
+  .sm-p-0 { padding: 0; }
 }
 
-/* Responsive logo */
-.responsive-logo {
-    max-width: 200px;
-    height: auto;
-}
-
-/* Hero section responsive styles */
-.hero {
-    position: relative;
-    background: url('../images/new-hero-background.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 8rem 2rem;
-    text-align: center;
-    color: white;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+  
+  .md-show {
+    display: block !important;
+  }
+  
+  .md-hide {
+    display: none !important;
+  }
+  
+  /* Grid utilities */
+  .grid-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Footer layout */
+  .footer-content {
+    grid-template-columns: 1fr 3fr;
+    text-align: left;
+  }
+  
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .footer-column h3::after {
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(26, 54, 93, 0.7);
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Practice areas responsive styles */
-.practice-areas-overview {
-    padding: 4rem 0;
-    background-color: #f8f9fa;
-}
-
-.practice-area-card {
+    transform: none;
+  }
+  
+  /* Form layouts */
+  .form-columns {
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 2rem;
+  }
+  
+  /* Navigation */
+  .navbar-menu {
+    display: flex !important;
+    position: static;
+    background-color: transparent;
+    flex-direction: row;
+    padding: 0;
+    box-shadow: none;
+    transform: none;
+    width: auto;
+  }
+  
+  /* Text utilities */
+  .text-md-left { text-align: left; }
+  .text-md-center { text-align: center; }
+  .text-md-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .md-mb-0 { margin-bottom: 0; }
+  .md-mt-0 { margin-top: 0; }
+  .md-p-0 { padding: 0; }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+  
+  .lg-show {
+    display: block !important;
+  }
+  
+  .lg-hide {
+    display: none !important;
+  }
+  
+  /* Grid utilities */
+  .grid-lg-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-lg-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-lg-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Blog layout */
+  .blog-content-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+  }
+  
+  /* Contact layout */
+  .contact-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+  
+  /* Featured content */
+  .featured-post {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Text utilities */
+  .text-lg-left { text-align: left; }
+  .text-lg-center { text-align: center; }
+  .text-lg-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .lg-mb-0 { margin-bottom: 0; }
+  .lg-mt-0 { margin-top: 0; }
+  .lg-p-0 { padding: 0; }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+  
+  .xl-show {
+    display: block !important;
+  }
+  
+  .xl-hide {
+    display: none !important;
+  }
+  
+  /* Grid utilities */
+  .grid-xl-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .grid-xl-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  /* Text utilities */
+  .text-xl-left { text-align: left; }
+  .text-xl-center { text-align: center; }
+  .text-xl-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .xl-mb-0 { margin-bottom: 0; }
+  .xl-mt-0 { margin-top: 0; }
+  .xl-p-0 { padding: 0; }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  :root {
+    --neutral-light: #ddd;
+    --neutral-lightest: #fff;
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+  }
+  
+  /* Enhance text contrast */
+  body {
+    color: black;
+  }
+  
+  /* Enhance borders for better visibility */
+  .card, .blog-card, .service-card, input, select, textarea {
+    border: 2px solid black;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive logo scaling */
+@media (max-width: 768px) {
+  .logo-container {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-container {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .logo-container {
+    max-width: 250px;
+  }
+}
+
+/* Responsive header scaling */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .site-header {
     padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 }
 
-.practice-area-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+/* Consistent container and section classes */
+.container {
+  padding: 0 1.5rem;
 }
 
-/* Contact section responsive styles */
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+.section {
+  padding: 4rem 0;
 }
 
-.contact-info-card {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    flex: 1 1 250px;
-    max-width: 300px;
-    text-align: center;
+/* Dynamic Sizing and Mobile-Friendliness */
+.site-header {
+  padding: 1rem 2%;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-info-card.cta-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Media Queries */
-@media (max-width: 1200px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    .site-header {
-        padding: 1rem 0;
-    }
-    
-    .nav-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 80%;
-        max-width: 320px;
-        background-color: white;
-        flex-direction: column;
-        padding: 5rem 2rem;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        z-index: 15;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    }
-    
-    .nav-menu.active {
-        transform: translateX(0);
-        display: flex;
-    }
-    
-    .mobile-menu-toggle {
-        display: flex;
-    }
-    
-    .practice-area-card {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .practice-area-icon {
-        margin-right: 0;
-        margin-bottom: 1.5rem;
-    }
+.logo-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding: 6rem 1rem;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.1rem;
-    }
-    
-    .contact-info-card {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
+  .site-header {
+    padding: 0.5rem 2%;
+  }
+  
+  .logo-container img {
+    max-width: 80%;
+  }
 }
 
-@media (max-width: 576px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .practice-area-content h3 {
-        font-size: 1.5rem;
-    }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header {
+    padding: 0.75rem 2%;
+  }
+  
+  .logo-container img {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .site-header {
+    padding: 1rem 2%;
+  }
+  
+  .logo-container img {
+    max-width: 100%;
+  }
 }
