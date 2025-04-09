@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeResourceFilters();
   initializeAccordions();
   initializeHeaderResize(); // Initialize header resize functionality
+  initializeCustomNavigationMenu(); // Initialize custom navigation menu
   
   // Add window resize handler for responsive elements
   window.addEventListener('resize', handleWindowResize);
@@ -368,4 +369,56 @@ function initializeHeaderResize() {
   
   window.addEventListener('scroll', adjustHeaderSize, { passive: true });
   adjustHeaderSize(); // Initial adjustment
+}
+
+/**
+ * Custom Navigation Menu
+ * Handles the custom navigation menu functionality
+ */
+function initializeCustomNavigationMenu() {
+  const navMenu = document.querySelector('.custom-nav .nav-menu');
+  const dropdowns = navMenu.querySelectorAll('.dropdown');
+  
+  if (!navMenu || dropdowns.length === 0) return;
+  
+  // Toggle dropdowns on click
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    
+    if (link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+        
+        // Close other dropdowns
+        dropdowns.forEach(otherDropdown => {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.classList.remove('active');
+          }
+        });
+      });
+    }
+  });
+  
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  });
+  
+  // Add keyboard navigation support for dropdown menus
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    if (link) {
+      link.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        }
+      });
+    }
+  });
 }
