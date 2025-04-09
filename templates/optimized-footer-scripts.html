@@ -1,0 +1,43 @@
+<!-- Back to top button -->
+<button class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+    </svg>
+</button>
+
+<!-- Performance-optimized scripts with defer attribute -->
+<script src="js/enhanced-navigation.js" defer></script>
+<script src="js/scroll-navigation.js" defer></script>
+<script src="js/back-to-top.js" defer></script>
+<script src="js/visual-integration.js" defer></script>
+<script src="js/main.js" defer></script>
+
+<!-- Conditional loading scripts based on page type -->
+<script>
+    // Only load what's needed for the current page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if we have jump navigation on this page
+        if (document.querySelector('.jump-nav')) {
+            const jumpNavScript = document.createElement('script');
+            jumpNavScript.src = 'js/nav-highlight.js';
+            jumpNavScript.defer = true;
+            document.body.appendChild(jumpNavScript);
+        }
+        
+        // Check if we need form validation
+        if (document.querySelector('form')) {
+            const formScript = document.createElement('script');
+            formScript.src = 'js/form-validation.js';
+            formScript.defer = true;
+            document.body.appendChild(formScript);
+        }
+        
+        // Load cookie consent script with delay to prioritize critical rendering
+        setTimeout(function() {
+            const cookieScript = document.createElement('script');
+            cookieScript.src = 'js/cookie-consent.js';
+            cookieScript.defer = true;
+            document.body.appendChild(cookieScript);
+        }, 1500);
+    });
+</script>
