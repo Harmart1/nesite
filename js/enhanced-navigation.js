@@ -1,6 +1,7 @@
 /**
  * Enhanced Navigation System
  * Handles both homepage and inner page navigation functionality
+ * Mobile optimized with improved touch interactions and accessibility
  */
 
 document.addEventListener('DOMContentLoaded', function() {
