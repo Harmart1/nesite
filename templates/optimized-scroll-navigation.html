@@ -1,0 +1,47 @@
+<!-- Optimized Scroll Navigation Template -->
+
+<!-- Progress bar for scroll tracking -->
+<div class="page-progress">
+    <div class="page-progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Jump navigation for section links -->
+<nav class="jump-nav" aria-label="Page Sections Navigation">
+    <div class="container">
+        <ul class="jump-nav-links">
+            <!-- Replace section IDs and names as needed -->
+            <li><a href="#section1" class="active">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Section Example - Repeat as needed -->
+<section id="section1" class="page-section">
+    <div class="container">
+        <h2>Section Title</h2>
+        <!-- Section content here -->
+        
+        <!-- Continue reading button to next section -->
+        <div class="continue-reading">
+            <button class="continue-button" data-target="#section2" aria-label="Continue to next section">
+                <span>Continue Reading</span>
+                <span class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Optional: Alternative pagination dots for mobile -->
+<div class="page-navigation-dots">
+    <span class="dot active" data-target="#section1" aria-label="Go to section 1"></span>
+    <span class="dot" data-target="#section2" aria-label="Go to section 2"></span>
+    <span class="dot" data-target="#section3" aria-label="Go to section 3"></span>
+    <span class="dot" data-target="#section4" aria-label="Go to section 4"></span>
+</div>
