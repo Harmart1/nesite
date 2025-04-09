@@ -2,10 +2,16 @@
  * Enhanced Navigation Scripts
  * 
  * This file provides functionality for:
- * - Smooth scrolling navigation
- * - Progress bar updates
+ * - Smooth scrolling navigation with performance optimizations
+ * - Progress bar updates using IntersectionObserver
  * - Active section highlighting in navigation
  * - Section-based pagination dots
+ * 
+ * Performance optimizations:
+ * - Uses IntersectionObserver instead of scroll events where possible
+ * - Debounced scroll handlers
+ * - Passive event listeners
+ * - Optimized animations with will-change
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,16 +22,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const continueButtons = document.querySelectorAll('.continue-button');
     const paginationDots = document.querySelectorAll('.page-navigation-dots .dot');
     
-    // Progress bar functionality - updates as user scrolls
+    // Apply will-change to elements that will animate
     if (progressBar) {
-        const updateProgressBar = () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            if (height <= 0) return; // Prevent division by zero
-            
-            const scrolled = (winScroll / height) * 100;
-            progressBar.style.width = Math.min(100, Math.max(0, scrolled)) + "%";
-        };
+        progressBar.style.willChange = 'width';
+    }
+    
+    // Progress bar functionality - optimized with IntersectionObserver
+    if (progressBar) {
+        // Create progress observer to track scroll percentage
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Calculate the intersection ratio as percentage of page scrolled
+                updateProgressBar();
+            });
+        }, { threshold: Array.from({length: 101}, (_, i) => i / 100) });
+        
+        // Observe document body to track scroll progress
+        progressObserver.observe(document.body);
+        
+        // Throttled scroll handler as backup for browsers without full IntersectionObserver support
+        const updateProgressBar = debounce(() => {
+            requestAnimationFrame(() => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                if (height <= 0) return; // Prevent division by zero
+                
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = Math.min(100, Math.max(0, scrolled)) + "%";
+            });
+        }, 10);
         
         window.addEventListener('scroll', updateProgressBar, { passive: true });
         
@@ -48,10 +73,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Jump navigation active state management
+    // Jump navigation active state management with IntersectionObserver
     if (jumpLinks.length > 0 && sections.length > 0) {
-        // Update active link on scroll
-        const updateActiveLink = () => {
+        // Create section observer to detect which section is in view
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // We need to account for sections that are partially visible
+                if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
+                    const currentSection = entry.target.id;
+                    
+                    // Update jump links
+                    jumpLinks.forEach(link => {
+                        if (link.getAttribute('href') === `#${currentSection}`) {
+                            // First clear all active classes
+                            jumpLinks.forEach(l => l.classList.remove('active'));
+                            
+                            // Add active class to current link
+                            link.classList.add('active');
+                            
+                            // If this is a horizontal scrolling navigation, ensure active link is visible
+                            const jumpNav = link.closest('.jump-nav-links');
+                            if (jumpNav && window.innerWidth < 992) { // Only for mobile/tablet
+                                link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                            }
+                        }
+                    });
+                    
+                    // Update pagination dots if they exist
+                    updatePaginationDots(currentSection);
+                }
+            });
+        }, { 
+            threshold: [0.1, 0.2, 0.5, 0.8],
+            rootMargin: '-100px 0px -100px 0px' // Adjust the trigger area for better UX
+        });
+        
+        // Observe each section
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+        
+        // Throttled scroll handler as backup
+        const updateActiveLink = debounce(() => {
             const currentSection = getCurrentSection();
             
             if (currentSection) {
@@ -59,15 +122,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === '#' + currentSection) {
                         link.classList.add('active');
+                        
+                        // If horizontal scrolling navigation, ensure active link is visible
+                        const jumpNav = link.closest('.jump-nav-links');
+                        if (jumpNav && window.innerWidth < 992) {
+                            link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                        }
                     }
                 });
                 
-                // Also update pagination dots if they exist
+                // Update pagination dots if they exist
                 if (paginationDots.length > 0) {
                     updatePaginationDots(currentSection);
                 }
             }
-        };
+        }, 50);
         
         window.addEventListener('scroll', updateActiveLink, { passive: true });
         
@@ -127,6 +196,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function smoothScrollTo(element) {
         if (!element) return;
         
+        // Add will-change before animating
+        element.style.willChange = 'scroll-position';
+        
         // Get header height for offset
         const header = document.querySelector('.site-header');
         const headerOffset = header ? header.offsetHeight : 0;
@@ -136,6 +208,11 @@ document.addEventListener('DOMContentLoaded', function() {
             top: targetPosition - headerOffset - 20,
             behavior: 'smooth'
         });
+        
+        // Reset will-change after animation completes
+        setTimeout(() => {
+            element.style.willChange = 'auto';
+        }, 500);
     }
     
     // Helper function to update pagination dots
@@ -161,5 +238,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+    });
+    
+    // Debounce function to limit frequency of events
+    function debounce(func, wait) {
+        let timeout;
+        return function() {
+            const context = this;
+            const args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                func.apply(context, args);
+            }, wait);
+        };
+    }
+    
+    // Clean up function to prevent memory leaks
+    window.addEventListener('beforeunload', () => {
+        window.removeEventListener('scroll', updateActiveLink);
+        if (progressBar) {
+            window.removeEventListener('scroll', updateProgressBar);
+        }
     });
 });
