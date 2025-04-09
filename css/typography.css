@@ -9,8 +9,13 @@
 
 :root {
   /* Font families */
+<<<<<<< HEAD
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Raleway', Helvetica, Arial, sans-serif;
+=======
+  --font-heading: 'Montserrat', sans-serif; /* Updated to Montserrat */
+  --font-body: 'Lato', sans-serif; /* Updated to Lato */
+>>>>>>> 1740b1a (Clod1)
   
   /* Font sizes */
   --fs-xs: 0.75rem;    /* 12px */
@@ -106,7 +111,7 @@ p.lead {
   font-size: 1.25rem;
   font-weight: 300;
   line-height: var(--lh-relaxed);
-  color: var(--neutral-dark);
+  color: var (--neutral-dark);
 }
 
 /* Links */

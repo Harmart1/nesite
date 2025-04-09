@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | NorthernEdge Legal Solutions</title>
     <meta name="description" content="Learn about NorthernEdge Legal Solutions, a modern law firm serving Ontario with expertise in civil litigation, business law, and technology law.">
-    <base href="/">
+    
+    <!-- Core styles -->
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/elegant-navigation.css">
-    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    
+    <!-- Navigation styles -->
+    <link rel="stylesheet" href="css/homepage-navigation.css">
+    <link rel="stylesheet" href="css/inner-navigation.css">
+    
+    <!-- Additional styles -->
     <link rel="stylesheet" href="css/breadcrumbs.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <!-- JavaScript -->
+    <script src="js/enhanced-navigation.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/back-to-top.js" defer></script>
     <script src="js/visual-integration.js" defer></script>
@@ -57,30 +69,41 @@
     </script>
 </head>
 <body>
-    <header class="site-header">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </a>
+    
+    <!-- Inner page standard navigation -->
+    <header class="standard-navigation">
         <div class="container">
-            <div class="logo-container">
-                <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+            <div class="standard-logo-container">
+                <a href="index.html"><img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
             </div>
-            <nav class="main-nav" aria-label="Main Navigation">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
+            <nav class="standard-nav">
+                <button class="standard-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span><span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li class="dropdown">
+                <ul class="standard-menu">
+                    <li class="standard-menu-item"><a href="index.html">Home</a></li>
+                    <li class="standard-menu-item"><a href="about.html">About</a></li>
+                    <li class="standard-menu-item standard-dropdown">
                         <a href="practice-areas.html">Practice Areas</a>
-                        <ul class="dropdown-menu">
+                        <ul class="standard-dropdown-menu">
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
                             <li><a href="business-law.html">Business Law</a></li>
                             <li><a href="technology-law.html">Technology Law</a></li>
                             <li><a href="general-practice.html">General Practice</a></li>
                         </ul>
                     </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="standard-menu-item"><a href="resources.html">Resources</a></li>
+                    <li class="standard-menu-item"><a href="blog/index.html">Blog</a></li>
+                    <li class="standard-menu-item"><a href="contact.html" class="nav-contact-button">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -95,7 +118,7 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main id="main-content">
         <!-- Main content remains the same - just updating image references -->
         <section class="page-header fade-in">
             <div class="container">
@@ -121,14 +144,7 @@
                 </div>
             </div>
         </section>
-
     </main>
-
-    <button class="back-to-top" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
-        </svg>
-    </button>
 
     <footer class="site-footer">
         <div class="container">

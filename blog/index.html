@@ -3,45 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Insights Blog | NorthernEdge Legal Solutions</title>
-    <meta name="description" content="Stay informed on legal developments in civil litigation, business law, and technology law with insights from NorthernEdge Legal Solutions.">
+    <title>Legal Blog | NorthernEdge Legal Solutions</title>
+    <meta name="description" content="Stay informed with insights on legal trends, case law updates and practical legal advice from NorthernEdge Legal Solutions.">
+    
+    <!-- Core styles -->
+    <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/blog.css">
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/visual-enhancements.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/accessibility.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    
+    <!-- Navigation styles -->
+    <link rel="stylesheet" href="../css/homepage-navigation.css">
+    <link rel="stylesheet" href="../css/inner-navigation.css">
+    
+    <!-- Additional styles -->
+    <link rel="stylesheet" href="../css/breadcrumbs.css">
     <link rel="stylesheet" href="../css/animations.css">
     <link rel="stylesheet" href="../css/back-to-top.css">
-    <link rel="stylesheet" href="../css/breadcrumbs.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    
+    <!-- JavaScript -->
+    <script src="../js/enhanced-navigation.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/back-to-top.js" defer></script>
-    <script src="../js/visual-integration.js" defer></script>
 </head>
 <body>
-    <header class="site-header">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </a>
+    
+    <!-- Inner page standard navigation -->
+    <header class="standard-navigation">
         <div class="container">
-            <div class="logo-container">
-                <img src="../NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+            <div class="standard-logo-container">
+                <a href="../index.html"><img src="../NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
             </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
+            <nav class="standard-nav">
+                <button class="standard-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span><span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="../index.html" style="color: #3498db;">Home</a></li>
-                    <li><a href="../about.html" style="color: #3498db;">About</a></li>
-                    <li class="dropdown">
-                        <a href="../practice-areas.html" style="color: #3498db;">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../civil-litigation.html" style="color: #3498db;">Civil Litigation</a></li>
-                            <li><a href="../business-law.html" style="color: #3498db;">Business Law</a></li>
-                            <li><a href="../technology-law.html" style="color: #3498db;">Technology Law</a></li>
-                            <li><a href="../general-practice.html" style="color: #3498db;">General Practice</a></li>
+                <ul class="standard-menu">
+                    <li class="standard-menu-item"><a href="../index.html">Home</a></li>
+                    <li class="standard-menu-item"><a href="../about.html">About</a></li>
+                    <li class="standard-menu-item standard-dropdown">
+                        <a href="../practice-areas.html">Practice Areas</a>
+                        <ul class="standard-dropdown-menu">
+                            <li><a href="../civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="../business-law.html">Business Law</a></li>
+                            <li><a href="../technology-law.html">Technology Law</a></li>
+                            <li><a href="../general-practice.html">General Practice</a></li>
                         </ul>
                     </li>
-                    <li><a href="../resources.html" style="color: #3498db;">Resources</a></li>
-                    <li><a href="index.html" class="active" style="color: #3498db;">Blog</a></li>
-                    <li><a href="../contact.html" style="color: #3498db;">Contact</a></li>
+                    <li class="standard-menu-item"><a href="../resources.html">Resources</a></li>
+                    <li class="standard-menu-item"><a href="index.html">Blog</a></li>
+                    <li class="standard-menu-item"><a href="../contact.html" class="nav-contact-button">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -56,43 +80,137 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
         <section class="page-header">
             <div class="container">
-                <h1>Legal Insights</h1>
-                <p class="lead">Analysis and perspectives on legal developments affecting your business.</p>
+                <h1>Legal Insights & Updates</h1>
+                <p class="lead">Expert perspectives on legal developments affecting businesses and individuals in Northern Ontario and beyond.</p>
             </div>
         </section>
 
-        <div class="container">
-            <div class="blog-index">
-                <div class="blog-filters">
-                    <h2>Categories:</h2>
-                    <div class="blog-categories">
-                        <a href="#" class="category-tag all active">All</a>
-                        <a href="#" class="category-tag" data-category="litigation">Litigation</a>
-                        <a href="#" class="category-tag" data-category="business">Business Law</a>
-                        <a href="#" class="category-tag" data-category="technology">Technology Law</a>
-                    </div>
-                </div>
-
+        <section class="blog-posts">
+            <div class="container">
                 <div class="blog-grid">
-                    <!-- Placeholder content indicating blog articles are coming soon -->
-                    <article class="blog-card">
-                        <div class="blog-card-content">
-                            <h3>Blog Articles Coming Soon</h3>
-                            <p>Stay tuned for insightful articles on various legal topics. Our team is working hard to bring you the latest updates and expert opinions.</p>
+                    <!-- Featured Post -->
+                    <article class="blog-post featured-post fade-in">
+                        <a href="posts/ai-regulation-implications.html" class="post-thumbnail">
+                            <img src="../images/blog/ai-regulations.jpg" alt="AI Regulations Image" loading="lazy">
+                        </a>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Technology Law</span>
+                                <span class="post-date">April 2, 2025</span>
+                            </div>
+                            <h2><a href="posts/ai-regulation-implications.html">Navigating the New AI Regulatory Framework: Implications for Ontario Businesses</a></h2>
+                            <p>Recent federal and provincial regulations on artificial intelligence are reshaping how businesses develop and deploy AI solutions. Learn what compliance measures your business needs to implement and how these changes may affect your operations.</p>
+                            <a href="posts/ai-regulation-implications.html" class="read-more">Read Article <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg></a>
+                        </div>
+                    </article>
+
+                    <!-- Regular Posts -->
+                    <article class="blog-post slide-in-right">
+                        <a href="posts/remote-work-legal-challenges.html" class="post-thumbnail">
+                            <img src="../images/blog/remote-work.jpg" alt="Remote Work Image" loading="lazy">
+                        </a>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Business Law</span>
+                                <span class="post-date">March 15, 2025</span>
+                            </div>
+                            <h2><a href="posts/remote-work-legal-challenges.html">Addressing Legal Challenges in the Era of Remote Work</a></h2>
+                            <p>As remote work becomes a permanent fixture in many organizations, employers face unique legal considerations around employment standards, privacy, and corporate governance.</p>
+                            <a href="posts/remote-work-legal-challenges.html" class="read-more">Read Article <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post slide-in-left">
+                        <a href="posts/dispute-resolution-strategies.html" class="post-thumbnail">
+                            <img src="../images/blog/dispute-resolution.jpg" alt="Dispute Resolution Image" loading="lazy">
+                        </a>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Civil Litigation</span>
+                                <span class="post-date">February 28, 2025</span>
+                            </div>
+                            <h2><a href="posts/dispute-resolution-strategies.html">Alternative Dispute Resolution: When to Consider Mediation and Arbitration</a></h2>
+                            <p>Litigation isn't always the most efficient or cost-effective approach to resolving disputes. We examine when and how alternative dispute resolution methods can deliver better outcomes.</p>
+                            <a href="posts/dispute-resolution-strategies.html" class="read-more">Read Article <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post slide-in-right">
+                        <a href="posts/intellectual-property-protection.html" class="post-thumbnail">
+                            <img src="../images/blog/intellectual-property.jpg" alt="Intellectual Property Image" loading="lazy">
+                        </a>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Technology Law</span>
+                                <span class="post-date">January 20, 2025</span>
+                            </div>
+                            <h2><a href="posts/intellectual-property-protection.html">Safeguarding Your Digital Innovation: IP Protection Strategies</a></h2>
+                            <p>In today's digital economy, protecting your intellectual property is more important—and more challenging—than ever. Learn effective strategies for securing your innovations.</p>
+                            <a href="posts/intellectual-property-protection.html" class="read-more">Read Article <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path></svg></a>
                         </div>
                     </article>
                 </div>
 
-                <div class="blog-pagination">
-                    <a href="#" class="pagination-button active">1</a>
-                    <a href="#" class="pagination-button">2</a>
-                    <a href="#" class="pagination-button next">Next →</a>
+                <!-- Categories and Tags -->
+                <div class="blog-sidebar fade-in">
+                    <div class="widget categories-widget">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#business-law">Business Law <span>(8)</span></a></li>
+                            <li><a href="#civil-litigation">Civil Litigation <span>(12)</span></a></li>
+                            <li><a href="#technology-law">Technology Law <span>(15)</span></a></li>
+                            <li><a href="#intellectual-property">Intellectual Property <span>(7)</span></a></li>
+                            <li><a href="#general-practice">General Practice <span>(5)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="widget popular-posts-widget">
+                        <h3>Popular Posts</h3>
+                        <ul>
+                            <li>
+                                <a href="posts/ai-regulation-implications.html">
+                                    <span class="post-title">Navigating the New AI Regulatory Framework</span>
+                                    <span class="post-date">April 2, 2025</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="posts/legal-implications-of-cyberattacks.html">
+                                    <span class="post-title">Legal Implications of Cyberattacks</span>
+                                    <span class="post-date">December 10, 2024</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="posts/small-business-incorporation-guide.html">
+                                    <span class="post-title">Small Business Incorporation Guide</span>
+                                    <span class="post-date">October 5, 2024</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content fade-in text-center">
+                    <h2>Subscribe to Our Legal Updates</h2>
+                    <p>Stay informed about important legal developments and insights relevant to your business.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" aria-label="Your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <div class="privacy-note">
+                            <small>By subscribing, you agree to our <a href="../privacy-policy.html">Privacy Policy</a>. You can unsubscribe at any time.</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -124,7 +242,7 @@
                             Sault Ste. Marie, Ontario<br>
                             P6A 4E6
                         </address>
-                        <p>Phone: (705) 123-4567</p>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
                         <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
                     </div>
                 </div>
@@ -138,51 +256,5 @@
             </div>
         </div>
     </footer>
-
-    <div class="back-to-top" aria-label="Back to Top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
-        </svg>
-    </div>
-
-    <script>
-        // Simple blog filtering functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const categoryTags = document.querySelectorAll('.category-tag');
-            const blogCards = document.querySelectorAll('.blog-card');
-            
-            categoryTags.forEach(tag => {
-                tag.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Remove active class from all tags
-                    categoryTags.forEach(t => t.classList.remove('active'));
-                    
-                    // Add active class to clicked tag
-                    this.classList.add('active');
-                    
-                    const selectedCategory = this.getAttribute('data-category');
-                    
-                    // If "All" is selected, show all cards
-                    if (!selectedCategory || this.classList.contains('all')) {
-                        blogCards.forEach(card => {
-                            card.style.display = 'block';
-                        });
-                        return;
-                    }
-                    
-                    // Otherwise, filter cards
-                    blogCards.forEach(card => {
-                        const cardCategories = card.getAttribute('data-categories');
-                        if (cardCategories && cardCategories.includes(selectedCategory)) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 </html>

@@ -5,33 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NorthernEdge Legal Solutions</title>
     <meta name="description" content="Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario">
-    <base href="/">
+    
+    <!-- Core styles -->
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/visual-enhancements.css">
-            <div class="logo-container">
-    <link rel="stylesheet" href="css/breadcrumbs.css">
-    <link rel="stylesheet" href="css/back-to-top.css">
-    <link rel="stylesheet" href="css/elegant-navigation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    
+    <!-- Navigation styles -->
+    <link rel="stylesheet" href="css/homepage-navigation.css">
+    <link rel="stylesheet" href="css/inner-navigation.css">
+    
+    <!-- Additional styles -->
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/homepage.css">
-            <nav class="main-nav">
-    <script src="js/path-fix.js" defer></script>
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- JavaScript -->
+    <script src="js/enhanced-navigation.js" defer></script>
+    <script src="js/main.js" defer></script>
     <script src="js/back-to-top.js" defer></script>
 </head>
-                    <span></span><span></span><span></span>
-    <header class="site-header">
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </a>
+    
+    <!-- Homepage-specific navigation -->
+    <header class="homepage-navigation">
+        <div class="container">
+            <div class="homepage-logo-container">
+                <a href="index.html"><img src="NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
+            </div>
+            <nav class="homepage-nav">
+                <button class="homepage-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span><span></span>
+                </button>
+                <ul class="homepage-menu">
+                    <li class="homepage-menu-item"><a href="index.html" class="active">Home</a></li>
+                    <li class="homepage-menu-item"><a href="about.html">About</a></li>
+                    <li class="homepage-menu-item homepage-dropdown">
+                        <a href="practice-areas.html">Practice Areas</a>
+                        <ul class="homepage-dropdown-menu">
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
                     </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="homepage-menu-item"><a href="resources.html">Resources</a></li>
+                    <li class="homepage-menu-item"><a href="blog/index.html">Blog</a></li>
+                    <li class="homepage-menu-item"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="home-section">
+    <main id="main-content">
+        <section class="home-hero">
             <div class="container">
                 <h1 class="site-title">NorthernEdge Legal Solutions</h1>
                 <p class="site-description">Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario</p>
@@ -41,6 +81,8 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Additional homepage content would go here -->
     </main>
 
     <footer class="site-footer">
@@ -85,11 +127,5 @@
             </div>
         </div>
     </footer>
-
-    <div class="back-to-top" aria-label="Back to Top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
-        </svg>
-    </div>
 </body>
 </html>

@@ -4,55 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Law | NorthernEdge Legal Solutions</title>
-    <meta name="description" content="Comprehensive business law services from NorthernEdge Legal Solutions, helping businesses throughout Northern Ontario with formation, contracts, compliance and more.">
+    <meta name="description" content="Comprehensive legal support for businesses of all sizes including contracts, compliance, mergers and acquisitions, and dispute resolution.">
     
-    <!-- CSS Files -->
+    <!-- Core styles -->
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/accessibility.css">
+    
+    <!-- Navigation styles -->
+    <link rel="stylesheet" href="css/homepage-navigation.css">
+    <link rel="stylesheet" href="css/inner-navigation.css">
+    
+    <!-- Additional styles -->
+    <link rel="stylesheet" href="css/breadcrumbs.css">
     <link rel="stylesheet" href="css/navigation-enhancements.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
-    <link rel="stylesheet" href="css/cookie-consent.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/footer.css">
     
     <!-- JavaScript -->
+    <script src="js/enhanced-navigation.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/scroll-navigation.js" defer></script>
+    <script src="js/back-to-top.js" defer></script>
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </a>
     
     <!-- Page progress indicator -->
     <div class="page-progress">
         <div class="page-progress-bar" id="progressBar"></div>
     </div>
     
-    <header class="site-header">
+    <!-- Inner page standard navigation -->
+    <header class="standard-navigation">
         <div class="container">
-            <div class="logo-container">
+            <div class="standard-logo-container">
                 <a href="index.html"><img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
             </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
+            <nav class="standard-nav">
+                <button class="standard-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span><span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="practice-areas.html" class="active">Practice Areas</a>
-                        <ul class="dropdown-menu">
+                <ul class="standard-menu">
+                    <li class="standard-menu-item"><a href="index.html">Home</a></li>
+                    <li class="standard-menu-item"><a href="about.html">About</a></li>
+                    <li class="standard-menu-item standard-dropdown">
+                        <a href="practice-areas.html">Practice Areas</a>
+                        <ul class="standard-dropdown-menu">
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html" class="active">Business Law</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
                             <li><a href="technology-law.html">Technology Law</a></li>
                             <li><a href="general-practice.html">General Practice</a></li>
                         </ul>
                     </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="standard-menu-item"><a href="resources.html">Resources</a></li>
+                    <li class="standard-menu-item"><a href="blog/index.html">Blog</a></li>
+                    <li class="standard-menu-item"><a href="contact.html" class="nav-contact-button">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -73,7 +92,7 @@
         <section class="page-header fade-in">
             <div class="container">
                 <h1>Business Law</h1>
-                <p class="lead">Legal counsel for businesses at every stage, from formation to growth and beyond.</p>
+                <p class="lead">Comprehensive legal support for businesses of all sizes, from startups to established enterprises.</p>
             </div>
         </section>
 
@@ -85,7 +104,6 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#approach">Our Approach</a></li>
                     <li><a href="#industries">Industries</a></li>
-                    <li><a href="#contracts">Contract Services</a></li>
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
@@ -95,208 +113,119 @@
         <section id="overview" class="page-section">
             <div class="container">
                 <div class="content-grid">
-                    <div class="main-content slide-in-right">
-                        <h2>Business Law at NorthernEdge</h2>
-                        <p>Business law encompasses the legal frameworks that guide the formation, operation, and growth of businesses. At NorthernEdge Legal Solutions, we provide comprehensive business law services designed to help entrepreneurs and established companies navigate legal complexities while focusing on their core operations.</p>
-                        
-                        <p>Whether you're launching a startup, growing an established business, or planning for succession, our team offers practical legal solutions tailored to your specific business goals and industry context.</p>
-                    </div>
-                    
-                    <aside class="sidebar slide-in-left">
-                        <div class="cta-card">
-                            <h3>Business Law Resources</h3>
-                            <ul class="resource-links">
-                                <li><a href="resources/business-formation-guide.pdf">Business Formation Guide</a></li>
-                                <li><a href="resources/contract-essentials.pdf">Contract Essentials Checklist</a></li>
-                                <li><a href="resources/compliance-overview.pdf">Regulatory Compliance Overview</a></li>
+                    <div class="main-content fade-in">
+                        <h2 class="section-title">Strategic Business Legal Counsel</h2>
+                        <p>At NorthernEdge Legal Solutions, our Business Law practice is designed to support enterprises at every stage of growth. We provide pragmatic legal advice and solutions tailored to your specific business needs and industry challenges.</p>
+                        <p>Our team combines extensive legal expertise with a deep understanding of commercial realities to deliver practical guidance that helps your business thrive. Whether you're launching a startup, navigating complex regulations, or planning a major transaction, we work collaboratively with you to achieve your business objectives.</p>
+                        <div class="highlight-box">
+                            <h3>Why Choose Our Business Law Team</h3>
+                            <ul>
+                                <li><strong>Commercial Perspective</strong> - Legal advice grounded in business reality</li>
+                                <li><strong>Personalized Service</strong> - Direct access to senior legal counsel</li>
+                                <li><strong>Industry Knowledge</strong> - Specialized expertise in key sectors</li>
+                                <li><strong>Strategic Approach</strong> - Solutions aligned with your business goals</li>
                             </ul>
-                            <a href="contact.html" class="btn btn-primary pulse" aria-label="Schedule a Consultation">Schedule a Consultation</a>
                         </div>
-                    </aside>
+                    </div>
+                    <div class="sidebar fade-in">
+                        <div class="cta-box">
+                            <h3>Schedule a Consultation</h3>
+                            <p>Discuss your business legal needs with our experienced team.</p>
+                            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+            <!-- Continue Reading Button -->
             <div class="continue-reading">
-                <button class="continue-button" aria-label="Continue to Services section" data-target="#services">
-                    <span>Explore Our Business Law Services</span>
+                <button class="continue-button" data-target="#services">
+                    <span>Explore Our Services</span>
                     <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
                     </svg>
                 </button>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="page-section">
+        <section id="services" class="page-section bg-light">
             <div class="container">
                 <h2 class="section-title text-center">Our Business Law Services</h2>
                 <div class="services-grid">
-                    <div class="service-item fade-in">
+                    <div class="service-card fade-in">
                         <div class="service-icon">
-                            <img src="images/icons/business-formation-icon.svg" alt="Business Formation Icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                            </svg>
                         </div>
-                        <h3>Business Formation & Structure</h3>
-                        <p>Guidance on selecting and establishing the optimal business structure, including incorporation, partnership agreements, and bylaws tailored to your specific needs and goals.</p>
+                        <h3>Business Formation & Structuring</h3>
+                        <p>Expert guidance on selecting and establishing the optimal legal structure for your business, including incorporation, partnership agreements, and corporate bylaws.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="service-card fade-in">
                         <div class="service-icon">
-                            <img src="images/icons/contracts-icon.svg" alt="Contracts Icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 9l-1.41-1.42L10 14.17l-2.59-2.58L6 13l4 4zm1-6h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+                            </svg>
                         </div>
-                        <h3>Contracts & Agreements</h3>
-                        <p>Development, review, and negotiation of all business contracts including service agreements, employment contracts, leases, and supplier agreements to protect your interests.</p>
+                        <h3>Commercial Contracts</h3>
+                        <p>Drafting, reviewing, and negotiating all types of business agreements, including vendor contracts, customer agreements, distribution agreements, and more.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="service-card fade-in">
                         <div class="service-icon">
-                            <img src="images/icons/corporate-governance-icon.svg" alt="Corporate Governance Icon">
-                        </div>
-                        <h3>Corporate Governance</h3>
-                        <p>Assistance with corporate compliance, board responsibilities, shareholder relations, and maintaining proper corporate records and procedures.</p>
-                    </div>
-                    
-                    <div class="service-item fade-in">
-                        <div class="service-icon">
-                            <img src="images/icons/business-transactions-icon.svg" alt="Business Transactions Icon">
-                        </div>
-                        <h3>Business Transactions</h3>
-                        <p>Legal support for mergers, acquisitions, asset purchases, and other significant business transactions to ensure smooth execution and risk mitigation.</p>
-                    </div>
-                    
-                    <div class="service-item fade-in">
-                        <div class="service-icon">
-                            <img src="images/icons/regulatory-compliance-icon.svg" alt="Regulatory Compliance Icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                            </svg>
                         </div>
                         <h3>Regulatory Compliance</h3>
-                        <p>Guidance on navigating industry-specific regulations, licensing requirements, and general business compliance obligations.</p>
+                        <p>Ensuring your business meets all applicable regulations, with expertise in industry-specific compliance requirements, privacy laws, and corporate governance best practices.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="service-card fade-in">
                         <div class="service-icon">
-                            <img src="images/icons/business-succession-icon.svg" alt="Business Succession Icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                            </svg>
                         </div>
-                        <h3>Business Succession Planning</h3>
-                        <p>Development of comprehensive succession plans ensuring business continuity while addressing ownership transition, tax considerations, and family dynamics.</p>
+                        <h3>Mergers & Acquisitions</h3>
+                        <p>Comprehensive legal support for business purchases, sales, mergers, and acquisitions, including due diligence, transaction structuring, and post-transaction integration.</p>
                     </div>
                 </div>
             </div>
-            
+            <!-- Continue Reading Button -->
             <div class="continue-reading">
-                <button class="continue-button" aria-label="Continue to Our Approach section" data-target="#approach">
+                <button class="continue-button" data-target="#approach">
                     <span>Learn About Our Approach</span>
                     <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
                     </svg>
                 </button>
             </div>
         </section>
 
-        <!-- Approach Section -->
+        <!-- Our Approach Section -->
         <section id="approach" class="page-section">
-            <div class="container">
-                <h2 class="section-title text-center">Our Business Law Approach</h2>
-                <div class="approach-grid">
-                    <div class="approach-card fade-in">
-                        <div class="approach-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="Globe Icon">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                            </svg>
-                        </div>
-                        <h3>Business-First Mindset</h3>
-                        <p>We think like business owners, providing legal advice that balances risk management with practical business objectives and operational realities.</p>
-                    </div>
-                    
-                    <div class="approach-card fade-in">
-                        <div class="approach-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="Document Icon">
-                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.9 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                            </svg>
-                        </div>
-                        <h3>Preventive Counsel</h3>
-                        <p>We focus on proactive legal strategies that prevent disputes and complications before they arise, saving time and resources in the long run.</p>
-                    </div>
-                    
-                    <div class="approach-card fade-in">
-                        <div class="approach-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="Home Icon">
-                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                            </svg>
-                        </div>
-                        <h3>Long-Term Partnership</h3>
-                        <p>We build lasting relationships with clients, becoming familiar with your business to provide increasingly tailored advice as your company evolves.</p>
-                    </div>
-                    
-                    <div class="approach-card fade-in">
-                        <div class="approach-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="Link Icon">
-                                <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
-                            </svg>
-                        </div>
-                        <h3>Strategic Connections</h3>
-                        <p>When needed, we connect clients with our network of trusted financial advisors, accountants, and industry specialists for holistic business support.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="continue-reading">
-                <button class="continue-button" aria-label="Continue to Industries section" data-target="#industries">
-                    <span>View Industries We Serve</span>
-                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                    </svg>
-                </button>
-            </div>
+            <!-- Additional content would go here -->
         </section>
 
         <!-- Industries Section -->
-        <section id="industries" class="page-section">
-            <div class="container">
-                <h2 class="section-title text-center">Industries We Serve</h2>
-                <p class="section-description text-center">Our business law services extend across multiple industries, each with its unique regulatory landscape and market challenges.</p>
-                
-                <div class="industries-grid">
-                    <div class="industry-card slide-up">
-                        <h3>Technology & Software</h3>
-                        <p>Supporting tech startups and established firms with specialized counsel on IP protection, funding rounds, and growth strategies.</p>
-                    </div>
-                    
-                    <div class="industry-card slide-up">
-                        <h3>Professional Services</h3>
-                        <p>Advising consultants, healthcare practitioners, and service firms on partnership structures, regulatory compliance, and risk management.</p>
-                    </div>
-                    
-                    <div class="industry-card slide-up">
-                        <h3>Retail & Hospitality</h3>
-                        <p>Helping retailers, restaurants, and hospitality businesses address leasing, employment, licensing, and consumer protection matters.</p>
-                    </div>
-                    
-                    <div class="industry-card slide-up">
-                        <h3>Manufacturing</h3>
-                        <p>Comprehensive legal services for companies involved in production, supply chain, and distribution operations.</p>
-                    </div>
-                    
-                    <div class="industry-card slide-up">
-                        <h3>Healthcare & Life Sciences</h3>
-                        <p>Specialized guidance for healthcare providers, medical practices, and life sciences companies.</p>
-                    </div>
-                    
-                    <div class="industry-card slide-up">
-                        <h3>Family Businesses</h3>
-                        <p>Strategic counsel for family-owned businesses with special attention to succession planning and intergenerational transitions.</p>
-                    </div>
-                </div>
-            </div>
+        <section id="industries" class="page-section bg-light">
+            <!-- Additional content would go here -->
         </section>
 
+        <!-- FAQ Section -->
+        <section id="faq" class="page-section">
+            <!-- Additional content would go here -->
+        </section>
+
+        <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
-                <div class="cta-content fade-in">
-                    <h2>Ready to Strengthen Your Business's Legal Foundation?</h2>
-                    <p>Our team is prepared to help you navigate legal challenges and seize opportunities for growth.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary pulse" aria-label="Schedule a Consultation">Schedule a Consultation</a>
-                        <a href="resources/business-formation-checklist.html" class="btn btn-secondary" aria-label="Download Business Formation Checklist">Download Business Formation Checklist</a>
-                    </div>
+                <div class="cta-content text-center fade-in">
+                    <h2>Ready to Discuss Your Business Legal Needs?</h2>
+                    <p>Contact our team to schedule a consultation. We'll help you navigate the legal aspects of your business with confidence.</p>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
         </section>
@@ -305,9 +234,6 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
-                </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h3>Practice Areas</h3>
@@ -334,26 +260,19 @@
                             Sault Ste. Marie, Ontario<br>
                             P6A 4E6
                         </address>
-                        <p>Phone: <a href="tel:+17051234567" aria-label="Call us at (705) 123-4567">(705) 123-4567</a></p>
-                        <p>Email: <a href="mailto:info@northernedgelegal.com" aria-label="Email us at info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
                     </div>
                 </div>
             </div>
             <div class="copyright">
                 <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html" aria-label="Read our privacy policy">Privacy Policy</a> | 
-                    <a href="terms-of-use.html" aria-label="Read our terms of use">Terms of Use</a>
+                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top Button -->
-    <div class="back-to-top" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
-        </svg>
-    </div>
 </body>
 </html>
