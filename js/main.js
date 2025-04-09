@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function handleWindowResize() {
   // Reinitialize dropdown menus when window size changes
   initializeDropdownMenus();
-  adjustHeaderSize(); // Adjust header size on window resize
+  window.adjustHeaderSize(); // Adjust header size on window resize
 }
 
 /**
@@ -354,7 +354,7 @@ function initializeHeaderResize() {
   const header = document.querySelector('.site-header');
   if (!header) return;
   
-  const adjustHeaderSize = () => {
+  window.adjustHeaderSize = () => {
     const scrollPosition = window.scrollY;
     const headerContentHeight = header.querySelector('.container').offsetHeight;
     
