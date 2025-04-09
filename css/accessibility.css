@@ -172,3 +172,9 @@ document.body.addEventListener('keydown', function(e) {
 [aria-expanded="true"] .dropdown-toggle::after {
   transform: rotate(180deg);
 }
+
+/* Focus styles for back-to-top button */
+.back-to-top:focus {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
