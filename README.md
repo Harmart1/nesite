@@ -72,6 +72,39 @@ This repository contains the code for the NorthernEdge Legal Solutions website, 
 - **SEO Optimized**: Structured data, meta tags, and semantic HTML
 - **Performance Optimized**: Efficient code and optimized assets
 
+## Performance Enhancements
+
+### Navigation Performance Optimizations (April 2025)
+
+The navigation system has been enhanced with several performance optimizations:
+
+- **Debounced Scroll Events**: Replaced direct scroll listeners with debounced handlers to reduce computational overhead
+- **IntersectionObserver**: Used modern IntersectionObserver API to replace scroll events where possible
+- **GPU Acceleration**: Added `will-change` and `transform: translateZ(0)` properties to offload animations to GPU
+- **CSS Containment**: Implemented CSS containment for better render isolation
+- **Passive Event Listeners**: Added `{ passive: true }` to scroll listeners for smoother scrolling
+- **Optimized Touch Interactions**: Enhanced mobile experience with improved touch handling
+
+### Implementation
+
+Implementation templates are available in the `/templates` directory:
+- `optimized-inner-navigation.html` - For regular pages
+- `optimized-homepage-navigation.html` - For the homepage
+- `optimized-scroll-navigation.html` - For pages with sectional navigation
+- `optimized-footer-scripts.html` - For optimized script loading
+- `template-head-performance.html` - For optimized resource loading
+- `performance-navigation-guide.html` - Developer implementation guide
+
+The following files have been updated with these optimizations:
+- `civil-litigation.html` - Example implementation of optimized navigation
+
+### Technical Dependencies
+
+These optimizations depend on:
+- `js/enhanced-navigation.js` - Main navigation enhancement with IntersectionObserver
+- `js/scroll-navigation.js` - Optimized scroll handling and section tracking
+- `css/performance-fixes.css` - General performance optimizations
+
 ## Implementation Guides
 
 - **Navigation**: See `docs/navigation-guide.html` for detailed instructions on implementing and maintaining the navigation
@@ -99,6 +132,14 @@ This website is built with accessibility in mind, following WCAG 2.1 AA guidelin
 - Color contrast that meets AA requirements
 - Skip to content link
 - Alternative text for images
+
+## Performance Considerations
+
+- Set width and height attributes on images to prevent layout shifts
+- Use `passive: true` for all non-blocking event listeners
+- Prefer CSS transforms over other animatable properties
+- Implement `will-change` judiciously to avoid memory overconsumption
+- Use debounced handlers for frequent events like scroll and resize
 
 ## Copyright
 
