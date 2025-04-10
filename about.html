@@ -137,20 +137,6 @@
     </style>
 </head>
 <body>
-    <!-- User info and date/time bar -->
-    <div class="user-info-bar">
-        <div class="container">
-            <div class="datetime">
-                <i class="far fa-clock"></i> 
-                <span id="current-datetime">2025-03-27 00:29:31</span>
-            </div>
-            <div class="user-welcome">
-                <i class="far fa-user"></i> 
-                Welcome, <span id="username">Harmart1</span>
-            </div>
-        </div>
-    </div>
-
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
@@ -163,19 +149,19 @@
                     <span></span><span></span><span></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="index.html" class="btn btn-primary">Home</a></li>
+                    <li><a href="about.html" class="btn btn-primary active">About</a></li>
                     <li class="dropdown">
-                        <a href="practice-areas.html">Practice Areas</a>
+                        <a href="practice-areas.html" class="btn btn-primary">Practice Areas</a>
                         <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
+                            <li><a href="civil-litigation.html" class="btn btn-primary">Civil Litigation</a></li>
+                            <li><a href="business-law.html" class="btn btn-primary">Business Law</a></li>
+                            <li><a href="technology-law.html" class="btn btn-primary">Technology Law</a></li>
+                            <li><a href="general-practice.html" class="btn btn-primary">General Practice</a></li>
                         </ul>
                     </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resources.html" class="btn btn-primary">Resources</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -359,23 +345,6 @@
                     });
                 }
             });
-            
-            // Keep the current date and time updated
-            function updateDateTime() {
-                const now = new Date();
-                const year = now.getUTCFullYear();
-                const month = String(now.getUTCMonth() + 1).padStart(2, '0');
-                const day = String(now.getUTCDate()).padStart(2, '0');
-                const hours = String(now.getUTCHours()).padStart(2, '0');
-                const minutes = String(now.getUTCMinutes()).padStart(2, '0');
-                const seconds = String(now.getUTCSeconds()).padStart(2, '0');
-                
-                const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-                document.getElementById('current-datetime').textContent = formattedDateTime;
-            }
-            
-            // Update the time every second
-            setInterval(updateDateTime, 1000);
         });
     </script>
 </body>
