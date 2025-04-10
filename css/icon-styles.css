@@ -14,6 +14,7 @@
 .practice-icon img {
   width: 48px;
   height: 48px;
+  fill: var(--gold); /* Updated color */
 }
 
 /* Icon sizing for expertise cards on homepage */
@@ -22,12 +23,13 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
-  height: 50px;
+  height: 60px; /* Updated height for consistency */
 }
 
 .expertise-card .icon-container img {
-  width: 42px;
-  height: 42px;
+  width: 48px; /* Updated width for consistency */
+  height: 48px; /* Updated height for consistency */
+  fill: var(--gold); /* Updated color */
 }
 
 /* Icon sizing for approach/value sections */
@@ -37,13 +39,42 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-  height: 55px;
+  height: 60px; /* Updated height for consistency */
 }
 
 .approach-card .approach-icon svg,
 .value-card .value-icon svg {
-  width: 45px;
-  height: 45px;
+  width: 48px; /* Updated width for consistency */
+  height: 48px; /* Updated height for consistency */
+  fill: var(--gold); /* Updated color */
+}
+
+/* Icon styles for highlighting key points or sections */
+.key-point-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  fill: var(--primary);
+}
+
+.key-point-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon styles for hero section */
+.hero-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  fill: var(--accent);
+}
+
+.hero-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Responsive adjustments */
@@ -51,16 +82,19 @@
   .practice-icon img {
     width: 42px;
     height: 42px;
+    fill: var(--gold); /* Updated color */
   }
   
   .expertise-card .icon-container img {
-    width: 38px;
-    height: 38px;
+    width: 42px; /* Updated width for consistency */
+    height: 42px; /* Updated height for consistency */
+    fill: var(--gold); /* Updated color */
   }
   
   .approach-card .approach-icon svg,
   .value-card .value-icon svg {
-    width: 40px;
-    height: 40px;
+    width: 42px; /* Updated width for consistency */
+    height: 42px; /* Updated height for consistency */
+    fill: var(--gold); /* Updated color */
   }
 }

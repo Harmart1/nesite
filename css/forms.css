@@ -25,7 +25,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: var(--neutral-dark);
+  color: var(--black);
   font-size: 0.9375rem;
 }
 
@@ -51,7 +51,7 @@ select {
   border: 1px solid var(--neutral-light);
   border-radius: var(--radius-sm);
   background-color: white;
-  color: var(--neutral-dark);
+  color: var(--black);
   font-family: var(--font-body);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }

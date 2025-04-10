@@ -40,8 +40,8 @@
 .nav-menu > li > a:hover,
 .nav-menu > li > a:focus,
 .nav-menu > li > a.active {
-    background-color: var(--primary-lightest);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--accent);
 }
 
 /* Dropdown Menu */
@@ -104,8 +104,8 @@
 .dropdown-menu a:hover,
 .dropdown-menu a:focus,
 .dropdown-menu a.active {
-    background-color: var(--primary-lightest);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--accent);
 }
 
 /* Mobile Menu Button */
@@ -136,6 +136,7 @@
     z-index: 1000;
     padding: 1rem 0;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .site-header .container {
@@ -186,8 +187,8 @@
 
 .side-navigation a:hover,
 .side-navigation a.active {
-    background-color: var(--primary-lightest);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--accent);
 }
 
 /* Back to Top Button */
@@ -283,5 +284,64 @@
     
     .dropdown > a.active-dropdown:after {
         content: "−";
+    }
+}
+
+/* Icon Styling */
+.nav-menu > li > a > svg,
+.dropdown-menu a > svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: fill 0.2s ease;
+}
+
+.nav-menu > li > a:hover > svg,
+.nav-menu > li > a:focus > svg,
+.nav-menu > li > a.active > svg,
+.dropdown-menu a:hover > svg,
+.dropdown-menu a:focus > svg,
+.dropdown-menu a.active > svg {
+    fill: var(--primary);
+}
+
+/* Dynamic Sizing and Mobile-Friendliness */
+.site-header {
+    padding: 1rem 2%;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0.5rem 2%;
+    }
+    
+    .logo-container img {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .site-header {
+        padding: 0.75rem 2%;
+    }
+    
+    .logo-container img {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .site-header {
+        padding: 1rem 2%;
+    }
+    
+    .logo-container img {
+        max-width: 100%;
     }
 }

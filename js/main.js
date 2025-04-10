@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeContactForm();
   // Back-to-top button is now handled by back-to-top.js
   initializeResourceFilters();
-  initializeBlogFilters();
   initializeAccordions();
+  initializeHeaderResize(); // Initialize header resize functionality
+  initializeCustomNavigationMenu(); // Initialize custom navigation menu
   
   // Add window resize handler for responsive elements
   window.addEventListener('resize', handleWindowResize);
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function handleWindowResize() {
   // Reinitialize dropdown menus when window size changes
   initializeDropdownMenus();
+  window.adjustHeaderSize(); // Adjust header size on window resize
 }
 
 /**
@@ -104,6 +106,19 @@ function initializeDropdownMenus() {
       });
     }
   });
+
+  // Add keyboard navigation support for dropdown menus
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    if (link) {
+      link.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        }
+      });
+    }
+  });
 }
 
 /**
@@ -140,49 +155,6 @@ function initializeResourceFilters() {
         
         if (cardCategories && cardCategories.includes(selectedCategory)) {
           card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-/**
- * Blog Filters
- * For the blog listings page category filtering
- */
-function initializeBlogFilters() {
-  const categoryTags = document.querySelectorAll('.blog-categories .category-tag');
-  const blogCards = document.querySelectorAll('.blog-card');
-  
-  if (categoryTags.length === 0 || blogCards.length === 0) return;
-  
-  categoryTags.forEach(tag => {
-    tag.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Remove active class from all tags
-      categoryTags.forEach(t => t.classList.remove('active'));
-      
-      // Add active class to clicked tag
-      this.classList.add('active');
-      
-      const selectedCategory = this.getAttribute('data-category');
-      
-      // If "All" is selected, show all cards
-      if (!selectedCategory || this.classList.contains('all')) {
-        blogCards.forEach(card => {
-          card.style.display = 'block';
-        });
-        return;
-      }
-      
-      // Otherwise, filter cards
-      blogCards.forEach(card => {
-        const cardCategories = card.getAttribute('data-categories');
-        if (cardCategories && cardCategories.includes(selectedCategory)) {
-          card.style.display = 'block';
         } else {
           card.style.display = 'none';
         }
@@ -371,5 +343,82 @@ function initializeContactForm() {
         errorMsg.remove();
       }
     });
+  });
+}
+
+/**
+ * Header Resize
+ * Dynamically resizes the header based on scroll position and content
+ */
+function initializeHeaderResize() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  
+  window.adjustHeaderSize = () => {
+    const scrollPosition = window.scrollY;
+    const headerContentHeight = header.querySelector('.container').offsetHeight;
+    
+    if (scrollPosition > 50) {
+      header.classList.add('compact');
+      header.style.height = `${headerContentHeight}px`;
+    } else {
+      header.classList.remove('compact');
+      header.style.height = 'auto';
+    }
+  };
+  
+  window.addEventListener('scroll', adjustHeaderSize, { passive: true });
+  adjustHeaderSize(); // Initial adjustment
+}
+
+/**
+ * Custom Navigation Menu
+ * Handles the custom navigation menu functionality
+ */
+function initializeCustomNavigationMenu() {
+  const navMenu = document.querySelector('.custom-nav .nav-menu');
+  const dropdowns = navMenu.querySelectorAll('.dropdown');
+  
+  if (!navMenu || dropdowns.length === 0) return;
+  
+  // Toggle dropdowns on click
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    
+    if (link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+        
+        // Close other dropdowns
+        dropdowns.forEach(otherDropdown => {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.classList.remove('active');
+          }
+        });
+      });
+    }
+  });
+  
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  });
+  
+  // Add keyboard navigation support for dropdown menus
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+    if (link) {
+      link.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        }
+      });
+    }
   });
 }

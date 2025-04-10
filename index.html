@@ -3,301 +3,892 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NorthernEdge Legal Solutions | Modern Law Firm in Sault Ste. Marie, ON</title>
-    <meta name="description" content="NorthernEdge Legal Solutions provides expert legal services in civil litigation, business law, and technology law throughout Northern Ontario.">
-    
-    <!-- Favicon References -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a3c5a">
-    <meta name="msapplication-TileColor" content="#1a3c5a">
-    <meta name="theme-color" content="#ffffff">
-    
-    <!-- CSS Files -->
+    <title>NorthernEdge Legal Solutions</title>
+    <meta name="description" content="Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/elegant-design-system.css">
     <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/accessibility.css">
-    <link rel="stylesheet" href="css/navigation-enhancements.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
-    <link rel="stylesheet" href="css/cookie-consent.css">
-    <link rel="stylesheet" href="css/back-to-top.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <!-- Add the icon styles CSS -->
+    <link rel="stylesheet" href="css/visual-enhancement.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/icon-styles.css">
-    <!-- Splash Video Styling -->
+    <link rel="stylesheet" href="css/navigation-enhancements.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/accessibility-enhancements.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/back-to-top.js" defer></script>
+    <script src="js/visual-integration.js" defer></script>
+    <script src="js/scroll-navigation.js" defer></script>
     <style>
-        /* Splash screen container styling */
-        #splash-container {
-            position: fixed;
+        /* Date/Time and User Login Bar */
+        .user-info-bar {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .user-info-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .datetime, .user-welcome {
+            display: flex;
+            align-items: center;
+        }
+        
+        .datetime i, .user-welcome i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+        
+        #username {
+            font-weight: 600;
+            color: var(--accent);
+            margin-left: 4px;
+        }
+        
+        /* Enhanced Typography */
+        .hero-tagline {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.4;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -0.5rem;
+            margin-bottom: 3rem;
+            color: var(--neutral-medium);
+        }
+        
+        .eyebrow-text {
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        /* Enhanced Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+        
+        .pulse-btn {
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 0 rgba(212, 175, 55, 0.4);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+        
+        .glow-btn:hover {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+        
+        .slide-btn {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: color 0.3s ease;
+        }
+        
+        .slide-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .slide-btn:hover {
+            color: white;
+        }
+        
+        .slide-btn:hover::before {
+            left: 0;
+        }
+        
+        /* Value Props Section */
+        .value-props {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .value-props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .value-prop {
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .value-prop:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--neutral-lightest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary);
+        }
+        
+        .icon-circle i {
+            font-size: 2rem;
+        }
+        
+        .card-icon {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Video Section */
+        .video-section {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+            position: relative;
+        }
+        
+        .video-section::before {
+            content: '';
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            /* Updated background color to match site palette */
-            background-color: #f5f8fb; /* Light blue-gray that matches website theme */
-            z-index: 9999;
+            background-color: rgba(26, 54, 93, 0.05);
+            z-index: 0;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .video-responsive {
+            width: 100%;
+            background-color: #000;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .video-responsive video {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+        
+        .video-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+        
+        .video-btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #1A365D;
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 1s;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
         
-        #splash-container video {
-            width: 100%;
-            height: auto;
+        .video-btn:hover {
+            background-color: rgba(255, 255, 255, 1);
+            transform: scale(1.1);
+        }
+        
+        .video-btn i {
+            font-size: 1.2rem;
+        }
+        
+        .video-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+            color: #1A365D;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .video-description {
+            text-align: center;
             max-width: 800px;
-            /* Add subtle shadow for depth */
-            filter: drop-shadow(0 10px 15px rgba(26, 60, 90, 0.15));
+            margin: 0 auto 1rem;
+            color: #444;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
         }
         
-        #splash-container .fallback-logo {
-            max-width: 300px;
-            margin: 0 auto;
+        /* Enhanced Logo Display */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            position: relative;
         }
         
-        /* Hide main content initially */
-        body.splash-active main, 
-        body.splash-active header,
-        body.splash-active footer {
-            display: none;
-        }
-        
-        /* Skip splash link for accessibility */
-        .skip-splash {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255,255,255,0.85);
-            padding: 8px 15px;
-            border-radius: 4px;
-            color: #1a3c5a;
-            text-decoration: none;
-            font-size: 0.9rem;
-            z-index: 10000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .responsive-logo {
+            max-height: 70px;
+            width: auto;
             transition: all 0.3s ease;
         }
         
-        .skip-splash:focus, 
-        .skip-splash:hover {
-            background: #fff;
-            text-decoration: underline;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        .logo-text {
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
         }
-
-        /* Progress indicator for video */
-        .video-progress {
+        
+        .logo-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1A365D;
+            line-height: 1.2;
+        }
+        
+        .logo-tagline {
+            font-size: 0.8rem;
+            color: #555;
+            font-style: italic;
+        }
+        
+        /* Practice Area Cards */
+        .practice-area-card {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .practice-area-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .practice-area-icon {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .practice-area-icon img {
+            width: 100%;
+            max-width: 60px;
+            height: auto;
+        }
+        
+        .practice-area-content h3 {
+            color: #1A365D;
+            margin-bottom: 1rem;
+        }
+        
+        .practice-area-content p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1 1 200px;
+            max-width: 250px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Footer Enhancements */
+        .footer-logo {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .footer-logo img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        /* Enhanced Navigation */
+        .nav-menu {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            position: relative;
+            margin-left: 1.5rem;
+        }
+        
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0;
+            display: inline-block;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a::after {
+            content: '';
             position: absolute;
-            bottom: 30px;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
             left: 50%;
             transform: translateX(-50%);
-            width: 150px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 2px;
-            overflow: hidden;
+            background-color: #1A365D;
+            transition: width 0.3s ease;
         }
-
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background-color: #e8963a; /* Use accent color from website */
-            transition: width 0.1s linear;
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #1A365D;
         }
-
-        /* Hero section video styling */
-        .hero-section video {
+        
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
             width: 100%;
-            height: auto;
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: -20px;
+            background-color: white;
+            min-width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 0;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            padding: 0.75rem 1.5rem;
+            display: block;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .dropdown-menu a:hover,
+        .dropdown-menu a.active {
+            background-color: #f8f9fa;
+        }
+        
+        .dropdown-menu a::after {
+            display: none;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: relative;
+        }
+        
+        .mobile-menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #1A365D;
+            position: absolute;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .mobile-menu-toggle span:nth-child(1) {
+            top: 30%;
+            transform: translateY(-50%);
+        }
+        
+        .mobile-menu-toggle span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .mobile-menu-toggle span:nth-child(3) {
+            top: 70%;
+            transform: translateY(-50%);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        
+        /* Responsive fixes */
+        @media (max-width: 991px) {
+            .practice-area-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .practice-area-icon {
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+            
+            .contact-info-card {
+                flex: 1 1 45%;
+                max-width: 100%;
+            }
+            
+            .video-container {
+                max-width: 90%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .user-info-bar .container {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+            
+            .logo-text {
+                display: none;
+            }
+            
+            .responsive-logo {
+                max-height: 50px;
+            }
+            
+            .contact-info-card {
+                flex: 1 1 100%;
+            }
+            
+            .site-header .container {
+                padding: 0.5rem 1rem;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+                padding: 0;
+            }
+            
+            .nav-menu.active {
+                display: block;
+            }
+            
+            .nav-menu li {
+                margin: 0;
+            }
+            
+            .nav-menu a {
+                padding: 1rem 1.5rem;
+                display: block;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                padding: 0;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            
+            .dropdown-menu a {
+                padding: 1rem 3rem;
+                background-color: #f8f9fa;
+            }
+            
+            .video-controls {
+                bottom: 10px;
+            }
+            
+            .video-btn {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .video-title {
+                font-size: 1.5rem;
+            }
+            
+            .video-description {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+                padding: 0 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .value-props-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .video-controls {
+                gap: 10px;
+            }
+            
+            .video-btn {
+                width: 36px;
+                height: 36px;
+            }
         }
     </style>
-    
-    <!-- JavaScript -->
-    <script src="js/main.js" defer></script>
 </head>
-<body class="splash-active">
-    <!-- Splash Screen with Video -->
-    <div id="splash-container">
-        <a href="#skip-to-content" class="skip-splash" id="skip-splash" aria-label="Skip Intro">Skip Intro</a>
-        <video id="logo-animation" autoplay muted playsinline preload="auto">
-            <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
-            <!-- Fallback for when video cannot be played -->
-            <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions" class="fallback-logo">
-        </video>
-        <!-- Added progress indicator -->
-        <div class="video-progress">
-            <div class="progress-bar" id="videoProgress"></div>
-        </div>
-    </div>
-
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-        </svg>
-    </a>
-    
-    <header class="site-header" id="skip-to-content">
+<body>
+    <nav class="custom-nav">
         <div class="container">
             <div class="logo-container">
-                <a href="index.html"><img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
+                <a href="index.html">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" class="responsive-logo">
+                </a>
+                <div class="logo-text">
+                    <span class="logo-name">NorthernEdge Legal</span>
+                    <span class="logo-tagline">Innovative Legal Solutions</span>
+                </div>
             </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="btn btn-primary">Home</a></li>
+                    <li><a href="about.html" class="btn btn-primary">About</a></li>
                     <li class="dropdown">
-                        <a href="practice-areas.html">Practice Areas</a>
+                        <a href="practice-areas.html" class="btn btn-primary">Practice Areas</a>
                         <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
+                            <li><a href="civil-litigation.html" class="btn btn-primary">Civil Litigation</a></li>
+                            <li><a href="business-law.html" class="btn btn-primary">Business Law</a></li>
+                            <li><a href="technology-law.html" class="btn btn-primary">Technology Law</a></li>
+                            <li><a href="general-practice.html" class="btn btn-primary">General Practice</a></li>
                         </ul>
                     </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resources.html" class="btn btn-primary">Resources</a></li>
+                    <li><a href="blog/index.html" class="btn btn-primary">Blog</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
                 </ul>
-            </nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-content fade-in">
-                    <h1>Modern Legal Solutions for Today's Challenges</h1>
-                    <p class="lead">Expert legal guidance in Civil Litigation, Business Law, and Technology Law, serving clients throughout Northern Ontario and beyond.</p>
-                    <div class="hero-buttons">
-                        <!-- Fixed button with multiple approaches to ensure it works -->
-                        <a href="contact.html" class="btn btn-primary pulse" aria-label="Schedule a Consultation" onclick="window.location.href='contact.html'; return false;" id="consultation-btn">Schedule a Consultation</a>
-                        <a href="#services" class="btn btn-secondary" aria-label="Explore Our Services">Explore Our Services</a>
-                    </div>
-                    <!-- Embedded video -->
-                    <video src="videos/DynamicLogoAnimation.mp4" autoplay muted loop></video>
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1>Trusted Legal Expertise for Northern Ontario</h1>
+                <p class="hero-tagline">Innovative solutions for complex legal challenges in today's rapidly evolving business landscape</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary pulse-btn">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
+                    <a href="practice-areas.html" class="btn btn-secondary glow-btn">Explore Our Services <i class="fas fa-briefcase"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- Page navigation dots - side navigation -->
-        <div class="page-navigation-dots">
-            <a href="#hero" class="dot active" data-section="hero" aria-label="Hero section"></a>
-            <a href="#services" class="dot" data-section="services" aria-label="Services section"></a>
-            <a href="#about" class="dot" data-section="about" aria-label="About section"></a>
-            <a href="#approach" class="dot" data-section="approach" aria-label="Approach section"></a>
-            <a href="#testimonials" class="dot" data-section="testimonials" aria-label="Testimonials section"></a>
-            <a href="#contact" class="dot" data-section="contact" aria-label="Contact section"></a>
-        </div>
-
-        <!-- Services Section -->
-        <section id="services" class="page-section services-section">
+        <!-- Featured Video Section - Placed more prominently after the hero section -->
+        <section class="video-section">
             <div class="container">
-                <h2 class="section-title text-center">Our Practice Areas</h2>
-                <p class="section-description text-center">Specialized legal services tailored to your specific needs.</p>
+                <h2 class="section-title text-center">Our Dynamic Legal Solutions</h2>
+                <p class="video-description">Watch how NorthernEdge Legal Solutions brings innovation and expertise to your legal challenges</p>
                 
-                <div class="services-grid staggered-fade-in">
-                    <a href="civil-litigation.html" class="practice-card float-on-hover">
-                        <div class="practice-icon">
-                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
+                <div class="video-container">
+                    <div class="video-responsive">
+                        <!-- Using the specific video file from videos directory -->
+                        <video id="firm-video" controls autoplay muted loop>
+                            <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-controls">
+                            <button class="video-btn" id="play-pause-btn" aria-label="Play or pause video">
+                                <i class="fas fa-pause" id="play-pause-icon"></i>
+                            </button>
+                            <button class="video-btn" id="mute-unmute-btn" aria-label="Mute or unmute video">
+                                <i class="fas fa-volume-mute" id="mute-icon"></i>
+                            </button>
+                            <button class="video-btn" id="fullscreen-btn" aria-label="Toggle fullscreen">
+                                <i class="fas fa-expand"></i>
+                            </button>
                         </div>
-                        <h3>Civil Litigation</h3>
-                        <p>Strategic representation in disputes, lawsuits, and negotiations to protect your rights and achieve favorable outcomes.</p>
-                        <div class="card-action">
-                            <span class="btn-text">Learn More</span>
+                    </div>
+                </div>
+                <h3 class="video-title">NorthernEdge Legal: Modern Approach to Traditional Law</h3>
+                <p class="video-description">Witness our commitment to excellence and innovation through our dynamic visual identity. Our logo represents the intersection of traditional legal expertise and modern problem-solving strategies.</p>
+            </div>
+        </section>
+
+        <section class="value-props">
+            <div class="container">
+                <div class="value-props-grid">
+                    <div class="value-prop">
+                        <div class="icon-circle">
+                            <i class="fas fa-balance-scale"></i>
                         </div>
-                    </a>
-                    
-                    <a href="business-law.html" class="practice-card float-on-hover">
-                        <div class="practice-icon">
-                            <img src="images/icons/business-icon.svg" alt="Business Law Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
+                        <h3>Expert Counsel</h3>
+                        <p>Backed by years of specialized experience in multiple practice areas</p>
+                    </div>
+                    <div class="value-prop">
+                        <div class="icon-circle">
+                            <i class="fas fa-handshake"></i>
                         </div>
-                        <h3>Business Law</h3>
-                        <p>Comprehensive legal support for businesses at every stage, from formation to growth, transactions, and compliance.</p>
-                        <div class="card-action">
-                            <span class="btn-text">Learn More</span>
+                        <h3>Client-Focused</h3>
+                        <p>Your priorities are our priorities—we listen and deliver results</p>
+                    </div>
+                    <div class="value-prop">
+                        <div class="icon-circle">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
-                    </a>
-                    
-                    <a href="technology-law.html" class="practice-card float-on-hover">
-                        <div class="practice-icon">
-                            <img src="images/icons/technology-icon.svg" alt="Technology Law Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Technology Law</h3>
-                        <p>Expert legal services for technology companies, including intellectual property, data protection, and regulatory compliance.</p>
-                        <div class="card-action">
-                            <span class="btn-text">Learn More</span>
-                        </div>
-                    </a>
+                        <h3>Innovative Approach</h3>
+                        <p>Combining traditional expertise with modern legal solutions</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="why-choose-us">
-            <!-- Value proposition section -->
-        </section>
-
-        <!-- Replace testimonials with industry expertise section -->
-        <section class="industry-expertise">
+        <section class="practice-areas-overview">
             <div class="container">
-                <h2>Our Industry Expertise</h2>
-                <p class="section-intro">NorthernEdge Legal Solutions brings specialized knowledge to complex legal challenges across multiple industries.</p>
+                <h2 class="section-title text-center">Specialized Legal Expertise</h2>
+                <p class="section-subtitle text-center">Comprehensive legal solutions tailored to your specific needs</p>
                 
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <div class="icon-container">
-                            <img src="images/icons/technology-icon.svg" alt="Technology Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Technology & Software</h3>
-                        <p>Navigating intellectual property, data protection, and regulatory compliance for tech companies.</p>
+                <div class="practice-area-card">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/business-icon.svg" alt="Business Law Icon">
                     </div>
-                    
-                    <div class="expertise-card">
-                        <div class="icon-container">
-                            <img src="images/icons/business-icon.svg" alt="Business Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Business & Startups</h3>
-                        <p>Guiding businesses from formation through growth with strategic legal counsel.</p>
+                    <div class="practice-area-content">
+                        <h3>Business Law & Corporate Governance</h3>
+                        <p>Navigate the complexities of modern business with confidence. Our expert team provides strategic guidance on mergers and acquisitions, regulatory compliance, contract negotiations, and all aspects of corporate governance to help your business thrive.</p>
+                        <a href="business-law.html" class="btn btn-secondary slide-btn">Explore Business Services <i class="fas fa-chevron-right"></i></a>
                     </div>
-                    
-                    <div class="expertise-card">
-                        <div class="icon-container">
-                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Civil Litigation</h3>
-                        <p>Resolving disputes with strategic representation focused on achieving optimal outcomes.</p>
+                </div>
+                
+                <div class="practice-area-card">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/litigation-icon.svg" alt="Civil Litigation Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h3>Civil Litigation & Dispute Resolution</h3>
+                        <p>When conflicts arise, our strategic litigation team stands ready to protect your interests. We combine thorough case preparation with persuasive advocacy to achieve favorable outcomes whether through negotiation, mediation, or in the courtroom.</p>
+                        <a href="civil-litigation.html" class="btn btn-secondary slide-btn">Learn About Litigation <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="practice-area-card">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/technology-icon.svg" alt="Technology Law Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h3>Technology Law & Cybersecurity</h3>
+                        <p>In today's digital economy, legal protection for your technology assets is essential. Our specialized team provides guidance on data privacy regulations, intellectual property protection, and cybersecurity compliance to safeguard your digital operations.</p>
+                        <a href="technology-law.html" class="btn btn-secondary slide-btn">Discover Tech Solutions <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="recent-posts">
-            <!-- Blog preview -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <span class="eyebrow-text">WHO WE ARE</span>
+                    <h2>Northern Ontario's Premier Legal Partner</h2>
+                    <p>At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to providing innovative legal strategies that address your specific challenges and opportunities.</p>
+                    <p>We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, navigating regulatory requirements, or planning for future growth, we're here to guide you every step of the way.</p>
+                    <a href="about.html" class="btn btn-primary glow-btn">Discover Our Story <i class="fas fa-users"></i></a>
+                </div>
+            </div>
         </section>
 
-        <section class="cta-section">
+        <section class="contact-section">
             <div class="container">
-                <div class="cta-content fade-in">
+                <div class="contact-content">
+                    <span class="eyebrow-text">GET IN TOUCH</span>
                     <h2>Ready to Discuss Your Legal Needs?</h2>
-                    <p>Our team provides expert guidance tailored to your unique situation.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary" id="cta-consultation-btn" onclick="window.location.href='contact.html'; return false;">Schedule a Consultation</a>
-                        <a href="tel:+17051234567" class="btn btn-secondary">(705) 123-4567</a>
+                    <p>Our team is available to answer your questions and provide the expert guidance you're looking for. We're committed to responding to all inquiries within one business day.</p>
+                    <div class="contact-info">
+                        <div class="contact-info-card">
+                            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h3>Our Location</h3>
+                            <p>67 Hugill St.<br>Sault Ste. Marie, Ontario<br>P6A 4E6</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                            <h3>Email Us</h3>
+                            <p><a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+17059993657">(705) 999-3657</a></p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="card-icon"><i class="far fa-clock"></i></div>
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
+                        </div>
+                        <div class="contact-info-card cta-card">
+                            <a href="contact.html" class="btn btn-primary pulse-btn">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -308,19 +899,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
-                    <p class="footer-tagline">Sophisticated legal solutions for modern challenges.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        </a>
-                    </div>
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
@@ -348,193 +927,98 @@
                             Sault Ste. Marie, Ontario<br>
                             P6A 4E6
                         </address>
-                        <p>Phone: <a href="tel:+17051234567">(705) 123-4567</a></p>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
                         <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
-                        
-                        <div class="newsletter">
-                            <h3>Subscribe to Updates</h3>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your email address" required>
-                                <button type="submit">Subscribe</button>
-                            </form>
-                            <p class="disclaimer">We respect your privacy and will never share your information.</p>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
                     <a href="privacy-policy.html">Privacy Policy</a> | 
-                    <a href="terms-of-use.html">Terms of Use</a> |
-                    <a href="sitemap.html">Sitemap</a>
+                    <a href="terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
         </div>
-        
-        <!-- Back to top button for footer -->
-        <a href="#" class="back-to-top visible" aria-label="Back to top">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-            </svg>
-        </a>
     </footer>
 
-    <!-- Cookie Consent JavaScript -->
-    <script src="js/cookie-consent.js" defer></script>
-    <script src="js/cookie-consent-fixed.js"></script>
-    <script src="js/back-to-top.js"></script>
+    <div class="back-to-top" aria-label="Back to Top" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </div>
 
-    <!-- Splash Video Script -->
     <script>
+        // Mobile menu toggle functionality
         document.addEventListener('DOMContentLoaded', function() {
-            // Get references to elements
-            const splashContainer = document.getElementById('splash-container');
-            const logoAnimation = document.getElementById('logo-animation');
-            const skipSplash = document.getElementById('skip-splash');
-            const progressBar = document.getElementById('videoProgress');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
             
-            // Function to check if video exists and is accessible
-            function checkVideoExists() {
-                const videoSrc = logoAnimation.querySelector('source').src;
-                const http = new XMLHttpRequest();
-                http.open('HEAD', videoSrc, false);
-                try {
-                    http.send();
-                    return http.status !== 404;
-                } catch(e) {
-                    console.error("Error checking video file:", e);
-                    return false;
-                }
-            }
-            
-            // Function to end splash and show main content
-            function endSplash() {
-                splashContainer.style.opacity = '0';
-                document.body.classList.remove('splash-active');
-                
-                // Remove splash container after fade out
-                setTimeout(() => {
-                    splashContainer.remove();
-                }, 1000);
-            }
-            
-            // End splash when video ends
-            logoAnimation.addEventListener('ended', endSplash);
-            
-            // Allow users to skip the splash
-            skipSplash.addEventListener('click', function(e) {
-                e.preventDefault();
-                endSplash();
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
             });
             
-            // If video fails to load, show the site immediately
-            logoAnimation.addEventListener('error', function() {
-                console.warn("Video error detected, showing fallback logo or ending splash");
-                // Check if we have a fallback logo
-                const fallbackLogo = document.querySelector('.fallback-logo');
-                if (fallbackLogo) {
-                    fallbackLogo.style.display = 'block';
-                    // Wait 3 seconds then end splash
-                    setTimeout(endSplash, 3000);
-                } else {
-                    endSplash();
+            // Add dropdown functionality for mobile
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                if (window.innerWidth <= 1024) {
+                    dropdown.addEventListener('click', function(e) {
+                        if (e.target.parentNode.classList.contains('dropdown')) {
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                        }
+                    });
                 }
             });
             
-            // Update progress bar
-            logoAnimation.addEventListener('timeupdate', function() {
-                if (logoAnimation.duration) {
-                    const percent = (logoAnimation.currentTime / logoAnimation.duration) * 100;
-                    progressBar.style.width = percent + '%';
-                }
-            });
+            // Video player enhanced functionality
+            const video = document.getElementById('firm-video');
+            const playPauseBtn = document.getElementById('play-pause-btn');
+            const playPauseIcon = document.getElementById('play-pause-icon');
+            const muteBtn = document.getElementById('mute-unmute-btn');
+            const muteIcon = document.getElementById('mute-icon');
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
             
-            // Check if user prefers reduced motion
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                endSplash();
-            }
-            
-            // Set a maximum wait time (exactly 10 seconds as recommended)
-            setTimeout(endSplash, 10000);
-
-            // Log video duration for reference
-            logoAnimation.addEventListener('loadedmetadata', function() {
-                console.log('Video duration:', logoAnimation.duration, 'seconds');
-                
-                // Add warning if video is significantly longer than recommended 10 seconds
-                if (logoAnimation.duration > 12) {
-                    console.warn('Video duration exceeds recommended 10 seconds. Consider shortening for better user experience.');
-                }
-            });
-            
-            // If video doesn't exist, show fallback or end splash
-            if (!checkVideoExists()) {
-                console.warn("Video file not found, showing fallback");
-                const fallbackLogo = document.createElement('img');
-                fallbackLogo.src = 'videos/NorthernEdge%20Legal%20Logo.jpg';
-                fallbackLogo.alt = 'NorthernEdge Legal Solutions';
-                fallbackLogo.className = 'fallback-logo';
-                logoAnimation.parentNode.replaceChild(fallbackLogo, logoAnimation);
-                // Wait 3 seconds then end splash
-                setTimeout(endSplash, 3000);
-            }
-        });
-    </script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Back to top button functionality
-            const backToTopButton = document.querySelector('.back-to-top');
-            
-            if (backToTopButton) {
-              // Hide initially
-              backToTopButton.style.opacity = 0;
-              backToTopButton.style.visibility = 'hidden';
-              
-              // Show only when scrolled down
-              window.addEventListener('scroll', function() {
-                if (window.scrollY > 300) {
-                  backToTopButton.style.opacity = 1;
-                  backToTopButton.style.visibility = 'visible';
-                } else {
-                  backToTopButton.style.opacity = 0;
-                  backToTopButton.style.visibility = 'hidden';
-                }
-              });
-              
-              // Scroll to top when clicked
-              backToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({top: 0, behavior: 'smooth'});
-              });
-            }
-            
-            // Fix for consultation buttons
-            const consultationBtns = document.querySelectorAll('a[href="contact.html"]');
-            consultationBtns.forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.location.href = 'contact.html';
+            if (video && playPauseBtn && muteBtn && fullscreenBtn) {
+                // Play/Pause functionality
+                playPauseBtn.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                        playPauseIcon.classList.remove('fa-play');
+                        playPauseIcon.classList.add('fa-pause');
+                    } else {
+                        video.pause();
+                        playPauseIcon.classList.remove('fa-pause');
+                        playPauseIcon.classList.add('fa-play');
+                    }
                 });
-            });
-            
-            // Specifically target main hero CTA button
-            const mainCtaBtn = document.getElementById('consultation-btn');
-            if (mainCtaBtn) {
-                mainCtaBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    console.log("CTA button clicked, navigating to contact page");
-                    window.location.href = 'contact.html';
+                
+                // Mute/Unmute functionality
+                muteBtn.addEventListener('click', function() {
+                    if (video.muted) {
+                        video.muted = false;
+                        muteIcon.classList.remove('fa-volume-mute');
+                        muteIcon.classList.add('fa-volume-up');
+                    } else {
+                        video.muted = true;
+                        muteIcon.classList.remove('fa-volume-up');
+                        muteIcon.classList.add('fa-volume-mute');
+                    }
                 });
-            }
-            
-            // And CTA section button
-            const ctaBtn = document.getElementById('cta-consultation-btn');
-            if (ctaBtn) {
-                ctaBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.location.href = 'contact.html';
+                
+                // Fullscreen functionality
+                fullscreenBtn.addEventListener('click', function() {
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    } else if (video.mozRequestFullScreen) { /* Firefox */
+                        video.mozRequestFullScreen();
+                    } else if (video.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                        video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) { /* IE/Edge */
+                        video.msRequestFullscreen();
+                    }
                 });
             }
         });
