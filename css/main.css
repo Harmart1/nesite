@@ -256,15 +256,15 @@ p.lead {
 
 /* Site Header Styling */
 .site-header {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--white);
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 1rem 0;
   width: 100%;
-  margin-top: 50px;
-  transition: height 0.3s ease;
+  margin-top: 0;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
 .site-header .container {
@@ -275,7 +275,7 @@ p.lead {
 
 /* Enhanced Logo Container */
 .logo-container {
-  max-width: 260px;
+  max-width: 220px;
   transition: transform var(--transition-normal);
 }
 
