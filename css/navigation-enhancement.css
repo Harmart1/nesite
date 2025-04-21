@@ -318,3 +318,16 @@
         max-width: 100%;
     }
 }
+
+/* Aria Labels for Accessibility */
+.nav-menu > li > a {
+    aria-label: "Navigation link";
+}
+
+.dropdown > a {
+    aria-label: "Dropdown link";
+}
+
+.dropdown-menu a {
+    aria-label: "Dropdown menu item";
+}

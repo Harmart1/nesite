@@ -73,6 +73,7 @@
   transition: all 0.2s ease;
   position: relative;
   white-space: nowrap;
+  aria-label: "Navigation link"; /* Added aria-label for accessibility */
 }
 
 .standard-menu-item > a:hover,
@@ -147,6 +148,7 @@
   text-decoration: none;
   transition: all 0.2s ease;
   font-size: 0.875rem;
+  aria-label: "Dropdown menu item"; /* Added aria-label for accessibility */
 }
 
 .standard-dropdown-menu a:hover,
