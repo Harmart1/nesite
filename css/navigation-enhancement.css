@@ -35,6 +35,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    aria-label: "Navigation link"; /* Added aria-label for accessibility */
 }
 
 .nav-menu > li > a:hover,
@@ -54,6 +55,7 @@
     margin-left: 0.5rem;
     font-size: 0.8em;
     transition: transform 0.2s;
+    aria-label: "Dropdown link"; /* Added aria-label for accessibility */
 }
 
 .nav-menu .dropdown:hover > a:after,
@@ -99,6 +101,7 @@
     text-decoration: none;
     transition: all 0.2s;
     white-space: nowrap;
+    aria-label: "Dropdown menu item"; /* Added aria-label for accessibility */
 }
 
 .dropdown-menu a:hover,
@@ -317,4 +320,17 @@
     .logo-container img {
         max-width: 100%;
     }
+}
+
+/* Aria Labels for Accessibility */
+.nav-menu > li > a {
+    aria-label: "Navigation link";
+}
+
+.dropdown > a {
+    aria-label: "Dropdown link";
+}
+
+.dropdown-menu a {
+    aria-label: "Dropdown menu item";
 }
