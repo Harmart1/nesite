@@ -128,33 +128,6 @@
     transition: all 0.3s;
 }
 
-/* Header Layout */
-.site-header {
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 1rem 0;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.site-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-container img {
-    max-height: 50px;
-    width: auto;
-}
-
 /* Side Navigation for Long Pages */
 .side-navigation {
     position: sticky;
