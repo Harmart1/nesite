@@ -137,35 +137,32 @@
     </style>
 </head>
 <body>
-    <header class="site-header">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+    
+    <!-- Include the common header template from templates/optimized-inner-navigation.html -->
+    <header class="standard-navigation">
         <div class="container">
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+            <div class="standard-logo-container">
+                <a href="index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" width="120" height="40">
                 </a>
             </div>
-            <nav class="main-nav" aria-label="Main Navigation">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
+            <nav class="standard-nav" aria-label="Main Navigation">
+                <button class="standard-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span></span><span></span><span></span><span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="btn btn-primary">Home</a></li>
-                    <li><a href="about.html" class="btn btn-primary active">About</a></li>
-                    <li class="dropdown">
-                        <a href="practice-areas.html" class="btn btn-primary">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html" class="btn btn-primary">Civil Litigation</a></li>
-                            <li><a href="business-law.html" class="btn btn-primary">Business Law</a></li>
-                            <li><a href="technology-law.html" class="btn btn-primary">Technology Law</a></li>
-                            <li><a href="general-practice.html" class="btn btn-primary">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="resources.html" class="btn btn-primary">Resources</a></li>
-                    <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+                <ul class="standard-menu">
+                    <li class="standard-menu-item"><a href="index.html" aria-label="Home">Home</a></li>
+                    <li class="standard-menu-item"><a href="about.html" aria-label="About">About</a></li>
+                    <li class="standard-menu-item"><a href="practice-areas.html" aria-label="Practice Areas">Practice Areas</a></li>
+                    <li class="standard-menu-item"><a href="resources.html" aria-label="Resources">Resources</a></li>
+                    <li class="standard-menu-item"><a href="contact.html" aria-label="Contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="mobile-overlay"></div>
 
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <div class="container">
@@ -176,7 +173,7 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
         <section class="page-header fade-in">
             <div class="container">
                 <h1>About Our Firm</h1>
