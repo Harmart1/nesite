@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/visual-enhancement.css">
-    <link rel="stylesheet" href="css/navigation-enhancement.css">
+    <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/print.css" media="print">
@@ -18,7 +18,7 @@
     
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
-    <script src="js/visual-integration.js" defer></script>
+    <script src="js/navigation.js" defer></script>
 </head>
 <body>
     <!-- Skip to content link for accessibility -->
@@ -38,25 +38,17 @@
                     <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" width="120" height="40">
                 </a>
             </div>
-            <nav class="main-nav" aria-label="Main Navigation">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <nav class="nav-wrapper" aria-label="Main Navigation">
+                <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li class="nav-menu-item"><a href="index.html" class="btn btn-primary">Home</a></li>
-                    <li class="nav-menu-item"><a href="about.html" class="btn btn-primary">About</a></li>
-                    <li class="dropdown">
-                        <a href="practice-areas.html" class="btn btn-primary" aria-haspopup="true" aria-expanded="false">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html" class="btn btn-primary">Civil Litigation</a></li>
-                            <li><a href="business-law.html" class="btn btn-primary">Business Law</a></li>
-                            <li><a href="technology-law.html" class="btn btn-primary">Technology Law</a></li>
-                            <li><a href="general-practice.html" class="btn btn-primary">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-menu-item"><a href="resources.html" class="btn btn-primary">Resources</a></li>
-                    <li class="nav-menu-item"><a href="blog/index.html" class="btn btn-primary">Blog</a></li>
-                    <li class="nav-menu-item"><a href="contact.html" class="btn btn-primary">Contact</a></li>
+                <ul class="primary-nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link" aria-label="Home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" aria-label="About">About</a></li>
+                    <li class="nav-item"><a href="practice-areas.html" class="nav-link" aria-label="Practice Areas">Practice Areas</a></li>
+                    <li class="nav-item"><a href="resources.html" class="nav-link" aria-label="Resources">Resources</a></li>
+                    <li class="nav-item"><a href="blog/index.html" class="nav-link" aria-label="Blog">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" aria-label="Contact">Contact</a></li>
                 </ul>
             </nav>
         </div>

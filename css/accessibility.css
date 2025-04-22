@@ -178,3 +178,13 @@ document.body.addEventListener('keydown', function(e) {
   outline: 3px solid var(--gold);
   outline-offset: 2px;
 }
+
+/* Ensure touch targets are large enough for easy interaction on mobile devices */
+.nav-menu a {
+  padding: 1rem 1.5rem;
+}
+
+.mobile-menu-toggle span {
+  height: 4px;
+  margin: 6px 0;
+}
