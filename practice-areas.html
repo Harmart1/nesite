@@ -17,35 +17,40 @@
     <link rel="stylesheet" href="css/navigation-enhancements.css">
     <link rel="stylesheet" href="css/icon-styles.css">
     <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/accessibility-enhancements.css">
     
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
+    <script src="js/navigation.js" defer></script>
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
     
-    <header class="site-header">
+    <!-- Include the common header template from templates/optimized-inner-navigation.html -->
+    <header class="standard-navigation">
         <div class="container">
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+            <div class="standard-logo-container">
+                <a href="index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" width="120" height="40">
                 </a>
             </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
+            <nav class="standard-nav" aria-label="Main Navigation">
+                <button class="standard-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span></span><span></span><span></span><span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="practice-areas.html" class="active">Practice Areas</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="standard-menu">
+                    <li class="standard-menu-item"><a href="index.html" aria-label="Home">Home</a></li>
+                    <li class="standard-menu-item"><a href="about.html" aria-label="About">About</a></li>
+                    <li class="standard-menu-item"><a href="practice-areas.html" aria-label="Practice Areas">Practice Areas</a></li>
+                    <li class="standard-menu-item"><a href="resources.html" aria-label="Resources">Resources</a></li>
+                    <li class="standard-menu-item"><a href="contact.html" aria-label="Contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="mobile-overlay"></div>
 
     <main id="main-content">
         <section class="page-header fade-in">
@@ -171,16 +176,16 @@
                             Sault Ste. Marie, Ontario<br>
                             P6A 4E6
                         </address>
-                        <p>Phone: <a href="tel:+17051234567">(705) 123-4567</a></p>
-                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                        <p>Phone: <a href="tel:+17051234567" aria-label="Call us at (705) 123-4567">(705) 123-4567</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com" aria-label="Email us at info@northernedgelegal.com">info@northernedgelegal.com</a></p>
                     </div>
                 </div>
             </div>
             <div class="copyright">
                 <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html">Privacy Policy</a> | 
-                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="privacy-policy.html" aria-label="Read our privacy policy">Privacy Policy</a> | 
+                    <a href="terms-of-use.html" aria-label="Read our terms of use">Terms of Use</a>
                 </div>
             </div>
         </div>

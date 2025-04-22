@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/navigation-enhancements.css">
     <link rel="stylesheet" href="css/icon-styles.css">
     <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/accessibility-enhancements.css">
     
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -162,42 +164,35 @@
     <script src="js/main.js" defer></script>
     <!-- Form validation script -->
     <script src="js/contact-form-validation.js" defer></script>
+    <script src="js/navigation.js" defer></script>
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
     
-    <!-- Include the common header template from templates/header.html -->
-    <header class="site-header">
+    <!-- Include the common header template from templates/optimized-inner-navigation.html -->
+    <header class="standard-navigation">
         <div class="container">
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+            <div class="standard-logo-container">
+                <a href="index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" width="120" height="40">
                 </a>
             </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
+            <nav class="standard-nav" aria-label="Main Navigation">
+                <button class="standard-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span></span><span></span><span></span><span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="practice-areas.html">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                <ul class="standard-menu">
+                    <li class="standard-menu-item"><a href="index.html" aria-label="Home">Home</a></li>
+                    <li class="standard-menu-item"><a href="about.html" aria-label="About">About</a></li>
+                    <li class="standard-menu-item"><a href="practice-areas.html" aria-label="Practice Areas">Practice Areas</a></li>
+                    <li class="standard-menu-item"><a href="resources.html" aria-label="Resources">Resources</a></li>
+                    <li class="standard-menu-item"><a href="contact.html" aria-label="Contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="mobile-overlay"></div>
 
     <main id="main-content">
         <section class="page-header fade-in">
