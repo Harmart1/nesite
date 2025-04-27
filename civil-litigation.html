@@ -141,5 +141,31 @@
     <script src="js/visual-integration.js" defer></script>
     <script src="js/nav-highlight.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.standard-menu-toggle');
+            const navMenu = document.querySelector('.standard-menu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Add dropdown functionality for mobile
+            const dropdowns = document.querySelectorAll('.standard-dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                if (window.innerWidth <= 1024) {
+                    dropdown.addEventListener('click', function(e) {
+                        if (e.target.parentNode.classList.contains('standard-dropdown')) {
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
