@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeJumpNavigation();
     initializePaginationDots();
     initializeSwipeSupport();
+    initializeDropdownMenus(); // P3d19
 });
 
 /**
@@ -396,4 +397,70 @@ function debounce(func, wait) {
             func.apply(context, args);
         }, wait);
     };
+}
+
+/**
+ * Dropdown Menus
+ * Handles touch interactions for dropdown menus on mobile
+ */
+function initializeDropdownMenus() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    if (dropdowns.length === 0) return;
+    
+    // Remove previous event listeners (to prevent duplicates on resize)
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        if (link) {
+            const newLink = link.cloneNode(true);
+            if (link.parentNode) {
+                link.parentNode.replaceChild(newLink, link);
+            }
+        }
+    });
+    
+    // For mobile: toggle dropdown on click
+    if (window.innerWidth < 1024) {
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+            
+            if (link) {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth < 1024) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(otherDropdown => {
+                            if (otherDropdown !== dropdown) {
+                                otherDropdown.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+
+    // Add keyboard navigation support for dropdown menus
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        if (link) {
+            link.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
 }
