@@ -340,3 +340,10 @@
     padding: 1rem 0;
   }
 }
+
+/* Ensure touch targets are large enough for easy interaction on mobile devices */
+@media (max-width: 1024px) {
+  .nav-menu a {
+    padding: 1.5rem 0;
+  }
+}
