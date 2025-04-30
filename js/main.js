@@ -53,6 +53,15 @@ function initializeMobileMenu() {
     const isExpanded = navMenu.classList.contains('active');
     mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
   });
+
+  // Close nav menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-menu') && !e.target.closest('.mobile-menu-toggle')) {
+      navMenu.classList.remove('active');
+      mobileMenuToggle.classList.remove('active');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
 /**
