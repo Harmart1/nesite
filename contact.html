@@ -156,6 +156,70 @@
             width: auto;
             margin-top: 0.25rem;
         }
+        
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 2rem;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--neutral-light);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .modal-body {
+            padding: 1rem 0;
+        }
+        
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            border-top: 1px solid var(--neutral-light);
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
     
     <!-- JavaScript -->
@@ -210,53 +274,68 @@
                         <h2>Send Us a Message</h2>
                         <p>Fill out the form below to schedule a consultation or inquire about our services. We aim to respond to all inquiries within 1 business day.</p>
                         
-                        <form class="contact-form" id="contact-form" action="mailto:info@northernedgelegal.com" method="POST" enctype="text/plain" onsubmit="return handleFormSubmit(event)">
-                            <!-- Form error container will be auto-created by the validation script -->
-                            
-                            <div class="form-grid">
-                                <div class="form-group form-field">
-                                    <label for="name" class="form-required">Name</label>
-                                    <input type="text" id="name" name="Name" required aria-required="true" data-validate="required">
+                        <button class="btn btn-primary" id="open-modal-btn">Open Contact Form</button>
+                        
+                        <div id="contact-modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Contact Us</h2>
+                                    <button class="modal-close" id="close-modal-btn">&times;</button>
                                 </div>
-                                
-                                <div class="form-group form-field">
-                                    <label for="email" class="form-required">Email</label>
-                                    <input type="email" id="email" name="Email" required aria-required="true" data-validate="required email">
+                                <div class="modal-body">
+                                    <form class="contact-form" id="contact-form" action="mailto:tharmar@northernedgelegal.com" method="POST" enctype="text/plain" onsubmit="return handleFormSubmit(event)">
+                                        <!-- Form error container will be auto-created by the validation script -->
+                                        
+                                        <div class="form-grid">
+                                            <div class="form-group form-field">
+                                                <label for="name" class="form-required">Name</label>
+                                                <input type="text" id="name" name="Name" required aria-required="true" data-validate="required">
+                                            </div>
+                                            
+                                            <div class="form-group form-field">
+                                                <label for="email" class="form-required">Email</label>
+                                                <input type="email" id="email" name="Email" required aria-required="true" data-validate="required email">
+                                            </div>
+                                            
+                                            <div class="form-group form-field">
+                                                <label for="phone">Phone</label>
+                                                <input type="tel" id="phone" name="Phone" data-validate="phone">
+                                            </div>
+                                            
+                                            <div class="form-group form-field">
+                                                <label for="service" class="form-required">Service Needed</label>
+                                                <select id="service" name="Service" required aria-required="true" data-validate="required">
+                                                    <option value="" selected disabled>Please select...</option>
+                                                    <option value="Civil Litigation">Civil Litigation</option>
+                                                    <option value="Business Law">Business Law</option>
+                                                    <option value="Technology Law">Technology Law</option>
+                                                    <option value="General Practice">General Practice</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group form-field">
+                                            <label for="message" class="form-required">Your Message</label>
+                                            <textarea id="message" name="Message" required aria-required="true" data-validate="required"></textarea>
+                                        </div>
+                                        
+                                        <div class="form-group form-field">
+                                            <div class="checkbox-group">
+                                                <input type="checkbox" id="privacy" name="PrivacyConsent" required aria-required="true" data-validate="required">
+                                                <label for="privacy" class="form-required">I agree to the <a href="privacy-policy.html">Privacy Policy</a> and consent to being contacted via the provided information.</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <input type="hidden" name="Subject" value="Website Contact Form Submission">
+                                        <button type="submit" class="btn btn-primary pulse" aria-label="Submit Inquiry">Submit Inquiry</button>
+                                    </form>
                                 </div>
-                                
-                                <div class="form-group form-field">
-                                    <label for="phone">Phone</label>
-                                    <input type="tel" id="phone" name="Phone" data-validate="phone">
-                                </div>
-                                
-                                <div class="form-group form-field">
-                                    <label for="service" class="form-required">Service Needed</label>
-                                    <select id="service" name="Service" required aria-required="true" data-validate="required">
-                                        <option value="" selected disabled>Please select...</option>
-                                        <option value="Civil Litigation">Civil Litigation</option>
-                                        <option value="Business Law">Business Law</option>
-                                        <option value="Technology Law">Technology Law</option>
-                                        <option value="General Practice">General Practice</option>
-                                        <option value="Other">Other</option>
-                                    </select>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" id="close-modal-footer-btn">Close</button>
                                 </div>
                             </div>
-                            
-                            <div class="form-group form-field">
-                                <label for="message" class="form-required">Your Message</label>
-                                <textarea id="message" name="Message" required aria-required="true" data-validate="required"></textarea>
-                            </div>
-                            
-                            <div class="form-group form-field">
-                                <div class="checkbox-group">
-                                    <input type="checkbox" id="privacy" name="PrivacyConsent" required aria-required="true" data-validate="required">
-                                    <label for="privacy" class="form-required">I agree to the <a href="privacy-policy.html">Privacy Policy</a> and consent to being contacted via the provided information.</label>
-                                </div>
-                            </div>
-                            
-                            <input type="hidden" name="Subject" value="Website Contact Form Submission">
-                            <button type="submit" class="btn btn-primary pulse" aria-label="Submit Inquiry">Submit Inquiry</button>
-                        </form>
+                        </div>
                     </div>
                     
                     <aside class="sidebar slide-in-left">
@@ -473,6 +552,30 @@
                     const content = this.parentElement.nextElementSibling;
                     content.style.maxHeight = !expanded ? content.scrollHeight + 'px' : null;
                 });
+            });
+            
+            // Modal functionality
+            const openModalBtn = document.getElementById('open-modal-btn');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const closeModalFooterBtn = document.getElementById('close-modal-footer-btn');
+            const modal = document.getElementById('contact-modal');
+            
+            openModalBtn.addEventListener('click', function() {
+                modal.style.display = 'block';
+            });
+            
+            closeModalBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            closeModalFooterBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
             });
         });
         
