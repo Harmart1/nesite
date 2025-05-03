@@ -6,16 +6,19 @@
     <title>Contact Us | NorthernEdge Legal Solutions</title>
     <meta name="description" content="Get in touch with NorthernEdge Legal Solutions. Schedule a consultation with our experienced legal team in Sault Ste. Marie, Ontario.">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- CSS Files -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/elegant-design-system.css">
+    <link rel="stylesheet" href="css/elegant-navigation.css">
+    <link rel="stylesheet" href="css/typography-animations.css">
     <link rel="stylesheet" href="css/print.css" media="print">
     <link rel="stylesheet" href="css/cookie-consent.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/elegant-design-system.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/visual-enhancements.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/navigation-enhancements.css">
     <link rel="stylesheet" href="css/icon-styles.css">
     <link rel="stylesheet" href="css/back-to-top.css">
     
@@ -229,20 +232,18 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="container">
+        <div class="container header-container">
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                    <img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions">
                 </a>
             </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
+            
+            <nav class="nav-wrapper">
+                <ul class="primary-nav">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
+                    <li class="has-dropdown">
                         <a href="practice-areas.html">Practice Areas</a>
                         <ul class="dropdown-menu">
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
@@ -255,23 +256,29 @@
                     <li><a href="blog/index.html">Blog</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </nav>
         </div>
     </header>
 
     <main id="main-content">
-        <section class="page-header fade-in">
+        <section class="page-header py-16 bg-neutral-lightest fade-in">
             <div class="container">
-                <h1>Contact Us</h1>
+                <h1 class="elegant-heading centered">Contact Us</h1>
                 <p class="lead">Get in touch with our team to discuss how we can help with your legal needs.</p>
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section py-16 bg-white">
             <div class="container">
-                <div class="content-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="main-content slide-in-right">
-                        <h2>Send Us a Message</h2>
+                        <h2 class="elegant-heading">Send Us a Message</h2>
                         <p>Fill out the form below to schedule a consultation or inquire about our services. We aim to respond to all inquiries within 1 business day.</p>
                         
                         <button class="btn btn-primary" id="open-modal-btn">Open Contact Form</button>
@@ -340,7 +347,7 @@
                     
                     <aside class="sidebar slide-in-left">
                         <div class="contact-info-card">
-                            <h2>Contact Information</h2>
+                            <h2 class="elegant-heading">Contact Information</h2>
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
@@ -388,16 +395,16 @@
         </section>
         
         <!-- Map Section -->
-        <section class="map-section">
+        <section class="map-section py-16 bg-neutral-lightest">
             <div class="container">
-                <h2>Our Location</h2>
+                <h2 class="elegant-heading centered">Our Location</h2>
                 <div id="contact-map"></div>
             </div>
         </section>
 
-        <section class="faq-section">
+        <section class="faq-section py-16 bg-white">
             <div class="container">
-                <h2>Frequently Asked Questions</h2>
+                <h2 class="elegant-heading centered">Frequently Asked Questions</h2>
                 <div class="accordion">
                     <div class="accordion-item">
                         <h3 class="accordion-header">
@@ -435,10 +442,10 @@
             </div>
         </section>
 
-        <section class="cta-section">
+        <section class="cta-section py-16 bg-primary-lightest">
             <div class="container">
                 <div class="cta-content fade-in">
-                    <h2>Ready to Take the First Step?</h2>
+                    <h2 class="elegant-heading centered">Ready to Take the First Step?</h2>
                     <p>Our team is committed to providing prompt, professional legal guidance.</p>
                     <div class="cta-buttons">
                         <a href="tel:+17051234567" class="btn btn-primary pulse" aria-label="Call Now">Call Now</a>
@@ -455,61 +462,48 @@
         </svg>
     </button>
 
-    <footer class="site-footer">
+    <footer class="py-12 bg-navy-dark">
         <div class="container">
-            <div class="footer-content">
+            <div class="grid grid-cols-4 gap-8">
                 <div class="footer-logo">
-                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                    <img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions">
                 </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3>Practice Areas</h3>
-                        <ul>
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="blog/index.html">Blog</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Contact</h3>
-                        <address>
-                            67 Hugill St.<br>
-                            Sault Ste. Marie, Ontario<br>
-                            P6A 4E6
-                        </address>
-                        <p>Phone: <a href="tel:+17059993657" aria-label="Call us at (705) 999-3657">(705) 999-3657</a></p>
-                        <p>Email: <a href="mailto:info@northernedgelegal.com" aria-label="Email us at info@northernedgelegal.com">info@northernedgelegal.com</a></p>
-                    </div>
+                <div class="footer-column">
+                    <h3 class="elegant-heading">Practice Areas</h3>
+                    <ul>
+                        <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                        <li><a href="business-law.html">Business Law</a></li>
+                        <li><a href="technology-law.html">Technology Law</a></li>
+                        <li><a href="general-practice.html">General Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="elegant-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="elegant-heading">Contact</h3>
+                    <address>
+                        67 Hugill St.<br>
+                        Sault Ste. Marie, Ontario<br>
+                        P6A 4E6
+                    </address>
+                    <p>Phone: <a href="tel:+17059993657" aria-label="Call us at (705) 999-3657">(705) 999-3657</a></p>
+                    <p>Email: <a href="mailto:info@northernedgelegal.com" aria-label="Email us at info@northernedgelegal.com">info@northernedgelegal.com</a></p>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="mt-12 pt-6 border-t border-slate-dark text-center">
                 <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
                     <a href="privacy-policy.html" aria-label="Read our privacy policy">Privacy Policy</a> | 
                     <a href="terms-of-use.html" aria-label="Read our terms of use">Terms of Use</a>
                 </div>
             </div>
-        </div>
-        <div class="footer-icons">
-            <a href="https://www.facebook.com/NorthernEdgeLegal" aria-label="Facebook">
-                <img src="images/icons/facebook-icon.svg" alt="Facebook Icon">
-            </a>
-            <a href="https://twitter.com/NorthernEdgeLegal" aria-label="Twitter">
-                <img src="images/icons/twitter-icon.svg" alt="Twitter Icon">
-            </a>
-            <a href="https://www.linkedin.com/company/northernedgelegal" aria-label="LinkedIn">
-                <img src="images/icons/linkedin-icon.svg" alt="LinkedIn Icon">
-            </a>
         </div>
     </footer>
     
