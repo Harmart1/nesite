@@ -1,433 +1,151 @@
-/**
- * NorthernEdge Legal Solutions - Main JavaScript
- *
- * This file contains the main JavaScript functionality for the website,
- * handling navigation, animations, and interactive elements.
- */
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize all interactive components
-  initializeMobileMenu();
-  initializeDropdownMenus();
-  initializeSmoothScroll();
-  initializeScrollAnimations();
-  initializeContactForm();
-  // Back-to-top button is now handled by back-to-top.js
-  initializeResourceFilters();
-  initializeAccordions();
-  initializeHeaderResize(); // Initialize header resize functionality
-  initializeCustomNavigationMenu(); // Initialize custom navigation menu
-  
-  // Add window resize handler for responsive elements
-  window.addEventListener('resize', handleWindowResize);
-});
-
-/**
- * Handle window resize events for responsive elements
- */
-function handleWindowResize() {
-  // Reinitialize dropdown menus when window size changes
-  initializeDropdownMenus();
-  window.adjustHeaderSize(); // Adjust header size on window resize
-}
-
-/**
- * Mobile Menu Toggle
- * Handles the mobile hamburger menu toggle functionality
- */
-function initializeMobileMenu() {
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  
-  if (!mobileMenuToggle || !navMenu) return;
-  
-  mobileMenuToggle.addEventListener('click', function() {
-    navMenu.classList.toggle('active');
-    mobileMenuToggle.classList.toggle('active');
-    
-    // Animate hamburger icon
-    const spans = mobileMenuToggle.querySelectorAll('span');
-    spans.forEach(span => span.classList.toggle('active'));
-    
-    // Accessibility
-    const isExpanded = navMenu.classList.contains('active');
-    mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
-  });
-
-  // Close nav menu when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.nav-menu') && !e.target.closest('.mobile-menu-toggle')) {
-      navMenu.classList.remove('active');
-      mobileMenuToggle.classList.remove('active');
-      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+// JavaScript compiled from TypeScript
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize mobile menu toggle
+    var menuToggle = document.querySelector('.menu-toggle');
+    var mainNav = document.querySelector('.main-nav');
+    var menuItems = document.querySelectorAll('.nav-menu a');
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function () {
+            var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', (!expanded).toString());
+            mainNav.classList.toggle('active');
+        });
     }
-  });
-}
-
-/**
- * Dropdown Menus
- * Handles touch interactions for dropdown menus on mobile
- */
-function initializeDropdownMenus() {
-  const dropdowns = document.querySelectorAll('.dropdown');
-  
-  if (dropdowns.length === 0) return;
-  
-  // Remove previous event listeners (to prevent duplicates on resize)
-  dropdowns.forEach(dropdown => {
-    const link = dropdown.querySelector('a');
-    if (link) {
-      const newLink = link.cloneNode(true);
-      if (link.parentNode) {
-        link.parentNode.replaceChild(newLink, link);
-      }
-    }
-  });
-  
-  // For mobile: toggle dropdown on click
-  if (window.innerWidth < 1024) {
-    dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('a');
-      
-      if (link) {
-        link.addEventListener('click', function(e) {
-          if (window.innerWidth < 1024) {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
-            
-            // Close other dropdowns
-            dropdowns.forEach(otherDropdown => {
-              if (otherDropdown !== dropdown) {
-                otherDropdown.classList.remove('active');
-              }
+    // Close menu when a menu item is clicked (mobile)
+    menuItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            if (window.innerWidth < 768 && menuToggle && mainNav) {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                mainNav.classList.remove('active');
+            }
+        });
+    });
+    // Add scroll reveal animation for elements
+    var revealElements = document.querySelectorAll('.service-card, .portfolio-item, .contact-form, .contact-info');
+    // Simple intersection observer to add animation when elements come into view
+    if ('IntersectionObserver' in window) {
+        var observer_1 = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer_1.unobserve(entry.target);
+                }
             });
-          }
+        }, {
+            threshold: 0.1
         });
-      }
-    });
-  }
-  
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.dropdown')) {
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.remove('active');
-      });
-    }
-  });
-
-  // Add keyboard navigation support for dropdown menus
-  dropdowns.forEach(dropdown => {
-    const link = dropdown.querySelector('a');
-    if (link) {
-      link.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          dropdown.classList.toggle('active');
-        }
-      });
-    }
-  });
-}
-
-/**
- * Resource Filters
- * For the resources page category filtering
- */
-function initializeResourceFilters() {
-  const categoryTabs = document.querySelectorAll('.category-tab');
-  const resourceCards = document.querySelectorAll('.resource-card');
-  
-  if (categoryTabs.length === 0 || resourceCards.length === 0) return;
-  
-  categoryTabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-      // Remove active class from all tabs
-      categoryTabs.forEach(t => t.classList.remove('active'));
-      
-      // Add active class to clicked tab
-      this.classList.add('active');
-      
-      const selectedCategory = this.getAttribute('data-category');
-      
-      // Show all cards if "All" is selected
-      if (selectedCategory === 'all') {
-        resourceCards.forEach(card => {
-          card.style.display = 'flex';
+        revealElements.forEach(function (el) {
+            observer_1.observe(el);
         });
-        return;
-      }
-      
-      // Otherwise filter the cards
-      resourceCards.forEach(card => {
-        const cardCategories = card.getAttribute('data-categories');
-        
-        if (cardCategories && cardCategories.includes(selectedCategory)) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-/**
- * Initialize Accordions
- * For FAQ sections and other accordion-based content
- */
-function initializeAccordions() {
-  const accordionHeaders = document.querySelectorAll('.accordion-header');
-  
-  if (accordionHeaders.length === 0) return;
-  
-  accordionHeaders.forEach(header => {
-    header.addEventListener('click', function() {
-      this.classList.toggle('active');
-      
-      const content = this.nextElementSibling;
-      if (!content) return;
-      
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-    });
-  });
-}
-
-/**
- * Smooth Scroll
- * Adds smooth scrolling for anchors linking to page sections
- */
-function initializeSmoothScroll() {
-  const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
-  
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        e.preventDefault();
-        
-        // Get header height for offset (safely)
-        const header = document.querySelector('.site-header');
-        const headerHeight = header ? header.offsetHeight : 0;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
+    }
+    else {
+        // Fallback for browsers that don't support IntersectionObserver
+        revealElements.forEach(function (el) {
+            el.classList.add('revealed');
         });
-      }
-    });
-  });
-}
-
-/**
- * Scroll Animations
- * Adds fade-in animations for elements as they enter the viewport
- */
-function initializeScrollAnimations() {
-  const animatedElements = document.querySelectorAll('.fade-in, .slide-up, .slide-in');
-  
-  if (animatedElements.length === 0) return;
-  
-  // Check if IntersectionObserver is supported
-  if ('IntersectionObserver' in window) {
-    // Create observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          // Stop observing after animation
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
-    
-    // Observe each element
-    animatedElements.forEach(element => {
-      observer.observe(element);
-    });
-  } else {
-    // Fallback for browsers that don't support IntersectionObserver
-    animatedElements.forEach(element => {
-      element.classList.add('active');
-    });
-  }
-}
-
-/**
- * Contact Form
- * Handles form validation and submission
- */
-function initializeContactForm() {
-  const contactForm = document.querySelector('.contact-form');
-  
-  if (!contactForm) return;
-  
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Simple validation
-    let isValid = true;
-    const requiredFields = contactForm.querySelectorAll('[required]');
-    
-    requiredFields.forEach(field => {
-      if (!field.value.trim()) {
-        isValid = false;
-        field.classList.add('error');
-        
-        // Add error message if it doesn't exist
-        let errorMsg = field.nextElementSibling;
-        if (!errorMsg || !errorMsg.classList.contains('error-message')) {
-          errorMsg = document.createElement('p');
-          errorMsg.classList.add('error-message');
-          errorMsg.textContent = 'This field is required';
-          field.parentNode.insertBefore(errorMsg, field.nextSibling);
-        }
-      } else {
-        field.classList.remove('error');
-        
-        // Remove error message if it exists
-        const errorMsg = field.nextElementSibling;
-        if (errorMsg && errorMsg.classList.contains('error-message')) {
-          errorMsg.remove();
-        }
-      }
-    });
-    
-    // Email validation for email field
-    const emailField = contactForm.querySelector('input[type="email"]');
-    if (emailField && emailField.value.trim()) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailField.value.trim())) {
-        isValid = false;
-        emailField.classList.add('error');
-        
-        // Add error message if it doesn't exist
-        let errorMsg = emailField.nextElementSibling;
-        if (!errorMsg || !errorMsg.classList.contains('error-message')) {
-          errorMsg = document.createElement('p');
-          errorMsg.classList.add('error-message');
-          errorMsg.textContent = 'Please enter a valid email address';
-          emailField.parentNode.insertBefore(errorMsg, emailField.nextSibling);
-        } else {
-          errorMsg.textContent = 'Please enter a valid email address';
-        }
-      }
     }
-    
-    // If form is valid, show success message
-    if (isValid) {
-      // Here you would typically send the form data to your server
-      // For now, we'll just show a success message
-      const formData = new FormData(contactForm);
-      
-      // Replace form with success message
-      const successMessage = document.createElement('div');
-      successMessage.classList.add('form-success');
-      successMessage.innerHTML = `
-        <h3>Thank You for Contacting Us</h3>
-        <p>Your message has been received. We'll get back to you shortly.</p>
-      `;
-      
-      contactForm.parentNode.replaceChild(successMessage, contactForm);
-    }
-  });
-  
-  // Clear validation errors when field is interacted with
-  contactForm.querySelectorAll('input, textarea').forEach(field => {
-    field.addEventListener('input', function() {
-      this.classList.remove('error');
-      
-      const errorMsg = this.nextElementSibling;
-      if (errorMsg && errorMsg.classList.contains('error-message')) {
-        errorMsg.remove();
-      }
-    });
-  });
-}
-
-/**
- * Header Resize
- * Dynamically resizes the header based on scroll position and content
- */
-function initializeHeaderResize() {
-  const header = document.querySelector('.site-header');
-  if (!header) return;
-  
-  window.adjustHeaderSize = () => {
-    const scrollPosition = window.scrollY;
-    const headerContentHeight = header.querySelector('.container').offsetHeight;
-    
-    if (scrollPosition > 50) {
-      header.classList.add('compact');
-      header.style.height = `${headerContentHeight}px`;
-    } else {
-      header.classList.remove('compact');
-      header.style.height = 'auto';
-    }
-  };
-  
-  window.addEventListener('scroll', adjustHeaderSize, { passive: true });
-  adjustHeaderSize(); // Initial adjustment
-}
-
-/**
- * Custom Navigation Menu
- * Handles the custom navigation menu functionality
- */
-function initializeCustomNavigationMenu() {
-  const navMenu = document.querySelector('.custom-nav .nav-menu');
-  const dropdowns = navMenu.querySelectorAll('.dropdown');
-  
-  if (!navMenu || dropdowns.length === 0) return;
-  
-  // Toggle dropdowns on click
-  dropdowns.forEach(dropdown => {
-    const link = dropdown.querySelector('a');
-    
-    if (link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        dropdown.classList.toggle('active');
-        
-        // Close other dropdowns
-        dropdowns.forEach(otherDropdown => {
-          if (otherDropdown !== dropdown) {
-            otherDropdown.classList.remove('active');
-          }
+    // Form validation
+    var contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Simple validation example
+            var nameInput = document.getElementById('name');
+            var emailInput = document.getElementById('email');
+            var messageInput = document.getElementById('message');
+            var isValid = true;
+            if (nameInput && !nameInput.value.trim()) {
+                showError(nameInput, 'Please enter your name');
+                isValid = false;
+            }
+            else if (nameInput) {
+                clearError(nameInput);
+            }
+            if (emailInput) {
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.value)) {
+                    showError(emailInput, 'Please enter a valid email address');
+                    isValid = false;
+                }
+                else {
+                    clearError(emailInput);
+                }
+            }
+            if (messageInput && !messageInput.value.trim()) {
+                showError(messageInput, 'Please enter your message');
+                isValid = false;
+            }
+            else if (messageInput) {
+                clearError(messageInput);
+            }
+            if (isValid) {
+                // Would normally submit the form or make API call here
+                alert('Form submitted successfully!');
+                contactForm.reset();
+            }
         });
-      });
     }
-  });
-  
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.dropdown')) {
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.remove('active');
-      });
-    }
-  });
-  
-  // Add keyboard navigation support for dropdown menus
-  dropdowns.forEach(dropdown => {
-    const link = dropdown.querySelector('a');
-    if (link) {
-      link.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          dropdown.classList.toggle('active');
+    // Helper functions for form validation
+    function showError(input, message) {
+        var formGroup = input.closest('.form-group');
+        if (formGroup) {
+            // Remove any existing error message
+            var existingError = formGroup.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+            // Create and add error message
+            var errorElement = document.createElement('div');
+            errorElement.className = 'error-message';
+            errorElement.textContent = message;
+            errorElement.style.color = '#dc3545';
+            errorElement.style.fontSize = '0.875rem';
+            errorElement.style.marginTop = '0.25rem';
+            formGroup.appendChild(errorElement);
+            // Add error styling to input
+            input.style.borderColor = '#dc3545';
+            // Add aria attributes for accessibility
+            input.setAttribute('aria-invalid', 'true');
+            input.setAttribute('aria-describedby', "error-for-".concat(input.id));
+            errorElement.id = "error-for-".concat(input.id);
         }
-      });
     }
-  });
-}
+    function clearError(input) {
+        var formGroup = input.closest('.form-group');
+        if (formGroup) {
+            var errorElement = formGroup.querySelector('.error-message');
+            if (errorElement) {
+                errorElement.remove();
+            }
+            // Reset input styling
+            input.style.borderColor = '';
+            // Remove aria attributes
+            input.removeAttribute('aria-invalid');
+            input.removeAttribute('aria-describedby');
+        }
+    }
+    // Add animation to scroll links for smooth scrolling experience
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            var href = this.getAttribute('href');
+            if (href) {
+                var targetElement = document.querySelector(href);
+                if (targetElement) {
+                    // Check if browser supports ScrollToOptions
+                    if ('scrollBehavior' in document.documentElement.style) {
+                        // Modern smooth scroll
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                    else {
+                        // Fallback for older browsers
+                        window.scrollTo(0, targetElement.offsetTop - 80);
+                    }
+                }
+            }
+        });
+    });
+});
