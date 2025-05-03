@@ -1,151 +1,277 @@
-// JavaScript compiled from TypeScript
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize mobile menu toggle
-    var menuToggle = document.querySelector('.menu-toggle');
-    var mainNav = document.querySelector('.main-nav');
-    var menuItems = document.querySelectorAll('.nav-menu a');
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', function () {
-            var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            menuToggle.setAttribute('aria-expanded', (!expanded).toString());
-            mainNav.classList.toggle('active');
-        });
-    }
-    // Close menu when a menu item is clicked (mobile)
-    menuItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            if (window.innerWidth < 768 && menuToggle && mainNav) {
-                menuToggle.setAttribute('aria-expanded', 'false');
-                mainNav.classList.remove('active');
-            }
-        });
-    });
-    // Add scroll reveal animation for elements
-    var revealElements = document.querySelectorAll('.service-card, .portfolio-item, .contact-form, .contact-info');
-    // Simple intersection observer to add animation when elements come into view
-    if ('IntersectionObserver' in window) {
-        var observer_1 = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    observer_1.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        revealElements.forEach(function (el) {
-            observer_1.observe(el);
-        });
-    }
-    else {
-        // Fallback for browsers that don't support IntersectionObserver
-        revealElements.forEach(function (el) {
-            el.classList.add('revealed');
-        });
-    }
-    // Form validation
-    var contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            // Simple validation example
-            var nameInput = document.getElementById('name');
-            var emailInput = document.getElementById('email');
-            var messageInput = document.getElementById('message');
-            var isValid = true;
-            if (nameInput && !nameInput.value.trim()) {
-                showError(nameInput, 'Please enter your name');
-                isValid = false;
-            }
-            else if (nameInput) {
-                clearError(nameInput);
-            }
-            if (emailInput) {
-                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(emailInput.value)) {
-                    showError(emailInput, 'Please enter a valid email address');
-                    isValid = false;
-                }
-                else {
-                    clearError(emailInput);
-                }
-            }
-            if (messageInput && !messageInput.value.trim()) {
-                showError(messageInput, 'Please enter your message');
-                isValid = false;
-            }
-            else if (messageInput) {
-                clearError(messageInput);
-            }
-            if (isValid) {
-                // Would normally submit the form or make API call here
-                alert('Form submitted successfully!');
-                contactForm.reset();
-            }
-        });
-    }
-    // Helper functions for form validation
-    function showError(input, message) {
-        var formGroup = input.closest('.form-group');
-        if (formGroup) {
-            // Remove any existing error message
-            var existingError = formGroup.querySelector('.error-message');
-            if (existingError) {
-                existingError.remove();
-            }
-            // Create and add error message
-            var errorElement = document.createElement('div');
-            errorElement.className = 'error-message';
-            errorElement.textContent = message;
-            errorElement.style.color = '#dc3545';
-            errorElement.style.fontSize = '0.875rem';
-            errorElement.style.marginTop = '0.25rem';
-            formGroup.appendChild(errorElement);
-            // Add error styling to input
-            input.style.borderColor = '#dc3545';
-            // Add aria attributes for accessibility
-            input.setAttribute('aria-invalid', 'true');
-            input.setAttribute('aria-describedby', "error-for-".concat(input.id));
-            errorElement.id = "error-for-".concat(input.id);
-        }
-    }
-    function clearError(input) {
-        var formGroup = input.closest('.form-group');
-        if (formGroup) {
-            var errorElement = formGroup.querySelector('.error-message');
-            if (errorElement) {
-                errorElement.remove();
-            }
-            // Reset input styling
-            input.style.borderColor = '';
-            // Remove aria attributes
-            input.removeAttribute('aria-invalid');
-            input.removeAttribute('aria-describedby');
-        }
-    }
-    // Add animation to scroll links for smooth scrolling experience
-    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(function (anchor) {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            var href = this.getAttribute('href');
-            if (href) {
-                var targetElement = document.querySelector(href);
-                if (targetElement) {
-                    // Check if browser supports ScrollToOptions
-                    if ('scrollBehavior' in document.documentElement.style) {
-                        // Modern smooth scroll
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                    else {
-                        // Fallback for older browsers
-                        window.scrollTo(0, targetElement.offsetTop - 80);
-                    }
-                }
-            }
-        });
-    });
+/**
+ * Law Firm Website JavaScript
+ * Modern, accessible, and performance-optimized
+ */
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize mobile navigation
+  setupMobileNav();
+  
+  // Initialize form validation
+  setupFormValidation();
+  
+  // Initialize smooth scrolling
+  setupSmoothScrolling();
+  
+  // Initialize animation on scroll
+  setupScrollAnimations();
 });
+
+/**
+ * Mobile Navigation Setup
+ */
+function setupMobileNav() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  
+  if (!navToggle || !navMenu) return;
+  
+  navToggle.addEventListener('click', () => {
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+    navMenu.classList.toggle('active');
+    
+    // Prevent body scrolling when menu is open
+    document.body.classList.toggle('nav-open', !isExpanded);
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (
+      navMenu.classList.contains('active') && 
+      !navMenu.contains(e.target) && 
+      !navToggle.contains(e.target)
+    ) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navMenu.classList.remove('active');
+      document.body.classList.remove('nav-open');
+    }
+  });
+  
+  // Close menu when menu item is clicked
+  const menuLinks = navMenu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('nav-open');
+      }
+    });
+  });
+  
+  // Handle resize events (to fix mobile/desktop transition issues)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navMenu.classList.remove('active');
+      document.body.classList.remove('nav-open');
+    }
+  });
+}
+
+/**
+ * Form Validation
+ */
+function setupFormValidation() {
+  const contactForm = document.querySelector('.contact-form');
+  if (!contactForm) return;
+  
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    let isValid = true;
+    
+    // Name validation
+    const nameInput = document.getElementById('name');
+    if (nameInput && !nameInput.value.trim()) {
+      showError(nameInput, 'Please enter your name');
+      isValid = false;
+    } else if (nameInput) {
+      clearError(nameInput);
+    }
+    
+    // Email validation
+    const emailInput = document.getElementById('email');
+    if (emailInput) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value)) {
+        showError(emailInput, 'Please enter a valid email address');
+        isValid = false;
+      } else {
+        clearError(emailInput);
+      }
+    }
+    
+    // Message validation
+    const messageInput = document.getElementById('message');
+    if (messageInput && !messageInput.value.trim()) {
+      showError(messageInput, 'Please enter your message');
+      isValid = false;
+    } else if (messageInput) {
+      clearError(messageInput);
+    }
+    
+    if (isValid) {
+      // Form submission logic would go here
+      // For now, we'll just show a success message
+      const formContainer = contactForm.closest('.contact-form-container');
+      if (formContainer) {
+        formContainer.innerHTML = `
+          <div class="form-success">
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. One of our attorneys will contact you shortly.</p>
+          </div>
+        `;
+      }
+    }
+  });
+  
+  function showError(input, message) {
+    const formGroup = input.closest('.form-group');
+    if (!formGroup) return;
+    
+    // Remove any existing error message
+    clearError(input);
+    
+    // Create error element
+    const errorElement = document.createElement('div');
+    errorElement.className = 'form-error';
+    errorElement.textContent = message;
+    formGroup.appendChild(errorElement);
+    
+    // Add error class to input
+    input.classList.add('input-error');
+    
+    // Set aria attributes for accessibility
+    input.setAttribute('aria-invalid', 'true');
+    
+    const errorId = `error-for-${input.id}`;
+    errorElement.id = errorId;
+    input.setAttribute('aria-describedby', errorId);
+    
+    // Focus the first input with an error
+    input.focus();
+  }
+  
+  function clearError(input) {
+    const formGroup = input.closest('.form-group');
+    if (!formGroup) return;
+    
+    const errorElement = formGroup.querySelector('.form-error');
+    if (errorElement) {
+      errorElement.remove();
+    }
+    
+    input.classList.remove('input-error');
+    input.removeAttribute('aria-invalid');
+    
+    const describedBy = input.getAttribute('aria-describedby');
+    if (describedBy && describedBy.startsWith('error-for-')) {
+      input.removeAttribute('aria-describedby');
+    }
+  }
+}
+
+/**
+ * Smooth Scrolling
+ */
+function setupSmoothScrolling() {
+  const scrollLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+  
+  scrollLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (!targetElement) return;
+      
+      const headerOffset = 80; // Adjust based on your header height
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = targetPosition - headerOffset;
+      
+      // Check if browser supports smooth scrolling
+      if ('scrollBehavior' in document.documentElement.style) {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      } else {
+        // Fallback for browsers that don't support smooth scrolling
+        window.scrollTo(0, offsetPosition);
+      }
+      
+      // Update URL hash (without scrolling)
+      window.history.pushState(null, null, targetId);
+    });
+  });
+}
+
+/**
+ * Animation on Scroll
+ * Using Intersection Observer for performance
+ */
+function setupScrollAnimations() {
+  // Elements to animate
+  const animatedElements = document.querySelectorAll(
+    '.practice-card, .attorney-card, .testimonial-card, .contact-form-container, .contact-info'
+  );
+  
+  if (!animatedElements.length) return;
+  
+  // Add initial state class
+  animatedElements.forEach(el => {
+    el.classList.add('animate-on-scroll');
+  });
+  
+  // Check if IntersectionObserver is supported
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
+    
+    animatedElements.forEach(el => {
+      observer.observe(el);
+    });
+  } else {
+    // Fallback for browsers that don't support IntersectionObserver
+    animatedElements.forEach(el => {
+      el.classList.add('animate-in');
+    });
+  }
+}
+
+/**
+ * Handle CSS transitions for elements
+ * Add this to your CSS:
+ * 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+  }
+}
+*/
