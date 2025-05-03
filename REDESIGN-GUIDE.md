@@ -30,6 +30,7 @@ Add these CSS file references to the `<head>` section of all HTML files:
 <link rel="stylesheet" href="css/elegant-design-system.css">
 <link rel="stylesheet" href="css/elegant-navigation.css">
 <link rel="stylesheet" href="css/typography-animations.css">
+<link rel="stylesheet" href="css/main.css">
 ```
 
 ### 2. Update Header Structure

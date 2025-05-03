@@ -254,6 +254,69 @@ p.lead {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  margin-bottom: var(--space-6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid var(--gold);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  padding: var(--space-4);
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.card-body {
+  padding: var(--space-6);
+  flex-grow: 1;
+}
+
+.card-footer {
+  padding: var(--space-4);
+  background-color: var(--light-gray);
+  text-align: right;
+  border-top: 1px solid var(--light-gray);
+}
+
+/* Form styles */
+input, textarea, select {
+  width: 100%;
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--text-base);
+  border: 2px solid var(--light-gray);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  background-color: var(--white);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+  color: var(--navy);
+}
+
 /* Site Header Styling */
 .site-header {
   background-color: var(--white);
@@ -769,7 +832,7 @@ p.lead {
   text-align: center;
 }
 
-.copyright p {
+copyright p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
