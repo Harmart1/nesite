@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,10 +11,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+< redesign-site-1
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/elegant-design-system.css">
     <link rel="stylesheet" href="css/elegant-navigation.css">
     <link rel="stylesheet" href="css/typography-animations.css">
+    <link rel="stylesheet" href="css/main.css">
+=======
+    <-- CSS Files -->
+    <link rel="stylesheet" href="css/elegant-design-system.css">
+    <link rel="stylesheet" href="css/elegant-navigation.css">
+    <link rel="stylesheet" href="css/typography-animations.css">
+<redesign-site
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/print.css" media="print">
     <link rel="stylesheet" href="css/cookie-consent.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -22,7 +31,7 @@
     <link rel="stylesheet" href="css/icon-styles.css">
     <link rel="stylesheet" href="css/back-to-top.css">
     
-    <!-- Leaflet CSS -->
+    <-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
@@ -225,10 +234,12 @@
         }
     </style>
     
-    <!-- JavaScript -->
+    <-- JavaScript -->
     <script src="js/main.js" defer></script>
-    <!-- Form validation script -->
+    <-- Form validation script -->
     <script src="js/contact-form-validation.js" defer></script>
+> main
+> redesign-site
 </head>
 <body>
     <header class="site-header">
@@ -394,7 +405,10 @@
             </div>
         </section>
         
+< redesign-site-1
         <!-- Map Section -->
+        <-- Map Section -->
+> redesign-site
         <section class="map-section py-16 bg-neutral-lightest">
             <div class="container">
                 <h2 class="elegant-heading centered">Our Location</h2>
@@ -506,107 +520,5 @@
             </div>
         </div>
     </footer>
-    
-    <!-- Cookie Consent JavaScript -->
-    <script src="js/cookie-consent.js" defer></script>
-    
-    <!-- Leaflet JavaScript - loading last for optimal performance -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-    
-    <script>
-        // Initialize the map after page is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Create map centered on the office location in Sault Ste. Marie
-            // Using coordinates from both contact files - this is more specific
-            const map = L.map('contact-map').setView([46.490, -84.367], 15);
-            
-            // Add OpenStreetMap tile layer
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-            }).addTo(map);
-            
-            // Add a marker for the office location
-            const officeMarker = L.marker([46.490, -84.367]).addTo(map);
-            
-            // Add a popup to the marker with office information
-            officeMarker.bindPopup("<strong>NorthernEdge Legal Solutions</strong><br>67 Hugill St.<br>Sault Ste. Marie, ON<br>P6A 4E6").openPopup();
-            
-            // Accordion functionality for FAQs
-            const accordionButtons = document.querySelectorAll('.accordion-button');
-            accordionButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Toggle aria-expanded
-                    const expanded = this.getAttribute('aria-expanded') === 'true';
-                    this.setAttribute('aria-expanded', !expanded);
-                    
-                    // Toggle accordion content visibility
-                    const content = this.parentElement.nextElementSibling;
-                    content.style.maxHeight = !expanded ? content.scrollHeight + 'px' : null;
-                });
-            });
-            
-            // Modal functionality
-            const openModalBtn = document.getElementById('open-modal-btn');
-            const closeModalBtn = document.getElementById('close-modal-btn');
-            const closeModalFooterBtn = document.getElementById('close-modal-footer-btn');
-            const modal = document.getElementById('contact-modal');
-            
-            openModalBtn.addEventListener('click', function() {
-                modal.style.display = 'block';
-            });
-            
-            closeModalBtn.addEventListener('click', function() {
-                modal.style.display = 'none';
-            });
-            
-            closeModalFooterBtn.addEventListener('click', function() {
-                modal.style.display = 'none';
-            });
-            
-            window.addEventListener('click', function(event) {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        });
-        
-        // Form submission handler with backup email option
-        function handleFormSubmit(event) {
-            // Store form data for thank you page
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Store in sessionStorage for thank you page
-            sessionStorage.setItem('contactFormData', JSON.stringify(formData));
-            
-            // Check if mailto: will work, otherwise provide fallback
-            if (navigator.userAgent.indexOf('MSIE') !== -1 || 
-                navigator.userAgent.indexOf('Trident') !== -1 ||
-                navigator.userAgent.indexOf('Edge') !== -1) {
-                // For browsers where mailto: with form data may not work well
-                
-                alert("Thank you for your message. If your email client doesn't open automatically, please email us directly at info@northernedgelegal.com with your inquiry.");
-                
-                // Continue with form submission (will attempt to open email client)
-                return true;
-            }
-            
-            // For other browsers, let the form submit naturally
-            // After 2 seconds, redirect to thank you page
-            setTimeout(function() {
-                window.location.href = 'thank-you.html';
-            }, 2000);
-            
-            return true;
-        }
-    </script>
 </body>
 </html>
