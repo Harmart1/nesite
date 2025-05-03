@@ -37,12 +37,15 @@ Add these CSS file references to the `<head>` section of all HTML files:
 <link rel="stylesheet" href="css/elegant-navigation.css">
 <link rel="stylesheet" href="css/typography-animations.css">
 <link rel="stylesheet" href="css/main.css">
+< redesign-site-1
 <link rel="stylesheet" href="css/critical.css">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/visual-enhancements.css">
 <link rel="stylesheet" href="css/accessibility-enhancements.css">
 <link rel="stylesheet" href="css/accessibility.css">
+=======
+> redesign-site
 ```
 
 ### 2. Update Header Structure
