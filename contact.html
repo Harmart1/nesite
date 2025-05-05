@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | NorthernEdge Legal Solutions</title>
@@ -236,15 +238,17 @@
         <div class="container header-container">
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                 </a>
             </div>
-            
-            <nav class="nav-wrapper">
-                <ul class="primary-nav">
-                    <li><a href="index.html">Home</a></li>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li class="has-dropdown">
+                    <li class="dropdown">
                         <a href="practice-areas.html">Practice Areas</a>
                         <ul class="dropdown-menu">
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
@@ -254,16 +258,35 @@
                         </ul>
                     </li>
                     <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form class="search-form" action="search.html" method="get" role="search">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+                            <button type="submit" aria-label="Submit Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
                 </ul>
-                
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </nav>
+    <!-- Leaflet JS for map functionality -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1jRVvG8zE1U5lHkD6yQK6lWA1Q1p1gXkG4yZ9gPo=" crossorigin=""></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Map initialization
+        var mapEl = document.getElementById('contact-map');
+        if (mapEl && typeof L !== 'undefined') {
+            var map = L.map('contact-map').setView([46.5219, -84.3461], 15);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            L.marker([46.5219, -84.3461]).addTo(map)
+                .bindPopup('NorthernEdge Legal Solutions<br>67 Hugill St, Sault Ste. Marie, ON')
+                .openPopup();
+        }
+    });
+    </script>
         </div>
     </header>
 
@@ -352,7 +375,7 @@
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
-                                    <img src="images/icons/location-icon.svg" alt="Location Icon">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <h3>Address</h3>
@@ -366,7 +389,7 @@
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
-                                    <img src="images/icons/email-icon.svg" alt="Email Icon">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <h3>Email</h3>
@@ -376,7 +399,7 @@
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
-                                    <img src="images/icons/phone-icon.svg" alt="Phone Icon">
+                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <h3>Phone</h3>

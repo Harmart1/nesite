@@ -34,6 +34,89 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* --- Typography Redesign for Legibility --- */
+        body {
+            color: #222;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            background: #f8fafc;
+        }
+        .elegant-heading,
+        h1, h2, h3, h4, h5, h6 {
+            color: #1a2233;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            line-height: 1.2;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.2);
+        }
+        .text-lead,
+        .hero-tagline,
+        .section-subtitle {
+            color: #2a3344;
+            font-size: 1.25rem;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.15);
+        }
+        .hero .elegant-heading,
+        .hero .hero-tagline {
+            color: #102040;
+            text-shadow: 0 2px 8px rgba(255,255,255,0.25);
+        }
+        .card-body,
+        .card-header {
+            color: #222;
+        }
+        a, .btn, .slide-btn, .pulse-btn, .glow-btn {
+            color: #fff !important;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 1rem;
+            }
+            .elegant-heading,
+            h1, h2, h3 {
+                font-size: 1.3rem;
+            }
+        }
+        /* --- Contact Form Styling --- */
+        .contact-form-wrapper {
+            max-width: 500px;
+            margin: 2rem auto 2rem auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(30,40,60,0.07);
+            padding: 2rem;
+        }
+        .contact-form .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .contact-form label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a2233;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #f8fafc;
+            color: #222;
+            transition: border-color 0.2s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #3b82f6;
+            outline: none;
+        }
+        .contact-form button[type="submit"] {
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -77,51 +160,40 @@
     </header>
 
     <main>
-        <section class="hero py-16 bg-primary-lightest text-center">
-            <div class="container">
-                <h1 class="elegant-heading centered">Trusted Legal Expertise for Northern Ontario</h1>
-                <p class="hero-tagline text-lead">Innovative solutions for complex legal challenges in today's rapidly evolving business landscape</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary pulse-btn">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
-                    <a href="practice-areas.html" class="btn btn-secondary glow-btn">Explore Our Services <i class="fas fa-briefcase"></i></a>
+        <section class="hero py-16 bg-primary-lightest text-center" aria-labelledby="main-hero-heading">
+            <div class="container hero-flex" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem;">
+                <div class="hero-content" style="flex: 1 1 350px; min-width: 300px;">
+                    <h1 id="main-hero-heading" class="elegant-heading centered" tabindex="0">Trusted Legal Expertise for Northern Ontario</h1>
+                    <p class="hero-tagline text-lead" tabindex="0">Innovative solutions for complex legal challenges in today's rapidly evolving business landscape</p>
+                    <div class="hero-buttons" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                        <a href="contact.html" class="btn btn-primary pulse-btn" aria-label="Schedule a Consultation">Schedule a Consultation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="practice-areas.html" class="btn btn-secondary glow-btn" aria-label="Explore Our Services">Explore Our Services <i class="fas fa-briefcase" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image" style="flex: 1 1 350px; min-width: 300px; display: flex; justify-content: center; align-items: center;">
+                    <img src="images/office-interior.jpg" alt="NorthernEdge Legal Solutions office interior" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(30,40,60,0.10);" loading="lazy">
+                </div>
+            </div>
+            <!-- Unobtrusive video placement below hero content -->
+            <div class="container" style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+                <div class="homepage-video-wrapper" style="max-width: 420px; width: 100%; background: #fff; border-radius: 12px; box-shadow: 0 2px 16px rgba(30,40,60,0.07); padding: 1rem;">
+                    <video id="firm-video" controls autoplay muted loop style="width: 100%; border-radius: 8px;">
+                        <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="sr-only">NorthernEdge Legal Solutions: Modern Approach to Traditional Law</div>
                 </div>
             </div>
         </section>
 
-        <section class="video-section py-16 bg-neutral-lightest">
-            <div class="container">
-                <h2 class="elegant-heading centered">Our Dynamic Legal Solutions</h2>
-                <p class="video-description text-lead">Watch how NorthernEdge Legal Solutions brings innovation and expertise to your legal challenges</p>
-                <div class="video-container">
-                    <div class="video-responsive">
-                        <video id="firm-video" controls autoplay muted loop>
-                            <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-controls">
-                            <button class="video-btn" id="play-pause-btn" aria-label="Play or pause video">
-                                <i class="fas fa-pause" id="play-pause-icon"></i>
-                            </button>
-                            <button class="video-btn" id="mute-unmute-btn" aria-label="Mute or unmute video">
-                                <i class="fas fa-volume-mute" id="mute-icon"></i>
-                            </button>
-                            <button class="video-btn" id="fullscreen-btn" aria-label="Toggle fullscreen">
-                                <i class="fas fa-expand"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="video-title">NorthernEdge Legal: Modern Approach to Traditional Law</h3>
-                <p class="video-description text-lead">Witness our commitment to excellence and innovation through our dynamic visual identity. Our logo represents the intersection of traditional legal expertise and modern problem-solving strategies.</p>
-            </div>
-        </section>
 
         <section class="value-props py-16 bg-white">
             <div class="container">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="card">
+                <h2 class="elegant-heading centered" tabindex="0">Why Choose NorthernEdge?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" role="list">
+                    <div class="card" role="listitem">
                         <div class="card-header">
-                            <div class="icon-circle">
+                            <div class="icon-circle" aria-hidden="true">
                                 <i class="fas fa-balance-scale"></i>
                             </div>
                             <h3 class="elegant-heading">Expert Counsel</h3>
@@ -130,9 +202,9 @@
                             <p>Backed by years of specialized experience in multiple practice areas</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" role="listitem">
                         <div class="card-header">
-                            <div class="icon-circle">
+                            <div class="icon-circle" aria-hidden="true">
                                 <i class="fas fa-handshake"></i>
                             </div>
                             <h3 class="elegant-heading">Client-Focused</h3>
@@ -141,9 +213,9 @@
                             <p>Your priorities are our priorities—we listen and deliver results</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" role="listitem">
                         <div class="card-header">
-                            <div class="icon-circle">
+                            <div class="icon-circle" aria-hidden="true">
                                 <i class="fas fa-lightbulb"></i>
                             </div>
                             <h3 class="elegant-heading">Innovative Approach</h3>
@@ -158,8 +230,8 @@
 
         <section class="practice-areas-overview py-16 bg-neutral-lightest">
             <div class="container">
-                <h2 class="elegant-heading centered">Specialized Legal Expertise</h2>
-                <p class="section-subtitle text-center">Comprehensive legal solutions tailored to your specific needs</p>
+                <h2 class="elegant-heading centered" tabindex="0">Specialized Legal Expertise</h2>
+                <p class="section-subtitle text-center" tabindex="0">Comprehensive legal solutions tailored to your specific needs</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="card">
                         <div class="card-header">
@@ -203,12 +275,17 @@
 
         <section class="about-section py-16 bg-neutral-lightest">
             <div class="container">
-                <div class="text-center">
-                    <span class="eyebrow-text">WHO WE ARE</span>
-                    <h2 class="elegant-heading centered">Northern Ontario's Premier Legal Partner</h2>
-                    <p class="text-lead">At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to providing innovative legal strategies that address your specific challenges and opportunities.</p>
-                    <p class="text-lead">We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, navigating regulatory requirements, or planning for future growth, we're here to guide you every step of the way.</p>
-                    <a href="about.html" class="btn btn-primary glow-btn">Discover Our Story <i class="fas fa-users"></i></a>
+                <div class="about-flex" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
+                    <div class="about-text" style="flex: 2 1 350px; min-width: 300px;">
+                        <span class="eyebrow-text">WHO WE ARE</span>
+                        <h2 class="elegant-heading centered" tabindex="0">Northern Ontario's Premier Legal Partner</h2>
+                        <p class="text-lead">At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to providing innovative legal strategies that address your specific challenges and opportunities.</p>
+                        <p class="text-lead">We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, navigating regulatory requirements, or planning for future growth, we're here to guide you every step of the way.</p>
+                        <a href="about.html" class="btn btn-primary glow-btn" aria-label="Discover Our Story">Discover Our Story <i class="fas fa-users" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="about-image" style="flex: 1 1 300px; min-width: 220px; display: flex; justify-content: center; align-items: center;">
+                        <img src="images/office-interior.jpg" alt="NorthernEdge Legal Solutions team" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 24px rgba(30,40,60,0.10);" loading="lazy">
+                    </div>
                 </div>
             </div>
         </section>
@@ -219,6 +296,25 @@
                     <span class="eyebrow-text">GET IN TOUCH</span>
                     <h2 class="elegant-heading centered">Ready to Discuss Your Legal Needs?</h2>
                     <p class="text-lead">Our team is available to answer your questions and provide the expert guidance you're looking for. We're committed to responding to all inquiries within one business day.</p>
+                    <!-- Contact Form Start -->
+                    <div class="contact-form-wrapper" style="max-width:500px;margin:2rem auto 2rem auto;">
+                        <form class="contact-form" action="mailto:info@northernedgelegal.com" method="POST" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="name">Name<span aria-hidden="true">*</span></label>
+                                <input type="text" id="name" name="name" required autocomplete="name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email<span aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message<span aria-hidden="true">*</span></label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <!-- Contact Form End -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
                         <div class="card">
                             <div class="card-header">
