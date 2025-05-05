@@ -202,7 +202,7 @@ a:hover {
 
 .btn-secondary {
   background-color: var(--white);
-  color: var(--navy);
+  color: var (--navy);
   border: 2px solid var(--navy);
 }
 
@@ -294,7 +294,7 @@ input:focus, textarea:focus, select:focus {
 
 label {
   display: block;
-  margin-bottom: var(--space-2);
+  margin-bottom: var (--space-2);
   font-weight: 600;
   color: var(--navy);
 }
