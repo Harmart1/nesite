@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice Areas | NorthernEdge Legal Solutions</title>
@@ -41,17 +42,20 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="container header-container">
+        <div class="container">
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                 </a>
             </div>
-            <nav class="nav-wrapper" aria-label="Main Navigation">
-                <ul class="primary-nav">
+            <nav class="main-nav" aria-label="Main Navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li class="has-dropdown">
+                    <li class="dropdown">
                         <a href="practice-areas.html" class="active">Practice Areas</a>
                         <ul class="dropdown-menu">
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
@@ -72,11 +76,6 @@
                         </form>
                     </li>
                 </ul>
-                <button class="mobile-nav-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </nav>
         </div>
     </header>

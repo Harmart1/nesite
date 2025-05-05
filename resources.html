@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,11 +32,13 @@
                     <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                 </a>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Main Navigation">
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
                     <span></span><span></span><span></span>
                 </button>
                 <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li class="dropdown">
                         <a href="practice-areas.html">Practice Areas</a>
                         <ul class="dropdown-menu">
@@ -49,6 +51,15 @@
                     <li><a href="resources.html" class="active">Resources</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form class="search-form" action="search.html" method="get" role="search">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+                            <button type="submit" aria-label="Submit Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
                 </ul>
             </nav>
         </div>
