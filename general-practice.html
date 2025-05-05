@@ -22,6 +22,21 @@
     
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
+    <style>
+        /* Add smooth fade-in and slide-down animations to the dropdown menus */
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     
@@ -56,6 +71,15 @@
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="blog/index.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form class="search-form" action="search.html" method="get" role="search">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+                            <button type="submit" aria-label="Submit Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
                 </ul>
             </nav>
         </div>
