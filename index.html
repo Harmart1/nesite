@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-< redesign-site
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NorthernEdge Legal Solutions</title>
@@ -21,20 +20,38 @@
     <script src="js/back-to-top.js" defer></script>
     <script src="js/visual-integration.js" defer></script>
     <script src="js/scroll-navigation.js" defer></script>
+    <style>
+        /* Add smooth fade-in and slide-down animations to the dropdown menus */
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
-        <div class="container header-container">
+        <div class="container">
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                 </a>
             </div>
-            <nav class="nav-wrapper">
-                <ul class="primary-nav">
-                    <li><a href="index.html">Home</a></li>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li class="has-dropdown">
+                    <li class="dropdown">
                         <a href="practice-areas.html">Practice Areas</a>
                         <ul class="dropdown-menu">
                             <li><a href="civil-litigation.html">Civil Litigation</a></li>
@@ -45,12 +62,16 @@
                     </li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form class="search-form" action="search.html" method="get" role="search">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+                            <button type="submit" aria-label="Submit Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
                 </ul>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </nav>
         </div>
     </header>
@@ -132,166 +153,9 @@
                         </div>
                     </div>
                 </div>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional legal services specializing in [practice areas]. Contact our experienced attorneys today.">
-  <title>Law Firm Name | Legal Services</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Preload critical assets -->
-  <link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
-  <link rel="preload" href="css/fonts.css" as="style">
-  <link rel="stylesheet" href="css/fonts.css">
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon.ico">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-</head>
-<body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
-  <header class="site-header">
-    <div class="container header-container">
-      <div class="logo">
-        <a href="/" aria-label="Homepage">
-          <img src="assets/logo.svg" alt="Law Firm Name" width="200" height="60">
-        </a>
-      </div>
-      
-      <nav aria-label="Main navigation">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">
-          <span class="sr-only">Toggle menu</span>
-          <span class="hamburger"></span>
-        </button>
-        
-        <ul id="main-menu" class="nav-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#practice-areas">Practice Areas</a></li>
-          <li><a href="#attorneys">Attorneys</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#resources">Resources</a></li>
-          <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+            </div>
+        </section>
 
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="container">
-        <div class="hero-content">
-          <h1 id="hero-heading">Experienced Legal Representation You Can Trust</h1>
-          <p class="hero-text">Our team of dedicated attorneys brings decades of experience to every case. We're committed to achieving the best possible outcomes for our clients.</p>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
-            <a href="#practice-areas" class="btn btn-secondary">Our Practice Areas</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Practice Areas Section -->
-    <section id="practice-areas" class="section practice-areas" aria-labelledby="practice-areas-heading">
-      <div class="container">
-        <h2 id="practice-areas-heading" class="section-heading">Our Practice Areas</h2>
-        <p class="section-subheading">Specialized legal expertise to address your specific needs</p>
-        
-        <div class="practice-grid">
-          <article class="practice-card">
-            <div class="practice-icon">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <path d="M12,1L3,5v6c0,5.5,3.8,10.7,9,12c5.2-1.3,9-6.5,9-12V5L12,1z M12,11.8L5,6.4l7-3.1l7,3.1L12,11.8z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <h3>Corporate Law</h3>
-            <p>Comprehensive legal solutions for businesses of all sizes, from formation to complex transactions.</p>
-            <a href="/practice-areas/corporate-law" class="practice-link" aria-label="Learn more about Corporate Law">Learn More</a>
-          </article>
-          
-          <article class="practice-card">
-            <div class="practice-icon">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M10,17l-5-5l1.4-1.4l3.6,3.6l9.2-9.2 L20.6,6L10,17z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <h3>Litigation</h3>
-            <p>Strategic representation in complex disputes, with a focus on efficient and favorable resolution.</p>
-            <a href="/practice-areas/litigation" class="practice-link" aria-label="Learn more about Litigation">Learn More</a>
-          </article>
-          
-          <article class="practice-card">
-            <div class="practice-icon">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <path d="M12,2C8.13,2,5,5.13,5,9c0,5.25,7,13,7,13s7-7.75,7-13C19,5.13,15.87,2,12,2z M12,11.5c-1.38,0-2.5-1.12-2.5-2.5 s1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5S13.38,11.5,12,11.5z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <h3>Real Estate</h3>
-            <p>Expert guidance through commercial and residential transactions and property dispute resolution.</p>
-            <a href="/practice-areas/real-estate" class="practice-link" aria-label="Learn more about Real Estate">Learn More</a>
-          </article>
-          
-          <article class="practice-card">
-            <div class="practice-icon">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <path d="M21,5c0-1.1-0.9-2-2-2H5.01c-1.1,0-2,0.9-2,2v14c0,1.1,0.9,2,2,2H19c1.1,0,2-0.9,2-2V5z M12,6c1.65,0,3,1.35,3,3 s-1.35,3-3,3s-3-1.35-3-3S10.35,6,12,6z M12,18.2c-2.5,0-4.71-1.28-6-3.22C6.01,13.97,8.39,12.2,12,12.2s5.99,1.77,6,2.78 C16.71,16.92,14.5,18.2,12,18.2z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <h3>Family Law</h3>
-            <p>Compassionate support through divorces, custody issues, and other sensitive family matters.</p>
-            <a href="/practice-areas/family-law" class="practice-link" aria-label="Learn more about Family Law">Learn More</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Attorneys Section -->
-    <section id="attorneys" class="section attorneys" aria-labelledby="attorneys-heading">
-      <div class="container">
-        <h2 id="attorneys-heading" class="section-heading">Our Attorneys</h2>
-        <p class="section-subheading">Meet our team of experienced legal professionals</p>
-        
-        <div class="attorneys-grid">
-          <article class="attorney-card">
-            <div class="attorney-image">
-              <img src="assets/attorney-1.jpg" alt="Jane Doe" width="300" height="400">
-            </div>
-            <h3>Jane Doe</h3>
-            <p class="attorney-title">Managing Partner</p>
-            <p class="attorney-practice">Corporate Law, Mergers & Acquisitions</p>
-            <a href="/attorneys/jane-doe" class="attorney-link">View Profile</a>
-          </article>
-          
-          <article class="attorney-card">
-            <div class="attorney-image">
-              <img src="assets/attorney-2.jpg" alt="John Smith" width="300" height="400">
-            </div>
-            <h3>John Smith</h3>
-            <p class="attorney-title">Senior Partner</p>
-            <p class="attorney-practice">Litigation, Dispute Resolution</p>
-            <a href="/attorneys/john-smith" class="attorney-link">View Profile</a>
-          </article>
-          
-          <article class="attorney-card">
-            <div class="attorney-image">
-              <img src="assets/attorney-3.jpg" alt="Maria Johnson" width="300" height="400">
-> main
-            </div>
-            <h3>Maria Johnson</h3>
-            <p class="attorney-title">Partner</p>
-            <p class="attorney-practice">Real Estate, Land Use</p>
-            <a href="/attorneys/maria-johnson" class="attorney-link">View Profile</a>
-          </article>
-        </div>
-        
-        <div class="attorneys-cta">
-          <a href="/attorneys" class="btn btn-secondary">View All Attorneys</a>
-        </div>
-      </div>
-    </section>
-
-< redesign-site-1
-=======
-< redesign-site
-> redesign-site
         <section class="practice-areas-overview py-16 bg-neutral-lightest">
             <div class="container">
                 <h2 class="elegant-heading centered">Specialized Legal Expertise</h2>
@@ -397,231 +261,67 @@
                         </div>
                     </div>
                 </div>
-    <-- Testimonials Section -->
-    <section id="testimonials" class="section testimonials" aria-labelledby="testimonials-heading">
-      <div class="container">
-        <h2 id="testimonials-heading" class="section-heading">Client Testimonials</h2>
-        <p class="section-subheading">What our clients say about our services</p>
-        
-        <div class="testimonials-grid">
-          <blockquote class="testimonial-card">
-            <div class="testimonial-content">
-              <p>"The team at [Law Firm Name] provided exceptional guidance through our complex corporate restructuring. Their expertise was invaluable."</p>
             </div>
-            <footer>
-              <cite>— Robert T., CEO of XYZ Corporation</cite>
-            </footer>
-          </blockquote>
-          
-          <blockquote class="testimonial-card">
-            <div class="testimonial-content">
-              <p>"I was extremely impressed with the level of personal attention and care. My case was handled professionally from start to finish."</p>
-            </div>
-            <footer>
-              <cite>— Sarah L., Real Estate Client</cite>
-            </footer>
-          </blockquote>
-          
-          <blockquote class="testimonial-card">
-            <div class="testimonial-content">
-              <p>"Their strategic approach to our litigation resulted in a favorable outcome that exceeded our expectations. Highly recommended."</p>
-> main
-            </div>
-            <footer>
-              <cite>— Michael D., Litigation Client</cite>
-            </footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
+        </section>
+    </main>
 
-< redesign-site-1
-=======
-< redesign-site
-> redesign-site
-    <footer class="py-12 bg-primary-dark text-white">
+    <footer class="site-footer">
         <div class="container">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="footer-column">
-                    <h3 class="elegant-heading">Practice Areas</h3>
-                    <ul>
-                        <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                        <li><a href="business-law.html">Business Law</a></li>
-                        <li><a href="technology-law.html">Technology Law</a></li>
-                        <li><a href="general-practice.html">General Practice</a></li>
-                    </ul>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-column">
-                    <h3 class="elegant-heading">Quick Links</h3>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="blog/index.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3 class="elegant-heading">Contact</h3>
-                    <address>
-                        67 Hugill St.<br>
-                        Sault Ste. Marie, Ontario<br>
-                        P6A 4E6
-                    </address>
-                    <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
-                    <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Practice Areas</h3>
+                        <ul>
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="blog/index.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <address>
+                            67 Hugill St.<br>
+                            Sault Ste. Marie, Ontario<br>
+                            P6A 4E6
+                        </address>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="mt-12 pt-6 border-t border-neutral-light text-center">
-                <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
                     <a href="privacy-policy.html">Privacy Policy</a> | 
                     <a href="terms-of-use.html">Terms of Use</a>
                 </div>
-    <!-- Contact Section -->
-    <section id="contact" class="section contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <h2 id="contact-heading" class="section-heading">Contact Us</h2>
-        <p class="section-subheading">Schedule a consultation with our attorneys</p>
-        
-        <div class="contact-container">
-          <div class="contact-form-container">
-            <form class="contact-form" action="/submit-contact" method="POST">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
-              </div>
-              
-              <div class="form-group">
-                <label for="practice-area">Practice Area</label>
-                <select id="practice-area" name="practice-area">
-                  <option value="">Select a Practice Area</option>
-                  <option value="corporate">Corporate Law</option>
-                  <option value="litigation">Litigation</option>
-                  <option value="real-estate">Real Estate</option>
-                  <option value="family">Family Law</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              
-              <div class="form-group">
-                <label for="message">How Can We Help You?</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-              </div>
-              
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-          
-          <div class="contact-info">
-            <div class="info-item">
-              <h3>Office Location</h3>
-              <address>
-                123 Legal Avenue<br>
-                Suite 500<br>
-                City, State 12345
-              </address>
             </div>
-            
-            <div class="info-item">
-              <h3>Contact Information</h3>
-              <p>
-                <strong>Phone:</strong> <a href="tel:+11234567890">(123) 456-7890</a><br>
-                <strong>Email:</strong> <a href="mailto:info@lawfirmname.com">info@lawfirmname.com</a>
-              </p>
-            </div>
-            
-            <div class="info-item">
-              <h3>Business Hours</h3>
-              <p>
-                Monday-Friday: 8:30 AM - 5:30 PM<br>
-                Weekends: By appointment only
-              </p>
-< main
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-info">
-          <div class="footer-logo">
-            <img src="assets/logo-white.svg" alt="Law Firm Name" width="180" height="54">
-          </div>
-          <p>Providing exceptional legal services with integrity and dedication since [Year].</p>
-          <ul class="social-links">
-            <li>
-              <a href="https://linkedin.com/" aria-label="LinkedIn">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24" height="24">
-                  <path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M9,17H7V9h2V17z M8,8 C7.4,8,7,7.6,7,7s0.4-1,1-1s1,0.4,1,1S8.6,8,8,8z M17,17h-2v-4c0-0.6-0.4-1-1-1s-1,0.4-1,1v4h-2V9h2v0.7c0.4-0.5,1.2-0.8,1.8-0.8 c1.6,0,2.2,1.1,2.2,2.9V17z" fill="currentColor"></path>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/" aria-label="Twitter">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24" height="24">
-                  <path d="M22.46,6c-0.77,0.35-1.6,0.58-2.46,0.69c0.88-0.53,1.56-1.37,1.88-2.38c-0.83,0.5-1.75,0.85-2.72,1.05 C18.37,4.5,17.26,4,16,4c-2.35,0-4.27,1.92-4.27,4.29c0,0.34,0.04,0.67,0.11,0.98C8.28,9.09,5.11,7.38,3,4.79 c-0.37,0.63-0.58,1.37-0.58,2.15c0,1.49,0.75,2.81,1.91,3.56c-0.71,0-1.37-0.2-1.95-0.5v0.03c0,2.08,1.48,3.82,3.44,4.21 c-0.36,0.1-0.74,0.15-1.13,0.15c-0.27,0-0.54-0.03-0.8-0.08c0.54,1.69,2.11,2.95,4,2.98c-1.46,1.16-3.31,1.84-5.33,1.84 c-0.34,0-0.68-0.02-1.02-0.06C3.44,20.29,5.7,21,8.12,21C16,21,20.33,14.46,20.33,8.79c0-0.19,0-0.37-0.01-0.56 C21.17,7.64,21.88,6.87,22.46,6" fill="currentColor"></path>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://facebook.com/" aria-label="Facebook">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24" height="24">
-                  <path d="M20,3H4C3.4,3,3,3.4,3,4v16c0,0.6,0.4,1,1,1h8.6v-7h-2.3v-2.7h2.3v-2c0-2.3,1.4-3.6,3.5-3.6c1,0,1.8,0.1,2.1,0.1v2.4h-1.4 c-1.1,0-1.3,0.5-1.3,1.3v1.7h2.7L17.8,14h-2.3v7H20c0.6,0,1-0.4,1-1V4C21,3.4,20.6,3,20,3z" fill="currentColor"></path>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#practice-areas">Practice Areas</a></li>
-            <li><a href="#attorneys">Our Attorneys</a></li>
-            <li><a href="/careers">Careers</a></li>
-            <li><a href="/news">News & Insights</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-practice-areas">
-          <h3>Practice Areas</h3>
-          <ul>
-            <li><a href="/practice-areas/corporate-law">Corporate Law</a></li>
-            <li><a href="/practice-areas/litigation">Litigation</a></li>
-            <li><a href="/practice-areas/real-estate">Real Estate Law</a></li>
-            <li><a href="/practice-areas/family-law">Family Law</a></li>
-            <li><a href="/practice-areas/estate-planning">Estate Planning</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2025 Law Firm Name. All Rights Reserved.</p>
-        <div class="footer-legal-links">
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-of-use">Terms of Use</a>
-          <a href="/accessibility">Accessibility Statement</a>
-        </div>
-      </div>
+    <div class="back-to-top" aria-label="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
     </div>
-  </footer>
 
-< redesign-site
     <script>
         // Mobile menu toggle functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -697,7 +397,5 @@
             }
         });
     </script>
-  <script src="js/main.js" defer></script>
->main
 </body>
 </html>

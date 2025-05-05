@@ -34,6 +34,21 @@
     <link rel="stylesheet" href="css/breadcrumbs.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Add smooth fade-in and slide-down animations to the dropdown menus */
+        .standard-dropdown-menu {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+
+        .standard-dropdown:hover .standard-dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     <!-- Page progress indicator -->
@@ -44,7 +59,7 @@
     <!-- Optimized Inner Navigation -->
     <header class="standard-navigation">
         <div class="container">
-            <div class="standard-logo-container">
+            <div class="logo-container">
                 <a href="index.html" aria-label="NorthernEdge Legal Solutions Homepage">
                     <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" width="180" height="60">
                 </a>
@@ -67,6 +82,15 @@
                     </li>
                     <li class="standard-menu-item"><a href="resources.html">Resources</a></li>
                     <li class="standard-menu-item"><a href="contact.html" class="nav-contact-button">Contact Us</a></li>
+                    <li>
+                        <form class="search-form" action="search.html" method="get" role="search">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+                            <button type="submit" aria-label="Submit Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -131,7 +155,54 @@
     </button>
 
     <footer class="site-footer">
-        <!-- Footer content remains the same -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Practice Areas</h3>
+                        <ul>
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="blog/index.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <address>
+                            67 Hugill St.<br>
+                            Sault Ste. Marie, Ontario<br>
+                            P6A 4E6
+                        </address>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
     </footer>
     
     <!-- Performance-optimized scripts with defer attribute -->
