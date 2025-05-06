@@ -19,7 +19,7 @@
 /* Removed redundant :root block - variables are defined in variables.css */
 
 html {
-  font-size: 16px;
+  font-size: 17px; /* Increased base font size */
   scroll-behavior: smooth;
 }
 
@@ -34,6 +34,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  text-align: center; /* Default text alignment to center */
 }
 
 main {
@@ -61,6 +62,7 @@ a:hover {
 p {
   margin-bottom: 1rem;
   color: var(--text-color); /* Use text-color variable */
+  /* Removed max-width and auto margins, handled by body text-align */
 }
 
 p.lead {
@@ -189,6 +191,7 @@ input, textarea, select {
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   background-color: var(--white);
+  text-align: left; /* Keep form input text left-aligned */
 }
 
 input:focus, textarea:focus, select:focus {
@@ -202,6 +205,7 @@ label {
   margin-bottom: var(--space-2);
   font-weight: 600;
   color: var(--primary-dark); /* Use primary-dark variable */
+  text-align: left; /* Keep labels left-aligned */
 }
 
 /* Site Header Styling */
@@ -252,6 +256,7 @@ label {
   gap: 1.5rem;
   margin: 0;
   padding: 0;
+  text-align: left; /* Keep nav items left-aligned */
 }
 
 .nav-menu a {
@@ -316,6 +321,7 @@ label {
 .dropdown-menu a {
   display: block;
   padding: 0.75rem 1.5rem;
+  text-align: left; /* Keep dropdown items left-aligned */
 }
 
 .dropdown-menu a::after {
@@ -481,6 +487,7 @@ label {
 
 .hero h1.elegant-heading {
     color: #1a365d; /* Dark blue color for better contrast */
+    /* text-align: center; is inherited */
 }
 
 .hero p {
@@ -532,6 +539,7 @@ label {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   color: var(--primary); /* Use primary variable */
+  /* text-align: center; is inherited */
 }
 
 .practice-area-content h3::after {
@@ -541,6 +549,11 @@ label {
 .practice-area-content p {
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
+  /* text-align: left; Inherited from card-body now */
+}
+
+.practice-areas-overview .card-body {
+  text-align: left; /* Override inherited center alignment for readability */
 }
 
 /* About section */
@@ -553,6 +566,7 @@ label {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  /* text-align: center; is inherited */
 }
 
 .about-content h2 {
@@ -580,6 +594,7 @@ label {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  /* text-align: center; is inherited */
 }
 
 .contact-content h2 {
@@ -616,21 +631,17 @@ label {
   flex-direction: column;
   gap: 1.5rem; /* Add space between contact methods */
   /* Remove fixed width/flex-basis to allow natural sizing within grid */
-}
-
-.contact-info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg); /* Use variable */
+  /* text-align: center; is inherited, but content inside might need adjustment */
 }
 
 /* Style the main heading within the card */
 .contact-info-card h2.elegant-heading {
     margin-bottom: 1rem;
-    text-align: left;
+    /* text-align: left; REMOVED - inherit center */
 }
 .contact-info-card h2.elegant-heading::after {
-    left: 0;
-    transform: translateX(0);
+    left: 50%; /* Center underline */
+    transform: translateX(-50%); /* Center underline */
     width: 50px;
 }
 
@@ -639,7 +650,7 @@ label {
     display: flex; /* Arrange icon and text side-by-side */
     align-items: flex-start; /* Align items to the top */
     gap: 1rem; /* Space between icon and text */
-    text-align: left; /* Ensure text within this div is left-aligned */
+    text-align: left; /* Keep contact details left-aligned for readability */
 }
 
 .contact-icon {
@@ -661,7 +672,7 @@ label {
     color: var(--primary-dark);
     position: relative;
     padding-bottom: 0;
-    text-align: left;
+    text-align: left; /* Keep contact details left-aligned */
 }
 /* Remove underline from method headings */
 .contact-method h3::after {
@@ -674,7 +685,7 @@ label {
   font-size: 1rem;
   margin-bottom: 0; /* Remove default paragraph margin */
   line-height: 1.6;
-  text-align: left;
+  text-align: left; /* Keep contact details left-aligned */
 }
 
 .contact-method a {
@@ -690,7 +701,7 @@ label {
 
 /* Style the office hours section */
 .office-hours {
-    text-align: left;
+    text-align: left; /* Keep office hours left-aligned */
     margin-top: 1rem; /* Space above office hours */
     padding-top: 1rem; /* Padding above */
     border-top: 1px solid var(--neutral-light); /* Separator line */
@@ -700,7 +711,7 @@ label {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
     color: var(--primary-dark);
-    text-align: left;
+    text-align: left; /* Keep office hours left-aligned */
     position: relative;
     padding-bottom: 0;
 }
@@ -713,7 +724,7 @@ label {
     font-size: 1rem;
     margin-bottom: 0;
     line-height: 1.6;
-    text-align: left;
+    text-align: left; /* Keep office hours left-aligned */
 }
 
 /* Map Section - Keep height */
@@ -724,6 +735,10 @@ label {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     margin-top: 1.5rem;
+}
+
+.contact-section .card .card-body {
+  text-align: left; /* Override inherited center alignment for contact details */
 }
 
 /* Footer styling */
@@ -737,6 +752,7 @@ label {
 .footer-column {
   flex: 1;
   min-width: 200px;
+  text-align: left; /* Keep footer columns left-aligned */
 }
 
 .footer-column h3 {
@@ -764,6 +780,7 @@ label {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: color 0.3s ease;
+  text-align: left;
 }
 
 .footer-column ul li a:hover {
@@ -784,7 +801,7 @@ label {
 .copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1.5rem;
-  text-align: center;
+  text-align: center; /* Keep copyright centered */
 }
 
 copyright p {
@@ -872,6 +889,7 @@ copyright p {
     border-top: 4px solid var(--primary); /* Add a top border for visual separation */
     display: flex; /* Ensure flex layout for vertical alignment */
     flex-direction: column; /* Stack header and body vertically */
+    /* text-align: center; is inherited */
 }
 
 .value-props .card-header {
@@ -906,6 +924,7 @@ copyright p {
     color: var(--white); /* Explicitly set heading color to white */
     margin-bottom: 0; /* Remove bottom margin if any */
     font-size: 1.3rem; /* Adjust heading size if needed */
+    /* text-align: center; is inherited */
 }
 .value-props .card-header h3.elegant-heading::after {
     display: none; /* Remove underline from these headings */
@@ -916,94 +935,10 @@ copyright p {
     text-align: center; /* Center text in the body */
     flex-grow: 1; /* Allow body to take remaining space */
     color: var(--text-color); /* Ensure body text uses the standard text color */
+    /* text-align: center; is inherited */
 }
 
 /* General Text Alignment Adjustments */
 .text-center {
-    text-align: center;
-}
-
-/* Center headings and lead paragraphs by default unless overridden */
-h1, h2, h3, h4, h5, h6, p.lead {
-    text-align: center;
-}
-
-/* Apply justification specifically where needed for longer text blocks */
-.section p:not(.lead):not(.text-center), /* Justify standard paragraphs in sections */
-.section .card-body p:not(.text-center),
-.about-content p:not(.lead),
-.contact-content p:not(.lead),
-.practice-area-content p:not(.lead),
-.video-description p:not(.lead) {
-    text-align: justify;
-    /* Ensure the block itself remains centered if its container is centered */
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px; /* Limit width for better readability */
-}
-
-/* Ensure specific headings remain centered */
-.elegant-heading.centered,
-.section-subtitle.text-center,
-.hero h1, /* Ensure hero heading is centered */
-.about-content h2, /* Ensure about heading is centered */
-.contact-content h2, /* Ensure contact heading is centered */
-.value-props .card-header h3 /* Ensure value prop card headings are centered */
-{
-    text-align: center;
-}
-/* Ensure ::after pseudo-elements on centered headings are also centered */
-.elegant-heading.centered::after,
-.hero h1::after,
-.about-content h2::after,
-.contact-content h2::after {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Keep hero text centered */
-.hero-tagline,
-.hero-video-content h1, /* Ensure video hero heading is centered */
-.hero-video-content p /* Ensure video hero paragraph is centered */
-{
-    text-align: center;
-}
-.hero-video-content h1::after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Adjust specific sections if needed */
-.about-content p:not(.lead),
-.contact-content p:not(.lead) {
-    text-align: justify; /* Justify text */
-    margin-left: auto; /* Center block */
-    margin-right: auto; /* Center block */
-}
-
-/* Ensure card body text in practice areas is justified */
-.practice-areas-overview .card-body p:not(.text-center) {
-    text-align: justify;
-    margin-left: 0; /* Reset margins if needed within card */
-    margin-right: 0;
-}
-
-/* Ensure contact card text is left-aligned */
-.contact-method p,
-.contact-method address,
-.contact-method h3,
-.office-hours p,
-.office-hours h3 {
-    text-align: left;
-}
-.contact-method h3::after,
-.office-hours h3::after {
-    display: none; /* Remove underlines */
-}
-.contact-info-card h2.elegant-heading {
-    text-align: left; /* Keep card title left-aligned */
-}
-.contact-info-card h2.elegant-heading::after {
-    left: 0; /* Align underline left */
-    transform: none;
+    text-align: center !important; /* Use important if needed to override */
 }
