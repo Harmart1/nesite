@@ -611,7 +611,6 @@ label {
   flex: 1 1 250px;
   max-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center; /* Center content */
 }
 
 .contact-info-card:hover {
@@ -622,17 +621,19 @@ label {
 .contact-info-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-align: left; /* Ensure heading is left-aligned */
 }
 
 .contact-info-card h3::after {
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0; /* Align pseudo-element to the left */
   width: 40px;
 }
 
-.contact-info-card p {
+.contact-info-card p,
+.contact-info-card address {
   font-size: 1rem;
   margin-bottom: 1rem;
+  text-align: left; /* Ensure paragraphs and address are left-aligned */
 }
 
 .contact-info-card a {
