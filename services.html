@@ -12,7 +12,22 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    /* Add smooth fade-in and slide-down animations to the dropdown menus */
+    .dropdown-menu {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(-10px);
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,16 +49,27 @@
 <body>
   <header class="sticky">
     <div class="container">
-      <a href="/index.html" class="logo">
-        <img src="/images/logo.png" alt="NorthernEdge Legal Solutions Logo" width="150">
-      </a>
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+        </a>
+      </div>
       <nav>
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/services.html" class="active">Services</a></li>
-          <li><a href="/attorneys.html">Attorneys</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/index.html" style="color: #3498db;">Home</a></li>
+          <li><a href="/services.html" class="active" style="color: #3498db;">Services</a></li>
+          <li><a href="/attorneys.html" style="color: #3498db;">Attorneys</a></li>
+          <li><a href="/about.html" style="color: #3498db;">About</a></li>
+          <li><a href="/contact.html" style="color: #3498db;">Contact</a></li>
+          <li>
+            <form class="search-form" action="search.html" method="get" role="search">
+              <label for="search-input" class="sr-only">Search</label>
+              <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+              <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </li>
         </ul>
       </nav>
       <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
@@ -109,7 +135,11 @@
 
   <footer>
     <div class="container">
-      <img src="/images/logo.png" alt="NorthernEdge Footer Logo" width="100" class="footer-logo">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+        </a>
+      </div>
       <p>© 2023 NorthernEdge Legal Solutions. All rights reserved.</p>
       <ul class="social-links">
         <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>

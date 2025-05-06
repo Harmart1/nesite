@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title | NorthernEdge Legal Solutions</title>
+    <!-- Title and Description should be set per page -->
+    <title>Page Title | NorthernEdge Legal Solutions</title> 
     <meta name="description" content="Page description">
     
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/visual-enhancement.css">
-    <link rel="stylesheet" href="css/navigation-enhancement.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- JavaScript -->
-    <script src="js/main.js" defer></script>
-    <script src="js/visual-integration.js" defer></script>
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Page-specific CSS can be added here if needed -->
+
 </head>
 <body>
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
     <!-- Back to top button -->
     <a href="#" class="back-to-top" aria-label="Back to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -33,33 +40,37 @@
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
-                <a href="index.html" aria-label="NorthernEdge Legal Solutions home page">
-                    <img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions Logo">
+                <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+                    <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                 </a>
             </div>
-            
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Main Navigation">
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
-                
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
                     <li class="dropdown">
-                        <a href="practice-areas.html" aria-haspopup="true" aria-expanded="false">Practice Areas</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="civil-litigation.html" role="menuitem">Civil Litigation</a></li>
-                            <li><a href="business-law.html" role="menuitem">Business Law</a></li>
-                            <li><a href="technology-law.html" role="menuitem">Technology Law</a></li>
-                            <li><a href="general-practice.html" role="menuitem">General Practice</a></li>
+                        <a href="/practice-areas.html">Practice Areas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="/business-law.html">Business Law</a></li>
+                            <li><a href="/technology-law.html">Technology Law</a></li>
+                            <li><a href="/general-practice.html">General Practice</a></li>
                         </ul>
                     </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html" class="nav-button">Contact</a></li>
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li>
+                        <form class="search-form" action="/search.html" method="get" role="search">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+                            <button type="submit" aria-label="Submit Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
                 </ul>
             </nav>
         </div>

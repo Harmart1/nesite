@@ -1,375 +1,277 @@
 /**
- * NorthernEdge Legal Solutions - Main JavaScript
- *
- * This file contains the main JavaScript functionality for the website,
- * handling navigation, animations, and interactive elements.
+ * Law Firm Website JavaScript
+ * Modern, accessible, and performance-optimized
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize all interactive components
-  initializeMobileMenu();
-  initializeDropdownMenus();
-  initializeSmoothScroll();
-  initializeScrollAnimations();
-  initializeContactForm();
-  // Back-to-top button is now handled by back-to-top.js
-  initializeResourceFilters();
-  initializeBlogFilters();
-  initializeAccordions();
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize mobile navigation
+  setupMobileNav();
   
-  // Add window resize handler for responsive elements
-  window.addEventListener('resize', handleWindowResize);
+  // Initialize form validation
+  setupFormValidation();
+  
+  // Initialize smooth scrolling
+  setupSmoothScrolling();
+  
+  // Initialize animation on scroll
+  setupScrollAnimations();
 });
 
 /**
- * Handle window resize events for responsive elements
+ * Mobile Navigation Setup
  */
-function handleWindowResize() {
-  // Reinitialize dropdown menus when window size changes
-  initializeDropdownMenus();
-}
-
-/**
- * Mobile Menu Toggle
- * Handles the mobile hamburger menu toggle functionality
- */
-function initializeMobileMenu() {
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+function setupMobileNav() {
+  const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
   
-  if (!mobileMenuToggle || !navMenu) return;
+  if (!navToggle || !navMenu) return;
   
-  mobileMenuToggle.addEventListener('click', function() {
+  navToggle.addEventListener('click', () => {
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
     navMenu.classList.toggle('active');
-    mobileMenuToggle.classList.toggle('active');
     
-    // Animate hamburger icon
-    const spans = mobileMenuToggle.querySelectorAll('span');
-    spans.forEach(span => span.classList.toggle('active'));
-    
-    // Accessibility
-    const isExpanded = navMenu.classList.contains('active');
-    mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+    // Prevent body scrolling when menu is open
+    document.body.classList.toggle('nav-open', !isExpanded);
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (
+      navMenu.classList.contains('active') && 
+      !navMenu.contains(e.target) && 
+      !navToggle.contains(e.target)
+    ) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navMenu.classList.remove('active');
+      document.body.classList.remove('nav-open');
+    }
+  });
+  
+  // Close menu when menu item is clicked
+  const menuLinks = navMenu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('nav-open');
+      }
+    });
+  });
+  
+  // Handle resize events (to fix mobile/desktop transition issues)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navMenu.classList.remove('active');
+      document.body.classList.remove('nav-open');
+    }
   });
 }
 
 /**
- * Dropdown Menus
- * Handles touch interactions for dropdown menus on mobile
+ * Form Validation
  */
-function initializeDropdownMenus() {
-  const dropdowns = document.querySelectorAll('.dropdown');
+function setupFormValidation() {
+  const contactForm = document.querySelector('.contact-form');
+  if (!contactForm) return;
   
-  if (dropdowns.length === 0) return;
-  
-  // Remove previous event listeners (to prevent duplicates on resize)
-  dropdowns.forEach(dropdown => {
-    const link = dropdown.querySelector('a');
-    if (link) {
-      const newLink = link.cloneNode(true);
-      if (link.parentNode) {
-        link.parentNode.replaceChild(newLink, link);
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    let isValid = true;
+    
+    // Name validation
+    const nameInput = document.getElementById('name');
+    if (nameInput && !nameInput.value.trim()) {
+      showError(nameInput, 'Please enter your name');
+      isValid = false;
+    } else if (nameInput) {
+      clearError(nameInput);
+    }
+    
+    // Email validation
+    const emailInput = document.getElementById('email');
+    if (emailInput) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value)) {
+        showError(emailInput, 'Please enter a valid email address');
+        isValid = false;
+      } else {
+        clearError(emailInput);
+      }
+    }
+    
+    // Message validation
+    const messageInput = document.getElementById('message');
+    if (messageInput && !messageInput.value.trim()) {
+      showError(messageInput, 'Please enter your message');
+      isValid = false;
+    } else if (messageInput) {
+      clearError(messageInput);
+    }
+    
+    if (isValid) {
+      // Form submission logic would go here
+      // For now, we'll just show a success message
+      const formContainer = contactForm.closest('.contact-form-container');
+      if (formContainer) {
+        formContainer.innerHTML = `
+          <div class="form-success">
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. One of our attorneys will contact you shortly.</p>
+          </div>
+        `;
       }
     }
   });
   
-  // For mobile: toggle dropdown on click
-  if (window.innerWidth < 1024) {
-    dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('a');
-      
-      if (link) {
-        link.addEventListener('click', function(e) {
-          if (window.innerWidth < 1024) {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
-            
-            // Close other dropdowns
-            dropdowns.forEach(otherDropdown => {
-              if (otherDropdown !== dropdown) {
-                otherDropdown.classList.remove('active');
-              }
-            });
-          }
-        });
-      }
-    });
+  function showError(input, message) {
+    const formGroup = input.closest('.form-group');
+    if (!formGroup) return;
+    
+    // Remove any existing error message
+    clearError(input);
+    
+    // Create error element
+    const errorElement = document.createElement('div');
+    errorElement.className = 'form-error';
+    errorElement.textContent = message;
+    formGroup.appendChild(errorElement);
+    
+    // Add error class to input
+    input.classList.add('input-error');
+    
+    // Set aria attributes for accessibility
+    input.setAttribute('aria-invalid', 'true');
+    
+    const errorId = `error-for-${input.id}`;
+    errorElement.id = errorId;
+    input.setAttribute('aria-describedby', errorId);
+    
+    // Focus the first input with an error
+    input.focus();
   }
   
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.dropdown')) {
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.remove('active');
-      });
+  function clearError(input) {
+    const formGroup = input.closest('.form-group');
+    if (!formGroup) return;
+    
+    const errorElement = formGroup.querySelector('.form-error');
+    if (errorElement) {
+      errorElement.remove();
     }
-  });
+    
+    input.classList.remove('input-error');
+    input.removeAttribute('aria-invalid');
+    
+    const describedBy = input.getAttribute('aria-describedby');
+    if (describedBy && describedBy.startsWith('error-for-')) {
+      input.removeAttribute('aria-describedby');
+    }
+  }
 }
 
 /**
- * Resource Filters
- * For the resources page category filtering
+ * Smooth Scrolling
  */
-function initializeResourceFilters() {
-  const categoryTabs = document.querySelectorAll('.category-tab');
-  const resourceCards = document.querySelectorAll('.resource-card');
+function setupSmoothScrolling() {
+  const scrollLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
   
-  if (categoryTabs.length === 0 || resourceCards.length === 0) return;
-  
-  categoryTabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-      // Remove active class from all tabs
-      categoryTabs.forEach(t => t.classList.remove('active'));
-      
-      // Add active class to clicked tab
-      this.classList.add('active');
-      
-      const selectedCategory = this.getAttribute('data-category');
-      
-      // Show all cards if "All" is selected
-      if (selectedCategory === 'all') {
-        resourceCards.forEach(card => {
-          card.style.display = 'flex';
-        });
-        return;
-      }
-      
-      // Otherwise filter the cards
-      resourceCards.forEach(card => {
-        const cardCategories = card.getAttribute('data-categories');
-        
-        if (cardCategories && cardCategories.includes(selectedCategory)) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-/**
- * Blog Filters
- * For the blog listings page category filtering
- */
-function initializeBlogFilters() {
-  const categoryTags = document.querySelectorAll('.blog-categories .category-tag');
-  const blogCards = document.querySelectorAll('.blog-card');
-  
-  if (categoryTags.length === 0 || blogCards.length === 0) return;
-  
-  categoryTags.forEach(tag => {
-    tag.addEventListener('click', function(e) {
+  scrollLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
       e.preventDefault();
       
-      // Remove active class from all tags
-      categoryTags.forEach(t => t.classList.remove('active'));
-      
-      // Add active class to clicked tag
-      this.classList.add('active');
-      
-      const selectedCategory = this.getAttribute('data-category');
-      
-      // If "All" is selected, show all cards
-      if (!selectedCategory || this.classList.contains('all')) {
-        blogCards.forEach(card => {
-          card.style.display = 'block';
-        });
-        return;
-      }
-      
-      // Otherwise, filter cards
-      blogCards.forEach(card => {
-        const cardCategories = card.getAttribute('data-categories');
-        if (cardCategories && cardCategories.includes(selectedCategory)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-/**
- * Initialize Accordions
- * For FAQ sections and other accordion-based content
- */
-function initializeAccordions() {
-  const accordionHeaders = document.querySelectorAll('.accordion-header');
-  
-  if (accordionHeaders.length === 0) return;
-  
-  accordionHeaders.forEach(header => {
-    header.addEventListener('click', function() {
-      this.classList.toggle('active');
-      
-      const content = this.nextElementSibling;
-      if (!content) return;
-      
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-    });
-  });
-}
-
-/**
- * Smooth Scroll
- * Adds smooth scrolling for anchors linking to page sections
- */
-function initializeSmoothScroll() {
-  const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
-  
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       const targetElement = document.querySelector(targetId);
       
-      if (targetElement) {
-        e.preventDefault();
-        
-        // Get header height for offset (safely)
-        const header = document.querySelector('.site-header');
-        const headerHeight = header ? header.offsetHeight : 0;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        
+      if (!targetElement) return;
+      
+      const headerOffset = 80; // Adjust based on your header height
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = targetPosition - headerOffset;
+      
+      // Check if browser supports smooth scrolling
+      if ('scrollBehavior' in document.documentElement.style) {
         window.scrollTo({
-          top: targetPosition,
+          top: offsetPosition,
           behavior: 'smooth'
         });
+      } else {
+        // Fallback for browsers that don't support smooth scrolling
+        window.scrollTo(0, offsetPosition);
       }
+      
+      // Update URL hash (without scrolling)
+      window.history.pushState(null, null, targetId);
     });
   });
 }
 
 /**
- * Scroll Animations
- * Adds fade-in animations for elements as they enter the viewport
+ * Animation on Scroll
+ * Using Intersection Observer for performance
  */
-function initializeScrollAnimations() {
-  const animatedElements = document.querySelectorAll('.fade-in, .slide-up, .slide-in');
+function setupScrollAnimations() {
+  // Elements to animate
+  const animatedElements = document.querySelectorAll(
+    '.practice-card, .attorney-card, .testimonial-card, .contact-form-container, .contact-info'
+  );
   
-  if (animatedElements.length === 0) return;
+  if (!animatedElements.length) return;
+  
+  // Add initial state class
+  animatedElements.forEach(el => {
+    el.classList.add('animate-on-scroll');
+  });
   
   // Check if IntersectionObserver is supported
   if ('IntersectionObserver' in window) {
-    // Create observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          // Stop observing after animation
+          entry.target.classList.add('animate-in');
           observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.1,
+      threshold: 0.15,
       rootMargin: '0px 0px -50px 0px'
     });
     
-    // Observe each element
-    animatedElements.forEach(element => {
-      observer.observe(element);
+    animatedElements.forEach(el => {
+      observer.observe(el);
     });
   } else {
     // Fallback for browsers that don't support IntersectionObserver
-    animatedElements.forEach(element => {
-      element.classList.add('active');
+    animatedElements.forEach(el => {
+      el.classList.add('animate-in');
     });
   }
 }
 
 /**
- * Contact Form
- * Handles form validation and submission
- */
-function initializeContactForm() {
-  const contactForm = document.querySelector('.contact-form');
-  
-  if (!contactForm) return;
-  
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Simple validation
-    let isValid = true;
-    const requiredFields = contactForm.querySelectorAll('[required]');
-    
-    requiredFields.forEach(field => {
-      if (!field.value.trim()) {
-        isValid = false;
-        field.classList.add('error');
-        
-        // Add error message if it doesn't exist
-        let errorMsg = field.nextElementSibling;
-        if (!errorMsg || !errorMsg.classList.contains('error-message')) {
-          errorMsg = document.createElement('p');
-          errorMsg.classList.add('error-message');
-          errorMsg.textContent = 'This field is required';
-          field.parentNode.insertBefore(errorMsg, field.nextSibling);
-        }
-      } else {
-        field.classList.remove('error');
-        
-        // Remove error message if it exists
-        const errorMsg = field.nextElementSibling;
-        if (errorMsg && errorMsg.classList.contains('error-message')) {
-          errorMsg.remove();
-        }
-      }
-    });
-    
-    // Email validation for email field
-    const emailField = contactForm.querySelector('input[type="email"]');
-    if (emailField && emailField.value.trim()) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailField.value.trim())) {
-        isValid = false;
-        emailField.classList.add('error');
-        
-        // Add error message if it doesn't exist
-        let errorMsg = emailField.nextElementSibling;
-        if (!errorMsg || !errorMsg.classList.contains('error-message')) {
-          errorMsg = document.createElement('p');
-          errorMsg.classList.add('error-message');
-          errorMsg.textContent = 'Please enter a valid email address';
-          emailField.parentNode.insertBefore(errorMsg, emailField.nextSibling);
-        } else {
-          errorMsg.textContent = 'Please enter a valid email address';
-        }
-      }
-    }
-    
-    // If form is valid, show success message
-    if (isValid) {
-      // Here you would typically send the form data to your server
-      // For now, we'll just show a success message
-      const formData = new FormData(contactForm);
-      
-      // Replace form with success message
-      const successMessage = document.createElement('div');
-      successMessage.classList.add('form-success');
-      successMessage.innerHTML = `
-        <h3>Thank You for Contacting Us</h3>
-        <p>Your message has been received. We'll get back to you shortly.</p>
-      `;
-      
-      contactForm.parentNode.replaceChild(successMessage, contactForm);
-    }
-  });
-  
-  // Clear validation errors when field is interacted with
-  contactForm.querySelectorAll('input, textarea').forEach(field => {
-    field.addEventListener('input', function() {
-      this.classList.remove('error');
-      
-      const errorMsg = this.nextElementSibling;
-      if (errorMsg && errorMsg.classList.contains('error-message')) {
-        errorMsg.remove();
-      }
-    });
-  });
+ * Handle CSS transitions for elements
+ * Add this to your CSS:
+ * 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+  }
+}
+*/

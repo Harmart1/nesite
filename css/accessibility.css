@@ -54,7 +54,7 @@ label[for] {
 
 /* Increased contrast for placeholder text */
 ::placeholder {
-  color: var(--neutral-dark);
+  color: var(--black);
   opacity: 0.8;
 }
 
@@ -171,4 +171,15 @@ document.body.addEventListener('keydown', function(e) {
 
 [aria-expanded="true"] .dropdown-toggle::after {
   transform: rotate(180deg);
+}
+
+/* Focus styles for back-to-top button */
+.back-to-top:focus {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Ensure touch targets are large enough for easy interaction on mobile devices */
+.nav-menu a {
+  padding: 1rem 0;
 }
