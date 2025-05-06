@@ -478,6 +478,10 @@ label {
   transform: translateX(-50%);
 }
 
+.hero h1.elegant-heading {
+    color: #1a365d; /* Dark blue color for better contrast */
+}
+
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
