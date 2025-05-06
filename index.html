@@ -88,9 +88,14 @@
         <section class="video-section section-lg bg-neutral-lightest">
             <div class="container">
                 <h2 class="elegant-heading centered">Our Dynamic Legal Solutions</h2>
-                <p class="video-description text-lead">Watch how NorthernEdge Legal Solutions brings innovation and expertise to your legal challenges</p>
+                <!-- Consolidated description -->
+                <p class="video-description text-lead text-center">
+                    Watch how NorthernEdge Legal Solutions brings innovation and expertise to your legal challenges. Witness our commitment to excellence through our dynamic visual identity, representing the intersection of traditional legal expertise and modern problem-solving strategies.
+                </p>
                 <div class="video-container">
                     <div class="video-responsive">
+                        <!-- Consider adding track elements for captions/subtitles -->
+                        <!-- Example: <track label="English" kind="subtitles" srclang="en" src="captions/video-en.vtt" default> -->
                         <video id="firm-video" controls autoplay muted loop>
                             <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -108,8 +113,7 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="video-title">NorthernEdge Legal: Modern Approach to Traditional Law</h3>
-                <p class="video-description text-lead">Witness our commitment to excellence and innovation through our dynamic visual identity. Our logo represents the intersection of traditional legal expertise and modern problem-solving strategies.</p>
+                <!-- Removed redundant title and description from below the video -->
             </div>
         </section>
 
@@ -216,6 +220,7 @@
                     <span class="eyebrow-text">GET IN TOUCH</span>
                     <h2 class="elegant-heading centered">Ready to Discuss Your Legal Needs?</h2>
                     <p class="text-lead">Our team is available to answer your questions and provide the expert guidance you're looking for. We're committed to responding to all inquiries within one business day.</p>
+                    <!-- Adjusted grid to better accommodate items, removed separate CTA card -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
                         <div class="card">
                             <div class="card-header">
@@ -253,9 +258,10 @@
                                 <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
                             </div>
                         </div>
-                        <div class="card cta-card">
-                            <a href="contact.html" class="btn btn-primary pulse-btn">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
-                        </div>
+                    </div>
+                    <!-- Moved CTA button below the grid -->
+                    <div class="mt-8">
+                         <a href="contact.html" class="btn btn-primary pulse-btn">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
                     </div>
                 </div>
             </div>

@@ -915,6 +915,7 @@ copyright p {
     padding: 1.5rem;
     text-align: center; /* Center text in the body */
     flex-grow: 1; /* Allow body to take remaining space */
+    color: var(--text-color); /* Ensure body text uses the standard text color */
 }
 
 /* General Text Alignment Adjustments */
@@ -922,13 +923,18 @@ copyright p {
     text-align: center;
 }
 
-/* Justify longer paragraphs within centered containers for readability */
-.section p.text-lead,
-.section .card-body p,
-.about-content p,
-.contact-content p,
-.practice-area-content p,
-.video-description {
+/* Center headings and lead paragraphs by default unless overridden */
+h1, h2, h3, h4, h5, h6, p.lead {
+    text-align: center;
+}
+
+/* Apply justification specifically where needed for longer text blocks */
+.section p:not(.lead):not(.text-center), /* Justify standard paragraphs in sections */
+.section .card-body p:not(.text-center),
+.about-content p:not(.lead),
+.contact-content p:not(.lead),
+.practice-area-content p:not(.lead),
+.video-description p:not(.lead) {
     text-align: justify;
     /* Ensure the block itself remains centered if its container is centered */
     margin-left: auto;
@@ -936,30 +942,68 @@ copyright p {
     max-width: 700px; /* Limit width for better readability */
 }
 
-/* Ensure headings remain centered where specified */
-/* Removed empty h1-h6 rule */
-
+/* Ensure specific headings remain centered */
 .elegant-heading.centered,
-.section-subtitle.text-center {
+.section-subtitle.text-center,
+.hero h1, /* Ensure hero heading is centered */
+.about-content h2, /* Ensure about heading is centered */
+.contact-content h2, /* Ensure contact heading is centered */
+.value-props .card-header h3 /* Ensure value prop card headings are centered */
+{
     text-align: center;
+}
+/* Ensure ::after pseudo-elements on centered headings are also centered */
+.elegant-heading.centered::after,
+.hero h1::after,
+.about-content h2::after,
+.contact-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Keep hero text centered */
-.hero-tagline {
+.hero-tagline,
+.hero-video-content h1, /* Ensure video hero heading is centered */
+.hero-video-content p /* Ensure video hero paragraph is centered */
+{
     text-align: center;
+}
+.hero-video-content h1::after {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Adjust specific sections if needed */
-.about-content p,
-.contact-content p {
+.about-content p:not(.lead),
+.contact-content p:not(.lead) {
     text-align: justify; /* Justify text */
     margin-left: auto; /* Center block */
     margin-right: auto; /* Center block */
 }
 
 /* Ensure card body text in practice areas is justified */
-.practice-areas-overview .card-body p {
+.practice-areas-overview .card-body p:not(.text-center) {
     text-align: justify;
     margin-left: 0; /* Reset margins if needed within card */
     margin-right: 0;
+}
+
+/* Ensure contact card text is left-aligned */
+.contact-method p,
+.contact-method address,
+.contact-method h3,
+.office-hours p,
+.office-hours h3 {
+    text-align: left;
+}
+.contact-method h3::after,
+.office-hours h3::after {
+    display: none; /* Remove underlines */
+}
+.contact-info-card h2.elegant-heading {
+    text-align: left; /* Keep card title left-aligned */
+}
+.contact-info-card h2.elegant-heading::after {
+    left: 0; /* Align underline left */
+    transform: none;
 }
