@@ -214,7 +214,8 @@ label {
   padding: 1rem 0;
   width: 100%;
   margin-top: 0;
-  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  /* Removed transition to prevent flashing on scroll */
+  /* transition: padding 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .site-header .container {
@@ -864,4 +865,101 @@ copyright p {
   .nav-menu a {
     padding: 1rem 0;
   }
+}
+
+/* Value Props Section Enhancements */
+.value-props .card {
+    border-top: 4px solid var(--primary); /* Add a top border for visual separation */
+    display: flex; /* Ensure flex layout for vertical alignment */
+    flex-direction: column; /* Stack header and body vertically */
+}
+
+.value-props .card-header {
+    background-color: var(--primary); /* Keep the blue background */
+    color: var(--white); /* Ensure heading text is white */
+    padding: 1.5rem; /* Adjust padding */
+    display: flex;
+    flex-direction: column; /* Stack icon and heading */
+    align-items: center; /* Center items horizontally */
+    min-height: 150px; /* Ensure consistent height */
+    justify-content: center; /* Center content vertically */
+}
+
+.value-props .icon-circle {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter circle background */
+    border-radius: 50%;
+    width: 70px; /* Increased size */
+    height: 70px; /* Increased size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem; /* Space below icon */
+    color: var(--white); /* Icon color */
+}
+
+.value-props .icon-circle i {
+    font-size: 2rem; /* Increased icon size */
+    line-height: 1; /* Ensure proper vertical alignment */
+}
+
+.value-props .card-header h3.elegant-heading {
+    color: var(--white); /* Explicitly set heading color to white */
+    margin-bottom: 0; /* Remove bottom margin if any */
+    font-size: 1.3rem; /* Adjust heading size if needed */
+}
+.value-props .card-header h3.elegant-heading::after {
+    display: none; /* Remove underline from these headings */
+}
+
+.value-props .card-body {
+    padding: 1.5rem;
+    text-align: center; /* Center text in the body */
+    flex-grow: 1; /* Allow body to take remaining space */
+}
+
+/* General Text Alignment Adjustments */
+.text-center {
+    text-align: center;
+}
+
+/* Justify longer paragraphs within centered containers for readability */
+.section p.text-lead,
+.section .card-body p,
+.about-content p,
+.contact-content p,
+.practice-area-content p,
+.video-description {
+    text-align: justify;
+    /* Ensure the block itself remains centered if its container is centered */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px; /* Limit width for better readability */
+}
+
+/* Ensure headings remain centered where specified */
+/* Removed empty h1-h6 rule */
+
+.elegant-heading.centered,
+.section-subtitle.text-center {
+    text-align: center;
+}
+
+/* Keep hero text centered */
+.hero-tagline {
+    text-align: center;
+}
+
+/* Adjust specific sections if needed */
+.about-content p,
+.contact-content p {
+    text-align: justify; /* Justify text */
+    margin-left: auto; /* Center block */
+    margin-right: auto; /* Center block */
+}
+
+/* Ensure card body text in practice areas is justified */
+.practice-areas-overview .card-body p {
+    text-align: justify;
+    margin-left: 0; /* Reset margins if needed within card */
+    margin-right: 0;
 }
