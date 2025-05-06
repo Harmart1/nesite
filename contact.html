@@ -96,68 +96,58 @@
                         <h2 class="elegant-heading">Send Us a Message</h2>
                         <p>Fill out the form below to schedule a consultation or inquire about our services. We aim to respond to all inquiries within 1 business day.</p>
                         
-                        <button class="btn btn-primary" id="open-modal-btn">Open Contact Form</button>
+                        <!-- Removed modal button -->
                         
-                        <div id="contact-modal" class="modal">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h2>Contact Us</h2>
-                                    <button class="modal-close" id="close-modal-btn">&times;</button>
+                        <!-- Removed modal wrapper div -->
+                        <!-- Embed the form directly -->
+                        <form class="contact-form" id="contact-form" action="mailto:tharmar@northernedgelegal.com" method="POST" enctype="text/plain" onsubmit="return handleFormSubmit(event)">
+                            <!-- Form error container will be auto-created by the validation script -->
+                            
+                            <div class="form-grid">
+                                <div class="form-group form-field">
+                                    <label for="name" class="form-required">Name</label>
+                                    <input type="text" id="name" name="Name" required aria-required="true" data-validate="required">
                                 </div>
-                                <div class="modal-body">
-                                    <form class="contact-form" id="contact-form" action="mailto:tharmar@northernedgelegal.com" method="POST" enctype="text/plain" onsubmit="return handleFormSubmit(event)">
-                                        <!-- Form error container will be auto-created by the validation script -->
-                                        
-                                        <div class="form-grid">
-                                            <div class="form-group form-field">
-                                                <label for="name" class="form-required">Name</label>
-                                                <input type="text" id="name" name="Name" required aria-required="true" data-validate="required">
-                                            </div>
-                                            
-                                            <div class="form-group form-field">
-                                                <label for="email" class="form-required">Email</label>
-                                                <input type="email" id="email" name="Email" required aria-required="true" data-validate="required email">
-                                            </div>
-                                            
-                                            <div class="form-group form-field">
-                                                <label for="phone">Phone</label>
-                                                <input type="tel" id="phone" name="Phone" data-validate="phone">
-                                            </div>
-                                            
-                                            <div class="form-group form-field">
-                                                <label for="service" class="form-required">Service Needed</label>
-                                                <select id="service" name="Service" required aria-required="true" data-validate="required">
-                                                    <option value="" selected disabled>Please select...</option>
-                                                    <option value="Civil Litigation">Civil Litigation</option>
-                                                    <option value="Business Law">Business Law</option>
-                                                    <option value="Technology Law">Technology Law</option>
-                                                    <option value="General Practice">General Practice</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group form-field">
-                                            <label for="message" class="form-required">Your Message</label>
-                                            <textarea id="message" name="Message" required aria-required="true" data-validate="required"></textarea>
-                                        </div>
-                                        
-                                        <div class="form-group form-field">
-                                            <div class="checkbox-group">
-                                                <input type="checkbox" id="privacy" name="PrivacyConsent" required aria-required="true" data-validate="required">
-                                                <label for="privacy" class="form-required">I agree to the <a href="privacy-policy.html">Privacy Policy</a> and consent to being contacted via the provided information.</label>
-                                            </div>
-                                        </div>
-                                        
-                                        <input type="hidden" name="Subject" value="Website Contact Form Submission">
-                                        <button type="submit" class="btn btn-primary pulse" aria-label="Submit Inquiry">Submit Inquiry</button>
-                                    </form>
+                                
+                                <div class="form-group form-field">
+                                    <label for="email" class="form-required">Email</label>
+                                    <input type="email" id="email" name="Email" required aria-required="true" data-validate="required email">
                                 </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" id="close-modal-footer-btn">Close</button>
+                                
+                                <div class="form-group form-field">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="Phone" data-validate="phone">
+                                </div>
+                                
+                                <div class="form-group form-field">
+                                    <label for="service" class="form-required">Service Needed</label>
+                                    <select id="service" name="Service" required aria-required="true" data-validate="required">
+                                        <option value="" selected disabled>Please select...</option>
+                                        <option value="Civil Litigation">Civil Litigation</option>
+                                        <option value="Business Law">Business Law</option>
+                                        <option value="Technology Law">Technology Law</option>
+                                        <option value="General Practice">General Practice</option>
+                                        <option value="Other">Other</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
+                            
+                            <div class="form-group form-field">
+                                <label for="message" class="form-required">Your Message</label>
+                                <textarea id="message" name="Message" required aria-required="true" data-validate="required"></textarea>
+                            </div>
+                            
+                            <div class="form-group form-field">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="privacy" name="PrivacyConsent" required aria-required="true" data-validate="required">
+                                    <label for="privacy" class="form-required">I agree to the <a href="privacy-policy.html">Privacy Policy</a> and consent to being contacted via the provided information.</label>
+                                </div>
+                            </div>
+                            
+                            <input type="hidden" name="Subject" value="Website Contact Form Submission">
+                            <button type="submit" class="btn btn-primary pulse" aria-label="Submit Inquiry">Submit Inquiry</button>
+                        </form>
+                        <!-- Removed modal closing divs -->
                     </div>
                     
                     <aside class="sidebar slide-in-left">
@@ -166,7 +156,8 @@
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
-                                    <img src="images/icons/location-icon.svg" alt="Location Icon">
+                                    <!-- Replaced img with Font Awesome icon -->
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <h3>Address</h3>
@@ -180,7 +171,8 @@
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
-                                    <img src="images/icons/email-icon.svg" alt="Email Icon">
+                                    <!-- Replaced img with Font Awesome icon -->
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <h3>Email</h3>
@@ -190,7 +182,8 @@
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
-                                    <img src="images/icons/phone-icon.svg" alt="Phone Icon">
+                                    <!-- Replaced img with Font Awesome icon -->
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <h3>Phone</h3>
