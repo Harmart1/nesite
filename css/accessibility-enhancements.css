@@ -90,10 +90,7 @@ input[type="radio"] {
   margin-top: var(--space-1);
 }
 
-/* ARIA support */
-[aria-hidden="true"] {
-  display: none;
-}
+/* ARIA support - Removed [aria-hidden="true"] { display: none; } rule */
 
 [aria-expanded="true"] .icon-expand {
   transform: rotate(180deg);
