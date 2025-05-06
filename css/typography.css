@@ -8,64 +8,23 @@
 /* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
 
-:root {
-  /* Font families */
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Raleway', Helvetica, Arial, sans-serif;
-  --font-accent: 'Montserrat', sans-serif;
-  
-  /* Font sizes */
-  --fs-xs: 0.875rem;    /* 14px */
-  --fs-sm: 1rem;       /* 16px */
-  --fs-base: 1.125rem; /* 18px */
-  --fs-md: 1.25rem;    /* 20px */
-  --fs-lg: 1.5rem;     /* 24px */
-  --fs-xl: 1.875rem;   /* 30px */
-  --fs-2xl: 2.25rem;   /* 36px */
-  --fs-3xl: 3rem;      /* 48px */
-  --fs-4xl: 3.75rem;   /* 60px */
-  --fs-5xl: 4.5rem;    /* 72px */
-  
-  /* Line heights */
-  --lh-tight: 1.3;
-  --lh-snug: 1.4;
-  --lh-normal: 1.6;
-  --lh-relaxed: 1.8;
-  --lh-loose: 2;
-  
-  /* Font weights */
-  --fw-light: 300;
-  --fw-normal: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
-  --fw-bold: 700;
-
-  /* Letter spacing */
-  --ls-tighter: -0.05em;
-  --ls-tight: -0.025em;
-  --ls-normal: 0;
-  --ls-wide: 0.025em;
-  --ls-wider: 0.05em;
-  --ls-widest: 0.1em;
-}
-
 /* Base Typography */
 body {
   font-family: var(--font-body);
-  font-size: var(--fs-base);
+  font-size: var(--text-base); /* Use text-base from variables.css */
   font-weight: var(--fw-normal);
-  line-height: var(--lh-normal);
-  color: var(--neutral-dark);
+  line-height: var(--lh-body); /* Use lh-body from variables.css */
+  color: var(--text-color); /* Use text-color from variables.css */
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: var(--fw-bold);
-  line-height: 1.2;
+  line-height: var(--lh-heading); /* Use lh-heading from variables.css */
   margin-top: 0;
-  margin-bottom: 1.5rem;
-  color: #1A365D;
+  margin-bottom: var(--space-5); /* Use space-5 from variables.css */
+  color: var(--heading-color); /* Use heading-color from variables.css */
   letter-spacing: var(--ls-tight);
   position: relative;
 }
@@ -73,12 +32,12 @@ h1, h2, h3, h4, h5, h6 {
 h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   content: '';
   position: absolute;
-  bottom: -0.75rem;
+  bottom: calc(-1 * var(--space-3)); /* Use space-3 from variables.css */
   left: 0;
   width: 60px;
   height: 3px;
-  background-color: #D4AF37;
-  transition: width 0.3s ease-out;
+  background-color: var(--accent); /* Use accent from variables.css */
+  transition: width var(--transition-normal);
 }
 
 h1:hover::after, h2:hover::after, h3:hover::after {
@@ -102,50 +61,50 @@ h6.text-center::after {
 }
 
 h1 {
-  font-size: var(--fs-5xl);
-  margin-bottom: 1.75rem;
+  font-size: var(--text-4xl); /* Use text-4xl from variables.css */
+  margin-bottom: var(--space-6); /* Use space-6 from variables.css */
 }
 
 h2 {
-  font-size: var(--fs-3xl);
-  margin-bottom: 1.5rem;
+  font-size: var(--text-3xl); /* Use text-3xl from variables.css */
+  margin-bottom: var(--space-5); /* Use space-5 from variables.css */
 }
 
 h3 {
-  font-size: var(--fs-2xl);
-  margin-bottom: 1.25rem;
+  font-size: var(--text-2xl); /* Use text-2xl from variables.css */
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
 }
 
 h4 {
-  font-size: var(--fs-xl);
-  margin-bottom: 1rem;
+  font-size: var(--text-xl); /* Use text-xl from variables.css */
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
 }
 
 h5 {
-  font-size: var(--fs-lg);
-  margin-bottom: 0.75rem;
+  font-size: var(--text-lg); /* Use text-lg from variables.css */
+  margin-bottom: var(--space-3); /* Use space-3 from variables.css */
 }
 
 h6 {
-  font-size: var(--fs-md);
-  margin-bottom: 0.75rem;
+  font-size: var(--text-md); /* Use text-md from variables.css */
+  margin-bottom: var (--space-3); /* Use space-3 from variables.css */
 }
 
 /* Hero Typography */
 .hero h1 {
-  font-size: var(--fs-5xl);
-  color: white;
+  font-size: var(--text-4xl); /* Adjusted for consistency, was --fs-5xl */
+  color: var(--white);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
   letter-spacing: var(--ls-tighter);
   line-height: 1.1;
 }
 
 .hero-tagline {
-  font-size: var(--fs-xl);
+  font-size: var(--text-xl); /* Use text-xl from variables.css */
   font-weight: var(--fw-light);
-  margin-bottom: 2rem;
-  color: rgba(255,255,255,0.9);
+  margin-bottom: var(--space-6); /* Use space-6 from variables.css */
+  color: rgba(var(--white-rgb, 255, 255, 255), 0.9); /* Assuming white-rgb exists or fallback */
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -154,51 +113,51 @@ h6 {
 /* Paragraph */
 p {
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
   font-family: var(--font-body);
-  font-size: var(--fs-base);
-  line-height: var(--lh-relaxed);
-  color: #4A4F54;
+  font-size: var(--text-base); /* Use text-base from variables.css */
+  line-height: var(--lh-body); /* Use lh-body from variables.css */
+  color: var(--text-color); /* Use text-color from variables.css */
 }
 
 p.lead {
-  font-size: var(--fs-lg);
+  font-size: var(--text-lg); /* Use text-lg from variables.css */
   font-weight: var(--fw-light);
-  line-height: var(--lh-relaxed);
-  color: var(--neutral-dark);
-  margin-bottom: 2rem;
+  line-height: var(--lh-body); /* Use lh-body from variables.css */
+  color: var(--text-color); /* Use text-color from variables.css */
+  margin-bottom: var(--space-6); /* Use space-6 from variables.css */
 }
 
 /* Section Styling */
 .section-title {
-  font-size: var(--fs-3xl);
-  margin-bottom: 0.5rem;
+  font-size: var(--text-3xl); /* Use text-3xl from variables.css */
+  margin-bottom: var(--space-2); /* Use space-2 from variables.css */
   position: relative;
 }
 
 .section-subtitle {
-  font-size: var(--fs-lg);
+  font-size: var(--text-lg); /* Use text-lg from variables.css */
   color: var(--neutral-medium);
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-8); /* Use space-8 from variables.css */
   font-weight: var(--fw-light);
 }
 
 .eyebrow-text {
   font-family: var(--font-accent);
-  font-size: var(--fs-xs);
+  font-size: var(--text-xs); /* Use text-xs from variables.css */
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
   letter-spacing: var(--ls-widest);
   color: var(--accent);
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
 }
 
 /* Links */
 a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.25s ease, transform 0.25s ease;
+  transition: color var(--transition-fast), transform var(--transition-fast);
   position: relative;
 }
 
@@ -212,44 +171,44 @@ a:hover {
   font-weight: var(--fw-medium);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  font-size: var(--fs-sm);
+  font-size: var(--text-sm); /* Use text-sm from variables.css */
 }
 
 /* Lists */
 ul, ol {
   margin-top: 0;
-  margin-bottom: 1rem;
-  padding-left: 1.25rem;
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
+  padding-left: var(--space-5); /* Use space-5 from variables.css */
 }
 
 li {
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--space-3); /* Use space-3 from variables.css */
 }
 
 /* Styled lists (used in practice areas) */
 ul.styled-list {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-5); /* Use space-5 from variables.css */
 }
 
 ul.styled-list li {
   position: relative;
-  padding-left: 1.75rem;
-  margin-bottom: 1.25rem;
-  font-size: var(--fs-base);
+  padding-left: var(--space-6); /* Use space-6 from variables.css */
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
+  font-size: var(--text-base); /* Use text-base from variables.css */
 }
 
 ul.styled-list li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.5rem;
-  width: 0.5rem;
-  height: 0.5rem;
+  top: var(--space-2); /* Use space-2 from variables.css */
+  width: var(--space-2); /* Use space-2 from variables.css */
+  height: var(--space-2); /* Use space-2 from variables.css */
   background-color: var(--accent);
-  border-radius: 50%;
-  transition: transform 0.2s ease;
+  border-radius: var(--radius-full);
+  transition: transform var(--transition-fast);
 }
 
 ul.styled-list li:hover::before {
@@ -258,11 +217,11 @@ ul.styled-list li:hover::before {
 
 /* Blockquote */
 blockquote {
-  margin: 2rem 0;
-  padding: 1.5rem 2rem;
+  margin: var(--space-6) 0; /* Use space-6 from variables.css */
+  padding: var(--space-5) var(--space-6); /* Use space-5/6 from variables.css */
   border-left: 4px solid var(--accent);
-  background-color: rgba(212, 175, 55, 0.05);
-  border-radius: 0 4px 4px 0;
+  background-color: rgba(var(--accent-rgb), 0.05); /* Use accent-rgb from variables.css */
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   font-style: italic;
   position: relative;
 }
@@ -270,23 +229,23 @@ blockquote {
 blockquote::before {
   content: '"';
   font-family: Georgia, serif;
-  font-size: 4rem;
+  font-size: var(--text-4xl); /* Use text-4xl from variables.css */
   position: absolute;
-  left: 0.5rem;
-  top: -1rem;
-  color: rgba(212, 175, 55, 0.2);
+  left: var(--space-2); /* Use space-2 from variables.css */
+  top: calc(-1 * var(--space-4)); /* Use space-4 from variables.css */
+  color: rgba(var(--accent-rgb), 0.2); /* Use accent-rgb from variables.css */
 }
 
 blockquote p {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2); /* Use space-2 from variables.css */
 }
 
 blockquote cite {
-  font-size: var(--fs-sm);
+  font-size: var(--text-sm); /* Use text-sm from variables.css */
   font-style: normal;
   color: var(--neutral-medium);
   display: block;
-  margin-top: 1rem;
+  margin-top: var(--space-4); /* Use space-4 from variables.css */
   font-weight: var(--fw-medium);
 }
 
@@ -295,27 +254,27 @@ blockquote cite {
   display: inline-block;
   font-family: var(--font-accent);
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-sm);
+  font-size: var(--text-sm); /* Use text-sm from variables.css */
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  padding: 0.875rem 1.75rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  padding: var(--space-3) var(--space-5); /* Use space-3/5 from variables.css */
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
   border: none;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-sm); /* Use shadow-sm from variables.css */
   position: relative;
   overflow: hidden;
 }
 
 .btn i {
-  margin-left: 0.5rem;
-  transition: transform 0.2s ease;
+  margin-left: var(--space-2); /* Use space-2 from variables.css */
+  transition: transform var(--transition-fast);
 }
 
 .btn:hover i {
@@ -324,26 +283,26 @@ blockquote cite {
 
 .btn-primary {
   background-color: var(--primary);
-  color: white;
+  color: var(--white);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-dark);
-  color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: var(--white);
+  box-shadow: var(--shadow-md); /* Use shadow-md from variables.css */
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background-color: white;
+  background-color: var(--white);
   color: var(--primary);
   border: 2px solid var(--primary);
 }
 
 .btn-secondary:hover {
   background-color: var(--primary);
-  color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: var(--white);
+  box-shadow: var(--shadow-md); /* Use shadow-md from variables.css */
   transform: translateY(-2px);
 }
 
@@ -391,7 +350,7 @@ blockquote cite {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #D4AF37, #1A365D, #D4AF37);
+  background: linear-gradient(45deg, var(--accent), var(--primary-dark), var(--accent));
   border-radius: 6px;
   z-index: -1;
   opacity: 0;
@@ -441,9 +400,9 @@ blockquote cite {
 /* User info and date styles */
 .user-info-bar {
   background-color: var(--primary-dark);
-  color: white;
-  padding: 0.5rem 0;
-  font-size: var(--fs-xs);
+  color: var(--white);
+  padding: var(--space-2) 0; /* Use space-2 from variables.css */
+  font-size: var(--text-xs); /* Use text-xs from variables.css */
   font-family: var(--font-accent);
 }
 
@@ -459,7 +418,7 @@ blockquote cite {
 }
 
 .datetime i, .user-welcome i {
-  margin-right: 0.5rem;
+  margin-right: var(--space-2); /* Use space-2 from variables.css */
   color: var(--accent);
 }
 
@@ -471,7 +430,7 @@ blockquote cite {
 /* Small helper text */
 .text-muted {
   color: var(--neutral-medium);
-  font-size: var(--fs-sm);
+  font-size: var(--text-sm); /* Use text-sm from variables.css */
 }
 
 /* Text alignment */
@@ -529,29 +488,29 @@ blockquote cite {
 /* Address styling */
 address {
   font-style: normal;
-  line-height: var(--lh-relaxed);
-  margin-bottom: 1rem;
+  line-height: var(--lh-body); /* Use lh-body from variables.css */
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
 }
 
 /* Card Typography */
 .card-title {
-  font-size: var(--fs-lg);
+  font-size: var(--text-lg); /* Use text-lg from variables.css */
   font-weight: var(--fw-semibold);
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--space-3); /* Use space-3 from variables.css */
 }
 
 .card-subtitle {
-  font-size: var(--fs-sm);
+  font-size: var(--text-sm); /* Use text-sm from variables.css */
   color: var(--neutral-medium);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
 }
 
 /* Practice area content */
 .practice-area-content h3 {
-  font-size: var(--fs-xl);
+  font-size: var(--text-xl); /* Use text-xl from variables.css */
   color: var(--primary);
-  margin-bottom: 1rem;
-  transition: color 0.2s ease;
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
+  transition: color var(--transition-fast);
 }
 
 .practice-area-content h3:hover {
@@ -559,73 +518,79 @@ address {
 }
 
 .practice-area-content p {
-  font-size: var(--fs-base);
-  margin-bottom: 1.5rem;
+  font-size: var(--text-base); /* Use text-base from variables.css */
+  margin-bottom: var(--space-5); /* Use space-5 from variables.css */
 }
 
 /* Value Proposition Typography */
 .value-prop h3 {
-  font-size: var(--fs-lg);
-  margin-bottom: 0.75rem;
+  font-size: var(--text-lg); /* Use text-lg from variables.css */
+  margin-bottom: var(--space-3); /* Use space-3 from variables.css */
   text-align: center;
   color: var(--primary);
 }
 
 .value-prop p {
-  font-size: var(--fs-base);
+  font-size: var(--text-base); /* Use text-base from variables.css */
   text-align: center;
-  color: var(--neutral-medium);
+  color: var (--neutral-medium);
 }
 
 /* Contact Info Card Typography */
 .contact-info-card h3 {
-  font-size: var(--fs-md);
-  margin-bottom: 0.75rem;
+  font-size: var(--text-md); /* Use text-md from variables.css */
+  margin-bottom: var(--space-3); /* Use space-3 from variables.css */
   color: var(--primary);
   text-align: center;
 }
 
 .contact-info-card p {
-  font-size: var(--fs-sm);
+  font-size: var(--text-sm); /* Use text-sm from variables.css */
   color: var(--neutral-medium);
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2); /* Use space-2 from variables.css */
 }
 
 /* Mobile typography adjustments */
 @media (max-width: 768px) {
-  :root {
-    --fs-5xl: 3rem;
-    --fs-4xl: 2.75rem;
-    --fs-3xl: 2.25rem;
-    --fs-2xl: 1.875rem;
-    --fs-xl: 1.5rem;
+  /* Removed redundant :root block */
+  
+  h1 {
+    font-size: var(--text-3xl); /* Adjust based on variables.css */
+  }
+  
+  h2 {
+    font-size: var(--text-2xl); /* Adjust based on variables.css */
+  }
+  
+  h3 {
+    font-size: var(--text-xl); /* Adjust based on variables.css */
   }
   
   .hero h1 {
-    font-size: var(--fs-3xl);
+    font-size: var(--text-3xl); /* Use text-3xl from variables.css */
   }
   
   .hero-tagline {
-    font-size: var(--fs-md);
+    font-size: var(--text-md); /* Use text-md from variables.css */
   }
   
   .section-title {
-    font-size: var(--fs-2xl);
+    font-size: var(--text-2xl); /* Use text-2xl from variables.css */
   }
   
   .section-subtitle {
-    font-size: var(--fs-base);
-    margin-bottom: 2rem;
+    font-size: var(--text-base); /* Use text-base from variables.css */
+    margin-bottom: var(--space-6); /* Use space-6 from variables.css */
   }
   
   p.lead {
-    font-size: var(--fs-md);
+    font-size: var(--text-md); /* Use text-md from variables.css */
   }
   
   .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: var(--fs-xs);
+    padding: var(--space-3) var(--space-5); /* Use space-3/5 from variables.css */
+    font-size: var(--text-xs); /* Use text-xs from variables.css */
   }
 }
 
@@ -642,7 +607,7 @@ address {
   left: 0;
   height: 30%;
   width: 100%;
-  background-color: rgba(212, 175, 55, 0.2);
+  background-color: rgba(var(--accent-rgb), 0.2); /* Use accent-rgb from variables.css */
   z-index: -1;
   transition: height 0.2s ease;
 }
@@ -654,9 +619,9 @@ address {
 /* Footer typography */
 .footer-column h3 {
   font-family: var(--font-accent);
-  font-size: var(--fs-md);
-  color: white;
-  margin-bottom: 1.25rem;
+  font-size: var(--text-md); /* Use text-md from variables.css */
+  color: var(--white);
+  margin-bottom: var(--space-4); /* Use space-4 from variables.css */
   font-weight: var(--fw-medium);
 }
 
@@ -666,8 +631,8 @@ address {
 }
 
 .footer-column ul li a {
-  font-size: var(--fs-sm);
-  transition: transform 0.2s ease, color 0.2s ease;
+  font-size: var(--text-sm); /* Use text-sm from variables.css */
+  transition: transform var(--transition-fast), color var(--transition-fast);
   display: inline-block;
 }
 
