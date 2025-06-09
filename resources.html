@@ -3,79 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Legal Resources | NorthernEdge Legal Solutions</title>
-        <meta name="description" content="Access valuable legal resources, guides, checklists, and information from NorthernEdge Legal Solutions to help navigate your legal matters.">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/favicon_io/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/favicon_io/safari-pinned-tab.svg" color="#1a365d">
-    <meta name="msapplication-TileColor" content="#1a365d">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Legal Resources | NorthernEdge Legal Solutions</title>
+    <meta name="description" content="Access valuable legal resources, guides, checklists, and information from NorthernEdge Legal Solutions to help navigate your legal matters.">
+
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/css/elegant-design-system.css">
-    <link rel="stylesheet" href="/css/elegant-navigation.css">
-    <link rel="stylesheet" href="/css/typography-animations.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/critical.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/visual-enhancements.css">
-    <link rel="stylesheet" href="/css/accessibility-enhancements.css">
-    <link rel="stylesheet" href="/css/accessibility.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/cookie-consent.css">
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="css/elegant-design-system.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/visual-enhancements.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/navigation-enhancements.css">
+    <link rel="stylesheet" href="css/icon-styles.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+    <script src="js/resources.js" defer></script>
 </head>
 <body>
     <!-- Include the common header template from templates/header.html -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+                    <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                </a>
+            </div>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="/practice-areas.html">Practice Areas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="/business-law.html">Business Law</a></li>
+                            <li><a href="/technology-law.html">Technology Law</a></li>
+                            <li><a href="/general-practice.html">General Practice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/resources.html" class="active">Resources</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li>
+                        <form class="search-form" action="/search.html" method="get" role="search">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+                            <button type="submit" aria-label="Submit Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header class="site-header">
-  <div class="container header-container">
-    <div class="logo-container">
-      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
-        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
-      </a>
-    </div>
-    <nav class="nav-wrapper" aria-label="Main Navigation">
-      <ul class="primary-nav">
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/about.html">About</a></li>
-    <li class="dropdown">
-        <a href="/practice-areas.html">Practice Areas</a>
-        <ul class="dropdown-menu">
-            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
-            <li><a href="/business-law.html">Business Law</a></li>
-            <li><a href="/technology-law.html">Technology Law</a></li>
-            <li><a href="/general-practice.html">General Practice</a></li>
-        </ul>
-    </li>
-    <li><a href="/resources.html" class="active">Resources</a></li>
-    <li><a href="/blog/index.html">Blog</a></li>
-    <li><a href="/contact.html">Contact</a></li>
-    <li>
-        <form class="search-form" action="/search.html" method="get" role="search">
-            <label for="search-input-header-resources" class="sr-only">Search</label>
-            <input type="text" id="search-input-header-resources" name="q" placeholder="Search..." aria-label="Search">
-            <button type="submit" aria-label="Submit Search">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-    </li>
-</ul>
-      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-  </div>
-</header>
-
-
-    <nav aria-label="Breadcrumb" class="breadcrumbs py-4">
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
         <div class="container">
             <ol class="breadcrumb-list">
                 <li><a href="index.html">Home</a></li> <!-- Added Home link -->
@@ -85,45 +74,44 @@
     </nav>
 
     <main id="main-content">
-        <section class="py-16 bg-neutral-lightest page-header">
+        <section class="page-header fade-in">
             <div class="container">
-                <h1 class="elegant-heading text-4xl md:text-5xl">Legal Resources</h1>
                 <p class="lead">Guides, checklists, and information to help you navigate legal matters with confidence.</p>
             </div>
         </section>
 
         <!-- Resource Filtering System -->
-        <section class="py-16 bg-white resource-filters">
+        <section class="resource-filters">
             <div class="container">
                 <div class="category-tabs">
-                    <button class="category-tab btn btn-sm btn-primary mr-2 mb-2 active" data-category="all">All Resources</button>
-                    <button class="category-tab btn btn-sm btn-outline-secondary mr-2 mb-2" data-category="guides">Guides & Handbooks</button>
-                    <button class="category-tab btn btn-sm btn-outline-secondary mr-2 mb-2" data-category="faq">FAQs</button>
+                    <button class="category-tab active" data-category="all">All Resources</button>
+                    <button class="category-tab" data-category="guides">Guides & Handbooks</button>
+                    <button class="category-tab" data-category="faq">FAQs</button>
                 </div>
                 <div class="search-bar">
-                    <input type="text" class="form-control w-full md:w-1/2"  id="search-input" placeholder="Search resources...">
+                    <input type="text" id="search-input" placeholder="Search resources...">
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-neutral-lightest resources-section slide-up">
+        <section class="resources-section slide-up">
             <div class="container">
                 <div class="resource-grid" id="resource-grid">
                     <!-- Resources will be dynamically loaded here -->
-                    <div class="card resource-card p-6 rounded-lg shadow-md flex flex-col md:flex-row items-start gap-4 mb-6" data-categories="guides">
+                    <div class="resource-card" data-categories="guides">
                         <div class="resource-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
                         </div>
                         <div class="resource-content">
                             <span class="resource-tag">Guide</span>
 
-                            <h3 class="elegant-heading text-xl mb-2"><a href="blog/posts/Designer_Babies.html" title="Explore the legal and ethical implications of designer babies.">Comprehensive Guide to Designer Babies: Legal and Ethical Implications</a></h3>
-                            <h3 class="elegant-heading text-xl mb-2"><a href="blog/posts/Designer_Babies.html">Designer Babies Guidebook</a></h3>
+                            <h3><a href="blog/posts/Designer_Babies.html" title="Explore the legal and ethical implications of designer babies.">Comprehensive Guide to Designer Babies: Legal and Ethical Implications</a></h3>
+                            <h3><a href="blog/posts/Designer_Babies.html">Designer Babies Guidebook</a></h3>
                       
                      
                             <p>Comprehensive guide on the legal and ethical implications of designer babies.</p>
                             <a href="../guidebook/Designer_Babies.pdf" class="btn btn-secondary" target="_blank">View Resource</a>
-                            <div class="social-share mt-4">
+                            <div class="social-share">
                                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.northernedgelegal.com/blog/posts/Designer_Babies.html" target="_blank" aria-label="Share on Facebook">
                                     <img src="images/icons/facebook-icon.svg" alt="Facebook">
                                 </a>
@@ -140,13 +128,13 @@
             </div>
         </section>
 
-        <section class="py-16 bg-white legal-links-section">
+        <section class="legal-links-section fade-in">
             <div class="container">
-                <h2 class="elegant-heading text-3xl centered mb-8">External Legal Resources</h2>
+                <h2 class="section-title text-center">External Legal Resources</h2>
                 <div class="legal-links-grid">
-                    <div class="card legal-link-card p-6 rounded-lg shadow-md">
+                    <div class="legal-link-card">
                         <div class="legal-link-content">
-                            <h3 class="elegant-heading text-xl mb-2">Courts of Ontario</h3>
+                            <h3>Courts of Ontario</h3>
                             <p>Access information about Ontario's court system, including locations, procedures, and online services.</p>
                             <a href="https://www.ontario.ca/page/courts-and-tribunals" class="external-link" target="_blank">Visit Website 
                                 <svg class="external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
@@ -154,9 +142,9 @@
                         </div>
                     </div>
                     
-                    <div class="card legal-link-card p-6 rounded-lg shadow-md">
+                    <div class="legal-link-card">
                         <div class="legal-link-content">
-                            <h3 class="elegant-heading text-xl mb-2">Law Society of Ontario</h3>
+                            <h3>Law Society of Ontario</h3>
                             <p>Find information about legal ethics, lawyer regulation, and resources for the public and legal professionals.</p>
                             <a href="https://lso.ca/" class="external-link" target="_blank">Visit Website 
                                 <svg class="external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
@@ -164,9 +152,9 @@
                         </div>
                     </div>
                     
-                    <div class="card legal-link-card p-6 rounded-lg shadow-md">
+                    <div class="legal-link-card">
                         <div class="legal-link-content">
-                            <h3 class="elegant-heading text-xl mb-2">Canadian Legal Information Institute</h3>
+                            <h3>Canadian Legal Information Institute</h3>
                             <p>Access free Canadian legal information including case law, legislation, and legal commentary.</p>
                             <a href="https://www.canlii.org/" class="external-link" target="_blank">Visit Website 
                                 <svg class="external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
@@ -174,9 +162,9 @@
                         </div>
                     </div>
                     
-                    <div class="card legal-link-card p-6 rounded-lg shadow-md">
+                    <div class="legal-link-card">
                         <div class="legal-link-content">
-                            <h3 class="elegant-heading text-xl mb-2">Self-Help Legal Services</h3>
+                            <h3>Self-Help Legal Services</h3>
                             <p>Access resources designed to help individuals navigate common legal matters without representation.</p>
                             <a href="https://stepstojustice.ca/" class="external-link" target="_blank">Visit Website 
                                 <svg class="external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
@@ -187,13 +175,13 @@
             </div>
         </section>
 
-        <section class="py-16 bg-primary-dark text-white cta-section">
+        <section class="cta-section">
             <div class="container">
                 <div class="cta-content fade-in">
-                    <h2 class="elegant-heading text-3xl centered mb-4">Need Personalized Legal Guidance?</h2>
+                    <h2>Need Personalized Legal Guidance?</h2>
                     <p>Our team is available to answer your questions and provide tailored legal advice for your specific situation.</p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
+                        <a href="contact.html" class="btn btn-primary pulse">Contact Our Team</a>
                         <a href="practice-areas.html" class="btn btn-secondary">Explore Our Services</a>
                     </div>
                 </div>
@@ -201,73 +189,163 @@
         </section>
     </main>
 
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Practice Areas</h3>
+                        <ul>
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <address>
+                            67 Hugill St.<br>
+                            Sault Ste. Marie, Ontario<br>
+                            P6A 4E6
+                        </address>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a> |
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<footer class="py-12 bg-navy-dark text-white">
-  <div class="container">
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 footer-links">
-      <div class="footer-column">
-        <h3 class="elegant-heading text-lg">Practice Areas</h3>
-        <ul>
-            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
-            <li><a href="/business-law.html">Business Law</a></li>
-            <li><a href="/technology-law.html">Technology Law</a></li>
-            <li><a href="/general-practice.html">General Practice</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3 class="elegant-heading text-lg">Quick Links</h3>
-        <ul>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/resources.html">Resources</a></li>
-            <li><a href="/blog/index.html">Blog</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3 class="elegant-heading text-lg">Contact</h3>
-        <address>
-            67 Hugill St.<br>
-            Sault Ste. Marie, Ontario<br>
-            P6A 4E6
-        </address>
-        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
-        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
-      </div>
-      <div class="footer-column footer-logo-area">
-         <div class="logo-container">
-             <a href="/index.html">
-                 <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" style="max-width: 200px; margin-bottom: 1rem;">
-             </a>
-         </div>
-         <p class="text-sm">NorthernEdge Legal Solutions: Providing expert legal services with a client-focused approach.</p>
-      </div>
-    </div>
-    <div class="mt-12 pt-6 border-t border-slate-dark text-center">
-      <p class="text-sm">&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
-      <div class="legal-links text-sm">
-          <a href="/privacy-policy.html">Privacy Policy</a> |
-          <a href="/terms-of-use.html">Terms of Use</a>
-      </div>
-    </div>
-  </div>
-</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Resource category filtering
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            const resourceCards = document.querySelectorAll('.resource-card');
 
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    categoryTabs.forEach(t => t.classList.remove('active'));
 
-    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
 
-<!-- Back to top button -->
-    <button class="back-to-top" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M12 4l-8 8h6v8h4v-8h6z" fill="white"/>
-        </svg>
-    </button>
-    <!-- Core JavaScript files deferred for performance -->
-    <script src="/js/main.js" defer></script>
-    <script src="/js/navigation.js" defer></script>
-    <script src="/js/resources.js" defer></script>
-    <script src="/js/back-to-top.js" defer></script>
-    <!-- Cookie Consent Script -->
-    <script src="/js/cookie-consent.js" defer></script>
+                    const selectedCategory = this.getAttribute('data-category');
 
+                    // Show all cards if "All" is selected
+                    if (selectedCategory === 'all') {
+                        resourceCards.forEach(card => {
+                            card.style.display = 'flex';
+                        });
+                        return;
+                    }
+
+                    // Otherwise filter the cards
+                    resourceCards.forEach(card => {
+                        const cardCategories = card.getAttribute('data-categories');
+
+                        if (cardCategories && cardCategories.includes(selectedCategory)) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Fetch resources from CMS
+            fetchResources();
+
+            // Search functionality
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                resourceCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    if (title.includes(query) || description.includes(query)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        function fetchResources() {
+            fetch('https://api.example.com/resources')
+                .then(response => response.json())
+                .then(data => {
+                    const resourceGrid = document.getElementById('resource-grid');
+                    data.forEach(resource => {
+                        const resourceCard = document.createElement('div');
+                        resourceCard.classList.add('resource-card');
+                        resourceCard.setAttribute('data-categories', resource.categories.join(' '));
+                        resourceCard.innerHTML = `
+                            <div class="resource-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="${resource.iconPath}"/></svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-tag">${resource.type}</span>
+                                <h3>${resource.title}</h3>
+                                <p>${resource.description}</p>
+                                <a href="${resource.link}" class="btn btn-secondary" target="_blank">View Resource</a>
+                            </div>
+                        `;
+                        resourceGrid.appendChild(resourceCard);
+                    });
+                })
+                .catch(error => console.error('Error fetching resources:', error));
+        }
+    </script>
+
+    <!-- Cookie Consent JavaScript -->
+    <script src="js/cookie-consent.js" defer></script>
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Add dropdown functionality for mobile
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                if (window.innerWidth <= 1024) {
+                    dropdown.addEventListener('click', function(e) {
+                        if (e.target.parentNode.classList.contains('dropdown')) {
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -9,15 +9,29 @@
     <!-- Preload critical assets for better performance -->
     <link rel="preload" href="/js/enhanced-navigation.js" as="script">
     <link rel="preload" href="/js/scroll-navigation.js" as="script">
-    
-    <!-- Favicon (assuming standard favicons are desired, copying from other pages) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
-    <meta name="msapplication-TileColor" content="#1a365d">
-    <meta name="theme-color" content="#ffffff">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Layout and Design CSS -->
+    <link rel="stylesheet" href="css/visual-enhancements.css">
+    <link rel="stylesheet" href="css/elegant-design-system.css">
+
+    <!-- Performance-optimized navigation CSS -->
+    <link rel="stylesheet" href="css/inner-navigation.css">
+    <link rel="stylesheet" href="css/navigation-enhancements.css">
+
+    <!-- Animation and Enhancement CSS -->
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/icon-styles.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/performance-fixes.css">
+
+    <!-- Feature-specific CSS -->
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/breadcrumbs.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -35,23 +49,6 @@
             transform: translateY(0);
         }
     </style>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="/css/elegant-design-system.css">
-    <link rel="stylesheet" href="/css/elegant-navigation.css">
-    <link rel="stylesheet" href="/css/typography-animations.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/critical.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/visual-enhancements.css">
-    <link rel="stylesheet" href="/css/accessibility-enhancements.css">
-    <link rel="stylesheet" href="/css/accessibility.css">
 </head>
 <body>
     <!-- Page progress indicator -->
@@ -100,7 +97,7 @@
     </header>
     <div class="mobile-overlay"></div>
 
-    <nav aria-label="Breadcrumb" class="breadcrumbs py-4">
+    <nav aria-label="Breadcrumb" class="breadcrumbs">
         <div class="container">
             <ol class="breadcrumb-list">
                 <li><a href="index.html">Home</a></li>
@@ -111,7 +108,7 @@
     </nav>
 
     <!-- Jump navigation for section links - Performance optimized -->
-    <nav class="jump-nav py-3 bg-slate-lightest shadow-md sticky top-0 z-40" aria-label="Page Sections Navigation">
+    <nav class="jump-nav" aria-label="Page Sections Navigation">
         <div class="container">
             <ul class="jump-nav-links">
                 <li><a href="#overview" class="active">Overview</a></li>
@@ -125,9 +122,9 @@
 
     <main>
         <!-- Section content remains the same, just adding optimized navigation controls -->
-        <section id="overview" class="py-16 bg-neutral-lightest page-section">
+        <section id="overview" class="page-section">
             <div class="container">
-                <h1 class="elegant-heading text-4xl md:text-5xl">Civil Litigation</h1>
+                <h1>Civil Litigation</h1>
                 <p class="lead">Strategic representation for complex disputes throughout Northern Ontario.</p>
                 
                 <!-- Content remains the same -->
@@ -157,57 +154,60 @@
         </svg>
     </button>
 
-
-<footer class="py-12 bg-navy-dark text-white">
-  <div class="container">
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 footer-links">
-      <div class="footer-column">
-        <h3 class="elegant-heading text-lg">Practice Areas</h3>
-        <ul>
-            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
-            <li><a href="/business-law.html">Business Law</a></li>
-            <li><a href="/technology-law.html">Technology Law</a></li>
-            <li><a href="/general-practice.html">General Practice</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3 class="elegant-heading text-lg">Quick Links</h3>
-        <ul>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/resources.html">Resources</a></li>
-            <li><a href="/blog/index.html">Blog</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3 class="elegant-heading text-lg">Contact</h3>
-        <address>
-            67 Hugill St.<br>
-            Sault Ste. Marie, Ontario<br>
-            P6A 4E6
-        </address>
-        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
-        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
-      </div>
-      <div class="footer-column footer-logo-area">
-         <div class="logo-container">
-             <a href="/index.html">
-                 <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" style="max-width: 200px; margin-bottom: 1rem;">
-             </a>
-         </div>
-         <p class="text-sm">NorthernEdge Legal Solutions: Providing expert legal services with a client-focused approach.</p>
-      </div>
-    </div>
-    <div class="mt-12 pt-6 border-t border-slate-dark text-center">
-      <p class="text-sm">&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
-      <div class="legal-links text-sm">
-          <a href="/privacy-policy.html">Privacy Policy</a> |
-          <a href="/terms-of-use.html">Terms of Use</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+< update-site-content-layout
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                        </a>
+                    </div>
+=======
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+> main
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Practice Areas</h3>
+                        <ul>
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="blog/index.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <address>
+                            67 Hugill St.<br>
+                            Sault Ste. Marie, Ontario<br>
+                            P6A 4E6
+                        </address>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a> |
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     
     <!-- Performance-optimized scripts with defer attribute -->
     <script src="js/enhanced-navigation.js" defer></script>
