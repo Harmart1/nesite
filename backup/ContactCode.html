@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact - NorthernEdge Legal Solutions</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Leaflet CSS can be added here or in your main stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      /* If not using an external stylesheet for the map */
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Include your site's header/navigation here -->
+    <header>
+      <!-- Navigation code -->
+    </header>
+
+    <main>
+      <h1>Get in Touch with NorthernEdge Legal Solutions</h1>
+      <p>Please fill out the form below or visit us at:</p>
+      <address>
+        67 Hugill Street, Sault Ste. Marie, ON, P6A 4E6
+      </address>
+      <!-- Map Container -->
+      <div id="map"></div>
+
+      <!-- Contact form and other content can follow here -->
+    </main>
+
+    <!-- Include your site's footer here -->
+    <footer>
+      <!-- Footer content -->
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      // Initialize the map with approximate coordinates for Sault Ste. Marie.
+      var map = L.map('map').setView([46.490, -84.367], 15);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+         maxZoom: 19,
+         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      // Add a marker at the firm’s location.
+      var marker = L.marker([46.490, -84.367]).addTo(map);
+      marker.bindPopup("<b>NorthernEdge Legal Solutions</b><br>67 Hugill St., Sault Ste. Marie, ON, P6A 4E6").openPopup();
+    </script>
+  </body>
+</html>
