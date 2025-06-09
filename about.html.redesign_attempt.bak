@@ -114,17 +114,17 @@
     <!-- END STANDARDIZED HEADER NAV -->
 
     <main id="main-content">
-        <section class="page-header fade-in">
+        <section class="page-header fade-in animate-fadeIn">
             <div class="container">
-                <h1>About Our Firm</h1>
-                <p class="lead">Founded on principles of innovation, integrity, and client-centered service.</p>
+                <h1 class="animate-slideDown">About Our Firm</h1>
+                <p class="lead animate-slideDown animate-delay-1">Founded on principles of innovation, integrity, and client-centered service.</p>
             </div>
         </section>
 
-        <section class="firm-overview">
+        <section class="firm-overview animate-fadeIn">
             <div class="container">
                 <div class="two-column-layout">
-                    <div class="text-column fade-in">
+                    <div class="text-column animate-slideInLeft animate-delay-1">
                         <h2>Our Approach</h2>
                         <p>At NorthernEdge Legal Solutions, we believe in delivering legal services differently. As a modern boutique firm serving Northern Ontario, we combine deep legal expertise with personalized service and innovative technology to provide efficient, cost-effective representation for our clients.</p>
 
@@ -132,7 +132,7 @@
 
                         <p>Whether you're facing a complex business transaction, navigating regulatory requirements, or need representation in litigation, our approach remains consistent: we provide thoughtful, pragmatic counsel with a focus on delivering tangible results.</p>
                     </div>
-                    <div class="image-column fade-in-delay">
+                    <div class="image-column animate-slideInRight animate-delay-2">
                         <img src="images/office-interior.jpg" alt="NorthernEdge Legal Solutions office" class="rounded-image shadow">
                     </div>
                 </div>
@@ -140,12 +140,12 @@
         </section>
 
         <!-- Lawyer profile section -->
-        <section class="lawyers">
+        <section class="lawyers animate-fadeIn">
             <div class="container">
                 <h2 class="section-title">Our Lawyers</h2>
                 <div class="lawyer-grid">
                     <!-- Tim J. Harmar Profile -->
-                    <div class="lawyer-item fade-in">
+                    <div class="lawyer-item animate-slideUp animate-delay-1">
                         <h3>Tim J. Harmar, BA (HONS), JD, MBA, LLM, LLM, M.Eng., CAPP</h3>
                         <p class="title">Founder &amp; Principal Lawyer – Corporate, Intellectual Property &amp; Technology Law</p>
                         <p>Tim J. Harmar is an award-winning lawyer and the driving force behind NorthernEdge Legal Solutions. With a distinguished record in corporate, intellectual property, and technology law, Tim brings a unique combination of legal expertise and business acumen to every client matter.</p>
