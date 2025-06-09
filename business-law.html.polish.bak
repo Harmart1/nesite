@@ -43,7 +43,7 @@
     <div class="page-progress">
         <div class="page-progress-bar" id="progressBar"></div>
     </div>
-    
+
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
@@ -101,15 +101,15 @@
         </section>
 
         <!-- Jump Navigation -->
-        <div class="section-nav">
+        <div class="jump-nav">
             <div class="container">
-                <ul class="section-nav-links">
-                    <li><a\1class="section-nav-link \2">Overview</a></li>
-                    <li><a class="section-nav-link" href="#services">Services</a></li>
-                    <li><a class="section-nav-link" href="#approach">Our Approach</a></li>
-                    <li><a class="section-nav-link" href="#industries">Industries</a></li>
-                    <li><a class="section-nav-link" href="#contracts">Contract Services</a></li>
-                    <li><a class="section-nav-link" href="#faq">FAQ</a></li>
+                <ul class="jump-nav-links">
+                    <li><a href="#overview" class="active">Overview</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#contracts">Contract Services</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
         </div>
@@ -121,10 +121,10 @@
                     <div class="main-content slide-in-right">
                         <h2>Business Law at NorthernEdge</h2>
                         <p>Business law encompasses the legal frameworks that guide the formation, operation, and growth of businesses. At NorthernEdge Legal Solutions, we provide comprehensive business law services designed to help entrepreneurs and established companies navigate legal complexities while focusing on their core operations.</p>
-                        
+
                         <p>Whether you're launching a startup, growing an established business, or planning for succession, our team offers practical legal solutions tailored to your specific business goals and industry context.</p>
                     </div>
-                    
+
                     <aside class="sidebar slide-in-left">
                         <div class="cta-card">
                             <h3>Business Law Resources</h3>
@@ -138,7 +138,7 @@
                     </aside>
                 </div>
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to Services section" data-target="#services">
                     <span>Explore Our Business Law Services</span>
@@ -154,47 +154,47 @@
             <div class="container">
                 <h2 class="section-title text-center">Our Business Law Services</h2>
                 <div class="services-grid">
-                    <div class="card service-item fade-in">
+                    <div class="service-item fade-in">
                         <div class="service-icon">
                             <img src="images/icons/business-formation-icon.svg" alt="Business Formation Icon">
                         </div>
                         <h3>Business Formation & Structure</h3>
                         <p>Guidance on selecting and establishing the optimal business structure, including incorporation, partnership agreements, and bylaws tailored to your specific needs and goals.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <div class="service-icon">
                             <img src="images/icons/contracts-icon.svg" alt="Contracts Icon">
                         </div>
                         <h3>Contracts & Agreements</h3>
                         <p>Development, review, and negotiation of all business contracts including service agreements, employment contracts, leases, and supplier agreements to protect your interests.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <div class="service-icon">
                             <img src="images/icons/corporate-governance-icon.svg" alt="Corporate Governance Icon">
                         </div>
                         <h3>Corporate Governance</h3>
                         <p>Assistance with corporate compliance, board responsibilities, shareholder relations, and maintaining proper corporate records and procedures.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <div class="service-icon">
                             <img src="images/icons/business-transactions-icon.svg" alt="Business Transactions Icon">
                         </div>
                         <h3>Business Transactions</h3>
                         <p>Legal support for mergers, acquisitions, asset purchases, and other significant business transactions to ensure smooth execution and risk mitigation.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <div class="service-icon">
                             <img src="images/icons/regulatory-compliance-icon.svg" alt="Regulatory Compliance Icon">
                         </div>
                         <h3>Regulatory Compliance</h3>
                         <p>Guidance on navigating industry-specific regulations, licensing requirements, and general business compliance obligations.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <div class="service-icon">
                             <img src="images/icons/business-succession-icon.svg" alt="Business Succession Icon">
                         </div>
@@ -203,7 +203,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to Our Approach section" data-target="#approach">
                     <span>Learn About Our Approach</span>
@@ -219,7 +219,7 @@
             <div class="container">
                 <h2 class="section-title text-center">Our Business Law Approach</h2>
                 <div class="approach-grid">
-                    <div class="card approach-card fade-in">
+                    <div class="approach-card fade-in">
                         <div class="approach-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="Globe Icon">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
@@ -228,8 +228,8 @@
                         <h3>Business-First Mindset</h3>
                         <p>We think like business owners, providing legal advice that balances risk management with practical business objectives and operational realities.</p>
                     </div>
-                    
-                    <div class="card approach-card fade-in">
+
+                    <div class="approach-card fade-in">
                         <div class="approach-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="Document Icon">
                                 <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.9 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
@@ -238,8 +238,8 @@
                         <h3>Preventive Counsel</h3>
                         <p>We focus on proactive legal strategies that prevent disputes and complications before they arise, saving time and resources in the long run.</p>
                     </div>
-                    
-                    <div class="card approach-card fade-in">
+
+                    <div class="approach-card fade-in">
                         <div class="approach-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="Home Icon">
                                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
@@ -248,8 +248,8 @@
                         <h3>Long-Term Partnership</h3>
                         <p>We build lasting relationships with clients, becoming familiar with your business to provide increasingly tailored advice as your company evolves.</p>
                     </div>
-                    
-                    <div class="card approach-card fade-in">
+
+                    <div class="approach-card fade-in">
                         <div class="approach-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="Link Icon">
                                 <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
@@ -260,7 +260,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to Industries section" data-target="#industries">
                     <span>View Industries We Serve</span>
@@ -276,34 +276,34 @@
             <div class="container">
                 <h2 class="section-title text-center">Industries We Serve</h2>
                 <p class="section-description text-center">Our business law services extend across multiple industries, each with its unique regulatory landscape and market challenges.</p>
-                
+
                 <div class="industries-grid">
-                    <div class="card industry-card slide-up">
+                    <div class="industry-card slide-up">
                         <h3>Technology & Software</h3>
                         <p>Supporting tech startups and established firms with specialized counsel on IP protection, funding rounds, and growth strategies.</p>
                     </div>
-                    
-                    <div class="card industry-card slide-up">
+
+                    <div class="industry-card slide-up">
                         <h3>Professional Services</h3>
                         <p>Advising consultants, healthcare practitioners, and service firms on partnership structures, regulatory compliance, and risk management.</p>
                     </div>
-                    
-                    <div class="card industry-card slide-up">
+
+                    <div class="industry-card slide-up">
                         <h3>Retail & Hospitality</h3>
                         <p>Helping retailers, restaurants, and hospitality businesses address leasing, employment, licensing, and consumer protection matters.</p>
                     </div>
-                    
-                    <div class="card industry-card slide-up">
+
+                    <div class="industry-card slide-up">
                         <h3>Manufacturing</h3>
                         <p>Comprehensive legal services for companies involved in production, supply chain, and distribution operations.</p>
                     </div>
-                    
-                    <div class="card industry-card slide-up">
+
+                    <div class="industry-card slide-up">
                         <h3>Healthcare & Life Sciences</h3>
                         <p>Specialized guidance for healthcare providers, medical practices, and life sciences companies.</p>
                     </div>
-                    
-                    <div class="card industry-card slide-up">
+
+                    <div class="industry-card slide-up">
                         <h3>Family Businesses</h3>
                         <p>Strategic counsel for family-owned businesses with special attention to succession planning and intergenerational transitions.</p>
                     </div>

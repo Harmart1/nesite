@@ -29,7 +29,7 @@
     <div class="page-progress">
         <div class="page-progress-bar" id="progressBar"></div>
     </div>
-    
+
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
@@ -67,15 +67,15 @@
         </section>
 
         <!-- Jump Navigation -->
-        <div class="section-nav">
+        <div class="jump-nav">
             <div class="container">
-                <ul class="section-nav-links">
-                    <li><a\1class="section-nav-link \2">Overview</a></li>
-                    <li><a class="section-nav-link" href="#services">Services</a></li>
-                    <li><a class="section-nav-link" href="#expertise">Our Expertise</a></li>
-                    <li><a class="section-nav-link" href="#privacy">Data Privacy</a></li>
-                    <li><a class="section-nav-link" href="#ip">Intellectual Property</a></li>
-                    <li><a class="section-nav-link" href="#faq">FAQ</a></li>
+                <ul class="jump-nav-links">
+                    <li><a href="#overview" class="active">Overview</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#expertise">Our Expertise</a></li>
+                    <li><a href="#privacy">Data Privacy</a></li>
+                    <li><a href="#ip">Intellectual Property</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
         </div>
@@ -87,14 +87,14 @@
                     <div class="main-content slide-in-right">
                         <h2>Technology Law at NorthernEdge</h2>
                         <p>Technology law addresses the unique legal challenges that arise from technological innovation and digital business models. At NorthernEdge Legal Solutions, we provide specialized legal services at the intersection of technology, business, and regulation.</p>
-                        
+
                         <p>Our technology law practice helps clients navigate complex issues including intellectual property protection, data privacy compliance, software licensing, e-commerce regulations, and emerging technology frameworks such as artificial intelligence and blockchain.</p>
-                        
+
                         <p>Whether you're a startup creating innovative solutions, an established technology company, or a traditional business adopting digital technologies, our team offers practical legal guidance designed to protect your innovations while enabling growth.</p>
                     </div>
-                    
+
                     <aside class="sidebar slide-in-left">
-                        <div class="card cta-card">
+                        <div class="cta-card">
                             <h3>Technology Law Resources</h3>
                             <ul class="resource-links">
                                 <li><a href="resources/software-ip-protection.pdf">Software IP Protection Guide</a></li>
@@ -106,7 +106,7 @@
                     </aside>
                 </div>
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to Services section" data-target="#services">
                     <span>Explore Our Technology Law Services</span>
@@ -122,38 +122,38 @@
             <div class="container">
                 <h2 class="section-title text-center">Our Technology Law Services</h2>
                 <div class="services-grid">
-                    <div class="card service-item fade-in">
+                    <div class="service-item fade-in">
                         <h3>Intellectual Property</h3>
                         <p>Strategic protection of software, digital content, and technology innovations through patents, copyrights, trademarks, and trade secrets.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>Data Privacy & Security</h3>
                         <p>Compliance guidance for PIPEDA, GDPR, CCPA and emerging privacy frameworks, breach response planning, and privacy policy development.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>Software & Licensing</h3>
                         <p>Development and negotiation of software licensing agreements, SaaS contracts, and open source compliance strategies.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>E-Commerce & Digital Compliance</h3>
                         <p>Legal frameworks for online businesses including terms of service, website policies, digital advertising compliance, and consumer protection.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>Digital Transactions</h3>
                         <p>Guidance on electronic signatures, smart contracts, digital payment systems, and emerging blockchain applications.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>Regulatory Compliance</h3>
                         <p>Navigation of technology-specific regulations including digital accessibility requirements, electronic communications, and industry-specific compliance.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to Our Expertise section" data-target="#expertise">
                     <span>Learn About Our Expertise</span>
@@ -171,7 +171,7 @@
                 <h2 class="section-title text-center">Our Technology Law Expertise</h2>
                 <!-- More content would be added here -->
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to Data Privacy section" data-target="#privacy">
                     <span>Explore Data Privacy Services</span>
@@ -189,7 +189,7 @@
                 <h2 class="section-title text-center">Data Privacy & Compliance</h2>
                 <!-- More content would be added here -->
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to Intellectual Property section" data-target="#ip">
                     <span>Explore Intellectual Property Services</span>
@@ -207,7 +207,7 @@
                 <h2 class="section-title text-center">Intellectual Property Protection</h2>
                 <!-- More content would be added here -->
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to FAQ section" data-target="#faq">
                     <span>View Frequently Asked Questions</span>
@@ -232,7 +232,7 @@
             <div class="container">
                 <h2 class="section-title text-center">Explore Other Practice Areas</h2>
                 <div class="services-grid">
-                    <a href="civil-litigation.html" class="card service-nav-card">
+                    <a href="civil-litigation.html" class="service-nav-card">
                         <div class="service-icon">
                             <img src="images/icons/litigation-icon.svg" alt="Civil Litigation Icon">
                         </div>
@@ -240,8 +240,8 @@
                         <p>Strategic representation in disputes and lawsuits across Ontario</p>
                         <span class="btn-text">Learn More</span>
                     </a>
-                    
-                    <a href="business-law.html" class="card service-nav-card">
+
+                    <a href="business-law.html" class="service-nav-card">
                         <div class="service-icon">
                             <img src="images/icons/business-icon.svg" alt="Business Law Icon">
                         </div>
@@ -249,8 +249,8 @@
                         <p>Comprehensive legal support for businesses of all sizes</p>
                         <span class="btn-text">Learn More</span>
                     </a>
-                    
-                    <a href="general-practice.html" class="card service-nav-card">
+
+                    <a href="general-practice.html" class="service-nav-card">
                         <div class="service-icon">
                             <img src="images/icons/general-practice-icon.svg" alt="General Practice Icon">
                         </div>
