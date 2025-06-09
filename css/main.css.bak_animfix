@@ -34,7 +34,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  /* text-align: center; -- Removed for specific alignment control */
+  text-align: center; /* Default text alignment to center */
 }
 
 main {
@@ -505,25 +505,24 @@ label {
 .practice-area-card {
   display: flex;
   align-items: center;
-  margin-bottom: var(--space-6); /* Was 2rem */
-  padding: var(--space-6); /* Was 2rem */
+  margin-bottom: 2rem;
+  padding: 2rem;
   background-color: white;
-  border-radius: var(--radius-lg); /* Was 10px */
-  box-shadow: var(--shadow-md); /* Was 0 5px 15px rgba(0,0,0,0.1) */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-bottom: 4px solid var(--accent); /* Added border */
 }
 
 .practice-area-card:hover {
-  transform: translateY(-5px); /* Keep existing or use var(--hover-lift) */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Keep existing or use var(--shadow-xl) */
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .practice-area-icon {
   flex-shrink: 0;
   width: 80px;
   height: 80px;
-  margin-right: var(--space-6); /* Was 2rem */
+  margin-right: 2rem;
 }
 
 .practice-area-icon img {
@@ -534,12 +533,11 @@ label {
 
 .practice-area-content {
   flex-grow: 1;
-  text-align: left; /* Added */
 }
 
 .practice-area-content h3 {
-  font-size: var(--text-xl); /* Was 1.75rem */
-  margin-bottom: var(--space-3); /* Was 1rem */
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
   color: var(--primary); /* Use primary variable */
   /* text-align: center; is inherited */
 }
@@ -549,8 +547,8 @@ label {
 }
 
 .practice-area-content p {
-  font-size: var(--text-base); /* Was 1.125rem */
-  margin-bottom: var(--space-4); /* Was 1.5rem */
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
   /* text-align: left; Inherited from card-body now */
 }
 
@@ -861,11 +859,11 @@ copyright p {
   .nav-menu {
     display: none;
   }
-  
+
   .mobile-menu-toggle {
     display: flex;
   }
-  
+
   .nav-menu.active {
     display: flex;
     flex-direction: column;
@@ -880,7 +878,7 @@ copyright p {
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
   }
-  
+
   .nav-menu a {
     padding: 1rem 0;
   }
@@ -943,334 +941,4 @@ copyright p {
 /* General Text Alignment Adjustments */
 .text-center {
     text-align: center !important; /* Use important if needed to override */
-}
-
-/* Utility classes for image styling */
-.rounded-image { border-radius: var(--radius-lg, 0.5rem); }
-.shadow { box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)); }
-
-/* Grid styling for Our Core Values section on About page */
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-6, 2.5rem);
-}
-
-/* CTA Section text color overrides for dark backgrounds */
-.cta-section.bg-primary-dark h2,
-.cta-section.bg-primary-dark p {
-  color: var(--white);
-}
-.cta-section.bg-primary-dark .elegant-heading {
-  color: var(--white);
-}
-.cta-section.bg-primary-dark .elegant-heading::after {
-  background-color: var(--gold);
-}
-
-/* Grid styling for Client-Focused Approach section on practice-areas.html */
-.approach-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-6, 2.5rem);
-}
-
-/* Styling for .approach-item to make it card-like */
-.approach-item {
-  background-color: var(--white);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  padding: var(--space-6);
-  margin-bottom: var(--space-4);
-  border-bottom: 4px solid var(--accent);
-  text-align: center;
-  transition: transform var(--transition-medium), box-shadow var(--transition-medium); /* Added transition */
-}
-.approach-item:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-}
-.approach-item .approach-icon svg {
-  width: 48px; height: 48px; margin: 0 auto var(--space-4);
-  fill: var(--primary);
-}
-.approach-item h3.elegant-heading {
-  font-size: var(--text-xl);
-  margin-top: 0;
-}
-
-/* Content Grid for pages like business-law.html */
-.content-grid {
-  display: grid;
-  gap: var(--space-8, 3rem);
-}
-@media (min-width: 768px) { /* md breakpoint */
-  .content-grid {
-    grid-template-columns: 3fr 1fr; /* Example: Main content 3 parts, sidebar 1 part */
-  }
-}
-/* Sidebar CTA Card */
-.cta-card {
-  background-color: var(--neutral-lightest);
-  padding: var(--space-6);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-}
-.cta-card h3 {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  color: var(--primary-dark);
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-}
-.cta-card .resource-links {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: var(--space-4);
-}
-.cta-card .resource-links li {
-  margin-bottom: var(--space-2);
-}
-.cta-card .resource-links a {
-  text-decoration: none;
-  color: var(--primary);
-}
-.cta-card .resource-links a:hover {
-  text-decoration: underline;
-  color: var(--accent);
-}
-.cta-card .btn-primary {
-  width: 100%;
-}
-/* Grids for Services, Approach, Industries */
-.services-grid,
-.industries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-6);
-}
-/* Specific card content alignment for practice area sub-pages */
-.service-item .service-icon,
-.approach-card .approach-icon,
-.industry-card .industry-icon {
-  margin: 0 auto var(--space-4);
-  width: 60px;
-  height: 60px;
-}
-.service-item .service-icon img,
-.approach-card .approach-icon img,
-.industry-card .industry-icon img {
-  width: 100%; height: 100%; object-fit: contain;
-}
-.service-item, .approach-card, .industry-card {
-  text-align: center;
-}
-.service-item h3, .approach-card h3, .industry-card h3 {
-  margin-top: 0;
-}
-/* Styling for .continue-button */
-.continue-button {
-  display: inline-flex;
-  align-items: center;
-  padding: var(--space-2) var(--space-4);
-  background-color: transparent;
-  border: 1px solid var(--neutral-light);
-  border-radius: var(--radius-md);
-  color: var(--primary-dark);
-  font-weight: 500;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  margin-top: var(--space-6);
-}
-.continue-button:hover {
-  background-color: var(--neutral-lightest);
-  border-color: var(--medium-gray);
-  box-shadow: var(--shadow-sm);
-}
-.continue-button .arrow {
-  margin-left: var(--space-2);
-  transition: transform var(--transition-fast);
-}
-.continue-button:hover .arrow {
-  transform: translateY(2px);
-}
-.continue-button .arrow svg {
-  fill: currentColor;
-}
-
-/* Resource Filters Layout - resources.html */
-.resource-filters > .container > div:first-child {
-  margin-bottom: var(--space-4);
-}
-@media (min-width: 768px) { /* md breakpoint */
-  .resource-filters > .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping if space is tight */
-    gap: var(--space-4); /* Adjusted gap for closer items if they wrap */
-  }
-  .resource-filters > .container > div:first-child {
-    margin-bottom: 0;
-    flex-grow: 1; /* Allow tabs to take more space if search is short */
-  }
-  .resource-filters .search-bar {
-    min-width: 300px; /* Ensure search bar has decent width */
-    flex-basis: 30%; /* Allow it to take a portion of space */
-  }
-}
-
-/* Resource Card Internal Styling - resources.html */
-.resource-card .resource-icon {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  margin-bottom: var(--space-3);
-}
-@media (min-width: 768px) { /* md breakpoint for horizontal layout of card content */
-  .resource-card .resource-icon {
-    margin-right: var(--space-4);
-    margin-bottom: 0;
-  }
-}
-.resource-card .resource-tag {
-  display: inline-block;
-  background-color: var(--accent-light, #fde68a); /* Added fallback */
-  color: var(--accent-dark, #7f5f01); /* Added fallback */
-  padding: var(--space-1) var(--space-2);
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  margin-bottom: var(--space-2);
-  text-transform: uppercase;
-}
-.resource-card .resource-content h3.elegant-heading {
-  margin-top: 0;
-}
-.resource-card .social-share {
-  margin-top: var(--space-4);
-}
-.resource-card .social-share img {
-  width: 24px; height: 24px; margin-right: var(--space-2);
-  opacity: 0.7; transition: opacity var(--transition-fast);
-}
-.resource-card .social-share img:hover { opacity: 1; }
-
-/* External Legal Links Grid - resources.html */
-.legal-links-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-6);
-}
-.legal-link-card h3 {
-  font-family: var(--font-heading);
-  font-size: var(--text-xl);
-  color: var(--primary-dark);
-  margin-top: 0;
-  margin-bottom: var(--space-3);
-}
-
-/* External link styling */
-.external-link {
-  display: inline-flex;
-  align-items: center;
-  font-weight: 500;
-  color: var(--primary);
-  transition: color var(--transition-fast);
-}
-.external-link:hover {
-  color: var(--accent);
-  text-decoration: underline;
-}
-.external-link .external-icon {
-  width: 1em;
-  height: 1em;
-  margin-left: var(--space-1);
-  fill: currentColor;
-}
-
-/* Contact Form Polish - contact.html */
-.contact-form .form-group {
-  margin-bottom: var(--space-5, 1.5rem); /* Increased default spacing, added fallback */
-}
-.contact-form label.form-required::after {
-  content: " *"; /* Added space before asterisk */
-  color: var(--error, #c62828);
-  font-weight: normal;
-}
-.contact-form input.form-control,
-.contact-form select.form-control,
-.contact-form textarea.form-control {
-  padding: var(--space-3, 0.75rem) var(--space-4, 1rem); /* Consistent padding, added fallback */
-  line-height: var(--lh-body, 1.8);
-}
-.contact-form .checkbox-group {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-2, 0.5rem);
-}
-.contact-form .checkbox-group input[type='checkbox'] {
-  width: auto; /* Override default 100% width for checkbox */
-  margin-top: 0.25em; /* Align checkbox better with text */
-  flex-shrink: 0;
-}
-.contact-form .checkbox-group label {
-  font-weight: normal;
-  color: var(--text-color);
-  margin-bottom: 0;
-}
-
-/* Accordion Polish - contact.html FAQ */
-.accordion-button {
-  position: relative;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  width: 100%; /* Ensure it takes full width of header */
-  text-align: left; /* Ensure text is left aligned */
-  padding: var(--space-4, 1rem); /* Standardized padding */
-  cursor: pointer; /* Ensure cursor indicates interactivity */
-}
-.accordion-button:hover {
-  background-color: var(--neutral-lightest, #f7f9fc); /* Subtle hover, added fallback */
-}
-.accordion-button::after {
-  content: '\002B'; /* Plus sign */
-  position: absolute;
-  right: var(--space-4, 1rem);
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform var(--transition-fast, 0.2s ease);
-  font-size: 1.2em;
-  font-family: sans-serif;
-  color: var(--primary, #1A365D);
-}
-.accordion-button[aria-expanded="true"]::after {
-  content: '\2212'; /* Minus sign */
-}
-.accordion-item {
-  border: 1px solid var(--neutral-light, #e0e5eb); /* Add border to card, added fallback */
-  margin-bottom: var(--space-3, 0.75rem); /* Ensure this was there, added fallback */
-}
-.accordion-item .card-header {
-  padding: 0; /* Remove padding if button handles it */
-  background-color: var(--white, #ffffff); /* Ensure header bg, added fallback */
-  border-bottom: 1px solid var(--neutral-light, #e0e5eb); /* Separator for expanded content */
-}
-.accordion-item:last-child,
-.accordion-item:last-of-type .card-header[aria-expanded="false"] {
- border-bottom: none; /* Remove border for last item if closed */
-}
-.accordion-item .card-body {
-  padding: var(--space-4, 1rem); /* Standardized padding */
-  border-top: none; /* Ensure no double border if header has one */
-}
-
-/* Resource Card Title Fallback Styling (if not elegant-heading in HTML) */
-.resource-card .resource-content h3 {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  color: var(--primary-dark);
-  margin-bottom: var(--space-3);
-  /* position: relative; */ /* Needed if using ::after for underline */
 }

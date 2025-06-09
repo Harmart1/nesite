@@ -6,7 +6,7 @@
   background-color: var(--neutral-lightest);
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--neutral-light);
-  margin-bottom: 1rem; /* Adjusted from 2rem */
+  margin-bottom: 2rem;
 }
 
 .breadcrumb-list {
@@ -55,7 +55,7 @@
     padding: 0.5rem 0;
     margin-bottom: 1rem;
   }
-  
+
   .breadcrumb-list li {
     font-size: 0.8rem;
   }

@@ -1,6 +1,6 @@
 /* NorthernEdge Legal Solutions - Critical CSS
  *
- * This file contains critical above-the-fold styles 
+ * This file contains critical above-the-fold styles
  * to be inlined in the <head> for faster page rendering.
  * Last updated: 2025-03-06
  */
@@ -46,8 +46,8 @@ body {
   top: 0;
   z-index: 100;
   padding: 0.25rem 0;
-  /* transition: padding 0.3s ease, box-shadow 0.3s ease; -- Removed to prevent jump/flash */
-  /* margin-top: 50px; -- Removed to prevent jump */
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 50px;
 }
 
 .container {
@@ -179,7 +179,7 @@ body {
   .nav-menu {
     display: none;
   }
-  
+
   .mobile-menu-toggle {
     display: flex;
   }
@@ -189,7 +189,7 @@ body {
   .hero h1 {
     font-size: 2rem;
   }
-  
+
   .hero {
     padding: 4rem 0;
   }

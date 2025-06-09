@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- START STANDARDIZED HEADER -->
-    <title>NorthernEdge Legal Solutions</title> 
+    <title>NorthernEdge Legal Solutions</title>
     <meta name="description" content="Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario">
-    
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -19,10 +19,10 @@
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Main CSS Bundle -->
     <link rel="stylesheet" href="/css/main.css">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- END STANDARDIZED HEADER -->
@@ -72,7 +72,7 @@
         </div>
     </header>
     <!-- END STANDARDIZED HEADER NAV -->
-    
+
     <main id="main-content">
         <section class="hero section-lg bg-primary-lightest text-center">
             <div class="container">
@@ -85,7 +85,7 @@
             </div>
         </section>
 
-        <section class="video-section section-lg bg-neutral-lightest fade-in text-center">
+        <section class="video-section section-lg bg-neutral-lightest fade-in">
             <div class="container">
                 <h2 class="elegant-heading centered">Our Dynamic Legal Solutions</h2>
                 <!-- Consolidated description -->
@@ -313,7 +313,7 @@
             <div class="copyright">
                 <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/privacy-policy.html">Privacy Policy</a> |
                     <a href="/terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
@@ -331,7 +331,7 @@
 
     <!-- Core JavaScript files deferred for performance -->
     <script src="/js/main.js" defer></script>
-    <script src="/js/navigation.js" defer></script> 
+    <script src="/js/navigation.js" defer></script>
     <script src="/js/back-to-top.js" defer></script>
 
     <!-- Conditional/Page-specific scripts can be added below by the including page if needed -->

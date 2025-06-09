@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General Practice | NorthernEdge Legal Solutions</title>
     <meta name="description" content="Comprehensive general practice legal services from NorthernEdge Legal Solutions, serving clients throughout Northern Ontario.">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/elegant-design-system.css">
     <link rel="stylesheet" href="css/icon-styles.css">
     <link rel="stylesheet" href="css/back-to-top.css">
-    
+
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
     <style>
@@ -39,12 +39,12 @@
     </style>
 </head>
 <body>
-    
+
     <!-- Page progress indicator -->
     <div class="page-progress">
         <div class="page-progress-bar" id="progressBar"></div>
     </div>
-    
+
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
@@ -99,12 +99,12 @@
                     <div class="main-content slide-in-right">
                         <h2>General Practice at NorthernEdge</h2>
                         <p>Our General Practice area covers a wide range of legal services designed to meet the diverse needs of our clients. Whether you require assistance with family law, real estate transactions, estate planning, or other common legal matters, our experienced team is here to provide expert guidance and representation.</p>
-                        
+
                         <p>We understand that legal issues can be complex and stressful. Our goal is to make the process as smooth and straightforward as possible, offering personalized service and practical solutions tailored to your unique circumstances.</p>
                     </div>
-                    
+
                     <aside class="sidebar slide-in-left">
-                        <div class="card cta-card">
+                        <div class="cta-card">
                             <h3>General Practice Resources</h3>
                             <ul class="resource-links">
                                 <li><a href="resources/family-law-guide.pdf">Family Law Guide</a></li>
@@ -116,7 +116,7 @@
                     </aside>
                 </div>
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to Services section" data-target="#services">
                     <span>Explore Our General Practice Services</span>
@@ -131,38 +131,38 @@
             <div class="container">
                 <h2 class="section-title text-center">Our General Practice Services</h2>
                 <div class="services-grid">
-                    <div class="card service-item fade-in">
+                    <div class="service-item fade-in">
                         <h3>Family Law</h3>
                         <p>Comprehensive legal support for family-related matters including divorce, child custody, and support agreements.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>Real Estate Transactions</h3>
                         <p>Expert guidance on buying, selling, and leasing residential and commercial properties.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>Estate Planning</h3>
                         <p>Assistance with wills, trusts, and estate administration to ensure your assets are protected and your wishes are honored.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>Contract Review & Drafting</h3>
                         <p>Development, review, and negotiation of various contracts to protect your interests and ensure legal compliance.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>Dispute Resolution</h3>
                         <p>Representation in mediation, arbitration, and litigation to resolve disputes efficiently and effectively.</p>
                     </div>
-                    
-                    <div class="card service-item fade-in">
+
+                    <div class="service-item fade-in">
                         <h3>General Legal Advice</h3>
                         <p>Providing practical legal advice on a wide range of issues to help you make informed decisions.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="continue-reading">
                 <button class="continue-button" aria-label="Continue to Contact section" data-target="#contact">
                     <span>Contact Us for More Information</span>
@@ -235,7 +235,7 @@
             <div class="copyright">
                 <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
