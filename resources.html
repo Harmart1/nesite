@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Resources | NorthernEdge Legal Solutions</title>
     <meta name="description" content="Access valuable legal resources, guides, checklists, and information from NorthernEdge Legal Solutions to help navigate your legal matters.">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/print.css" media="print">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/navigation-enhancements.css">
     <link rel="stylesheet" href="css/icon-styles.css">
     <link rel="stylesheet" href="css/back-to-top.css">
-    
+
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
     <script src="js/resources.js" defer></script>
@@ -229,7 +229,7 @@
             <div class="copyright">
                 <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
@@ -241,17 +241,17 @@
             // Resource category filtering
             const categoryTabs = document.querySelectorAll('.category-tab');
             const resourceCards = document.querySelectorAll('.resource-card');
-            
+
             categoryTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
                     // Remove active class from all tabs
                     categoryTabs.forEach(t => t.classList.remove('active'));
-                    
+
                     // Add active class to clicked tab
                     this.classList.add('active');
-                    
+
                     const selectedCategory = this.getAttribute('data-category');
-                    
+
                     // Show all cards if "All" is selected
                     if (selectedCategory === 'all') {
                         resourceCards.forEach(card => {
@@ -259,11 +259,11 @@
                         });
                         return;
                     }
-                    
+
                     // Otherwise filter the cards
                     resourceCards.forEach(card => {
                         const cardCategories = card.getAttribute('data-categories');
-                        
+
                         if (cardCategories && cardCategories.includes(selectedCategory)) {
                             card.style.display = 'flex';
                         } else {
@@ -318,7 +318,7 @@
                 .catch(error => console.error('Error fetching resources:', error));
         }
     </script>
-    
+
     <!-- Cookie Consent JavaScript -->
     <script src="js/cookie-consent.js" defer></script>
     <script>
@@ -326,15 +326,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
-            
+
             mobileMenuToggle.addEventListener('click', function() {
                 mobileMenuToggle.classList.toggle('active');
                 navMenu.classList.toggle('active');
             });
-            
+
             // Add dropdown functionality for mobile
             const dropdowns = document.querySelectorAll('.dropdown');
-            
+
             dropdowns.forEach(dropdown => {
                 if (window.innerWidth <= 1024) {
                     dropdown.addEventListener('click', function(e) {
