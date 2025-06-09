@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- START STANDARDIZED HEADER -->
-    <title>NorthernEdge Legal Solutions</title> 
+    <title>NorthernEdge Legal Solutions</title>
     <meta name="description" content="Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario">
-    
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -19,10 +19,10 @@
     <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Main CSS Bundle -->
     <link rel="stylesheet" href="/css/main.css">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- END STANDARDIZED HEADER -->
@@ -72,20 +72,20 @@
         </div>
     </header>
     <!-- END STANDARDIZED HEADER NAV -->
-    
+
     <main id="main-content">
         <section class="hero section-lg bg-primary-lightest text-center">
             <div class="container">
-                <h1 class="elegant-heading centered fade-in slide-down">Trusted Legal Expertise for Northern Ontario</h1>
-                <p class="hero-tagline text-lead fade-in slide-down delay-1">Innovative solutions for complex legal challenges in today's rapidly evolving business landscape</p>
+                <h1 class="elegant-heading centered">Trusted Legal Expertise for Northern Ontario</h1>
+                <p class="hero-tagline text-lead">Innovative solutions for complex legal challenges in today's rapidly evolving business landscape</p>
                 <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary fade-in slide-up delay-2 pulse">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
-                    <a href="practice-areas.html" class="btn btn-secondary fade-in slide-up delay-2">Explore Our Services <i class="fas fa-briefcase"></i></a>
+                    <a href="contact.html" class="btn btn-primary pulse-btn">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
+                    <a href="practice-areas.html" class="btn btn-secondary glow-btn">Explore Our Services <i class="fas fa-briefcase"></i></a>
                 </div>
             </div>
         </section>
 
-        <section class="video-section section-lg bg-neutral-lightest fade-in">
+        <section class="video-section section-lg bg-neutral-lightest">
             <div class="container">
                 <h2 class="elegant-heading centered">Our Dynamic Legal Solutions</h2>
                 <!-- Consolidated description -->
@@ -117,10 +117,10 @@
             </div>
         </section>
 
-        <section class="value-props section-lg bg-white fade-in">
+        <section class="value-props section-lg bg-white">
             <div class="container">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="card fade-in slide-up delay-1">
+                    <div class="card">
                         <div class="card-header">
                             <div class="icon-circle">
                                 <i class="fas fa-balance-scale"></i>
@@ -131,7 +131,7 @@
                             <p>Backed by years of specialized experience in multiple practice areas</p>
                         </div>
                     </div>
-                    <div class="card fade-in slide-up delay-2">
+                    <div class="card">
                         <div class="card-header">
                             <div class="icon-circle">
                                 <i class="fas fa-handshake"></i>
@@ -142,7 +142,7 @@
                             <p>Your priorities are our priorities—we listen and deliver results</p>
                         </div>
                     </div>
-                    <div class="card fade-in slide-up delay-3">
+                    <div class="card">
                         <div class="card-header">
                             <div class="icon-circle">
                                 <i class="fas fa-lightbulb"></i>
@@ -157,12 +157,12 @@
             </div>
         </section>
 
-        <section class="practice-areas-overview section-lg bg-neutral-lightest fade-in">
+        <section class="practice-areas-overview section-lg bg-neutral-lightest">
             <div class="container">
                 <h2 class="elegant-heading centered">Specialized Legal Expertise</h2>
                 <p class="section-subtitle text-center">Comprehensive legal solutions tailored to your specific needs</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card fade-in slide-up delay-1">
+                    <div class="card">
                         <div class="card-header">
                             <div class="practice-area-icon">
                                 <img src="images/icons/business-icon.svg" alt="Business Law Icon">
@@ -174,7 +174,7 @@
                             <a href="business-law.html" class="btn btn-secondary slide-btn">Explore Business Services <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
-                    <div class="card fade-in slide-up delay-2">
+                    <div class="card">
                         <div class="card-header">
                             <div class="practice-area-icon">
                                 <img src="images/icons/litigation-icon.svg" alt="Civil Litigation Icon">
@@ -186,7 +186,7 @@
                             <a href="civil-litigation.html" class="btn btn-secondary slide-btn">Learn About Litigation <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
-                    <div class="card fade-in slide-up">
+                    <div class="card">
                         <div class="card-header">
                             <div class="practice-area-icon">
                                 <img src="images/icons/technology-icon.svg" alt="Technology Law Icon">
@@ -202,19 +202,19 @@
             </div>
         </section>
 
-        <section class="about-section section-lg bg-neutral-lightest fade-in">
+        <section class="about-section section-lg bg-neutral-lightest">
             <div class="container">
                 <div class="text-center">
                     <span class="eyebrow-text">WHO WE ARE</span>
                     <h2 class="elegant-heading centered">Northern Ontario's Premier Legal Partner</h2>
                     <p class="text-lead">At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to providing innovative legal strategies that address your specific challenges and opportunities.</p>
                     <p class="text-lead">We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, navigating regulatory requirements, or planning for future growth, we're here to guide you every step of the way.</p>
- <a href="about.html" class="btn btn-primary fade-in delay-3 pulse">Discover Our Story <i class="fas fa-users"></i></a>
+                    <a href="about.html" class="btn btn-primary glow-btn">Discover Our Story <i class="fas fa-users"></i></a>
                 </div>
             </div>
         </section>
 
-        <section class="contact-section section-lg bg-neutral-lightest fade-in">
+        <section class="contact-section section-lg bg-neutral-lightest">
             <div class="container">
                 <div class="text-center">
                     <span class="eyebrow-text">GET IN TOUCH</span>
@@ -261,7 +261,7 @@
                     </div>
                     <!-- Moved CTA button below the grid -->
                     <div class="mt-8">
- <a href="contact.html" class="btn btn-primary fade-in delay-5 pulse">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
+                         <a href="contact.html" class="btn btn-primary pulse-btn">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
                     </div>
                 </div>
             </div>
@@ -313,7 +313,7 @@
             <div class="copyright">
                 <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/privacy-policy.html">Privacy Policy</a> |
                     <a href="/terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
@@ -331,7 +331,7 @@
 
     <!-- Core JavaScript files deferred for performance -->
     <script src="/js/main.js" defer></script>
-    <script src="/js/navigation.js" defer></script> 
+    <script src="/js/navigation.js" defer></script>
     <script src="/js/back-to-top.js" defer></script>
 
     <!-- Conditional/Page-specific scripts can be added below by the including page if needed -->
