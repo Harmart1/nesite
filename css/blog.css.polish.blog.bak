@@ -1,5 +1,5 @@
 /* NorthernEdge Legal Solutions - Blog Styles
- * 
+ *
  * Consolidated stylesheet for all blog-related components
  * Last updated: 2025-03-06
  */
@@ -40,7 +40,7 @@
 }
 
 /* Blog Categories and Filters */
-.blog-filters, 
+.blog-filters,
 .blog-filter {
   background-color: var(--neutral-lightest);
   padding: 1rem 0;
@@ -328,7 +328,7 @@
 }
 
 /* Post Meta Information */
-.post-meta, 
+.post-meta,
 .blog-meta {
   display: flex;
   align-items: center;
@@ -364,7 +364,7 @@
 }
 
 /* Blog Pagination */
-.pagination, 
+.pagination,
 .blog-pagination {
   display: flex;
   justify-content: center;
@@ -380,7 +380,7 @@
   gap: 0.5rem;
 }
 
-.pagination-links a, 
+.pagination-links a,
 .pagination-links span,
 .pagination-button {
   display: inline-flex;
@@ -471,7 +471,7 @@
   color: var(--primary-dark);
 }
 
-.blog-content ul, 
+.blog-content ul,
 .blog-content ol {
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
@@ -703,11 +703,11 @@
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .featured-post {
     grid-template-columns: 1fr;
   }
-  
+
   .featured-image {
     height: 300px;
   }
@@ -717,42 +717,42 @@
   .blog-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .blog-header h1 {
     font-size: 2rem;
   }
-  
+
   .blog-meta {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .author-bio {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .author-image {
     margin-right: 0;
     margin-bottom: 1rem;
   }
-  
+
   .blog-navigation {
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+
   .prev-post,
   .next-post {
     max-width: 100%;
     text-align: center;
   }
-  
+
   .filter-controls {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .search-bar {
     max-width: 100%;
   }
@@ -767,27 +767,4 @@
 }
 .blog-content.prose a:hover {
   color: var(--link-hover-color);
-}
-
-
-/* Mobile Optimizations for Blog Post Template Elements */
-@media (max-width: 768px) {
-  .author-bio {
-    flex-direction: column;
-    text-align: center;
-  }
-  .author-bio .author-image {
-    margin-right: 0;
-    margin-bottom: var(--space-4, 1rem);
-  }
-
-  .blog-navigation {
-    flex-direction: column;
-    gap: var(--space-4, 1rem);
-  }
-  .blog-navigation .prev-post,
-  .blog-navigation .next-post {
-    max-width: 100%;
-    text-align: center;
-  }
 }
