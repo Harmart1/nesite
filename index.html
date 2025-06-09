@@ -16,76 +16,91 @@
     <meta name="msapplication-TileColor" content="#1a365d">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Preconnect for Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Main CSS Bundle -->
-    <link rel="stylesheet" href="/css/main.css">
-    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- END STANDARDIZED HEADER -->
 
-    <!-- Page-specific CSS can be added here if needed -->
-    <!-- Removed redundant/old CSS links -->
+
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/elegant-design-system.css">
+    <link rel="stylesheet" href="/css/elegant-navigation.css">
+    <link rel="stylesheet" href="/css/typography-animations.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/critical.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/visual-enhancements.css">
+    <link rel="stylesheet" href="/css/accessibility-enhancements.css">
+    <link rel="stylesheet" href="/css/accessibility.css">
 
 </head>
 <body>
     <!-- START STANDARDIZED HEADER NAV -->
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-container">
-                <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
-                    <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
-                </a>
-            </div>
-            <nav class="main-nav" aria-label="Main Navigation">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="/index.html" class="active">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="/practice-areas.html">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="/business-law.html">Business Law</a></li>
-                            <li><a href="/technology-law.html">Technology Law</a></li>
-                            <li><a href="/general-practice.html">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/resources.html">Resources</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li>
-                        <form class="search-form" action="/search.html" method="get" role="search">
-                            <label for="search-input" class="sr-only">Search</label>
-                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
-                            <button type="submit" aria-label="Submit Search">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
+    </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html" class="active">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header" class="sr-only">Search</label>
+            <input type="text" id="search-input-header" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+
     <!-- END STANDARDIZED HEADER NAV -->
     
     <main id="main-content">
-        <section class="hero section-lg bg-primary-lightest text-center">
+        <section class="hero-section py-16 bg-neutral-lightest text-center">
             <div class="container">
-                <h1 class="elegant-heading centered">Trusted Legal Expertise for Northern Ontario</h1>
+                <h1 class="elegant-heading centered text-4xl md:text-5xl">Trusted Legal Expertise for Northern Ontario</h1>
                 <p class="hero-tagline text-lead">Innovative solutions for complex legal challenges in today's rapidly evolving business landscape</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary pulse-btn">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
+                <div class="hero-buttons mt-8 space-x-4">
+                    <a href="contact.html" class="btn btn-primary">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
                     <a href="practice-areas.html" class="btn btn-secondary glow-btn">Explore Our Services <i class="fas fa-briefcase"></i></a>
                 </div>
             </div>
         </section>
 
-        <section class="video-section section-lg bg-neutral-lightest">
+        <section class="video-section section-lg py-16 bg-white">
             <div class="container">
                 <h2 class="elegant-heading centered">Our Dynamic Legal Solutions</h2>
                 <!-- Consolidated description -->
@@ -117,7 +132,7 @@
             </div>
         </section>
 
-        <section class="value-props section-lg bg-white">
+        <section class="value-props section-lg py-16 bg-neutral-lightest">
             <div class="container">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     <div class="card">
@@ -157,7 +172,7 @@
             </div>
         </section>
 
-        <section class="practice-areas-overview section-lg bg-neutral-lightest">
+        <section class="practice-areas-overview section-lg py-16 bg-white">
             <div class="container">
                 <h2 class="elegant-heading centered">Specialized Legal Expertise</h2>
                 <p class="section-subtitle text-center">Comprehensive legal solutions tailored to your specific needs</p>
@@ -171,7 +186,7 @@
                         </div>
                         <div class="card-body">
                             <p>Navigate the complexities of modern business with confidence. Our expert team provides strategic guidance on mergers and acquisitions, regulatory compliance, contract negotiations, and all aspects of corporate governance to help your business thrive.</p>
-                            <a href="business-law.html" class="btn btn-secondary slide-btn">Explore Business Services <i class="fas fa-chevron-right"></i></a>
+ <a href="business-law.html" class="btn btn-secondary">Explore Business Services <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                     <div class="card">
@@ -183,7 +198,7 @@
                         </div>
                         <div class="card-body">
                             <p>When conflicts arise, our strategic litigation team stands ready to protect your interests. We combine thorough case preparation with persuasive advocacy to achieve favorable outcomes whether through negotiation, mediation, or in the courtroom.</p>
-                            <a href="civil-litigation.html" class="btn btn-secondary slide-btn">Learn About Litigation <i class="fas fa-chevron-right"></i></a>
+ <a href="civil-litigation.html" class="btn btn-secondary">Learn About Litigation <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                     <div class="card">
@@ -195,26 +210,26 @@
                         </div>
                         <div class="card-body">
                             <p>In today's digital economy, legal protection for your technology assets is essential. Our specialized team provides guidance on data privacy regulations, intellectual property protection, and cybersecurity compliance to safeguard your digital operations.</p>
-                            <a href="technology-law.html" class="btn btn-secondary slide-btn">Discover Tech Solutions <i class="fas fa-chevron-right"></i></a>
+ <a href="technology-law.html" class="btn btn-secondary">Discover Tech Solutions <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="about-section section-lg bg-neutral-lightest">
+        <section class="about-section section-lg py-16 bg-neutral-lightest">
             <div class="container">
                 <div class="text-center">
                     <span class="eyebrow-text">WHO WE ARE</span>
                     <h2 class="elegant-heading centered">Northern Ontario's Premier Legal Partner</h2>
                     <p class="text-lead">At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to providing innovative legal strategies that address your specific challenges and opportunities.</p>
                     <p class="text-lead">We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, navigating regulatory requirements, or planning for future growth, we're here to guide you every step of the way.</p>
-                    <a href="about.html" class="btn btn-primary glow-btn">Discover Our Story <i class="fas fa-users"></i></a>
+ <a href="about.html" class="btn btn-primary">Discover Our Story <i class="fas fa-users"></i></a>
                 </div>
             </div>
         </section>
 
-        <section class="contact-section section-lg bg-neutral-lightest">
+        <section class="contact-section section-lg py-16 bg-white">
             <div class="container">
                 <div class="text-center">
                     <span class="eyebrow-text">GET IN TOUCH</span>
@@ -261,7 +276,7 @@
                     </div>
                     <!-- Moved CTA button below the grid -->
                     <div class="mt-8">
-                         <a href="contact.html" class="btn btn-primary pulse-btn">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
+ <a href="contact.html" class="btn btn-primary">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
                     </div>
                 </div>
             </div>
@@ -269,56 +284,58 @@
     </main>
 
     <!-- START STANDARDIZED FOOTER -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="logo-container">
-                        <a href="/index.html">
-                            <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3>Practice Areas</h3>
-                        <ul>
-                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="/business-law.html">Business Law</a></li>
-                            <li><a href="/technology-law.html">Technology Law</a></li>
-                            <li><a href="/general-practice.html">General Practice</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="/about.html">About</a></li>
-                            <li><a href="/resources.html">Resources</a></li>
-                            <li><a href="/blog/index.html">Blog</a></li>
-                            <li><a href="/contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Contact</h3>
-                        <address>
-                            67 Hugill St.<br>
-                            Sault Ste. Marie, Ontario<br>
-                            P6A 4E6
-                        </address>
-                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
-                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
-                <div class="legal-links">
-                    <a href="/privacy-policy.html">Privacy Policy</a> | 
-                    <a href="/terms-of-use.html">Terms of Use</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+<footer class="py-12 bg-navy-dark text-white">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 footer-links">
+      <div class="footer-column">
+        <h3 class="elegant-heading text-lg">Practice Areas</h3>
+        <ul>
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3 class="elegant-heading text-lg">Quick Links</h3>
+        <ul>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/resources.html">Resources</a></li>
+            <li><a href="/blog/index.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3 class="elegant-heading text-lg">Contact</h3>
+        <address>
+            67 Hugill St.<br>
+            Sault Ste. Marie, Ontario<br>
+            P6A 4E6
+        </address>
+        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+      </div>
+      <div class="footer-column footer-logo-area">
+         <div class="logo-container">
+             <a href="/index.html">
+                 <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" style="max-width: 200px; margin-bottom: 1rem;">
+             </a>
+         </div>
+         <p class="text-sm">NorthernEdge Legal Solutions: Providing expert legal services with a client-focused approach.</p>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-slate-dark text-center">
+      <p class="text-sm">&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
+      <div class="legal-links text-sm">
+          <a href="/privacy-policy.html">Privacy Policy</a> |
+          <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
     <!-- END STANDARDIZED FOOTER -->
 
     <!-- START STANDARDIZED FOOTER SCRIPTS -->
