@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Civil Litigation | NorthernEdge Legal Solutions</title>
-<meta name="description" content="Explore our civil litigation services at NorthernEdge Legal Solutions - expert legal representation for clients throughout Northern Ontario.">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/favicon_io/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/favicon_io/safari-pinned-tab.svg" color="#1a365d">
-    <meta name="msapplication-TileColor" content="#1a365d">
-    <meta name="theme-color" content="#ffffff">
+    <title>Civil Litigation | NorthernEdge Legal Solutions</title>
+    <meta name="description" content="Explore our civil litigation services at NorthernEdge Legal Solutions - expert legal representation for clients throughout Northern Ontario.">
+
+    <!-- Preload critical assets for better performance -->
     <link rel="preload" href="/js/enhanced-navigation.js" as="script">
     <link rel="preload" href="/js/scroll-navigation.js" as="script">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- CSS Files -->
-    <link rel="stylesheet" href="/css/elegant-design-system.css">
-    <link rel="stylesheet" href="/css/elegant-navigation.css">
-    <link rel="stylesheet" href="/css/typography-animations.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/critical.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/visual-enhancements.css">
-    <link rel="stylesheet" href="/css/accessibility-enhancements.css">
-    <link rel="stylesheet" href="/css/accessibility.css">
-    <link rel="stylesheet" href="/css/breadcrumbs.css">
-    <link rel="stylesheet" href="/css/performance-fixes.css">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Layout and Design CSS -->
+    <link rel="stylesheet" href="css/visual-enhancements.css">
+    <link rel="stylesheet" href="css/elegant-design-system.css">
+
+    <!-- Performance-optimized navigation CSS -->
+    <link rel="stylesheet" href="css/inner-navigation.css">
+    <link rel="stylesheet" href="css/navigation-enhancements.css">
+
+    <!-- Animation and Enhancement CSS -->
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/icon-styles.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/performance-fixes.css">
+
+    <!-- Feature-specific CSS -->
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/breadcrumbs.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Add smooth fade-in and slide-down animations to the dropdown menus */
         .standard-dropdown-menu {
@@ -48,8 +50,6 @@
         }
     </style>
 </head>
-
-
 <body>
     <!-- Page progress indicator -->
     <div class="page-progress">
@@ -126,9 +126,9 @@
             <div class="container">
                 <h1>Civil Litigation</h1>
                 <p class="lead">Strategic representation for complex disputes throughout Northern Ontario.</p>
-                
+
                 <!-- Content remains the same -->
-                
+
                 <!-- Optimized continue reading button -->
                 <div class="continue-reading">
                     <button class="continue-button" data-target="#disputes" aria-label="Continue to Types of Disputes section">
@@ -142,9 +142,9 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Remaining page sections follow the same pattern -->
-        
+
         <!-- Keep remaining content the same -->
     </main>
 
@@ -202,13 +202,13 @@
             <div class="copyright">
                 <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <!-- Performance-optimized scripts with defer attribute -->
     <script src="js/enhanced-navigation.js" defer></script>
     <script src="js/scroll-navigation.js" defer></script>
@@ -221,15 +221,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.querySelector('.standard-menu-toggle');
             const navMenu = document.querySelector('.standard-menu');
-            
+
             mobileMenuToggle.addEventListener('click', function() {
                 mobileMenuToggle.classList.toggle('active');
                 navMenu.classList.toggle('active');
             });
-            
+
             // Add dropdown functionality for mobile
             const dropdowns = document.querySelectorAll('.standard-dropdown');
-            
+
             dropdowns.forEach(dropdown => {
                 if (window.innerWidth <= 1024) {
                     dropdown.addEventListener('click', function(e) {

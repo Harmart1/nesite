@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="/css/accessibility.css">
     <link rel="stylesheet" href="/css/breadcrumbs.css">
     <link rel="stylesheet" href="/css/performance-fixes.css">
-    <style>
+<style>
         /* Add smooth fade-in and slide-down animations to the dropdown menus */
         .standard-dropdown-menu {
             display: none;
@@ -48,7 +48,6 @@
         }
     </style>
 </head>
-
 
 <body>
     <!-- Page progress indicator -->
@@ -126,9 +125,9 @@
             <div class="container">
                 <h1>Civil Litigation</h1>
                 <p class="lead">Strategic representation for complex disputes throughout Northern Ontario.</p>
-                
+
                 <!-- Content remains the same -->
-                
+
                 <!-- Optimized continue reading button -->
                 <div class="continue-reading">
                     <button class="continue-button" data-target="#disputes" aria-label="Continue to Types of Disputes section">
@@ -142,9 +141,9 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Remaining page sections follow the same pattern -->
-        
+
         <!-- Keep remaining content the same -->
     </main>
 
@@ -202,13 +201,13 @@
             <div class="copyright">
                 <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <!-- Performance-optimized scripts with defer attribute -->
     <script src="js/enhanced-navigation.js" defer></script>
     <script src="js/scroll-navigation.js" defer></script>
@@ -221,15 +220,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.querySelector('.standard-menu-toggle');
             const navMenu = document.querySelector('.standard-menu');
-            
+
             mobileMenuToggle.addEventListener('click', function() {
                 mobileMenuToggle.classList.toggle('active');
                 navMenu.classList.toggle('active');
             });
-            
+
             // Add dropdown functionality for mobile
             const dropdowns = document.querySelectorAll('.standard-dropdown');
-            
+
             dropdowns.forEach(dropdown => {
                 if (window.innerWidth <= 1024) {
                     dropdown.addEventListener('click', function(e) {

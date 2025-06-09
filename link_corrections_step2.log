@@ -1,0 +1,5 @@
+Corrected direct relative paths in css/visual-enhancement.css to be root-relative
+Corrected '../' paths in css/main.css to root-relative
+Corrected '../' paths in css/footer.css to root-relative
+Corrected '../' paths in css/styles.css to root-relative
+Corrected direct relative paths in css/visual-enhancements.css to be root-relative

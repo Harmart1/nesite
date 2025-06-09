@@ -1,5 +1,5 @@
 /* Visual Enhancements - NorthernEdge Legal Solutions
- * 
+ *
  * This CSS implements modern design principles with careful attention to:
  * 1. Color theory - using a professional color palette with strategic accents
  * 2. Typography scale - establishing clear visual hierarchy
@@ -13,19 +13,19 @@
   --primary-dark: #0d2c54;     /* Deep navy blue: authority, trustworthiness */
   --primary: #1a3c5a;          /* Rich blue: stability, confidence */
   --primary-light: #3a6b99;    /* Lighter blue: approachability */
-  
+
   /* Secondary palette - complementary to primary */
   --accent: #D4AF37;           /* Gold/amber: wisdom, prestige */
   --accent-dark: #c67b23;      /* Darker gold: tradition, reliability */
   --accent-light: #f5b765;     /* Light gold: warmth, optimism */
-  
+
   /* Neutral palette - for backgrounds and text */
   --neutral-darkest: #2c3033;  /* Near-black: for important text */
   --neutral-dark: #4a4f54;     /* Darker shade for text */
   --neutral-medium: #a9a9a9;   /* Medium shade for text */
   --neutral-light: #d3d3d3;    /* Light gray for backgrounds */
   --neutral-lightest: #f7f9fc; /* Off-white: for backgrounds */
-  
+
   /* Feedback colors */
   --success: #2e7d32;          /* Green: success messages */
   --warning: #f9a825;          /* Amber: warning messages */
@@ -310,7 +310,7 @@ small, .text-small {
   padding: 1.5rem;
 }
 
-.service-areas-card h3, 
+.service-areas-card h3,
 .testimonial-card h3,
 .cta-card h3 {
   margin-top: 0;
@@ -319,7 +319,7 @@ small, .text-small {
   margin-bottom: 1.25rem;
 }
 
-.service-areas-card h3::after, 
+.service-areas-card h3::after,
 .testimonial-card h3::after,
 .cta-card h3::after {
   content: '';
@@ -685,11 +685,11 @@ founder-image img {
   .service-item {
     padding: 1.25rem;
   }
-  
+
   .resource-card {
     flex-direction: column;
   }
-  
+
   .resource-icon {
     margin-right: 0;
     margin-bottom: 1rem;
@@ -792,7 +792,7 @@ p.lead {
 .hero-section {
     padding: 8rem 0 6rem;
     position: relative;
-    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark)), url('/images/new-hero-background.jpg') no-repeat center center;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark)), url('images/new-hero-background.jpg') no-repeat center center;
     background-size: cover;
     color: white;
 }
@@ -996,7 +996,7 @@ section {
 }
 
 /* Card Design Refinement */
-.card, 
+.card,
 .info-card,
 .practice-card,
 .blog-card,
@@ -1023,7 +1023,7 @@ section {
 
 /* Grid Spacing */
 .content-grid,
-.services-grid, 
+.services-grid,
 .practice-areas-overview,
 .values-grid,
 .approach-grid,
@@ -1065,7 +1065,7 @@ label {
 .hero-section {
     padding: 8rem 0 6rem;
     position: relative;
-    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark)), url('/images/hero-background.jpg') no-repeat center center;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark)), url('images/hero-background.jpg') no-repeat center center;
     background-size: cover;
     color: white;
 }
@@ -1164,8 +1164,8 @@ img {
 }
 
 /* Visual Hierarchy and White Space for Text */
-.content-section p, 
-.about-content p, 
+.content-section p,
+.about-content p,
 .service-item p {
     max-width: 75ch; /* Optimal reading width */
     margin-bottom: 1.5rem;
@@ -1250,7 +1250,7 @@ img {
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    background: url('/images/play-button.png') no-repeat center center;
+    background: url('images/play-button.png') no-repeat center center;
     background-size: contain;
     cursor: pointer;
 }
@@ -1260,23 +1260,23 @@ img {
     section {
         padding: 3rem 0;
     }
-    
+
     .page-header {
         padding: 5rem 0 3rem;
     }
-    
+
     h1 {
         font-size: 2.2rem;
     }
-    
+
     h2 {
         font-size: 1.8rem;
     }
-    
+
     .hero-section {
         padding: 6rem 0 4rem;
     }
-    
+
     .hero-section h1 {
         font-size: 2.5rem;
     }
@@ -1286,18 +1286,18 @@ img {
     .container {
         padding: 0 1.5rem;
     }
-    
+
     .btn {
         padding: 0.85rem 1.5rem;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         gap: 1rem;
         align-items: center;
     }
-    
-    .card, 
+
+    .card,
     .info-card,
     .practice-card,
     .blog-card {
