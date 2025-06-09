@@ -1,0 +1,2 @@
+Updated prev/next links in blog/posts/template.html to '#' placeholders.
+WARNING: Found remaining '../' paths, listed in remaining_relative_paths.log. These need manual review or a more aggressive script.

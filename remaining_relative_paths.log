@@ -1,0 +1,144 @@
+./blog/index.html:8:    <link rel="stylesheet" href="../css/main.css">
+./blog/index.html:9:    <link rel="stylesheet" href="../css/responsive.css">
+./blog/index.html:10:    <link rel="stylesheet" href="../css/blog.css">
+./blog/index.html:11:    <link rel="stylesheet" href="../css/typography.css">
+./blog/index.html:12:    <link rel="stylesheet" href="../css/visual-enhancements.css">
+./blog/index.html:13:    <link rel="stylesheet" href="../css/animations.css">
+./blog/index.html:14:    <link rel="stylesheet" href="../css/back-to-top.css">
+./blog/index.html:15:    <link rel="stylesheet" href="../css/breadcrumbs.css">
+./blog/index.html:16:    <script src="../js/main.js" defer></script>
+./blog/index.html:17:    <script src="../js/back-to-top.js" defer></script>
+./blog/index.html:18:    <script src="../js/visual-integration.js" defer></script>
+./blog/index.html:39:                <a href="../index.html">
+./blog/index.html:40:                    <img src="../NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+./blog/index.html:48:                    <li><a href="../index.html">Home</a></li>
+./blog/index.html:49:                    <li><a href="../about.html">About</a></li>
+./blog/index.html:51:                        <a href="../practice-areas.html">Practice Areas</a>
+./blog/index.html:53:                            <li><a href="../civil-litigation.html">Civil Litigation</a></li>
+./blog/index.html:54:                            <li><a href="../business-law.html">Business Law</a></li>
+./blog/index.html:55:                            <li><a href="../technology-law.html">Technology Law</a></li>
+./blog/index.html:56:                            <li><a href="../general-practice.html">General Practice</a></li>
+./blog/index.html:59:                    <li><a href="../resources.html">Resources</a></li>
+./blog/index.html:61:                    <li><a href="../contact.html">Contact</a></li>
+./blog/index.html:79:                <li><a href="../index.html">Home</a></li>
+./blog/index.html:128:                    <img src="../NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+./blog/index.html:134:                            <li><a href="../civil-litigation.html">Civil Litigation</a></li>
+./blog/index.html:135:                            <li><a href="../business-law.html">Business Law</a></li>
+./blog/index.html:136:                            <li><a href="../technology-law.html">Technology Law</a></li>
+./blog/index.html:137:                            <li><a href="../general-practice.html">General Practice</a></li>
+./blog/index.html:143:                            <li><a href="../about.html">About</a></li>
+./blog/index.html:144:                            <li><a href="../resources.html">Resources</a></li>
+./blog/index.html:146:                            <li><a href="../contact.html">Contact</a></li>
+./blog/index.html:164:                    <a href="../privacy-policy.html">Privacy Policy</a> |
+./blog/index.html:165:                    <a href="../terms-of-use.html">Terms of Use</a>
+./blog/posts/Designer_Babies.html:10:    <link rel="stylesheet" href="../../css/main.css">
+./blog/posts/Designer_Babies.html:11:    <link rel="stylesheet" href="../../css/responsive.css">
+./blog/posts/Designer_Babies.html:12:    <link rel="stylesheet" href="../../css/blog.css">
+./blog/posts/Designer_Babies.html:13:    <script src="../../js/main.js" defer></script>
+./blog/posts/Designer_Babies.html:19:                <a href="../../index.html">
+./blog/posts/Designer_Babies.html:20:                    <img src="../../NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+./blog/posts/Designer_Babies.html:28:                    <li><a href="../../index.html">Home</a></li>
+./blog/posts/Designer_Babies.html:29:                    <li><a href="../../about.html">About</a></li>
+./blog/posts/Designer_Babies.html:31:                        <a href="../../practice-areas.html">Practice Areas</a>
+./blog/posts/Designer_Babies.html:33:                            <li><a href="../../civil-litigation.html">Civil Litigation</a></li>
+./blog/posts/Designer_Babies.html:34:                            <li><a href="../../business-law.html">Business Law</a></li>
+./blog/posts/Designer_Babies.html:35:                            <li><a href="../../technology-law.html">Technology Law</a></li>
+./blog/posts/Designer_Babies.html:36:                            <li><a href="../../general-practice.html">General Practice</a></li>
+./blog/posts/Designer_Babies.html:39:                    <li><a href="../../resources.html">Resources</a></li>
+./blog/posts/Designer_Babies.html:40:                    <li><a href="../../blog/index.html">Blog</a></li>
+./blog/posts/Designer_Babies.html:41:                    <li><a href="../../contact.html">Contact</a></li>
+./blog/posts/Designer_Babies.html:82:                    <p>For more detailed information, download our comprehensive guidebook <a href="../../guidebook/Designer_Babies.pdf" target="_blank">here</a>.</p>
+./blog/posts/Designer_Babies.html:87:                        <img src="../../images/icons/facebook-icon.svg" alt="Facebook">
+./blog/posts/Designer_Babies.html:90:                        <img src="../../images/icons/twitter-icon.svg" alt="Twitter">
+./blog/posts/Designer_Babies.html:93:                        <img src="../../images/icons/linkedin-icon.svg" alt="LinkedIn">
+./blog/posts/Designer_Babies.html:107:                            <li><a href="../../civil-litigation.html">Civil Litigation</a></li>
+./blog/posts/Designer_Babies.html:108:                            <li><a href="../../business-law.html">Business Law</a></li>
+./blog/posts/Designer_Babies.html:109:                            <li><a href="../../technology-law.html">Technology Law</a></li>
+./blog/posts/Designer_Babies.html:110:                            <li><a href="../../general-practice.html">General Practice</a></li>
+./blog/posts/Designer_Babies.html:116:                            <li><a href="../../about.html">About</a></li>
+./blog/posts/Designer_Babies.html:117:                            <li><a href="../../resources.html">Resources</a></li>
+./blog/posts/Designer_Babies.html:118:                            <li><a href="../../blog/index.html">Blog</a></li>
+./blog/posts/Designer_Babies.html:119:                            <li><a href="../../contact.html">Contact</a></li>
+./blog/posts/Designer_Babies.html:137:                    <a href="../../privacy-policy.html">Privacy Policy</a> |
+./blog/posts/Designer_Babies.html:138:                    <a href="../../terms-of-use.html">Terms of Use</a>
+./blog/posts/template.html:9:    <link rel="stylesheet" href="../../css/main.css">
+./blog/posts/template.html:10:    <link rel="stylesheet" href="../../css/responsive.css">
+./blog/posts/template.html:11:    <link rel="stylesheet" href="../../css/blog.css">
+./blog/posts/template.html:12:    <script src="../../js/main.js" defer></script>
+./blog/posts/template.html:50:                        <a href="../index.html?category=category1" class="category-tag">Category 1</a>
+./blog/posts/template.html:51:                        <a href="../index.html?category=category2" class="category-tag">Category 2</a>
+./blog/posts/template.html:60:                <img src="../../images/blog/post-image.jpg" alt="Image description" class="blog-featured-image">
+./blog/posts/template.html:75:                        <img src="../../images/team/author-name.jpg" alt="Author Name" class="author-image">
+./blog/posts/ai-regulation-implications.html:8:    <link rel="stylesheet" href="../../css/main.css">
+./blog/posts/ai-regulation-implications.html:9:    <link rel="stylesheet" href="../../css/responsive.css">
+./blog/posts/ai-regulation-implications.html:10:    <link rel="stylesheet" href="../../css/blog.css">
+./blog/posts/ai-regulation-implications.html:11:    <script src="../../js/main.js" defer></script>
+./blog/posts/ai-regulation-implications.html:41:                <a href="../../index.html"><img src="../../images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions Logo"></a>
+./blog/posts/ai-regulation-implications.html:48:                    <li><a href="../../index.html">Home</a></li>
+./blog/posts/ai-regulation-implications.html:49:                    <li><a href="../../about.html">About</a></li>
+./blog/posts/ai-regulation-implications.html:51:                        <a href="../../practice-areas.html">Practice Areas</a>
+./blog/posts/ai-regulation-implications.html:53:                            <li><a href="../../civil-litigation.html">Civil Litigation</a></li>
+./blog/posts/ai-regulation-implications.html:54:                            <li><a href="../../business-law.html">Business Law</a></li>
+./blog/posts/ai-regulation-implications.html:55:                            <li><a href="../../technology-law.html">Technology Law</a></li>
+./blog/posts/ai-regulation-implications.html:56:                            <li><a href="../../general-practice.html">General Practice</a></li>
+./blog/posts/ai-regulation-implications.html:59:                    <li><a href="../../resources.html">Resources</a></li>
+./blog/posts/ai-regulation-implications.html:60:                    <li><a href="../index.html" class="active">Blog</a></li>
+./blog/posts/ai-regulation-implications.html:61:                    <li><a href="../../contact.html">Contact</a></li>
+./blog/posts/ai-regulation-implications.html:72:                        <a href="../index.html?category=business" class="category-tag">Business Law</a>
+./blog/posts/ai-regulation-implications.html:73:                        <a href="../index.html?category=technology" class="category-tag">Technology Law</a>
+./blog/posts/ai-regulation-implications.html:82:                <img src="../../images/blog/ai-regulation.jpg" alt="AI Regulation Concept" class="blog-featured-image">
+./blog/posts/ai-regulation-implications.html:123:                        <img src="../../images/team/tim-harmar.jpg" alt="Tim J. Harmar" class="author-image">
+./blog/posts/ai-regulation-implications.html:161:                    <img src="../../images/northernedge-logo-white.svg" alt="NorthernEdge Legal Solutions Logo">
+./blog/posts/ai-regulation-implications.html:167:                            <li><a href="../../civil-litigation.html">Civil Litigation</a></li>
+./blog/posts/ai-regulation-implications.html:168:                            <li><a href="../../business-law.html">Business Law</a></li>
+./blog/posts/ai-regulation-implications.html:169:                            <li><a href="../../technology-law.html">Technology Law</a></li>
+./blog/posts/ai-regulation-implications.html:170:                            <li><a href="../../general-practice.html">General Practice</a></li>
+./blog/posts/ai-regulation-implications.html:176:                            <li><a href="../../about.html">About</a></li>
+./blog/posts/ai-regulation-implications.html:177:                            <li><a href="../../resources.html">Resources</a></li>
+./blog/posts/ai-regulation-implications.html:178:                            <li><a href="../index.html">Blog</a></li>
+./blog/posts/ai-regulation-implications.html:179:                            <li><a href="../../contact.html">Contact</a></li>
+./blog/posts/ai-regulation-implications.html:197:                    <a href="../../privacy-policy.html">Privacy Policy</a> |
+./blog/posts/ai-regulation-implications.html:198:                    <a href="../../terms-of-use.html">Terms of Use</a>
+./components/breadcrumbs.html:35:            <li><a href="../index.html">Home</a></li>
+./components/breadcrumbs.html:36:            <li><a href="../blog/index.html">Blog</a></li>
+./resources.html:113:                            <a href="../guidebook/Designer_Babies.pdf" class="btn btn-secondary" target="_blank">View Resource</a>
+./team/tim-harmar.html:10:    <link rel="stylesheet" href="../css/main.css">
+./team/tim-harmar.html:11:    <link rel="stylesheet" href="../css/responsive.css">
+./team/tim-harmar.html:12:    <link rel="stylesheet" href="../css/typography.css">
+./team/tim-harmar.html:13:    <link rel="stylesheet" href="../css/visual-enhancements.css">
+./team/tim-harmar.html:14:    <link rel="stylesheet" href="../css/animations.css">
+./team/tim-harmar.html:15:    <link rel="stylesheet" href="../css/accessibility.css">
+./team/tim-harmar.html:16:    <link rel="stylesheet" href="../css/navigation-enhancements.css">
+./team/tim-harmar.html:17:    <link rel="stylesheet" href="../css/print.css" media="print">
+./team/tim-harmar.html:21:    <script src="../js/main.js" defer></script>
+./team/tim-harmar.html:22:    <script src="../js/back-to-top.js" defer></script>
+./team/tim-harmar.html:23:    <script src="../js/visual-integration.js" defer></script>
+./team/tim-harmar.html:78:                <a href="../index.html"><img src="../NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" class="responsive-logo"></a>
+./team/tim-harmar.html:85:                    <li><a href="../index.html">Home</a></li>
+./team/tim-harmar.html:86:                    <li><a href="../about.html" class="active">About</a></li>
+./team/tim-harmar.html:88:                        <a href="../practice-areas.html">Practice Areas</a>
+./team/tim-harmar.html:90:                            <li><a href="../civil-litigation.html">Civil Litigation</a></li>
+./team/tim-harmar.html:91:                            <li><a href="../business-law.html">Business Law</a></li>
+./team/tim-harmar.html:92:                            <li><a href="../technology-law.html">Technology Law</a></li>
+./team/tim-harmar.html:93:                            <li><a href="../general-practice.html">General Practice</a></li>
+./team/tim-harmar.html:96:                    <li><a href="../resources.html">Resources</a></li>
+./team/tim-harmar.html:97:                    <li><a href="../blog/index.html">Blog</a></li>
+./team/tim-harmar.html:98:                    <li><a href="../contact.html">Contact</a></li>
+./team/tim-harmar.html:109:                    <li><a href="../index.html">Home</a></li>
+./team/tim-harmar.html:110:                    <li><a href="../about.html">About</a></li>
+./team/tim-harmar.html:120:                        <img src="../images/team/tim-harmar-large.jpg" alt="Tim J. Harmar - Founder & Principal Lawyer">
+./team/tim-harmar.html:220:                        <a href="../contact.html" class="btn btn-primary">Contact Me</a>
+./team/tim-harmar.html:227:                                <a href="../blog/posts/ai-regulation-implications.html">AI Regulation: Implications for Technology Companies</a>
+./team/tim-harmar.html:231:                                <a href="../blog/posts/virtual-courts-future.html">The Future of Virtual Courts in Ontario</a>
+./team/tim-harmar.html:246:                        <a href="../contact.html" class="btn btn-primary">Schedule a Consultation</a>
+./team/tim-harmar.html:257:                    <img src="../NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+./team/tim-harmar.html:263:                            <li><a href="../civil-litigation.html">Civil Litigation</a></li>
+./team/tim-harmar.html:264:                            <li><a href="../business-law.html">Business Law</a></li>
+./team/tim-harmar.html:265:                            <li><a href="../technology-law.html">Technology Law</a></li>
+./team/tim-harmar.html:266:                            <li><a href="../general-practice.html">General Practice</a></li>
+./team/tim-harmar.html:272:                            <li><a href="../about.html">About</a></li>
+./team/tim-harmar.html:273:                            <li><a href="../resources.html">Resources</a></li>
+./team/tim-harmar.html:274:                            <li><a href="../blog/index.html">Blog</a></li>
+./team/tim-harmar.html:275:                            <li><a href="../contact.html">Contact</a></li>
+./team/tim-harmar.html:293:                    <a href="../privacy-policy.html">Privacy Policy</a> |
+./team/tim-harmar.html:294:                    <a href="../terms-of-use.html">Terms of Use</a>

@@ -210,8 +210,6 @@ label {
 
 /* Site Header Styling */
 .site-header {
-  transform: translateZ(0);
-  backface-visibility: hidden;
   background-color: var(--white);
   box-shadow: var(--shadow-sm);
   position: sticky;
@@ -454,7 +452,7 @@ label {
 /* Alternate Hero Section with Static Background */
 .hero {
   position: relative;
-  background: url('../images/new-hero-background.jpg') no-repeat center center;
+  background: url('/images/new-hero-background.jpg') no-repeat center center;
   background-size: cover;
   padding: 8rem 2rem;
   text-align: center;
@@ -863,11 +861,11 @@ copyright p {
   .nav-menu {
     display: none;
   }
-  
+
   .mobile-menu-toggle {
     display: flex;
   }
-  
+
   .nav-menu.active {
     display: flex;
     flex-direction: column;
@@ -882,7 +880,7 @@ copyright p {
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
   }
-  
+
   .nav-menu a {
     padding: 1rem 0;
   }
@@ -890,7 +888,7 @@ copyright p {
 
 /* Value Props Section Enhancements */
 .value-props .card {
-    /* border-top: 4px solid var(--primary); -- Removed for consistency, using default card bottom border */
+    border-top: 4px solid var(--primary); /* Add a top border for visual separation */
     display: flex; /* Ensure flex layout for vertical alignment */
     flex-direction: column; /* Stack header and body vertically */
     /* text-align: center; is inherited */

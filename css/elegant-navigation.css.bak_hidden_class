@@ -14,7 +14,6 @@
   padding: var(--space-2) 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   /* Removed transition: all var(--transition-normal); to prevent flashing on scroll */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Added for smooth reappear */
 }
 
 .site-header.scrolled {
@@ -375,7 +374,7 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
   .primary-nav {
     gap: 0;
   }
-  
+
   .nav-link {
     padding: var(--space-2);
   }
@@ -396,38 +395,38 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
     z-index: 100;
     overflow-y: auto;
   }
-  
+
   body.mobile-nav-open .nav-wrapper {
     right: 0;
   }
-  
+
   .mobile-nav-toggle {
     display: block;
   }
-  
+
   .primary-nav {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .nav-item {
     width: 100%;
     border-bottom: 1px solid var(--light-gray);
   }
-  
+
   .nav-link {
     width: 100%;
     padding: var(--space-2) 0;
     border-radius: 0;
   }
-  
+
   .nav-cta {
     margin: var(--space-4) 0 0;
     width: 100%;
     text-align: center;
     padding: var(--space-2);
   }
-  
+
   .dropdown-menu {
     position: static;
     box-shadow: none;
@@ -440,11 +439,11 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
     border-bottom: none;
     border-left: 2px solid var(--gold);
   }
-  
+
   .has-dropdown.active .dropdown-menu {
     display: block;
   }
-  
+
   .has-dropdown .nav-link::after {
     position: absolute;
     right: var(--space-2);
@@ -511,13 +510,3 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
 .icon:hover {
   fill: #1A365D;
 }
-
-/* Styles for hiding header on scroll down - with transition */
-.site-header.hidden {
-  opacity: 0;
-  transform: translateY(-100%);
-  visibility: hidden;
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Delay visibility to prevent interaction */
-}
-
-/* Removed duplicated .site-header block that was appended */

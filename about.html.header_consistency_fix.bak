@@ -64,13 +64,12 @@
         "sameAs": [
             "https://www.linkedin.com/company/northernedge-legal-solutions",
             "https://twitter.com/northernedgelaw"
-        ] 
+        ]
     }
     </script>
 </head>
 <body>
     <!-- START STANDARDIZED HEADER NAV -->
-
 
 <header class="site-header">
   <div class="container header-container">
@@ -97,8 +96,8 @@
     <li><a href="/contact.html">Contact</a></li>
     <li>
         <form class="search-form" action="/search.html" method="get" role="search">
-            <label for="search-input-header-abt" class="sr-only">Search</label>
-            <input type="text" id="search-input-header-abt" name="q" placeholder="Search..." aria-label="Search">
+            <label for="search-input-header-about" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-about" name="q" placeholder="Search..." aria-label="Search">
             <button type="submit" aria-label="Submit Search">
                 <i class="fas fa-search"></i>
             </button>
@@ -113,7 +112,6 @@
     </nav>
   </div>
 </header>
-
 
     <!-- END STANDARDIZED HEADER NAV -->
 
@@ -131,9 +129,9 @@
  <div class="text-column fade-in slide-in-left delay-1">
                         <h2 class="elegant-heading text-3xl mb-4">Our Approach</h2>
                         <p>At NorthernEdge Legal Solutions, we believe in delivering legal services differently. As a modern boutique firm serving Northern Ontario, we combine deep legal expertise with personalized service and innovative technology to provide efficient, cost-effective representation for our clients.</p>
-                        
+
                         <p>Our practice is built around understanding our clients' unique challenges and opportunities in the Northern Ontario business landscape. We take the time to listen, to understand your objectives, and to craft strategic legal solutions that help you achieve your goals.</p>
-                        
+
                         <p>Whether you're facing a complex business transaction, navigating regulatory requirements, or need representation in litigation, our approach remains consistent: we provide thoughtful, pragmatic counsel with a focus on delivering tangible results.</p>
                     </div>
  <div class="image-column fade-in slide-in-right delay-2">
@@ -275,7 +273,7 @@
     </button>
     <!-- Core JavaScript files deferred for performance -->
     <script src="/js/main.js" defer></script>
-    <script src="/js/navigation.js" defer></script> 
+    <script src="/js/navigation.js" defer></script>
     <script src="/js/back-to-top.js" defer></script>
     <!-- Cookie Consent Script -->
     <script src="/js/cookie-consent.js" defer></script>
