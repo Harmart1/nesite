@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- START STANDARDIZED HEADER -->
+    <title>Contact Us | NorthernEdge Legal Solutions</title>
+    <meta name="description" content="Get in touch with NorthernEdge Legal Solutions. Schedule a consultation with our experienced legal team in Sault Ste. Marie, Ontario.">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- END STANDARDIZED HEADER -->
+
+    <!-- Page-specific CSS can be added here if needed -->
+    <!-- Removed redundant/old CSS links -->
+    <link rel="stylesheet" href="css/icon-styles.css"> <!-- Keep icon-styles CSS -->
+    <link rel="stylesheet" href="css/footer.css"> <!-- Keep footer CSS (might contain specific contact page footer styles) -->
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <!-- Removed inline styles -->
+    <link rel="stylesheet" href="/css/chatbot.css">
+</head>
+<body>
+    <!-- START STANDARDIZED HEADER NAV -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+                    <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                </a>
+            </div>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="/practice-areas.html">Practice Areas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="/business-law.html">Business Law</a></li>
+                            <li><a href="/technology-law.html">Technology Law</a></li>
+                            <li><a href="/general-practice.html">General Practice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/contact.html" class="active">Contact</a></li>
+                    <li>
+                        <form class="search-form" action="/search.html" method="get" role="search">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+                            <button type="submit" aria-label="Submit Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- END STANDARDIZED HEADER NAV -->
+
+    <main id="main-content">
+        <section class="page-header py-16 bg-neutral-lightest fade-in">
+            <div class="container">
+                <h1 class="elegant-heading centered">Contact Us</h1>
+                <p class="lead">Get in touch with our team to discuss how we can help with your legal needs.</p>
+            </div>
+        </section>
+
+        <section class="contact-section py-16 bg-white">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="main-content slide-in-right">
+                        <h2 class="elegant-heading">Send Us a Message</h2>
+                        <p>Fill out the form below to schedule a consultation or inquire about our services. We aim to respond to all inquiries within 1 business day.</p>
+
+                        <!-- Removed modal button -->
+
+                        <!-- Removed modal wrapper div -->
+                        <!-- Embed the form directly -->
+                        <form class="contact-form" id="contact-form" action="/send-contact-email" method="POST">
+                            <!-- Form error container will be auto-created by the validation script -->
+
+                            <div class="form-grid">
+                                <div class="form-group form-field">
+                                    <label for="name" class="form-required">Name</label>
+                                    <input type="text" id="name" name="Name" required aria-required="true" data-validate="required">
+                                </div>
+
+                                <div class="form-group form-field">
+                                    <label for="email" class="form-required">Email</label>
+                                    <input type="email" id="email" name="Email" required aria-required="true" data-validate="required email">
+                                </div>
+
+                                <div class="form-group form-field">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="Phone" data-validate="phone">
+                                </div>
+
+                                <div class="form-group form-field">
+                                    <label for="service" class="form-required">Service Needed</label>
+                                    <select id="service" name="Service" required aria-required="true" data-validate="required">
+                                        <option value="" selected disabled>Please select...</option>
+                                        <option value="Civil Litigation">Civil Litigation</option>
+                                        <option value="Business Law">Business Law</option>
+                                        <option value="Technology Law">Technology Law</option>
+                                        <option value="General Practice">General Practice</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-field">
+                                <label for="message" class="form-required">Your Message</label>
+                                <textarea id="message" name="Message" required aria-required="true" data-validate="required"></textarea>
+                            </div>
+
+                            <div class="form-group form-field">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="privacy" name="PrivacyConsent" required aria-required="true" data-validate="required">
+                                    <label for="privacy" class="form-required">I agree to the <a href="privacy-policy.html">Privacy Policy</a> and consent to being contacted via the provided information.</label>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="Subject" value="Website Contact Form Submission">
+                            <button type="submit" class="btn btn-primary pulse" aria-label="Submit Inquiry">Submit Inquiry</button>
+                        </form>
+                        <!-- Removed modal closing divs -->
+                    </div>
+
+                    <aside class="sidebar slide-in-left">
+                        <div class="contact-info-card">
+                            <h2 class="elegant-heading">Contact Information</h2>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <!-- Replaced img with Font Awesome icon -->
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>Address</h3>
+                                    <address>
+                                        67 Hugill St.<br>
+                                        Sault Ste. Marie, Ontario<br>
+                                        P6A 4E6
+                                    </address>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <!-- Replaced img with Font Awesome icon -->
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <!-- Replaced img with Font Awesome icon -->
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>Phone</h3>
+                                    <p><a href="tel:+17059993657">(705) 999-3657</a></p>
+                                </div>
+                            </div>
+
+                            <div class="office-hours">
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                                Saturday - Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section py-16 bg-neutral-lightest">
+            <div class="container">
+                <h2 class="elegant-heading centered">Our Location</h2>
+                <div id="contact-map"></div>
+            </div>
+        </section>
+
+        <section class="faq-section py-16 bg-white">
+            <div class="container">
+                <h2 class="elegant-heading centered">Frequently Asked Questions</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" aria-expanded="false" aria-label="Toggle How can I schedule a consultation?">
+                                How can I schedule a consultation?
+                            </button>
+                        </h3>
+                        <div class="accordion-content">
+                            <p>You can schedule a consultation by filling out our contact form, calling our office at (705) 123-4567, or sending an email to info@northernedgelegal.com. We offer both in-person and virtual consultations to accommodate your preferences and schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" aria-expanded="false" aria-label="Toggle Do you offer virtual appointments?">
+                                Do you offer virtual appointments?
+                            </button>
+                        </h3>
+                        <div class="accordion-content">
+                            <p>Yes, we offer virtual consultations via secure video conferencing. This option is available for most legal matters and provides a convenient alternative for clients who prefer not to travel to our office or who live outside the immediate area.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" aria-expanded="false" aria-label="Toggle What information should I prepare for my first consultation?">
+                                What information should I prepare for my first consultation?
+                            </button>
+                        </h3>
+                        <div class="accordion-content">
+                            <p>For your first consultation, it's helpful to bring any documents related to your legal matter, a summary of key events and dates, and a list of your questions or concerns. The more information you can provide, the more effectively we can assess your situation and provide guidance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section py-16 bg-primary-lightest">
+            <div class="container">
+                <div class="cta-content fade-in">
+                    <h2 class="elegant-heading centered">Ready to Take the First Step?</h2>
+                    <p>Our team is committed to providing prompt, professional legal guidance.</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+17051234567" class="btn btn-primary pulse" aria-label="Call Now">Call Now</a>
+                        <a href="about.html" class="btn btn-secondary" aria-label="Learn About Our Team">Learn About Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- START STANDARDIZED FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-container">
+                        <a href="/index.html">
+                            <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Practice Areas</h3>
+                        <ul>
+                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="/business-law.html">Business Law</a></li>
+                            <li><a href="/technology-law.html">Technology Law</a></li>
+                            <li><a href="/general-practice.html">General Practice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/resources.html">Resources</a></li>
+                            <li><a href="/blog/index.html">Blog</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <address>
+                            67 Hugill St.<br>
+                            Sault Ste. Marie, Ontario<br>
+                            P6A 4E6
+                        </address>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="/privacy-policy.html">Privacy Policy</a> |
+                    <a href="/terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END STANDARDIZED FOOTER -->
+
+    <!-- START STANDARDIZED FOOTER SCRIPTS -->
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z" fill="white"/>
+        </svg>
+    </button>
+
+    <!-- Core JavaScript files deferred for performance -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navigation.js" defer></script>
+    <script src="/js/back-to-top.js" defer></script>
+
+    <!-- Conditional/Page-specific scripts -->
+    <!-- Leaflet JS for map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <script>
+        // Initialize Leaflet map
+        document.addEventListener('DOMContentLoaded', function() {
+            var map = L.map('contact-map').setView([46.522, -84.345], 13); // Coordinates for Sault Ste. Marie
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+            var marker = L.marker([46.522, -84.345]).addTo(map);
+            marker.bindPopup("<b>NorthernEdge Legal Solutions</b><br>67 Hugill St.").openPopup();
+        });
+
+        // Conditionally load contact form validation
+        if (document.querySelector('form.contact-form')) {
+            const formScript = document.createElement('script');
+            formScript.src = '/js/contact-form-validation.js';
+            formScript.defer = true;
+            document.body.appendChild(formScript);
+        }
+    </script>
+
+    <!-- Cookie Consent Script (can also be loaded conditionally or with delay) -->
+    <script src="/js/cookie-consent.js" defer></script>
+    <!-- END STANDARDIZED FOOTER SCRIPTS -->
+
+    <!-- Removed old script links -->
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-closed"> <!-- Initially closed -->
+    <!-- Floating Action Button to open chat -->
+    <button id="chatbot-fab" class="chatbot-fab" aria-label="Open Chat" type="button">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+        <span class="sr-only">Open Chat</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chatbot-window" class="chatbot-window" role="dialog" aria-modal="true" aria-labelledby="chatbot-header-title">
+        <div class="chatbot-header">
+            <h3 id="chatbot-header-title" class="chatbot-title">How can we help?</h3>
+            <button id="chatbot-close-btn" class="chatbot-close-btn" aria-label="Close Chat" type="button">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="sr-only">Close Chat</span>
+            </button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages" role="log" aria-live="polite">
+            <!-- Welcome message will be added by JS -->
+        </div>
+        <div id="chatbot-questions-area" class="chatbot-questions-area">
+            <!-- Predefined question buttons will be populated by JavaScript -->
+        </div>
+        <div class="chatbot-footer">
+            <p class="text-xs text-muted">NorthernEdge Assistant</p>
+        </div>
+    </div>
+</div>
+    <script src="/js/chatbot.js" defer></script>
+</body>
+</html>

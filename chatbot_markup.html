@@ -1,0 +1,28 @@
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-closed"> <!-- Initially closed -->
+    <!-- Floating Action Button to open chat -->
+    <button id="chatbot-fab" class="chatbot-fab" aria-label="Open Chat" type="button">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+        <span class="sr-only">Open Chat</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chatbot-window" class="chatbot-window" role="dialog" aria-modal="true" aria-labelledby="chatbot-header-title" style="display: none;">
+        <div class="chatbot-header">
+            <h3 id="chatbot-header-title" class="chatbot-title">How can we help?</h3>
+            <button id="chatbot-close-btn" class="chatbot-close-btn" aria-label="Close Chat" type="button">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="sr-only">Close Chat</span>
+            </button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages" role="log" aria-live="polite">
+            <!-- Welcome message will be added by JS -->
+        </div>
+        <div id="chatbot-questions-area" class="chatbot-questions-area">
+            <!-- Predefined question buttons will be populated by JavaScript -->
+        </div>
+        <div class="chatbot-footer">
+            <p class="text-xs text-muted">NorthernEdge Assistant</p>
+        </div>
+    </div>
+</div>

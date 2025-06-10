@@ -38,6 +38,7 @@
     crossorigin=""/>
     
     <!-- Removed inline styles -->
+    <link rel="stylesheet" href="/css/chatbot.css">
 </head>
 <body>
     <!-- START STANDARDIZED HEADER NAV -->
@@ -84,15 +85,15 @@
     <main id="main-content">
         <section class="page-header py-16 bg-neutral-lightest fade-in">
             <div class="container">
-                <h1 class="elegant-heading centered">Contact Us</h1>
-                <p class="lead">Get in touch with our team to discuss how we can help with your legal needs.</p>
+                <h1 class="elegant-heading centered fade-in slide-down">Contact Us</h1>
+                <p class="lead fade-in slide-down delay-1">Get in touch with our team to discuss how we can help with your legal needs.</p>
             </div>
         </section>
 
-        <section class="contact-section py-16 bg-white">
+        <section class="contact-section py-16 bg-white fade-in">
             <div class="container">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="main-content slide-in-right">
+                    <div class="main-content slide-in-right fade-in delay-1">
                         <h2 class="elegant-heading">Send Us a Message</h2>
                         <p>Fill out the form below to schedule a consultation or inquire about our services. We aim to respond to all inquiries within 1 business day.</p>
                         
@@ -150,7 +151,7 @@
                         <!-- Removed modal closing divs -->
                     </div>
                     
-                    <aside class="sidebar slide-in-left">
+                    <aside class="sidebar slide-in-left fade-in delay-2">
                         <div class="contact-info-card">
                             <h2 class="elegant-heading">Contact Information</h2>
                             
@@ -203,18 +204,18 @@
         </section>
         
         <!-- Map Section -->
-        <section class="map-section py-16 bg-neutral-lightest">
+        <section class="map-section py-16 bg-neutral-lightest fade-in">
             <div class="container">
-                <h2 class="elegant-heading centered">Our Location</h2>
-                <div id="contact-map"></div>
+                <h2 class="elegant-heading centered fade-in delay-1">Our Location</h2>
+                <div id="contact-map" class="fade-in delay-2"></div>
             </div>
         </section>
 
-        <section class="faq-section py-16 bg-white">
+        <section class="faq-section py-16 bg-white fade-in">
             <div class="container">
-                <h2 class="elegant-heading centered">Frequently Asked Questions</h2>
+                <h2 class="elegant-heading centered fade-in delay-1">Frequently Asked Questions</h2>
                 <div class="accordion">
-                    <div class="accordion-item">
+                    <div class="accordion-item fade-in slide-up delay-1">
                         <h3 class="accordion-header">
                             <button class="accordion-button" aria-expanded="false" aria-label="Toggle How can I schedule a consultation?">
                                 How can I schedule a consultation?
@@ -225,7 +226,7 @@
                         </div>
                     </div>
                     
-                    <div class="accordion-item">
+                    <div class="accordion-item fade-in slide-up delay-2">
                         <h3 class="accordion-header">
                             <button class="accordion-button" aria-expanded="false" aria-label="Toggle Do you offer virtual appointments?">
                                 Do you offer virtual appointments?
@@ -236,7 +237,7 @@
                         </div>
                     </div>
                     
-                    <div class="accordion-item">
+                    <div class="accordion-item fade-in slide-up delay-3">
                         <h3 class="accordion-header">
                             <button class="accordion-button" aria-expanded="false" aria-label="Toggle What information should I prepare for my first consultation?">
                                 What information should I prepare for my first consultation?
@@ -250,14 +251,14 @@
             </div>
         </section>
 
-        <section class="cta-section py-16 bg-primary-lightest">
+        <section class="cta-section py-16 bg-primary-lightest fade-in">
             <div class="container">
                 <div class="cta-content fade-in">
-                    <h2 class="elegant-heading centered">Ready to Take the First Step?</h2>
-                    <p>Our team is committed to providing prompt, professional legal guidance.</p>
+                    <h2 class="elegant-heading centered fade-in delay-1">Ready to Take the First Step?</h2>
+                    <p class="fade-in delay-2">Our team is committed to providing prompt, professional legal guidance.</p>
                     <div class="cta-buttons">
-                        <a href="tel:+17051234567" class="btn btn-primary pulse" aria-label="Call Now">Call Now</a>
-                        <a href="about.html" class="btn btn-secondary" aria-label="Learn About Our Team">Learn About Our Team</a>
+                        <a href="tel:+17051234567" class="btn btn-primary pulse fade-in delay-3" aria-label="Call Now">Call Now</a>
+                        <a href="about.html" class="btn btn-secondary fade-in delay-3">Learn About Our Team</a>
                     </div>
                 </div>
             </div>
@@ -361,5 +362,34 @@
     <!-- END STANDARDIZED FOOTER SCRIPTS -->
 
     <!-- Removed old script links -->
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-closed"> <!-- Initially closed -->
+    <!-- Floating Action Button to open chat -->
+    <button id="chatbot-fab" class="chatbot-fab" aria-label="Open Chat" type="button">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+        <span class="sr-only">Open Chat</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chatbot-window" class="chatbot-window" role="dialog" aria-modal="true" aria-labelledby="chatbot-header-title">
+        <div class="chatbot-header">
+            <h3 id="chatbot-header-title" class="chatbot-title">How can we help?</h3>
+            <button id="chatbot-close-btn" class="chatbot-close-btn" aria-label="Close Chat" type="button">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="sr-only">Close Chat</span>
+            </button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages" role="log" aria-live="polite">
+            <!-- Welcome message will be added by JS -->
+        </div>
+        <div id="chatbot-questions-area" class="chatbot-questions-area">
+            <!-- Predefined question buttons will be populated by JavaScript -->
+        </div>
+        <div class="chatbot-footer">
+            <p class="text-xs text-muted">NorthernEdge Assistant</p>
+        </div>
+    </div>
+</div>
+    <script src="/js/chatbot.js" defer></script>
 </body>
 </html>

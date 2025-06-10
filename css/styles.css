@@ -386,7 +386,7 @@ a:hover, a:focus {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), 
-              url('../assets/hero-background.jpg');
+              url('/assets/hero-background.jpg');
   background-size: cover;
   background-position: center;
   padding: var(--space-xl) 0;

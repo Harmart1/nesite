@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- START STANDARDIZED HEADER -->
+    <title>Practice Areas | NorthernEdge Legal Solutions</title>
+    <meta name="description" content="Explore our legal services including civil litigation, business law, technology law, and general practice - serving clients throughout Northern Ontario.">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- END STANDARDIZED HEADER -->
+
+    <!-- Page-specific CSS can be added here if needed -->
+    <!-- Removed redundant/old CSS links -->
+    <link rel="stylesheet" href="css/icon-styles.css"> <!-- Keep icon-styles CSS -->
+
+    <!-- Removed inline styles -->
+</head>
+<body>
+    <!-- START STANDARDIZED HEADER NAV -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+                    <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                </a>
+            </div>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="/practice-areas.html" class="active">Practice Areas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="/business-law.html">Business Law</a></li>
+                            <li><a href="/technology-law.html">Technology Law</a></li>
+                            <li><a href="/general-practice.html">General Practice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li>
+                        <form class="search-form" action="/search.html" method="get" role="search">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
+                            <button type="submit" aria-label="Submit Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- END STANDARDIZED HEADER NAV -->
+
+    <main id="main-content">
+        <section class="py-16 bg-neutral-lightest page-header fade-in">
+            <div class="container">
+                <h1 class="elegant-heading fade-in slide-down">Our Practice Areas</h1>
+                <p class="lead fade-in slide-down delay-1">At NorthernEdge Legal Solutions, we deliver comprehensive legal services with a client-centered approach. Specializing in civil litigation, business law, technology, and intellectual property, our expertise empowers businesses and innovators throughout Ontario. Our proven track record in navigating complex legal challenges ensures that your interests are safeguarded with precision and dedication.</p>
+            </div>
+        </section>
+
+        <section class="practice-areas-overview py-16 bg-neutral-lightest fade-in">
+            <div class="container">
+                <div class="practice-area-card slide-in-right fade-in slide-up delay-1">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/business-icon.svg" alt="Business Law Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2 class="elegant-heading">Business Law & Corporate Governance</h2>
+                        <p>We advise on matters ranging from mergers and acquisitions to regulatory compliance. Our seasoned counsel guides businesses through complex commercial transactions and corporate governance challenges, ensuring robust legal strategies for sustainable growth.</p>
+                    </div>
+                </div>
+
+                <div class="practice-area-card slide-in-left fade-in slide-up delay-2">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/litigation-icon.svg" alt="Civil Litigation Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2 class="elegant-heading">Civil Litigation & Dispute Resolution</h2>
+                        <p>With a focus on resolution and risk management, our litigation team is committed to providing vigorous representation in complex civil disputes. We strive to achieve favorable outcomes through negotiation, mediation, or trial, tailored to your unique circumstances.</p>
+                    </div>
+                </div>
+
+                <div class="practice-area-card slide-in-right fade-in slide-up delay-3">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/technology-icon.svg" alt="Technology Law Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2 class="elegant-heading">Technology Law & Cybersecurity</h2>
+                        <p>In today's rapidly evolving digital landscape, our firm provides expert legal guidance on technology transactions, cybersecurity risk management, and regulatory compliance. We help clients protect their digital assets and navigate the intricate intersection of law and technology.</p>
+                    </div>
+                </div>
+
+                <div class="practice-area-card slide-in-left fade-in slide-up delay-4">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/intellectual-property-icon.svg" alt="Intellectual Property Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2 class="elegant-heading">Intellectual Property & Innovation</h2>
+                        <p>Our intellectual property practice is dedicated to protecting the creativity and innovation of our clients. We handle everything from trademark and copyright registration to strategic litigation, ensuring your competitive edge in the market remains uncompromised.</p>
+                    </div>
+                </div>
+
+                <div class="practice-area-card slide-in-right fade-in slide-up">
+                    <div class="practice-area-icon">
+                        <img src="images/icons/general-practice-icon.svg" alt="General Practice Icon">
+                    </div>
+                    <div class="practice-area-content">
+                        <h2 class="elegant-heading">General Practice</h2>
+                        <p>Our General Practice area covers a wide range of legal services designed to meet the diverse needs of our clients. Whether you require assistance with family law, real estate transactions, estate planning, or other common legal matters, our experienced team is here to provide expert guidance and representation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="client-focused py-16 bg-white fade-in">
+            <div class="container">
+                <h2 class="section-title text-center elegant-heading">Our Client-Focused Approach</h2>
+                <div class="approach-grid">
+                    <div class="approach-item fade-in slide-up delay-1">
+                        <div class="approach-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="elegant-heading">Personalized Service</h3>
+                        <p>Every client receives direct, personalized attention from our experienced legal team. We take the time to understand your unique needs and tailor our services to achieve the best possible outcomes.</p>
+                    </div>
+                    <div class="approach-item fade-in slide-up delay-2">
+                        <div class="approach-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="elegant-heading">Expertise & Experience</h3>
+                        <p>Our team brings a wealth of expertise and experience to every case. We stay current with the latest legal developments to provide informed, strategic advice and representation.</p>
+                    </div>
+                    <div class="approach-item fade-in slide-up delay-3">
+                        <div class="approach-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="elegant-heading">Client-Centered Solutions</h3>
+                        <p>We prioritize our clients' goals and work diligently to develop solutions that meet their needs. Our client-centered approach ensures that we are always working in your best interest.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section py-16 bg-neutral-lightest fade-in">
+            <div class="container">
+                <div class="cta-content fade-in">
+                    <h2 class="elegant-heading centered fade-in delay-1">Ready to Discuss Your Legal Needs?</h2>
+                    <p class="fade-in delay-2">Schedule a consultation with our team to explore how our expertise can help you achieve your goals.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary fade-in delay-3 pulse">Get In Touch</a>
+                        <a href="about.html" class="btn btn-secondary fade-in delay-4">Learn About Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- START STANDARDIZED FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-container">
+                        <a href="/index.html">
+                            <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Practice Areas</h3>
+                        <ul>
+                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="/business-law.html">Business Law</a></li>
+                            <li><a href="/technology-law.html">Technology Law</a></li>
+                            <li><a href="/general-practice.html">General Practice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/resources.html">Resources</a></li>
+                            <li><a href="/blog/index.html">Blog</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <address>
+                            67 Hugill St.<br>
+                            Sault Ste. Marie, Ontario<br>
+                            P6A 4E6
+                        </address>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="/privacy-policy.html">Privacy Policy</a> |
+                    <a href="/terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END STANDARDIZED FOOTER -->
+
+    <!-- START STANDARDIZED FOOTER SCRIPTS -->
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z" fill="white"/>
+        </svg>
+    </button>
+
+    <!-- Core JavaScript files deferred for performance -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navigation.js" defer></script>
+    <script src="/js/back-to-top.js" defer></script>
+
+    <!-- Conditional/Page-specific scripts can be added below by the including page if needed -->
+
+    <!-- Cookie Consent Script (can also be loaded conditionally or with delay) -->
+    <script src="/js/cookie-consent.js" defer></script>
+    <!-- END STANDARDIZED FOOTER SCRIPTS -->
+</body>
+</html>

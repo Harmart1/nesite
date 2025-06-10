@@ -357,3 +357,263 @@
     padding: 1rem 0;
   }
 }
+
+/* Mobile Optimization for index.html - Hero Buttons */
+@media (max-width: 768px) {
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3, 1rem);
+  }
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 320px;
+    padding-top: var(--space-3, 0.75rem); /* Adjusted fallback to match var(--space-3) more closely */
+    padding-bottom: var(--space-3, 0.75rem);
+  }
+}
+
+/* Mobile Optimization for index.html - Practice Area Cards */
+@media (max-width: 768px) {
+  .practice-areas-overview .card .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .practice-areas-overview .card .practice-area-icon {
+    margin-right: 0;
+    margin-bottom: var(--space-3, 1rem);
+  }
+  .practice-areas-overview .card .card-body {
+    text-align: center;
+  }
+  .practice-areas-overview .card .btn {
+    width: auto;
+    display: inline-block;
+    margin-top: var(--space-3, 1rem);
+  }
+}
+
+/* Mobile Optimization for about.html - Firm Overview */
+@media (max-width: 767px) { /* Max for 'sm' screens, before 'md' grid kicks in */
+  .firm-overview .grid {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+  }
+  .firm-overview .image-column {
+    /* order: -1; If image should be on top, HTML needs to be structured for this or JS used */
+    margin-bottom: var(--space-6, 1.5rem);
+  }
+  .firm-overview .image-column img.rounded-image {
+    width: 100%;
+    max-width: 380px; /* Optional: constrain image width on mobile */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .firm-overview .text-column {
+    text-align: center;
+  }
+  .firm-overview .text-column h2.elegant-heading {
+    text-align: center;
+  }
+  .firm-overview .text-column h2.elegant-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile Optimization - General CTA Section Buttons */
+@media (max-width: 768px) {
+  .cta-section .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3, 1rem);
+  }
+  .cta-section .btn {
+    width: 100%;
+    max-width: 320px;
+    padding-top: var(--space-3, 0.75rem);
+    padding-bottom: var(--space-3, 0.75rem);
+  }
+}
+
+/* Mobile Optimization for about.html - Values Grid Cards */
+@media (max-width: 768px) {
+  .values-grid .card {
+    text-align: center;
+  }
+  .values-grid .value-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .values-grid .value-icon img,
+  .values-grid .value-icon svg {
+    margin-left: auto; /* Center icon if it is a block or inline-block */
+    margin-right: auto;
+  }
+}
+
+/* Mobile Optimization for practice-areas.html - Practice Area Cards */
+@media (max-width: 768px) {
+  .practice-area-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .practice-area-card .practice-area-icon {
+    margin-right: 0;
+    margin-bottom: var(--space-4, 1rem);
+  }
+  .practice-area-card .practice-area-content {
+    text-align: center;
+  }
+  .practice-area-card .practice-area-content h3.elegant-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile Optimization for business-law.html (etc) - Jump Navigation */
+@media (max-width: 768px) {
+  .section-nav {
+    position: static; /* Override sticky */
+    margin-top: var(--space-6, 1.5rem);
+    margin-bottom: var(--space-6, 1.5rem);
+    box-shadow: none;
+    border-top: 1px solid var(--neutral-light, #e0e5eb); /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Added top border for separation blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    border-bottom: 1px solid var(--neutral-light, #e0e5eb);
+    border-radius: 0;
+    background-color: var(--neutral-lightest, #f7f9fc);
+  }
+  .section-nav .section-nav-list { /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Assuming this class is on the ul blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: var(--space-2, 0.5rem); /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Padding for scrollbar blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    padding-bottom: var(--space-2, 0.5rem);
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    border-bottom: none;
+    justify-content: flex-start; /* Align items to start */
+  }
+  .section-nav .section-nav-item { /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Assuming this class is on li if used blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .section-nav .section-nav-link {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+    display: inline-block; /* Ensure proper spacing and border */
+  }
+  .section-nav .section-nav-link:hover,
+  .section-nav .section-nav-link.active {
+    border-left: none;
+    border-bottom-color: var(--gold, #D4AF37);
+    background-color: transparent;
+    padding-left: var(--space-3, 0.75rem);
+    color: var(--primary, #1A365D);
+  }
+}
+
+/* Mobile Optimization for business-law.html (etc) - Content Grid */
+@media (max-width: 767px) { /* Using 767px to match firm-overview changes */
+  .content-grid {
+    grid-template-columns: 1fr; /* Stack columns */
+  }
+  .content-grid > .sidebar { /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Assuming direct child or specific class for sidebar blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    margin-top: var(--space-6, 1.5rem);
+  }
+}
+
+/* Mobile Optimization for resources.html - Resource Filters */
+@media (max-width: 767px) { /* Max for 'sm' screens, before 'md' flex kicks in from main.css */
+  .resource-filters > .container {
+    flex-direction: column;
+    align-items: stretch; /* Make search bar full width too */
+  }
+  .resource-filters .category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: var(--space-4, 1rem);
+    gap: var(--space-2, 0.5rem);
+  }
+  .resource-filters .category-tab {
+    margin: 0; /* Removed individual margins as gap is used */
+  }
+  .resource-filters .search-bar input.form-control {
+    width: 100%;
+  }
+}
+
+/* Mobile Optimization for contact.html - Contact Section Grid */
+@media (max-width: 767px) {
+  .contact-section .grid {
+    grid-template-columns: 1fr; /* Ensure it stacks to one column */
+  }
+  .contact-section .grid > .sidebar {
+    margin-top: var(--space-6, 1.5rem);
+    /* order: -1; /* User can uncomment if contact info should appear first */
+  }
+}
+
+/* Mobile Optimization for contact.html - Map Height */
+@media (max-width: 768px) {
+  #contact-map {
+    height: 300px; /* Reduce height for mobile */
+  }
+}
+
+/* Mobile Optimization for contact.html - Form Elements */
+@media (max-width: 768px) {
+  .contact-form .btn {
+    width: 100%;
+    padding-top: var(--space-3, 0.75rem);
+    padding-bottom: var(--space-3, 0.75rem);
+  }
+}
+
+/* Mobile Optimization for blog/index.html - Blog Filters */
+@media (max-width: 768px) {
+  .blog-filters .category-tabs, /* If category-tabs is the container */
+  .blog-categories {
+    justify-content: center; /* Center the wrapped tags */
+    gap: var(--space-2, 0.5rem);
+  }
+  .blog-filters .category-tab,
+  .blog-categories .category-tag {
+    margin: 0; /* Remove individual margins if gap is used by parent */
+  }
+}
+
+/* Mobile Optimization for blog/index.html - Pagination */
+@media (max-width: 768px) {
+  .blog-pagination {
+    flex-wrap: wrap;
+    gap: var(--space-2, 0.5rem);
+  }
+  .blog-pagination .pagination-button,
+  .blog-pagination .pagination-links a,
+  .blog-pagination .pagination-links span {
+    padding: var(--space-1, 0.25rem) var(--space-2, 0.5rem); /* Smaller padding */
+    font-size: var(--text-sm, 0.875rem);
+    min-width: 2rem; /* Slightly smaller min-width */
+    height: 2.25rem; /* Slightly smaller height */
+  }
+}
+
+/* Mobile Optimization for blog/posts/*.html - Social Share Container */
+@media (max-width: 768px) {
+  .social-share {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3, 0.75rem);
+  }
+  .social-share a img {
+    max-width: 32px; /* Example constraint */
+    height: auto;
+  }
+}

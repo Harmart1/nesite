@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post Title | NorthernEdge Legal Solutions</title>
+<meta name="description" content="Brief description of the blog post content.">
+<meta name="keywords" content="Keyword1, Keyword2, Keyword3">
+<meta name="author" content="Author Name">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/favicon_io/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/favicon_io/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- CSS Files -->
+    <link rel="stylesheet" href="/css/elegant-design-system.css">
+    <link rel="stylesheet" href="/css/elegant-navigation.css">
+    <link rel="stylesheet" href="/css/typography-animations.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/critical.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/visual-enhancements.css">
+    <link rel="stylesheet" href="/css/accessibility-enhancements.css">
+    <link rel="stylesheet" href="/css/accessibility.css">
+    <link rel="stylesheet" href="/css/blog.css">
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Post Title",
+      "image": "https://www.northernedgelegal.com/images/blog/post-thumbnail.jpg",
+      "datePublished": "2024-MM-DDT08:00:00+00:00",
+      "dateModified": "2024-MM-DDT08:00:00+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "Author Name"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NorthernEdge Legal Solutions",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.northernedgelegal.com/NorthernEdge%20Legal%20Logo.jpg"
+        }
+      },
+      "description": "Brief description of the blog post content."
+    }
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
+    </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/blog/index.html" class="active">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-blogpost" class="sr-only">Search</label> <!-- Unique ID for search input -->
+            <input type="text" id="search-input-header-blogpost" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+        <!-- ... -->
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <div class="container">
+                <div class="blog-header">
+                    <div class="blog-categories">
+                        <a href="/index.html?category=category1" class="category-tag">Category 1</a>
+                        <a href="/index.html?category=category2" class="category-tag">Category 2</a>
+                    </div>
+                    <h1>Post Title</h1>
+                    <div class="blog-meta">
+                        <span class="author">By Author Name</span>
+                        <span class="date">Month DD, YYYY</span>
+                    </div>
+                </div>
+
+                <img src="/images/blog/post-image.jpg" alt="Image description" class="blog-featured-image">
+
+                <div class="blog-content">
+                    <!-- Your blog post content goes here -->
+                    <p>Introduction paragraph...</p>
+
+                    <h2>First Section Heading</h2>
+                    <p>Section content...</p>
+
+                    <h2>Second Section Heading</h2>
+                    <p>Section content...</p>
+
+                    <!-- Add as many sections as needed -->
+
+                    <div class="author-bio">
+                        <img src="/images/team/author-name.jpg" alt="Author Name" class="author-image">
+                        <div class="author-details">
+                            <h3>About the Author</h3>
+                            <p><strong>Author Name</strong> is [author bio]. With experience in [areas of expertise], [Author First Name] helps clients [value proposition].</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-navigation">
+                    <div class="prev-post">
+                        <a href="previous-post.html">← Previous: Previous Post Title</a>
+                    </div>
+                    <div class="next-post">
+                        <a href="next-post.html">Next: Next Post Title →</a>
+                    </div>
+                </div>
+
+                <div class="related-posts">
+                    <h3>Related Articles</h3>
+                    <div class="post-grid">
+                        <!-- Related posts here -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+
+<footer class="py-12 bg-navy-dark text-white">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 footer-links">
+      <div class="footer-column">
+        <h3 class="elegant-heading text-lg">Practice Areas</h3>
+        <ul>
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3 class="elegant-heading text-lg">Quick Links</h3>
+        <ul>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/resources.html">Resources</a></li>
+            <li><a href="/blog/index.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3 class="elegant-heading text-lg">Contact</h3>
+        <address>
+            67 Hugill St.<br>
+            Sault Ste. Marie, Ontario<br>
+            P6A 4E6
+        </address>
+        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+      </div>
+      <div class="footer-column footer-logo-area">
+         <div class="logo-container">
+             <a href="/index.html">
+                 <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" style="max-width: 200px; margin-bottom: 1rem;">
+             </a>
+         </div>
+         <p class="text-sm">NorthernEdge Legal Solutions: Providing expert legal services with a client-focused approach.</p>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-slate-dark text-center">
+      <p class="text-sm">&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
+      <div class="legal-links text-sm">
+          <a href="/privacy-policy.html">Privacy Policy</a> |
+          <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+        <!-- ... -->
+    </footer>
+<!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z" fill="white"/>
+        </svg>
+    </button>
+    <!-- Core JavaScript files deferred for performance -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navigation.js" defer></script>
+    <script src="/js/back-to-top.js" defer></script>
+    <!-- Cookie Consent Script -->
+    <script src="/js/cookie-consent.js" defer></script>
+
+</body>
+</html>

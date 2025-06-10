@@ -14,8 +14,6 @@ const PRECACHE_URLS = [
   '/css/typography-animations.css',
   '/css/accessibility-enhancements.css',
   '/js/visual-integration.js',
-  '/images/northernedge-logo.svg',
-  '/images/northernedge-logo-white.svg',
   '/favicon/favicon.ico',
   '/offline.html',
   '/404.html'

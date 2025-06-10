@@ -10,7 +10,7 @@ class PDFResourceGenerator {
       filename: 'resource-document.pdf',
       pageSize: 'a4',
       margin: 15,
-      headerLogo: '/images/northernedge-logo.svg',
+      headerLogo: '/NorthernEdge%20Legal%20Logo.jpg',
       footerText: '© 2024 NorthernEdge Legal Solutions. All rights reserved.',
       includeDate: true,
       includePagination: true,

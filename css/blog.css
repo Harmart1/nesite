@@ -21,11 +21,11 @@
 }
 
 .blog-header h1 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4); /* Was 1rem */
 }
 
 .blog-header .lead {
-  font-size: 1.2rem;
+  font-size: var(--text-lg); /* Was 1.2rem, var is 1.25rem */
   max-width: 700px;
   margin: 0 auto;
   opacity: 0.9;
@@ -259,7 +259,7 @@
 }
 
 .blog-card-content {
-  padding: 1.5rem;
+  padding: var(--space-4); /* Was 1.5rem */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -280,8 +280,8 @@
 }
 
 .blog-card h3 {
-  margin: 0.5rem 0 1rem;
-  font-size: 1.3rem;
+  margin: var(--space-2) 0 var(--space-3); /* Was 0.5r 0 1r */
+  font-size: var(--text-lg); /* Was 1.3rem */
 }
 
 .blog-card h3 a {
@@ -295,7 +295,7 @@
 }
 
 .blog-card p {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-4); /* Was 1.5rem */
   font-size: 0.9375rem;
   color: var(--black);
   line-height: 1.6;
@@ -433,8 +433,8 @@
 }
 
 .blog-post h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: var(--text-4xl); /* Was 2.5rem, var is 3rem */
+  margin-bottom: var(--space-4); /* Was 1rem */
 }
 
 .blog-featured-image {
@@ -460,14 +460,14 @@
 }
 
 .blog-content h2 {
-  font-size: 1.8rem;
-  margin: 2.5rem 0 1rem;
+  font-size: var(--text-2xl); /* Was 1.8rem, var is 1.875rem */
+  margin: var(--space-6) 0 var(--space-3); /* Was 2.5r 0 1r */
   color: var(--primary-dark);
 }
 
 .blog-content h3 {
-  font-size: 1.4rem;
-  margin: 2rem 0 0.75rem;
+  font-size: var(--text-xl); /* Was 1.4rem, var is 1.5rem */
+  margin: var(--space-5) 0 var(--space-2); /* Was 2r 0 0.75r */
   color: var(--primary-dark);
 }
 
@@ -755,5 +755,39 @@
   
   .search-bar {
     max-width: 100%;
+  }
+}
+
+/* Blog Post Content Link Polish */
+.blog-content.prose a,
+.blog-content.prose a:visited {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: 500;
+}
+.blog-content.prose a:hover {
+  color: var(--link-hover-color);
+}
+
+
+/* Mobile Optimizations for Blog Post Template Elements */
+@media (max-width: 768px) {
+  .author-bio {
+    flex-direction: column;
+    text-align: center;
+  }
+  .author-bio .author-image {
+    margin-right: 0;
+    margin-bottom: var(--space-4, 1rem);
+  }
+
+  .blog-navigation {
+    flex-direction: column;
+    gap: var(--space-4, 1rem);
+  }
+  .blog-navigation .prev-post,
+  .blog-navigation .next-post {
+    max-width: 100%;
+    text-align: center;
   }
 }

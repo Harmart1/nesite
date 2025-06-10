@@ -1,0 +1,63 @@
+Added chatbot.css link to index.html
+Added chatbot HTML snippet to index.html
+Added chatbot.js link before </body> (after finding standard script block comment) in index.html
+Added chatbot.css link to about.html
+Added chatbot HTML snippet to about.html
+Added chatbot.js link before Cookie Consent comment in about.html
+Added chatbot.css link to practice-areas.html
+Added chatbot HTML snippet to practice-areas.html
+Added chatbot.js link before </body> (after finding standard script block comment) in practice-areas.html
+Added chatbot.css link to civil-litigation.html
+Added chatbot HTML snippet to civil-litigation.html
+Added chatbot.js link before </body> (fallback) in civil-litigation.html
+Added chatbot.css link to business-law.html
+Added chatbot HTML snippet to business-law.html
+Added chatbot.js link before </body> (fallback) in business-law.html
+Added chatbot.css link to technology-law.html
+Added chatbot HTML snippet to technology-law.html
+Added chatbot.js link before </body> (fallback) in technology-law.html
+Added chatbot.css link to general-practice.html
+Added chatbot HTML snippet to general-practice.html
+Added chatbot.js link before </body> (fallback) in general-practice.html
+Added chatbot.css link to resources.html
+Added chatbot HTML snippet to resources.html
+Added chatbot.js link before </body> (fallback) in resources.html
+Added chatbot.css link to contact.html
+Added chatbot HTML snippet to contact.html
+Added chatbot.js link before </body> (after finding standard script block comment) in contact.html
+Added chatbot.css link to blog/index.html
+Added chatbot HTML snippet to blog/index.html
+Added chatbot.js link before Cookie Consent comment in blog/index.html
+Added chatbot.css link to blog/posts/Designer_Babies.html
+Added chatbot HTML snippet to blog/posts/Designer_Babies.html
+Added chatbot.js link before Cookie Consent comment in blog/posts/Designer_Babies.html
+Added chatbot.css link to blog/posts/ai-regulation-implications.html
+Added chatbot HTML snippet to blog/posts/ai-regulation-implications.html
+Added chatbot.js link before Cookie Consent comment in blog/posts/ai-regulation-implications.html
+Added chatbot.css link to blog/posts/template.html
+Added chatbot HTML snippet to blog/posts/template.html
+Added chatbot.js link before Cookie Consent comment in blog/posts/template.html
+Added chatbot.css link to privacy-policy.html
+Added chatbot HTML snippet to privacy-policy.html
+Added chatbot.js link before </body> (fallback) in privacy-policy.html
+Added chatbot.css link to terms-of-use.html
+Added chatbot HTML snippet to terms-of-use.html
+Added chatbot.js link before </body> (fallback) in terms-of-use.html
+Added chatbot.css link to cookie-policy.html
+Added chatbot HTML snippet to cookie-policy.html
+Added chatbot.js link before </body> (fallback) in cookie-policy.html
+Added chatbot.css link to sitemap.html
+Added chatbot HTML snippet to sitemap.html
+Added chatbot.js link before </body> (fallback) in sitemap.html
+Added chatbot.css link to 404.html
+Added chatbot HTML snippet to 404.html
+Added chatbot.js link before </body> (fallback) in 404.html
+Added chatbot.css link to search.html
+Added chatbot HTML snippet to search.html
+Added chatbot.js link before </body> (after finding standard script block comment) in search.html
+Added chatbot.css link to thank-you.html
+Added chatbot HTML snippet to thank-you.html
+Added chatbot.js link before </body> (fallback) in thank-you.html
+Added chatbot.css link to team/tim-harmar.html
+Added chatbot HTML snippet to team/tim-harmar.html
+Added chatbot.js link before Cookie Consent comment in team/tim-harmar.html

@@ -152,9 +152,9 @@ function initializeStickyHeader() {
         const currentScrollY = window.scrollY;
         
         if (currentScrollY > 50) {
-            header.classList.add('compact');
+            header.classList.add('scrolled');
         } else {
-            header.classList.remove('compact');
+            header.classList.remove('scrolled');
         }
         
         // Hide header when scrolling down, show when scrolling up

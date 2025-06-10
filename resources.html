@@ -22,47 +22,53 @@
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
     <script src="js/resources.js" defer></script>
+    <link rel="stylesheet" href="/css/chatbot.css">
 </head>
 <body>
     <!-- Include the common header template from templates/header.html -->
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-container">
-                <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
-                    <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
-                </a>
-            </div>
-            <nav class="main-nav" aria-label="Main Navigation">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="/practice-areas.html">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="/business-law.html">Business Law</a></li>
-                            <li><a href="/technology-law.html">Technology Law</a></li>
-                            <li><a href="/general-practice.html">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/resources.html" class="active">Resources</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li>
-                        <form class="search-form" action="/search.html" method="get" role="search">
-                            <label for="search-input" class="sr-only">Search</label>
-                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
-                            <button type="submit" aria-label="Submit Search">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
+    </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html" class="active">Resources</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-res" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-res" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
 
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <div class="container">
@@ -76,25 +82,25 @@
     <main id="main-content">
         <section class="page-header fade-in">
             <div class="container">
-                <p class="lead">Guides, checklists, and information to help you navigate legal matters with confidence.</p>
+                <p class="lead fade-in slide-down delay-1">Guides, checklists, and information to help you navigate legal matters with confidence.</p>
             </div>
         </section>
 
         <!-- Resource Filtering System -->
-        <section class="resource-filters">
+        <section class="resource-filters fade-in">
             <div class="container">
-                <div class="category-tabs">
+                <div class="category-tabs fade-in delay-1">
                     <button class="category-tab active" data-category="all">All Resources</button>
                     <button class="category-tab" data-category="guides">Guides & Handbooks</button>
                     <button class="category-tab" data-category="faq">FAQs</button>
                 </div>
-                <div class="search-bar">
+                <div class="search-bar fade-in delay-1">
                     <input type="text" id="search-input" placeholder="Search resources...">
                 </div>
             </div>
         </section>
 
-        <section class="resources-section slide-up">
+        <section class="resources-section slide-up fade-in">
             <div class="container">
                 <div class="resource-grid" id="resource-grid">
                     <!-- Resources will be dynamically loaded here -->
@@ -130,9 +136,9 @@
 
         <section class="legal-links-section fade-in">
             <div class="container">
-                <h2 class="section-title text-center">External Legal Resources</h2>
+                <h2 class="section-title text-center fade-in delay-1">External Legal Resources</h2>
                 <div class="legal-links-grid">
-                    <div class="legal-link-card">
+                    <div class="legal-link-card fade-in slide-up delay-1">
                         <div class="legal-link-content">
                             <h3>Courts of Ontario</h3>
                             <p>Access information about Ontario's court system, including locations, procedures, and online services.</p>
@@ -142,7 +148,7 @@
                         </div>
                     </div>
                     
-                    <div class="legal-link-card">
+                    <div class="legal-link-card fade-in slide-up delay-2">
                         <div class="legal-link-content">
                             <h3>Law Society of Ontario</h3>
                             <p>Find information about legal ethics, lawyer regulation, and resources for the public and legal professionals.</p>
@@ -152,7 +158,7 @@
                         </div>
                     </div>
                     
-                    <div class="legal-link-card">
+                    <div class="legal-link-card fade-in slide-up delay-3">
                         <div class="legal-link-content">
                             <h3>Canadian Legal Information Institute</h3>
                             <p>Access free Canadian legal information including case law, legislation, and legal commentary.</p>
@@ -162,7 +168,7 @@
                         </div>
                     </div>
                     
-                    <div class="legal-link-card">
+                    <div class="legal-link-card fade-in slide-up delay-1">
                         <div class="legal-link-content">
                             <h3>Self-Help Legal Services</h3>
                             <p>Access resources designed to help individuals navigate common legal matters without representation.</p>
@@ -175,14 +181,13 @@
             </div>
         </section>
 
-        <section class="cta-section">
+        <section class="cta-section fade-in">
             <div class="container">
-                <div class="cta-content fade-in">
-                    <h2>Need Personalized Legal Guidance?</h2>
-                    <p>Our team is available to answer your questions and provide tailored legal advice for your specific situation.</p>
+                <div class="cta-content fade-in"> <h2 class="fade-in delay-1">Need Personalized Legal Guidance?</h2>
+                    <p class="fade-in delay-2">Our team is available to answer your questions and provide tailored legal advice for your specific situation.</p>
                     <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary pulse">Contact Our Team</a>
-                        <a href="practice-areas.html" class="btn btn-secondary">Explore Our Services</a>
+                        <a href="contact.html" class="btn btn-primary pulse fade-in delay-3">Contact Our Team</a>
+                        <a href="practice-areas.html" class="btn btn-secondary fade-in delay-3">Explore Our Services</a>
                     </div>
                 </div>
             </div>
@@ -347,5 +352,34 @@
             });
         });
     </script>
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-closed"> <!-- Initially closed -->
+    <!-- Floating Action Button to open chat -->
+    <button id="chatbot-fab" class="chatbot-fab" aria-label="Open Chat" type="button">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+        <span class="sr-only">Open Chat</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chatbot-window" class="chatbot-window" role="dialog" aria-modal="true" aria-labelledby="chatbot-header-title">
+        <div class="chatbot-header">
+            <h3 id="chatbot-header-title" class="chatbot-title">How can we help?</h3>
+            <button id="chatbot-close-btn" class="chatbot-close-btn" aria-label="Close Chat" type="button">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="sr-only">Close Chat</span>
+            </button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages" role="log" aria-live="polite">
+            <!-- Welcome message will be added by JS -->
+        </div>
+        <div id="chatbot-questions-area" class="chatbot-questions-area">
+            <!-- Predefined question buttons will be populated by JavaScript -->
+        </div>
+        <div class="chatbot-footer">
+            <p class="text-xs text-muted">NorthernEdge Assistant</p>
+        </div>
+    </div>
+</div>
+    <script src="/js/chatbot.js" defer></script>
 </body>
 </html>

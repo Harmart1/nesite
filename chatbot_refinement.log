@@ -1,0 +1,24 @@
+Updated css/chatbot.css for z-index and initial state display logic (Attempt 2).
+Starting HTML inline style removal pass (Attempt 2, should be mostly no-ops)...
+Inline 'display: none;' not found or already removed in index.html
+Inline 'display: none;' not found or already removed in about.html
+Inline 'display: none;' not found or already removed in practice-areas.html
+Inline 'display: none;' not found or already removed in civil-litigation.html
+Inline 'display: none;' not found or already removed in business-law.html
+Inline 'display: none;' not found or already removed in technology-law.html
+Inline 'display: none;' not found or already removed in general-practice.html
+Inline 'display: none;' not found or already removed in resources.html
+Inline 'display: none;' not found or already removed in contact.html
+Inline 'display: none;' not found or already removed in blog/index.html
+Inline 'display: none;' not found or already removed in blog/posts/Designer_Babies.html
+Inline 'display: none;' not found or already removed in blog/posts/ai-regulation-implications.html
+Inline 'display: none;' not found or already removed in blog/posts/template.html
+Inline 'display: none;' not found or already removed in privacy-policy.html
+Inline 'display: none;' not found or already removed in terms-of-use.html
+Inline 'display: none;' not found or already removed in cookie-policy.html
+Inline 'display: none;' not found or already removed in sitemap.html
+Inline 'display: none;' not found or already removed in 404.html
+Inline 'display: none;' not found or already removed in search.html
+Inline 'display: none;' not found or already removed in thank-you.html
+Inline 'display: none;' not found or already removed in team/tim-harmar.html
+HTML inline style removal pass complete (Attempt 2).

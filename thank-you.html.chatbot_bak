@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | NorthernEdge Legal Solutions</title>
+    <meta name="description" content="Thank you for contacting NorthernEdge Legal Solutions. We've received your message and will be in touch shortly.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/visual-enhancements.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+
+    <style>
+        .thank-you-container {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .thank-you-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-lightest);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+
+        .thank-you-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: var(--primary);
+        }
+
+        .next-steps {
+            margin: 2rem auto;
+            max-width: 500px;
+            text-align: left;
+            background-color: var(--neutral-lightest);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+        }
+
+        .next-steps h3 {
+            margin-bottom: 1rem;
+        }
+
+        .next-steps ol {
+            margin-left: 1.5rem;
+        }
+
+        .next-steps li {
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html"><img src="/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="practice-areas.html">Practice Areas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="thank-you-container fade-in">
+            <div class="thank-you-icon pulse">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5c-.39-.39-1.01-.39-1.4 0-.39.39-.39 1.01 0 1.4l4.19 4.19c.39.39 1.02.39 1.41 0L20.3 7.7c.39-.39.39-1.01 0-1.4-.39-.39-1.01-.39-1.4 0L9 16.2z"/></svg>
+            </div>
+
+            <h1>Thank You for Contacting Us</h1>
+            <p class="lead">We have received your message and appreciate your interest in NorthernEdge Legal Solutions.</p>
+
+            <div class="next-steps">
+                <h3>What Happens Next</h3>
+                <ol>
+                    <li>A member of our team will review your inquiry within one business day.</li>
+                    <li>We'll contact you via your preferred method (email or phone) to discuss your legal needs.</li>
+                    <li>If appropriate, we'll schedule a consultation to explore how we can assist you further.</li>
+                </ol>
+            </div>
+
+            <div id="submission-details" class="submission-details" style="display: none;">
+                <h3>Your Submission</h3>
+                <div class="submission-content"></div>
+            </div>
+
+            <p>If you have an urgent matter that requires immediate attention, please call our office at <a href="tel:+17051234567">(705) 123-4567</a>.</p>
+
+            <div class="buttons-container" style="margin-top: 2rem;">
+                <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                <a href="resources.html" class="btn btn-primary">Explore Our Resources</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Practice Areas</h3>
+                        <ul>
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="business-law.html">Business Law</a></li>
+                            <li><a href="technology-law.html">Technology Law</a></li>
+                            <li><a href="general-practice.html">General Practice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="blog/index.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <address>
+                            67 Hugill St.<br>
+                            Sault Ste. Marie, Ontario<br>
+                            P6A 4E6
+                        </address>
+                        <p>Phone: <a href="tel:+17051234567">(705) 123-4567</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a> |
+                    <a href="terms-of-use.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Display form submission details if available
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for form data in sessionStorage
+            const formDataString = sessionStorage.getItem('contactFormData');
+            if (formDataString) {
+                try {
+                    const formData = JSON.parse(formDataString);
+                    const submissionDetails = document.getElementById('submission-details');
+                    const submissionContent = submissionDetails.querySelector('.submission-content');
+
+                    // Create HTML for submission details
+                    let detailsHTML = '<p><strong>Name:</strong> ' + (formData.name || 'Not provided') + '</p>';
+                    detailsHTML += '<p><strong>Email:</strong> ' + (formData.email || 'Not provided') + '</p>';
+
+                    if (formData.phone) {
+                        detailsHTML += '<p><strong>Phone:</strong> ' + formData.phone + '</p>';
+                    }
+
+                    if (formData.service) {
+                        detailsHTML += '<p><strong>Service Requested:</strong> ' + formData.service + '</p>';
+                    }
+
+                    // Show the details section
+                    submissionContent.innerHTML = detailsHTML;
+                    submissionDetails.style.display = 'block';
+
+                    // Clear stored form data
+                    sessionStorage.removeItem('contactFormData');
+                } catch (e) {
+                    console.error('Error parsing form data:', e);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

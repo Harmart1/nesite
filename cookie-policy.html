@@ -18,6 +18,7 @@
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
     <script src="js/cookie-consent.js" defer></script>
+    <link rel="stylesheet" href="/css/chatbot.css">
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
@@ -26,7 +27,7 @@
     <header class="site-header">
         <div class="container">
             <div class="logo-container">
-                <a href="index.html"><img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions Logo"></a>
+                <a href="index.html"><img src="/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
             </div>
             <nav class="main-nav">
                 <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
@@ -146,7 +147,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/northernedge-logo-white.svg" alt="NorthernEdge Legal Solutions Logo">
+                    <img src="/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
@@ -207,5 +208,34 @@
             }
         });
     </script>
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-closed"> <!-- Initially closed -->
+    <!-- Floating Action Button to open chat -->
+    <button id="chatbot-fab" class="chatbot-fab" aria-label="Open Chat" type="button">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+        <span class="sr-only">Open Chat</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chatbot-window" class="chatbot-window" role="dialog" aria-modal="true" aria-labelledby="chatbot-header-title">
+        <div class="chatbot-header">
+            <h3 id="chatbot-header-title" class="chatbot-title">How can we help?</h3>
+            <button id="chatbot-close-btn" class="chatbot-close-btn" aria-label="Close Chat" type="button">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="sr-only">Close Chat</span>
+            </button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages" role="log" aria-live="polite">
+            <!-- Welcome message will be added by JS -->
+        </div>
+        <div id="chatbot-questions-area" class="chatbot-questions-area">
+            <!-- Predefined question buttons will be populated by JavaScript -->
+        </div>
+        <div class="chatbot-footer">
+            <p class="text-xs text-muted">NorthernEdge Assistant</p>
+        </div>
+    </div>
+</div>
+    <script src="/js/chatbot.js" defer></script>
 </body>
 </html>

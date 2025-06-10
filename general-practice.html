@@ -37,6 +37,7 @@
             transform: translateY(0);
         }
     </style>
+    <link rel="stylesheet" href="/css/chatbot.css">
 </head>
 <body>
     
@@ -88,23 +89,23 @@
     <main id="main-content">
         <section class="page-header fade-in">
             <div class="container">
-                <h1>General Practice</h1>
-                <p class="lead">Comprehensive legal services for a variety of common legal needs and situations.</p>
+                <h1 class="fade-in slide-down">General Practice</h1>
+                <p class="lead fade-in slide-down delay-1">Comprehensive legal services for a variety of common legal needs and situations.</p>
             </div>
         </section>
 
-        <section class="general-practice-overview">
+        <section class="general-practice-overview fade-in">
             <div class="container">
                 <div class="content-grid">
                     <div class="main-content slide-in-right">
-                        <h2>General Practice at NorthernEdge</h2>
+                        <h2 class="fade-in delay-1">General Practice at NorthernEdge</h2>
                         <p>Our General Practice area covers a wide range of legal services designed to meet the diverse needs of our clients. Whether you require assistance with family law, real estate transactions, estate planning, or other common legal matters, our experienced team is here to provide expert guidance and representation.</p>
                         
                         <p>We understand that legal issues can be complex and stressful. Our goal is to make the process as smooth and straightforward as possible, offering personalized service and practical solutions tailored to your unique circumstances.</p>
                     </div>
                     
                     <aside class="sidebar slide-in-left">
-                        <div class="cta-card">
+                        <div class="card cta-card fade-in slide-up delay-1">
                             <h3>General Practice Resources</h3>
                             <ul class="resource-links">
                                 <li><a href="resources/family-law-guide.pdf">Family Law Guide</a></li>
@@ -118,7 +119,7 @@
             </div>
             
             <div class="continue-reading">
-                <button class="continue-button" aria-label="Continue to Services section" data-target="#services">
+                <button class="continue-button fade-in" aria-label="Continue to Services section" data-target="#services">
                     <span>Explore Our General Practice Services</span>
                     <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
@@ -127,36 +128,36 @@
             </div>
         </section>
 
-        <section id="services" class="page-section">
+        <section id="services" class="page-section fade-in">
             <div class="container">
-                <h2 class="section-title text-center">Our General Practice Services</h2>
+                <h2 class="section-title text-center fade-in delay-1">Our General Practice Services</h2>
                 <div class="services-grid">
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in slide-up delay-1">
                         <h3>Family Law</h3>
                         <p>Comprehensive legal support for family-related matters including divorce, child custody, and support agreements.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in slide-up delay-2">
                         <h3>Real Estate Transactions</h3>
                         <p>Expert guidance on buying, selling, and leasing residential and commercial properties.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in slide-up delay-3">
                         <h3>Estate Planning</h3>
                         <p>Assistance with wills, trusts, and estate administration to ensure your assets are protected and your wishes are honored.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in slide-up delay-1">
                         <h3>Contract Review & Drafting</h3>
                         <p>Development, review, and negotiation of various contracts to protect your interests and ensure legal compliance.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in slide-up delay-2">
                         <h3>Dispute Resolution</h3>
                         <p>Representation in mediation, arbitration, and litigation to resolve disputes efficiently and effectively.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in slide-up delay-3">
                         <h3>General Legal Advice</h3>
                         <p>Providing practical legal advice on a wide range of issues to help you make informed decisions.</p>
                     </div>
@@ -164,7 +165,7 @@
             </div>
             
             <div class="continue-reading">
-                <button class="continue-button" aria-label="Continue to Contact section" data-target="#contact">
+                <button class="continue-button fade-in" aria-label="Continue to Contact section" data-target="#contact">
                     <span>Contact Us for More Information</span>
                     <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
@@ -173,13 +174,13 @@
             </div>
         </section>
 
-        <section id="contact" class="page-section">
+        <section id="contact" class="page-section fade-in">
             <div class="container">
-                <h2 class="section-title text-center">Get in Touch</h2>
-                <p class="section-description text-center">Schedule a consultation with our team to discuss your legal needs and how we can assist you.</p>
+                <h2 class="section-title text-center fade-in delay-1">Get in Touch</h2>
+                <p class="section-description text-center fade-in delay-2">Schedule a consultation with our team to discuss your legal needs and how we can assist you.</p>
                 <div class="cta-buttons text-center">
-                    <a href="contact.html" class="btn btn-primary pulse">Schedule a Consultation</a>
-                    <a href="tel:+17059993657" class="btn btn-secondary">(705) 999-3657</a>
+                    <a href="contact.html" class="btn btn-primary pulse fade-in delay-3">Schedule a Consultation</a>
+                    <a href="tel:+17059993657" class="btn btn-secondary fade-in delay-3">(705) 999-3657</a>
                 </div>
             </div>
         </section>
@@ -244,5 +245,34 @@
 
     <!-- Cookie Consent JavaScript -->
     <script src="js/cookie-consent.js" defer></script>
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-closed"> <!-- Initially closed -->
+    <!-- Floating Action Button to open chat -->
+    <button id="chatbot-fab" class="chatbot-fab" aria-label="Open Chat" type="button">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+        <span class="sr-only">Open Chat</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chatbot-window" class="chatbot-window" role="dialog" aria-modal="true" aria-labelledby="chatbot-header-title">
+        <div class="chatbot-header">
+            <h3 id="chatbot-header-title" class="chatbot-title">How can we help?</h3>
+            <button id="chatbot-close-btn" class="chatbot-close-btn" aria-label="Close Chat" type="button">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="sr-only">Close Chat</span>
+            </button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages" role="log" aria-live="polite">
+            <!-- Welcome message will be added by JS -->
+        </div>
+        <div id="chatbot-questions-area" class="chatbot-questions-area">
+            <!-- Predefined question buttons will be populated by JavaScript -->
+        </div>
+        <div class="chatbot-footer">
+            <p class="text-xs text-muted">NorthernEdge Assistant</p>
+        </div>
+    </div>
+</div>
+    <script src="/js/chatbot.js" defer></script>
 </body>
 </html>
