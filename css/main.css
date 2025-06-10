@@ -14,6 +14,7 @@
 @import 'responsive.css';
 @import 'visual-enhancement.css';
 @import 'animations.css';
+@import 'cookie-consent.css';
 
 /* Core styles */
 /* Removed redundant :root block - variables are defined in variables.css */

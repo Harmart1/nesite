@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PAGE-SPECIFIC TITLE -->
     <title>Business Law | NorthernEdge Legal Solutions</title>
+    <!-- PAGE-SPECIFIC META DESCRIPTION -->
     <meta name="description" content="Comprehensive business law services from NorthernEdge Legal Solutions, helping businesses throughout Northern Ontario with formation, contracts, compliance and more.">
+    <!-- PAGE-SPECIFIC META KEYWORDS (if any) -->
+    <!-- PAGE-SPECIFIC CANONICAL LINK (if any) -->
+    <!-- PAGE-SPECIFIC OG/TWITTER META TAGS (if any) -->
 
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/accessibility.css">
-    <link rel="stylesheet" href="css/navigation-enhancements.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
-    <link rel="stylesheet" href="css/cookie-consent.css">
-    <link rel="stylesheet" href="css/elegant-design-system.css">
-    <link rel="stylesheet" href="css/icon-styles.css">
-    <link rel="stylesheet" href="css/back-to-top.css">
+    <!-- Favicon (Standardized from index.html) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
 
-    <!-- JavaScript -->
-    <script src="js/main.js" defer></script>
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PAGE-SPECIFIC CSS (e.g., Leaflet on contact.html) -->
     <style>
         /* Add smooth fade-in and slide-down animations to the dropdown menus */
         .dropdown-menu {
@@ -37,6 +46,10 @@
             transform: translateY(0);
         }
     </style>
+    <!-- PAGE-SPECIFIC JSON-LD SCHEMA (if any) -->
+
+    <!-- Comment for any other page-specific additions -->
+    <!-- Page-specific CSS can be added here if needed -->
 </head>
 <body>
     <!-- Page progress indicator -->
@@ -44,42 +57,47 @@
         <div class="page-progress-bar" id="progressBar"></div>
     </div>
     
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-container">
-                <a href="index.html"><img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
-            </div>
-            <nav class="main-nav" aria-label="Main Navigation">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html" aria-label="Home"><i class="fas fa-home"></i></a></li>
-                    <li><a href="about.html" aria-label="About"><i class="fas fa-info-circle"></i></a></li>
-                    <li class="dropdown">
-                        <a href="practice-areas.html" aria-label="Practice Areas"><i class="fas fa-briefcase"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html" aria-label="Civil Litigation"><i class="fas fa-gavel"></i></a></li>
-                            <li><a href="business-law.html" aria-label="Business Law"><i class="fas fa-building"></i></a></li>
-                            <li><a href="technology-law.html" aria-label="Technology Law"><i class="fas fa-laptop-code"></i></a></li>
-                            <li><a href="general-practice.html" aria-label="General Practice"><i class="fas fa-balance-scale"></i></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="resources.html" aria-label="Resources"><i class="fas fa-book"></i></a></li>
-                    <li><a href="contact.html" aria-label="Contact"><i class="fas fa-envelope"></i></a></li>
-                    <li>
-                        <form class="search-form" action="search.html" method="get" role="search">
-                            <label for="search-input" class="sr-only">Search</label>
-                            <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
-                            <button type="submit" aria-label="Submit Search">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
+    </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html" class="active">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-business-law" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-business-law" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
 
     <!-- Breadcrumb Navigation -->
     <nav aria-label="Breadcrumb" class="breadcrumbs">

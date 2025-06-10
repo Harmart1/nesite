@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tim J. Harmar | NorthernEdge Legal Solutions</title>
-<meta name="description" content="Meet Tim J. Harmar, Founder and Principal Lawyer at NorthernEdge Legal Solutions, specializing in business law, technology law, and intellectual property.">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/favicon_io/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/favicon_io/safari-pinned-tab.svg" color="#1a365d">
+    <!-- PAGE-SPECIFIC TITLE -->
+    <title>Tim J. Harmar | NorthernEdge Legal Solutions</title>
+    <!-- PAGE-SPECIFIC META DESCRIPTION -->
+    <meta name="description" content="Meet Tim J. Harmar, Founder and Principal Lawyer at NorthernEdge Legal Solutions, specializing in business law, technology law, and intellectual property.">
+    <!-- PAGE-SPECIFIC META KEYWORDS (if any) -->
+    <!-- PAGE-SPECIFIC CANONICAL LINK (if any) -->
+    <!-- PAGE-SPECIFIC OG/TWITTER META TAGS (if any) -->
+
+    <!-- Favicon (Standardized from index.html) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
     <meta name="msapplication-TileColor" content="#1a365d">
     <meta name="theme-color" content="#ffffff">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- Google Fonts -->
+    <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- CSS Files -->
-    <link rel="stylesheet" href="/css/elegant-design-system.css">
-    <link rel="stylesheet" href="/css/elegant-navigation.css">
-    <link rel="stylesheet" href="/css/typography-animations.css">
+
+    <!-- Main CSS Bundle -->
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/critical.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/visual-enhancements.css">
-    <link rel="stylesheet" href="/css/accessibility-enhancements.css">
-    <link rel="stylesheet" href="/css/accessibility.css">
-    <!-- Duplicates like /css/main.css, /css/responsive.css, etc., are removed. -->
-    <!-- Only unique page-specific CSS files are kept if they are not part of the standard set. -->
-    <link rel="stylesheet" href="/css/navigation-enhancements.css"> <!-- Assuming this is unique and needed -->
-    <link rel="stylesheet" href="/css/print.css" media="print"> <!-- Assuming this is unique and needed -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PAGE-SPECIFIC CSS (e.g., Leaflet on contact.html) -->
+    <link rel="stylesheet" href="/css/navigation-enhancements.css">
+    <link rel="stylesheet" href="/css/print.css" media="print">
     <style>
         /* Date/Time and User Login Bar */
         .user-info-bar {
@@ -65,6 +65,10 @@
             margin-left: 4px;
         }
     </style>
+    <!-- PAGE-SPECIFIC JSON-LD SCHEMA (if any) -->
+
+    <!-- Comment for any other page-specific additions -->
+    <!-- Page-specific CSS can be added here if needed -->
 </head>
 
 <body>
@@ -85,34 +89,47 @@
         </div>
     </div>
     
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-container">
-                <a href="/index.html"><img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" class="responsive-logo"></a>
-            </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html" class="active">About</a></li>
-                    <li class="dropdown">
-                        <a href="/practice-areas.html">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="/business-law.html">Business Law</a></li>
-                            <li><a href="/technology-law.html">Technology Law</a></li>
-                            <li><a href="/general-practice.html">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/resources.html">Resources</a></li>
-                    <li><a href="/blog/index.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
+    </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html" class="active">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-team-tim-harmar" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-team-tim-harmar" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
 
     <main id="main-content">
         <!-- Breadcrumbs navigation -->
