@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Expert legal services at NorthernEdge Legal Solutions - Corporate law, litigation, intellectual property, and more.">
-  <meta name="keywords" content="legal services, law firm, corporate law, intellectual property, litigation">
-  <title>Legal Services - NorthernEdge Legal Solutions</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PAGE-SPECIFIC TITLE -->
+    <title>Legal Services - NorthernEdge Legal Solutions</title>
+    <!-- PAGE-SPECIFIC META DESCRIPTION -->
+    <meta name="description" content="Expert legal services at NorthernEdge Legal Solutions - Corporate law, litigation, intellectual property, and more.">
+    <!-- PAGE-SPECIFIC META KEYWORDS (if any) -->
+    <meta name="keywords" content="legal services, law firm, corporate law, intellectual property, litigation">
+    <!-- PAGE-SPECIFIC CANONICAL LINK (if any) -->
+    <!-- PAGE-SPECIFIC OG/TWITTER META TAGS (if any) -->
+
+    <!-- Favicon (Standardized from index.html) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PAGE-SPECIFIC CSS (e.g., Leaflet on contact.html) -->
+    <style>
     /* Add smooth fade-in and slide-down animations to the dropdown menus */
     .dropdown-menu {
       display: none;
@@ -27,54 +46,71 @@
       opacity: 1;
       transform: translateY(0);
     }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "NorthernEdge Legal Solutions",
-    "url": "https://www.northernedgelegal.com/services",
-    "description": "Comprehensive legal services including corporate law, litigation, and intellectual property.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "67 Hugill St.",
-      "addressLocality": "Sault Ste. Marie",
-      "addressRegion": "Ontario",
-      "postalCode": "P6A 4E6",
-      "addressCountry": "Canada"
+    </style>
+    <!-- PAGE-SPECIFIC JSON-LD SCHEMA (if any) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "NorthernEdge Legal Solutions",
+      "url": "https://www.northernedgelegal.com/services",
+      "description": "Comprehensive legal services including corporate law, litigation, and intellectual property.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "67 Hugill St.",
+        "addressLocality": "Sault Ste. Marie",
+        "addressRegion": "Ontario",
+        "postalCode": "P6A 4E6",
+        "addressCountry": "Canada"
+      }
     }
-  }
-  </script>
+    </script>
+
+    <!-- Comment for any other page-specific additions -->
+    <!-- Page-specific CSS can be added here if needed -->
 </head>
 <body>
-  <header class="sticky">
-    <div class="container">
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="/index.html" style="color: #3498db;">Home</a></li>
-          <li><a href="/services.html" class="active" style="color: #3498db;">Services</a></li>
-          <li><a href="/attorneys.html" style="color: #3498db;">Attorneys</a></li>
-          <li><a href="/about.html" style="color: #3498db;">About</a></li>
-          <li><a href="/contact.html" style="color: #3498db;">Contact</a></li>
-          <li>
-            <form class="search-form" action="search.html" method="get" role="search">
-              <label for="search-input" class="sr-only">Search</label>
-              <input type="text" id="search-input" name="q" placeholder="Search..." aria-label="Search">
-              <button type="submit" aria-label="Submit Search">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
-          </li>
-        </ul>
-      </nav>
-      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
     </div>
-  </header>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html" class="active">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-services" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-services" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
 
   <main>
     <section class="hero fade-in">
