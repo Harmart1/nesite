@@ -3,86 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PAGE-SPECIFIC TITLE -->
     <title>Page Not Found | NorthernEdge Legal Solutions</title>
+    <!-- PAGE-SPECIFIC META DESCRIPTION -->
     <meta name="description" content="The page you were looking for could not be found.">
+    <!-- PAGE-SPECIFIC META KEYWORDS (if any) -->
+    <!-- PAGE-SPECIFIC CANONICAL LINK (if any) -->
+    <!-- PAGE-SPECIFIC OG/TWITTER META TAGS (if any) -->
     
-    <!-- Add base URL for proper path resolution -->
-    <base href="/">
+    <!-- Favicon (Standardized from index.html) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/breadcrumbs.css">
-    <link rel="stylesheet" href="css/back-to-top.css">
-    <script src="js/main.js" defer></script>
-    <script src="js/path-fix.js" defer></script>
-    <script src="js/back-to-top.js" defer></script>
+    <!-- PAGE-SPECIFIC CSS (e.g., Leaflet on contact.html) -->
     <style>
+        body {
+            background: linear-gradient(135deg, rgba(58, 83, 155, 0.8), rgba(135, 206, 250, 0.8)), url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
         .error-container {
             text-align: center;
             padding: 6rem 2rem;
             max-width: 800px;
             margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .error-code {
             font-size: 8rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--primary);
             margin-bottom: 1rem;
             opacity: 0.2;
             line-height: 1;
+            animation: bounce 2s infinite;
         }
-        
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
         .error-illustration {
             max-width: 300px;
             margin: 2rem auto;
         }
-        
+
         .error-message {
             margin-bottom: 2rem;
         }
-        
+
         .error-links {
             margin-top: 2rem;
         }
-        
+
         .error-links a {
             margin: 0 0.5rem;
         }
+
+        .site-header {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .site-footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Add smooth fade-in and slide-down animations to the dropdown menus */
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
+    <!-- PAGE-SPECIFIC JSON-LD SCHEMA (if any) -->
+
+    <!-- Comment for any other page-specific additions -->
+    <!-- Page-specific CSS can be added here if needed -->
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-container">
-                <a href="index.html"><img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
-            </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="practice-areas.html">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
+    </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-404" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-404" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
 
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <div class="container">
@@ -100,7 +174,7 @@
                     <div class="error-code">404</div>
                     <h1>Page Not Found</h1>
                     <div class="error-illustration">
-                        <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="Page Not Found Illustration" style="max-width: 200px;">
+                        <img src="images/404-illustration.svg" alt="Page Not Found Illustration" style="max-width: 200px;">
                     </div>
                     <div class="error-message">
                         <p>The page you were looking for doesn't exist or has been moved.</p>
@@ -120,7 +194,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                    <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
@@ -137,7 +211,6 @@
                         <ul>
                             <li><a href="about.html">About</a></li>
                             <li><a href="resources.html">Resources</a></li>
-                            <li><a href="blog/index.html">Blog</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
@@ -148,7 +221,7 @@
                             Sault Ste. Marie, Ontario<br>
                             P6A 4E6
                         </address>
-                        <p>Phone: <a href="tel:+17051234567">(705) 123-4567</a></p>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
                         <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
                     </div>
                 </div>

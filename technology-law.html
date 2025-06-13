@@ -3,61 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PAGE-SPECIFIC TITLE -->
     <title>Technology Law | NorthernEdge Legal Solutions</title>
+    <!-- PAGE-SPECIFIC META DESCRIPTION -->
     <meta name="description" content="Specialized technology law services from NorthernEdge Legal Solutions, helping businesses navigate the complex legal landscape of data privacy, intellectual property, and digital regulation.">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/accessibility.css">
-    <link rel="stylesheet" href="css/navigation-enhancements.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
-    <link rel="stylesheet" href="css/cookie-consent.css">
-    
-    <!-- JavaScript -->
-    <script src="js/main.js" defer></script>
-    <script src="js/scroll-navigation.js" defer></script>
+    <!-- PAGE-SPECIFIC META KEYWORDS (if any) -->
+    <!-- PAGE-SPECIFIC CANONICAL LINK (if any) -->
+    <!-- PAGE-SPECIFIC OG/TWITTER META TAGS (if any) -->
+
+    <!-- Favicon (Standardized from index.html) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PAGE-SPECIFIC CSS (e.g., Leaflet on contact.html) -->
+    <!-- PAGE-SPECIFIC JSON-LD SCHEMA (if any) -->
+
+    <!-- Comment for any other page-specific additions -->
+    <!-- Page-specific CSS can be added here if needed -->
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
     <!-- Page progress indicator -->
     <div class="page-progress">
         <div class="page-progress-bar" id="progressBar"></div>
     </div>
     
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-container">
-                <a href="index.html"><img src="images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions Logo"></a>
-            </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="practice-areas.html" class="active">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html" class="active">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
+    </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html" class="active">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-technology-law" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-technology-law" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
 
     <main id="main-content">
         <section class="page-header fade-in">
@@ -68,15 +93,15 @@
         </section>
 
         <!-- Jump Navigation -->
-        <div class="jump-nav">
+        <div class="section-nav">
             <div class="container">
-                <ul class="jump-nav-links">
-                    <li><a href="#overview" class="active">Overview</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#expertise">Our Expertise</a></li>
-                    <li><a href="#privacy">Data Privacy</a></li>
-                    <li><a href="#ip">Intellectual Property</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                <ul class="section-nav-links">
+                    <li><a\1class="section-nav-link \2">Overview</a></li>
+                    <li><a class="section-nav-link" href="#services">Services</a></li>
+                    <li><a class="section-nav-link" href="#expertise">Our Expertise</a></li>
+                    <li><a class="section-nav-link" href="#privacy">Data Privacy</a></li>
+                    <li><a class="section-nav-link" href="#ip">Intellectual Property</a></li>
+                    <li><a class="section-nav-link" href="#faq">FAQ</a></li>
                 </ul>
             </div>
         </div>
@@ -95,7 +120,7 @@
                     </div>
                     
                     <aside class="sidebar slide-in-left">
-                        <div class="cta-card">
+                        <div class="card cta-card">
                             <h3>Technology Law Resources</h3>
                             <ul class="resource-links">
                                 <li><a href="resources/software-ip-protection.pdf">Software IP Protection Guide</a></li>
@@ -123,32 +148,32 @@
             <div class="container">
                 <h2 class="section-title text-center">Our Technology Law Services</h2>
                 <div class="services-grid">
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in">
                         <h3>Intellectual Property</h3>
                         <p>Strategic protection of software, digital content, and technology innovations through patents, copyrights, trademarks, and trade secrets.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in">
                         <h3>Data Privacy & Security</h3>
                         <p>Compliance guidance for PIPEDA, GDPR, CCPA and emerging privacy frameworks, breach response planning, and privacy policy development.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in">
                         <h3>Software & Licensing</h3>
                         <p>Development and negotiation of software licensing agreements, SaaS contracts, and open source compliance strategies.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in">
                         <h3>E-Commerce & Digital Compliance</h3>
                         <p>Legal frameworks for online businesses including terms of service, website policies, digital advertising compliance, and consumer protection.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in">
                         <h3>Digital Transactions</h3>
                         <p>Guidance on electronic signatures, smart contracts, digital payment systems, and emerging blockchain applications.</p>
                     </div>
                     
-                    <div class="service-item fade-in">
+                    <div class="card service-item fade-in">
                         <h3>Regulatory Compliance</h3>
                         <p>Navigation of technology-specific regulations including digital accessibility requirements, electronic communications, and industry-specific compliance.</p>
                     </div>
@@ -233,27 +258,27 @@
             <div class="container">
                 <h2 class="section-title text-center">Explore Other Practice Areas</h2>
                 <div class="services-grid">
-                    <a href="civil-litigation.html" class="service-nav-card">
+                    <a href="civil-litigation.html" class="card service-nav-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                            <img src="images/icons/litigation-icon.svg" alt="Civil Litigation Icon">
                         </div>
                         <h3>Civil Litigation</h3>
                         <p>Strategic representation in disputes and lawsuits across Ontario</p>
                         <span class="btn-text">Learn More</span>
                     </a>
                     
-                    <a href="business-law.html" class="service-nav-card">
+                    <a href="business-law.html" class="card service-nav-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                            <img src="images/icons/business-icon.svg" alt="Business Law Icon">
                         </div>
                         <h3>Business Law</h3>
                         <p>Comprehensive legal support for businesses of all sizes</p>
                         <span class="btn-text">Learn More</span>
                     </a>
                     
-                    <a href="general-practice.html" class="service-nav-card">
+                    <a href="general-practice.html" class="card service-nav-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                            <img src="images/icons/general-practice-icon.svg" alt="General Practice Icon">
                         </div>
                         <h3>General Practice</h3>
                         <p>Support for a variety of common legal needs and situations</p>
@@ -277,11 +302,17 @@
         </section>
     </main>
 
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </button>
+
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/northernedge-logo-white.svg" alt="NorthernEdge Legal Solutions Logo">
+                    <img src="NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
@@ -309,7 +340,7 @@
                             Sault Ste. Marie, Ontario<br>
                             P6A 4E6
                         </address>
-                        <p>Phone: <a href="tel:+17051234567">(705) 123-4567</a></p>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
                         <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
                     </div>
                 </div>
@@ -317,7 +348,7 @@
             <div class="copyright">
                 <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="privacy-policy.html">Privacy Policy</a> |
                     <a href="terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
@@ -326,5 +357,31 @@
 
     <!-- Cookie Consent JavaScript -->
     <script src="js/cookie-consent.js" defer></script>
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Add dropdown functionality for mobile
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                if (window.innerWidth <= 1024) {
+                    dropdown.addEventListener('click', function(e) {
+                        if (e.target.parentNode.classList.contains('dropdown')) {
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

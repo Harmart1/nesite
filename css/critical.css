@@ -16,12 +16,12 @@
 :root {
   /* Only most essential variables used in above-fold content */
   --primary-dark: #0d2c54;
-  --primary: #1a3c5a;
+  --primary: #1A365D; /* Updated to #1A365D */
   --neutral-dark: #4a4f54;
   --neutral-light: #e0e5eb;
   --neutral-lightest: #f7f9fc;
-  --accent: #e8963a;
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --accent: #D4AF37; /* Updated to gold */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 05);
   --radius-sm: 4px;
   --transition-fast: 0.2s ease;
 }
@@ -32,7 +32,7 @@ html, body {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif; /* Updated to Raleway */
   line-height: 1.6;
   color: var(--neutral-dark);
   background-color: #ffffff;
@@ -40,12 +40,14 @@ body {
 
 /* Site Header */
 .site-header {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 1rem 0;
+  padding: 0.25rem 0;
+  /* transition: padding 0.3s ease, box-shadow 0.3s ease; -- Removed to prevent jump/flash */
+  /* margin-top: 50px; -- Removed to prevent jump */
 }
 
 .container {
@@ -62,7 +64,7 @@ body {
 }
 
 .logo-container {
-  max-width: 220px;
+  max-width: 180px;
 }
 
 .logo-container img {
@@ -79,7 +81,7 @@ body {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .nav-menu a {
@@ -110,6 +112,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.2;
+  font-family: 'Playfair Display', serif; /* Updated to Playfair Display */
 }
 
 .hero .lead {

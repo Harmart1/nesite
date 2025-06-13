@@ -1,0 +1,944 @@
+/* NorthernEdge Legal Solutions - Main CSS File
+ *
+ * This is the primary CSS file that imports all other style modules
+ * and contains core styling for the website.
+ * Last updated: 2025-03-26 23:19:04
+ */
+
+/* Import font files and CSS modules */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import 'variables.css';
+@import 'typography.css';
+@import 'elegant-design-system.css';
+@import 'elegant-navigation.css';
+@import 'responsive.css';
+@import 'visual-enhancement.css';
+@import 'animations.css';
+
+/* Core styles */
+/* Removed redundant :root block - variables are defined in variables.css */
+
+html {
+  font-size: 17px; /* Increased base font size */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  text-align: center; /* Default text alignment to center */
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Removed h1-h6 base styles and ::after pseudo-elements - handled by typography.css */
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-color); /* Use text-color variable */
+  /* Removed max-width and auto margins, handled by body text-align */
+}
+
+p.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Container for page content */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section spacing */
+.section {
+  padding: var(--space-10) 0;
+}
+
+.section-sm {
+  padding: var(--space-6) 0;
+}
+
+.section-lg {
+  padding: var(--space-12) 0;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-dark);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  margin-bottom: var(--space-6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid var(--accent); /* Use --accent variable */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  padding: var(--space-4);
+  background-color: var(--primary-dark); /* Use primary-dark variable */
+  color: var(--white);
+}
+
+.card-body {
+  padding: var(--space-6);
+  flex-grow: 1;
+}
+
+.card-footer {
+  padding: var(--space-4);
+  background-color: var(--neutral-light); /* Use neutral-light variable */
+  text-align: right;
+  border-top: 1px solid var(--neutral-light); /* Use neutral-light variable */
+}
+
+/* Form styles */
+input, textarea, select {
+  width: 100%;
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--text-base);
+  border: 2px solid var(--neutral-light); /* Use neutral-light variable */
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  background-color: var(--white);
+  text-align: left; /* Keep form input text left-aligned */
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-dark); /* Use primary-dark variable */
+  box-shadow: 0 0 0 3px var(--focus-ring-color); /* Use focus ring variable */
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+  color: var(--primary-dark); /* Use primary-dark variable */
+  text-align: left; /* Keep labels left-aligned */
+}
+
+/* Site Header Styling */
+.site-header {
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  width: 100%;
+  margin-top: 0;
+  /* Removed transition to prevent flashing on scroll */
+  /* transition: padding 0.3s ease, box-shadow 0.3s ease; */
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Enhanced Logo Container */
+.logo-container {
+  max-width: 220px;
+  transition: transform var(--transition-normal);
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Navigation Menu */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Keep nav items left-aligned */
+}
+
+.nav-menu a {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--accent);
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width var(--transition-normal);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* Dropdown Menus */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-normal);
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  text-align: left; /* Keep dropdown items left-aligned */
+}
+
+.dropdown-menu a::after {
+  display: none;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 20;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--black);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* New Hero Video Section */
+.hero-video {
+  position: relative;
+  overflow: hidden;
+  height: 75vh;
+  min-height: 500px;
+  background-color: var(--primary-dark);
+}
+
+.hero-video-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.hero-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--primary-dark-rgb), 0.65); /* Use RGB variable */
+  z-index: 1;
+}
+
+.hero-video-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  color: white;
+}
+
+.hero-logo {
+  max-width: 380px;
+  width: 100%;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1.2s ease-out;
+}
+
+.hero-video-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  animation: fadeInUp 1.2s ease-out 0.3s both;
+}
+
+.hero-video-content h1::after {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  background-color: var(--accent);
+}
+
+.hero-video-content p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  animation: fadeInUp 1.2s ease-out 0.6s both;
+}
+
+.hero-video-content .btn {
+  animation: fadeInUp 1.2s ease-out 0.9s both;
+  margin: 0 0.5rem;
+}
+
+/* Alternate Hero Section with Static Background */
+.hero {
+  position: relative;
+  background: url('../images/new-hero-background.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 8rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--primary-rgb), 0.7); /* Use RGB variable */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero h1::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero h1.elegant-heading {
+    color: #1a365d; /* Dark blue color for better contrast */
+    /* text-align: center; is inherited */
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+/* Practice areas section */
+.practice-areas-overview {
+  padding: 4rem 0;
+  background-color: var(--neutral-lightest);
+}
+
+.practice-area-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.practice-area-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  margin-right: 2rem;
+}
+
+.practice-area-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.practice-area-content {
+  flex-grow: 1;
+}
+
+.practice-area-content h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--primary); /* Use primary variable */
+  /* text-align: center; is inherited */
+}
+
+.practice-area-content h3::after {
+  width: 50px;
+}
+
+.practice-area-content p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  /* text-align: left; Inherited from card-body now */
+}
+
+.practice-areas-overview .card-body {
+  text-align: left; /* Override inherited center alignment for readability */
+}
+
+/* About section */
+.about-section {
+  padding: 4rem 0;
+  background-color: var(--neutral-lightest);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  /* text-align: center; is inherited */
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-content h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Contact section */
+.contact-section {
+  padding: 4rem 0;
+  background-color: var(--neutral-lightest);
+}
+
+.contact-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  /* text-align: center; is inherited */
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-content h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Updated Contact Info Card Styles */
+.contact-info-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--radius-md); /* Use variable */
+  box-shadow: var(--shadow-md); /* Use variable */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Ensure content stacks vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Add space between contact methods */
+  /* Remove fixed width/flex-basis to allow natural sizing within grid */
+  /* text-align: center; is inherited, but content inside might need adjustment */
+}
+
+/* Style the main heading within the card */
+.contact-info-card h2.elegant-heading {
+    margin-bottom: 1rem;
+    /* text-align: left; REMOVED - inherit center */
+}
+.contact-info-card h2.elegant-heading::after {
+    left: 50%; /* Center underline */
+    transform: translateX(-50%); /* Center underline */
+    width: 50px;
+}
+
+/* Style each contact method block (icon + text) */
+.contact-method {
+    display: flex; /* Arrange icon and text side-by-side */
+    align-items: flex-start; /* Align items to the top */
+    gap: 1rem; /* Space between icon and text */
+    text-align: left; /* Keep contact details left-aligned for readability */
+}
+
+.contact-icon {
+    flex-shrink: 0; /* Prevent icon container from shrinking */
+    width: 30px; /* Adjust width as needed */
+    text-align: center; /* Center the icon horizontally */
+    margin-top: 0.25rem; /* Fine-tune vertical alignment */
+}
+
+.contact-icon i {
+    font-size: 1.5rem; /* Icon size */
+    color: var(--primary); /* Icon color */
+}
+
+/* Style the heading within each contact method */
+.contact-method h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+    position: relative;
+    padding-bottom: 0;
+    text-align: left; /* Keep contact details left-aligned */
+}
+/* Remove underline from method headings */
+.contact-method h3::after {
+   display: none;
+}
+
+/* Style the text/address within each contact method */
+.contact-method p,
+.contact-method address {
+  font-size: 1rem;
+  margin-bottom: 0; /* Remove default paragraph margin */
+  line-height: 1.6;
+  text-align: left; /* Keep contact details left-aligned */
+}
+
+.contact-method a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: normal; /* Adjust if needed */
+}
+
+.contact-method a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Style the office hours section */
+.office-hours {
+    text-align: left; /* Keep office hours left-aligned */
+    margin-top: 1rem; /* Space above office hours */
+    padding-top: 1rem; /* Padding above */
+    border-top: 1px solid var(--neutral-light); /* Separator line */
+}
+
+.office-hours h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+    text-align: left; /* Keep office hours left-aligned */
+    position: relative;
+    padding-bottom: 0;
+}
+/* Remove underline from office hours heading */
+.office-hours h3::after {
+    display: none;
+}
+
+.office-hours p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+    text-align: left; /* Keep office hours left-aligned */
+}
+
+/* Map Section - Keep height */
+#contact-map {
+    display: block; /* Ensure it's displayed */
+    height: 450px;
+    width: 100%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-top: 1.5rem;
+}
+
+.contact-section .card .card-body {
+  text-align: left; /* Override inherited center alignment for contact details */
+}
+
+/* Footer styling */
+.site-footer {
+  background-color: var(--primary-dark);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  text-align: left; /* Keep footer columns left-aligned */
+}
+
+.footer-column h3 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-column h3::after {
+  background-color: var(--accent);
+  width: 40px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-column ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+
+.footer-column ul li a:hover {
+  color: white;
+}
+
+.footer-column address {
+  font-style: normal;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-column p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  text-align: center; /* Keep copyright centered */
+}
+
+copyright p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal-links {
+  font-size: 0.875rem;
+}
+
+.legal-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: white;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+/* Responsive styles for new navigation */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: white;
+    padding: 5rem 2rem 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-menu a {
+    padding: 1rem 0;
+  }
+}
+
+/* Value Props Section Enhancements */
+.value-props .card {
+    border-top: 4px solid var(--primary); /* Add a top border for visual separation */
+    display: flex; /* Ensure flex layout for vertical alignment */
+    flex-direction: column; /* Stack header and body vertically */
+    /* text-align: center; is inherited */
+}
+
+.value-props .card-header {
+    background-color: var(--primary); /* Keep the blue background */
+    color: var(--white); /* Ensure heading text is white */
+    padding: 1.5rem; /* Adjust padding */
+    display: flex;
+    flex-direction: column; /* Stack icon and heading */
+    align-items: center; /* Center items horizontally */
+    min-height: 150px; /* Ensure consistent height */
+    justify-content: center; /* Center content vertically */
+}
+
+.value-props .icon-circle {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter circle background */
+    border-radius: 50%;
+    width: 70px; /* Increased size */
+    height: 70px; /* Increased size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem; /* Space below icon */
+    color: var(--white); /* Icon color */
+}
+
+.value-props .icon-circle i {
+    font-size: 2rem; /* Increased icon size */
+    line-height: 1; /* Ensure proper vertical alignment */
+}
+
+.value-props .card-header h3.elegant-heading {
+    color: var(--white); /* Explicitly set heading color to white */
+    margin-bottom: 0; /* Remove bottom margin if any */
+    font-size: 1.3rem; /* Adjust heading size if needed */
+    /* text-align: center; is inherited */
+}
+.value-props .card-header h3.elegant-heading::after {
+    display: none; /* Remove underline from these headings */
+}
+
+.value-props .card-body {
+    padding: 1.5rem;
+    text-align: center; /* Center text in the body */
+    flex-grow: 1; /* Allow body to take remaining space */
+    color: var(--text-color); /* Ensure body text uses the standard text color */
+    /* text-align: center; is inherited */
+}
+
+/* General Text Alignment Adjustments */
+.text-center {
+    text-align: center !important; /* Use important if needed to override */
+}

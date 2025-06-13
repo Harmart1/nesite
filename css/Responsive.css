@@ -1,0 +1,342 @@
+/* NorthernEdge Legal Solutions - Responsive Styles
+ *
+ * Standardized media queries for consistent responsive behavior
+ * Last updated: 2025-03-06
+ */
+
+/* Base (Mobile First) Styles
+ * Default styles target mobile devices - no media query needed
+ */
+
+/* Small devices (larger phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+  
+  .sm-show {
+    display: block !important;
+  }
+  
+  .sm-hide {
+    display: none !important;
+  }
+  
+  /* Grid utilities */
+  .grid-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Text utilities */
+  .text-sm-left { text-align: left; }
+  .text-sm-center { text-align: center; }
+  .text-sm-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .sm-mb-0 { margin-bottom: 0; }
+  .sm-mt-0 { margin-top: 0; }
+  .sm-p-0 { padding: 0; }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+  
+  .md-show {
+    display: block !important;
+  }
+  
+  .md-hide {
+    display: none !important;
+  }
+  
+  /* Grid utilities */
+  .grid-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Footer layout */
+  .footer-content {
+    grid-template-columns: 1fr 3fr;
+    text-align: left;
+  }
+  
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .footer-column h3::after {
+    left: 0;
+    transform: none;
+  }
+  
+  /* Form layouts */
+  .form-columns {
+    flex-direction: row;
+  }
+  
+  /* Navigation */
+  .navbar-menu {
+    display: flex !important;
+    position: static;
+    background-color: transparent;
+    flex-direction: row;
+    padding: 0;
+    box-shadow: none;
+    transform: none;
+    width: auto;
+  }
+  
+  /* Text utilities */
+  .text-md-left { text-align: left; }
+  .text-md-center { text-align: center; }
+  .text-md-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .md-mb-0 { margin-bottom: 0; }
+  .md-mt-0 { margin-top: 0; }
+  .md-p-0 { padding: 0; }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+  
+  .lg-show {
+    display: block !important;
+  }
+  
+  .lg-hide {
+    display: none !important;
+  }
+  
+  /* Grid utilities */
+  .grid-lg-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-lg-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-lg-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Blog layout */
+  .blog-content-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+  }
+  
+  /* Contact layout */
+  .contact-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+  
+  /* Featured content */
+  .featured-post {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Text utilities */
+  .text-lg-left { text-align: left; }
+  .text-lg-center { text-align: center; }
+  .text-lg-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .lg-mb-0 { margin-bottom: 0; }
+  .lg-mt-0 { margin-top: 0; }
+  .lg-p-0 { padding: 0; }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+  
+  .xl-show {
+    display: block !important;
+  }
+  
+  .xl-hide {
+    display: none !important;
+  }
+  
+  /* Grid utilities */
+  .grid-xl-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .grid-xl-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  /* Text utilities */
+  .text-xl-left { text-align: left; }
+  .text-xl-center { text-align: center; }
+  .text-xl-right { text-align: right; }
+  
+  /* Spacing utilities */
+  .xl-mb-0 { margin-bottom: 0; }
+  .xl-mt-0 { margin-top: 0; }
+  .xl-p-0 { padding: 0; }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  :root {
+    --neutral-light: #ddd;
+    --neutral-lightest: #fff;
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+  }
+  
+  /* Enhance text contrast */
+  body {
+    color: black;
+  }
+  
+  /* Enhance borders for better visibility */
+  .card, .blog-card, .service-card, input, select, textarea {
+    border: 2px solid black;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive logo scaling */
+@media (max-width: 768px) {
+  .logo-container {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-container {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .logo-container {
+    max-width: 250px;
+  }
+}
+
+/* Responsive header scaling */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .site-header {
+    padding: 2rem;
+  }
+}
+
+/* Consistent container and section classes */
+.container {
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+/* Dynamic Sizing and Mobile-Friendliness */
+.site-header {
+  padding: 1rem 2%;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.5rem 2%;
+  }
+  
+  .logo-container img {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header {
+    padding: 0.75rem 2%;
+  }
+  
+  .logo-container img {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .site-header {
+    padding: 1rem 2%;
+  }
+  
+  .logo-container img {
+    max-width: 100%;
+  }
+}
+
+/* Responsive styles for new navigation */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: white;
+    padding: 5rem 2rem 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .nav-menu a {
+    padding: 1rem 0;
+  }
+}

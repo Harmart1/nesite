@@ -1,0 +1,196 @@
+/* NorthernEdge Legal Solutions - Critical CSS
+ *
+ * This file contains critical above-the-fold styles
+ * to be inlined in the <head> for faster page rendering.
+ * Last updated: 2025-03-06
+ */
+
+/* Critical CSS Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Critical Variables */
+:root {
+  /* Only most essential variables used in above-fold content */
+  --primary-dark: #0d2c54;
+  --primary: #1A365D; /* Updated to #1A365D */
+  --neutral-dark: #4a4f54;
+  --neutral-light: #e0e5eb;
+  --neutral-lightest: #f7f9fc;
+  --accent: #D4AF37; /* Updated to gold */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 05);
+  --radius-sm: 4px;
+  --transition-fast: 0.2s ease;
+}
+
+/* Base Styles */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif; /* Updated to Raleway */
+  line-height: 1.6;
+  color: var(--neutral-dark);
+  background-color: #ffffff;
+}
+
+/* Site Header */
+.site-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.25rem 0;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 50px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  max-width: 180px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Critical Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-menu a {
+  color: var(--neutral-dark);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--neutral-lightest);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+  font-family: 'Playfair Display', serif; /* Updated to Playfair Display */
+}
+
+.hero .lead {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+/* Basic Button Styles */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Mobile Navigation (hidden by default) */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 20;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--neutral-dark);
+  border-radius: 3px;
+}
+
+/* Critical Responsive Adjustments */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 4rem 0;
+  }
+}

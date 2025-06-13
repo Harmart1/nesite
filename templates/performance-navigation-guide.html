@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance-Optimized Navigation Implementation Guide | NorthernEdge Legal Solutions</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            color: #1a3c5a;
+            border-bottom: 2px solid #e8963a;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: #1a3c5a;
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            color: #e8963a;
+        }
+        
+        code {
+            background-color: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        
+        .note {
+            background-color: #f0f7ff;
+            border-left: 4px solid #1a3c5a;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .warning {
+            background-color: #fff2f0;
+            border-left: 4px solid #e8963a;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Performance-Optimized Navigation Implementation Guide</h1>
+    <p>This guide explains how to implement the performance-optimized navigation components across the NorthernEdge Legal Solutions website.</p>
+    
+    <div class="note">
+        <p><strong>Note:</strong> These enhancements improve performance by using debounced scroll events, will-change properties, and IntersectionObserver for smoother animations.</p>
+    </div>
+    
+    <h2>Implementation Steps</h2>
+    
+    <h3>1. Update Page Header</h3>
+    <p>Replace the existing head section with our optimized template:</p>
+    <pre><code>&lt;!-- Include the optimized head template -->
+&lt;!-- Replace %%PAGE_TITLE%% and %%PAGE_DESCRIPTION%% with appropriate values -->
+&lt;!-- Example: -->
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>About Us | NorthernEdge Legal Solutions&lt;/title>
+    &lt;meta name="description" content="Learn about NorthernEdge Legal Solutions, a modern law firm serving Ontario.">
+    
+    &lt;!-- Preload critical assets -->
+    &lt;link rel="preload" href="/js/enhanced-navigation.js" as="script">
+    
+    &lt;!-- Include all CSS files from template-head-performance.html -->
+    &lt;link rel="stylesheet" href="css/main.css">
+    &lt;!-- ...remaining CSS files... -->
+&lt;/head></code></pre>
+
+    <h3>2. Choose the Appropriate Navigation Template</h3>
+    <p>Depending on the page type, select the appropriate navigation template:</p>
+    
+    <h4>For Regular (Inner) Pages:</h4>
+    <pre><code>&lt;!-- Include optimized inner navigation -->
+&lt;!-- Copy from templates/optimized-inner-navigation.html -->
+&lt;header class="standard-navigation">
+    &lt;!-- ...navigation content... -->
+&lt;/header>
+&lt;div class="mobile-overlay">&lt;/div></code></pre>
+
+    <h4>For Homepage:</h4>
+    <pre><code>&lt;!-- Add class to body -->
+&lt;body class="is-homepage">
+    
+    &lt;!-- Include optimized homepage navigation -->
+    &lt;!-- Copy from templates/optimized-homepage-navigation.html -->
+    &lt;header class="homepage-navigation">
+        &lt;!-- ...navigation content... -->
+    &lt;/header>
+    &lt;div class="mobile-overlay">&lt;/div></code></pre>
+
+    <h3>3. For Pages with Section Navigation</h3>
+    <p>Add the optimized scroll navigation components:</p>
+    <pre><code>&lt;!-- Page progress indicator -->
+&lt;div class="page-progress">
+    &lt;div class="page-progress-bar" id="progressBar">&lt;/div>
+&lt;/div>
+
+&lt;!-- Jump navigation -->
+&lt;nav class="jump-nav" aria-label="Page Sections Navigation">
+    &lt;!-- ...jump navigation content... -->
+&lt;/nav>
+
+&lt;!-- Page sections -->
+&lt;section id="section1" class="page-section">
+    &lt;!-- ...section content... -->
+    &lt;div class="continue-reading">
+        &lt;button class="continue-button" data-target="#section2">
+            &lt;!-- ...button content... -->
+        &lt;/button>
+    &lt;/div>
+&lt;/section></code></pre>
+
+    <h3>4. Include Optimized Footer Scripts</h3>
+    <p>Replace the script includes at the end of the body:</p>
+    <pre><code>&lt;!-- Performance-optimized scripts -->
+&lt;script src="js/enhanced-navigation.js" defer>&lt;/script>
+&lt;script src="js/scroll-navigation.js" defer>&lt;/script>
+&lt;script src="js/back-to-top.js" defer>&lt;/script>
+&lt;script src="js/visual-integration.js" defer>&lt;/script>
+&lt;script src="js/main.js" defer>&lt;/script></code></pre>
+
+    <h2>Performance Features</h2>
+    
+    <h3>Debounced Scroll Events</h3>
+    <p>Scroll events are debounced to improve performance:</p>
+    <pre><code>function debounce(func, wait) {
+    let timeout;
+    return function() {
+        const context = this;
+        const args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            func.apply(context, args);
+        }, wait);
+    };
+}</code></pre>
+
+    <h3>IntersectionObserver</h3>
+    <p>Used instead of scroll events where possible:</p>
+    <pre><code>const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Handle intersection
+        }
+    });
+}, { threshold: 0.2 });</code></pre>
+
+    <h3>GPU Acceleration</h3>
+    <p>GPU-accelerated animations via CSS properties:</p>
+    <pre><code>.standard-navigation {
+    will-change: transform;
+    transform: translateZ(0);
+    contain: layout style;
+}</code></pre>
+
+    <h3>Passive Event Listeners</h3>
+    <p>Improving scroll performance:</p>
+    <pre><code>window.addEventListener('scroll', updateProgressBar, { passive: true });</code></pre>
+
+    <div class="warning">
+        <p><strong>Important:</strong> Ensure that you maintain all ARIA attributes when implementing these templates to preserve accessibility.</p>
+    </div>
+    
+    <h2>Browser Compatibility</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Chrome</th>
+                <th>Firefox</th>
+                <th>Safari</th>
+                <th>Edge</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>IntersectionObserver</td>
+                <td>51+</td>
+                <td>55+</td>
+                <td>12.2+</td>
+                <td>15+</td>
+            </tr>
+            <tr>
+                <td>CSS will-change</td>
+                <td>36+</td>
+                <td>36+</td>
+                <td>9.1+</td>
+                <td>79+</td>
+            </tr>
+            <tr>
+                <td>Passive event listeners</td>
+                <td>51+</td>
+                <td>49+</td>
+                <td>10+</td>
+                <td>79+</td>
+            </tr>
+            <tr>
+                <td>CSS containment</td>
+                <td>52+</td>
+                <td>69+</td>
+                <td>15.4+</td>
+                <td>79+</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Fallback Support</h2>
+    <p>The implementation includes fallbacks for browsers that don't support these optimizations:</p>
+    <ul>
+        <li>Traditional scroll events as backup for IntersectionObserver</li>
+        <li>Safe feature detection prevents errors in older browsers</li>
+        <li>Graceful degradation for CSS properties like will-change</li>
+    </ul>
+    
+    <div class="note">
+        <p><strong>Performance Tip:</strong> For maximum performance gains, also implement lazy loading for images and defer non-critical JavaScript.</p>
+    </div>
+</body>
+</html>

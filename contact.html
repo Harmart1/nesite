@@ -3,214 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PAGE-SPECIFIC TITLE -->
     <title>Contact Us | NorthernEdge Legal Solutions</title>
+    <!-- PAGE-SPECIFIC META DESCRIPTION -->
     <meta name="description" content="Get in touch with NorthernEdge Legal Solutions. Schedule a consultation with our experienced legal team in Sault Ste. Marie, Ontario.">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/accessibility.css">
-    <link rel="stylesheet" href="css/navigation-enhancements.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
-    <link rel="stylesheet" href="css/cookie-consent.css">
+    <!-- PAGE-SPECIFIC META KEYWORDS (if any) -->
+    <!-- PAGE-SPECIFIC CANONICAL LINK (if any) -->
+    <!-- PAGE-SPECIFIC OG/TWITTER META TAGS (if any) -->
+
+    <!-- Favicon (Standardized from index.html) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PAGE-SPECIFIC CSS (e.g., Leaflet on contact.html) -->
+    <link rel="stylesheet" href="css/icon-styles.css">
     <link rel="stylesheet" href="css/footer.css">
-    
-    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
-    
-    <style>
-        /* Map container styling */
-        #contact-map {
-            height: 400px;
-            width: 100%;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Form styling enhancements */
-        .contact-form .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid var(--neutral-light);
-            border-radius: var(--radius-sm);
-            background-color: #fff;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-        
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(26, 60, 90, 0.1);
-        }
-        
-        .contact-form textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .form-required::after {
-            content: "*";
-            color: #dc3545;
-            margin-left: 0.25rem;
-        }
-        
-        /* Contact info styling */
-        .contact-info-card {
-            background-color: white;
-            padding: 2rem;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-md);
-            height: 100%;
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-icon {
-            margin-right: 1rem;
-            background-color: var(--primary-lightest);
-            padding: 0.75rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        
-        .contact-icon svg {
-            width: 1.25rem;
-            height: 1.25rem;
-            fill: var(--primary);
-        }
-        
-        .office-hours {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--neutral-light);
-        }
-        
-        .office-hours h3 {
-            margin-bottom: 1rem;
-        }
-        
-        /* Form error container */
-        .form-error-container {
-            display: none;
-            background-color: #f8d7da;
-            color: #721c24;
-            padding: 1rem;
-            border-radius: var(--radius-sm);
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-error-container.active {
-            display: block;
-        }
-        
-        /* Error message styling */
-        .error-message {
-            color: #dc3545;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-        }
-        
-        /* Invalid field styling */
-        .invalid {
-            border-color: #dc3545 !important;
-        }
-        
-        /* Checkbox group styling */
-        .checkbox-group {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-        }
-        
-        .checkbox-group input[type="checkbox"] {
-            width: auto;
-            margin-top: 0.25rem;
-        }
-    </style>
-    
-    <!-- JavaScript -->
-    <script src="js/main.js" defer></script>
-    <!-- Form validation script -->
-    <script src="js/contact-form-validation.js" defer></script>
+    <!-- PAGE-SPECIFIC JSON-LD SCHEMA (if any) -->
+
+    <!-- Comment for any other page-specific additions -->
+    <!-- Page-specific CSS can be added here if needed -->
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
-    
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-container">
-                <a href="index.html"><img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
-            </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="practice-areas.html">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
+    </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/contact.html" class="active">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-contact" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-contact" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
 
     <main id="main-content">
-        <section class="page-header fade-in">
+        <section class="page-header py-16 bg-neutral-lightest fade-in">
             <div class="container">
-                <h1>Contact Us</h1>
+                <h1 class="elegant-heading centered">Contact Us</h1>
                 <p class="lead">Get in touch with our team to discuss how we can help with your legal needs.</p>
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section py-16 bg-white">
             <div class="container">
-                <div class="content-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="main-content slide-in-right">
-                        <h2>Send Us a Message</h2>
+                        <h2 class="elegant-heading">Send Us a Message</h2>
                         <p>Fill out the form below to schedule a consultation or inquire about our services. We aim to respond to all inquiries within 1 business day.</p>
                         
-                        <form class="contact-form" id="contact-form" action="mailto:info@northernedgelegal.com" method="POST" enctype="text/plain" onsubmit="return handleFormSubmit(event)">
+                        <!-- Removed modal button -->
+                        
+                        <!-- Removed modal wrapper div -->
+                        <!-- Embed the form directly -->
+                        <form class="contact-form" id="contact-form" action="/send-contact-email" method="POST">
                             <!-- Form error container will be auto-created by the validation script -->
                             
                             <div class="form-grid">
@@ -255,19 +148,19 @@
                             </div>
                             
                             <input type="hidden" name="Subject" value="Website Contact Form Submission">
-                            <button type="submit" class="btn btn-primary" aria-label="Submit Inquiry">Submit Inquiry</button>
+                            <button type="submit" class="btn btn-primary pulse" aria-label="Submit Inquiry">Submit Inquiry</button>
                         </form>
+                        <!-- Removed modal closing divs -->
                     </div>
                     
                     <aside class="sidebar slide-in-left">
                         <div class="contact-info-card">
-                            <h2>Contact Information</h2>
+                            <h2 class="elegant-heading">Contact Information</h2>
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-label="Location Icon">
-                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                    </svg>
+                                    <!-- Replaced img with Font Awesome icon -->
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <h3>Address</h3>
@@ -281,9 +174,8 @@
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-label="Email Icon">
-                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                    </svg>
+                                    <!-- Replaced img with Font Awesome icon -->
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <h3>Email</h3>
@@ -293,13 +185,12 @@
                             
                             <div class="contact-method">
                                 <div class="contact-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-label="Phone Icon">
-                                        <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
-                                    </svg>
+                                    <!-- Replaced img with Font Awesome icon -->
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div>
                                     <h3>Phone</h3>
-                                    <p><a href="tel:+17051234567">(705) 123-4567</a></p>
+                                    <p><a href="tel:+17059993657">(705) 999-3657</a></p>
                                 </div>
                             </div>
                             
@@ -315,17 +206,16 @@
         </section>
         
         <!-- Map Section -->
-        <section class="map-section">
+        <section class="map-section py-16 bg-neutral-lightest">
             <div class="container">
-                <h2>Our Location</h2>
+                <h2 class="elegant-heading centered">Our Location</h2>
                 <div id="contact-map"></div>
-                <p class="text-center">Convenient downtown location with accessible entrance and free parking available.</p>
             </div>
         </section>
 
-        <section class="faq-section">
+        <section class="faq-section py-16 bg-white">
             <div class="container">
-                <h2>Frequently Asked Questions</h2>
+                <h2 class="elegant-heading centered">Frequently Asked Questions</h2>
                 <div class="accordion">
                     <div class="accordion-item">
                         <h3 class="accordion-header">
@@ -363,10 +253,10 @@
             </div>
         </section>
 
-        <section class="cta-section">
+        <section class="cta-section py-16 bg-primary-lightest">
             <div class="container">
                 <div class="cta-content fade-in">
-                    <h2>Ready to Take the First Step?</h2>
+                    <h2 class="elegant-heading centered">Ready to Take the First Step?</h2>
                     <p>Our team is committed to providing prompt, professional legal guidance.</p>
                     <div class="cta-buttons">
                         <a href="tel:+17051234567" class="btn btn-primary pulse" aria-label="Call Now">Call Now</a>
@@ -377,29 +267,34 @@
         </section>
     </main>
 
+    <!-- START STANDARDIZED FOOTER -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                    <div class="logo-container">
+                        <a href="/index.html">
+                            <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h3>Practice Areas</h3>
                         <ul>
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
+                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="/business-law.html">Business Law</a></li>
+                            <li><a href="/technology-law.html">Technology Law</a></li>
+                            <li><a href="/general-practice.html">General Practice</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="blog/index.html">Blog</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/resources.html">Resources</a></li>
+                            <li><a href="/blog/index.html">Blog</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -409,97 +304,65 @@
                             Sault Ste. Marie, Ontario<br>
                             P6A 4E6
                         </address>
-                        <p>Phone: <a href="tel:+17051234567" aria-label="Call us at (705) 123-4567">(705) 123-4567</a></p>
-                        <p>Email: <a href="mailto:info@northernedgelegal.com" aria-label="Email us at info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html" aria-label="Read our privacy policy">Privacy Policy</a> | 
-                    <a href="terms-of-use.html" aria-label="Read our terms of use">Terms of Use</a>
+                    <a href="/privacy-policy.html">Privacy Policy</a> |
+                    <a href="/terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
         </div>
     </footer>
-    
-    <!-- Cookie Consent JavaScript -->
-    <script src="js/cookie-consent.js" defer></script>
-    
-    <!-- Leaflet JavaScript - loading last for optimal performance -->
+    <!-- END STANDARDIZED FOOTER -->
+
+    <!-- START STANDARDIZED FOOTER SCRIPTS -->
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z" fill="white"/>
+        </svg>
+    </button>
+
+    <!-- Core JavaScript files deferred for performance -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navigation.js" defer></script> 
+    <script src="/js/back-to-top.js" defer></script>
+
+    <!-- Conditional/Page-specific scripts -->
+    <!-- Leaflet JS for map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
-    
     <script>
-        // Initialize the map after page is loaded
+        // Initialize Leaflet map
         document.addEventListener('DOMContentLoaded', function() {
-            // Create map centered on the office location in Sault Ste. Marie
-            // Using coordinates from both contact files - this is more specific
-            const map = L.map('contact-map').setView([46.490, -84.367], 15);
-            
-            // Add OpenStreetMap tile layer
+            var map = L.map('contact-map').setView([46.522, -84.345], 13); // Coordinates for Sault Ste. Marie
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
-                attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
-            
-            // Add a marker for the office location
-            const officeMarker = L.marker([46.490, -84.367]).addTo(map);
-            
-            // Add a popup to the marker with office information
-            officeMarker.bindPopup("<strong>NorthernEdge Legal Solutions</strong><br>67 Hugill St.<br>Sault Ste. Marie, ON<br>P6A 4E6").openPopup();
-            
-            // Accordion functionality for FAQs
-            const accordionButtons = document.querySelectorAll('.accordion-button');
-            accordionButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Toggle aria-expanded
-                    const expanded = this.getAttribute('aria-expanded') === 'true';
-                    this.setAttribute('aria-expanded', !expanded);
-                    
-                    // Toggle accordion content visibility
-                    const content = this.parentElement.nextElementSibling;
-                    content.style.maxHeight = !expanded ? content.scrollHeight + 'px' : null;
-                });
-            });
+            var marker = L.marker([46.522, -84.345]).addTo(map);
+            marker.bindPopup("<b>NorthernEdge Legal Solutions</b><br>67 Hugill St.").openPopup();
         });
-        
-        // Form submission handler with backup email option
-        function handleFormSubmit(event) {
-            // Store form data for thank you page
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Store in sessionStorage for thank you page
-            sessionStorage.setItem('contactFormData', JSON.stringify(formData));
-            
-            // Check if mailto: will work, otherwise provide fallback
-            if (navigator.userAgent.indexOf('MSIE') !== -1 || 
-                navigator.userAgent.indexOf('Trident') !== -1 ||
-                navigator.userAgent.indexOf('Edge') !== -1) {
-                // For browsers where mailto: with form data may not work well
-                
-                alert("Thank you for your message. If your email client doesn't open automatically, please email us directly at info@northernedgelegal.com with your inquiry.");
-                
-                // Continue with form submission (will attempt to open email client)
-                return true;
-            }
-            
-            // For other browsers, let the form submit naturally
-            // After 2 seconds, redirect to thank you page
-            setTimeout(function() {
-                window.location.href = 'thank-you.html';
-            }, 2000);
-            
-            return true;
+
+        // Conditionally load contact form validation
+        if (document.querySelector('form.contact-form')) { 
+            const formScript = document.createElement('script');
+            formScript.src = '/js/contact-form-validation.js'; 
+            formScript.defer = true;
+            document.body.appendChild(formScript);
         }
     </script>
+
+    <!-- Cookie Consent Script (can also be loaded conditionally or with delay) -->
+    <script src="/js/cookie-consent.js" defer></script>
+    <!-- END STANDARDIZED FOOTER SCRIPTS -->
+
+    <!-- Removed old script links -->
 </body>
 </html>

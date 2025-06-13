@@ -6,7 +6,7 @@
   background-color: var(--neutral-lightest);
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--neutral-light);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* Adjusted from 2rem */
 }
 
 .breadcrumb-list {
@@ -46,7 +46,7 @@
 /* Current page (last item) styling */
 .breadcrumb-list li:last-child {
   font-weight: 600;
-  color: var(--neutral-dark);
+  color: var(--black);
 }
 
 /* Responsive adjustments */

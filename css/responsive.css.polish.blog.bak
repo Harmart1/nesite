@@ -1,0 +1,576 @@
+/* NorthernEdge Legal Solutions - Responsive Styles
+ *
+ * Standardized media queries for consistent responsive behavior
+ * Last updated: 2025-03-06
+ */
+
+/* Base (Mobile First) Styles
+ * Default styles target mobile devices - no media query needed
+ */
+
+/* Small devices (larger phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+
+  .sm-show {
+    display: block !important;
+  }
+
+  .sm-hide {
+    display: none !important;
+  }
+
+  /* Grid utilities */
+  .grid-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Text utilities */
+  .text-sm-left { text-align: left; }
+  .text-sm-center { text-align: center; }
+  .text-sm-right { text-align: right; }
+
+  /* Spacing utilities */
+  .sm-mb-0 { margin-bottom: 0; }
+  .sm-mt-0 { margin-top: 0; }
+  .sm-p-0 { padding: 0; }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+
+  .md-show {
+    display: block !important;
+  }
+
+  .md-hide {
+    display: none !important;
+  }
+
+  /* Grid utilities */
+  .grid-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Footer layout */
+  .footer-content {
+    grid-template-columns: 1fr 3fr;
+    text-align: left;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-column h3::after {
+    left: 0;
+    transform: none;
+  }
+
+  /* Form layouts */
+  .form-columns {
+    flex-direction: row;
+  }
+
+  /* Navigation */
+  .navbar-menu {
+    display: flex !important;
+    position: static;
+    background-color: transparent;
+    flex-direction: row;
+    padding: 0;
+    box-shadow: none;
+    transform: none;
+    width: auto;
+  }
+
+  /* Text utilities */
+  .text-md-left { text-align: left; }
+  .text-md-center { text-align: center; }
+  .text-md-right { text-align: right; }
+
+  /* Spacing utilities */
+  .md-mb-0 { margin-bottom: 0; }
+  .md-mt-0 { margin-top: 0; }
+  .md-p-0 { padding: 0; }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+
+  .lg-show {
+    display: block !important;
+  }
+
+  .lg-hide {
+    display: none !important;
+  }
+
+  /* Grid utilities */
+  .grid-lg-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-lg-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-lg-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Blog layout */
+  .blog-content-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+  }
+
+  /* Contact layout */
+  .contact-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  /* Featured content */
+  .featured-post {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Text utilities */
+  .text-lg-left { text-align: left; }
+  .text-lg-center { text-align: center; }
+  .text-lg-right { text-align: right; }
+
+  /* Spacing utilities */
+  .lg-mb-0 { margin-bottom: 0; }
+  .lg-mt-0 { margin-top: 0; }
+  .lg-p-0 { padding: 0; }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+
+  .xl-show {
+    display: block !important;
+  }
+
+  .xl-hide {
+    display: none !important;
+  }
+
+  /* Grid utilities */
+  .grid-xl-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .grid-xl-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Text utilities */
+  .text-xl-left { text-align: left; }
+  .text-xl-center { text-align: center; }
+  .text-xl-right { text-align: right; }
+
+  /* Spacing utilities */
+  .xl-mb-0 { margin-bottom: 0; }
+  .xl-mt-0 { margin-top: 0; }
+  .xl-p-0 { padding: 0; }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  :root {
+    --neutral-light: #ddd;
+    --neutral-lightest: #fff;
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+  }
+
+  /* Enhance text contrast */
+  body {
+    color: black;
+  }
+
+  /* Enhance borders for better visibility */
+  .card, .blog-card, .service-card, input, select, textarea {
+    border: 2px solid black;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive logo scaling */
+@media (max-width: 768px) {
+  .logo-container {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-container {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .logo-container {
+    max-width: 250px;
+  }
+}
+
+/* Responsive header scaling */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .site-header {
+    padding: 2rem;
+  }
+}
+
+/* Consistent container and section classes */
+.container {
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+/* Dynamic Sizing and Mobile-Friendliness */
+.site-header {
+  padding: 1rem 2%;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.5rem 2%;
+  }
+
+  .logo-container img {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header {
+    padding: 0.75rem 2%;
+  }
+
+  .logo-container img {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .site-header {
+    padding: 1rem 2%;
+  }
+
+  .logo-container img {
+    max-width: 100%;
+  }
+}
+
+/* Responsive styles for new navigation */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+  }
+
+  .mobile-menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--neutral-dark);
+    border-radius: 3px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: white;
+    padding: 5rem 2rem 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-menu a {
+    padding: 1rem 0;
+  }
+}
+
+/* Mobile Optimization for index.html - Hero Buttons */
+@media (max-width: 768px) {
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3, 1rem);
+  }
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 320px;
+    padding-top: var(--space-3, 0.75rem); /* Adjusted fallback to match var(--space-3) more closely */
+    padding-bottom: var(--space-3, 0.75rem);
+  }
+}
+
+/* Mobile Optimization for index.html - Practice Area Cards */
+@media (max-width: 768px) {
+  .practice-areas-overview .card .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .practice-areas-overview .card .practice-area-icon {
+    margin-right: 0;
+    margin-bottom: var(--space-3, 1rem);
+  }
+  .practice-areas-overview .card .card-body {
+    text-align: center;
+  }
+  .practice-areas-overview .card .btn {
+    width: auto;
+    display: inline-block;
+    margin-top: var(--space-3, 1rem);
+  }
+}
+
+/* Mobile Optimization for about.html - Firm Overview */
+@media (max-width: 767px) { /* Max for 'sm' screens, before 'md' grid kicks in */
+  .firm-overview .grid {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+  }
+  .firm-overview .image-column {
+    /* order: -1; If image should be on top, HTML needs to be structured for this or JS used */
+    margin-bottom: var(--space-6, 1.5rem);
+  }
+  .firm-overview .image-column img.rounded-image {
+    width: 100%;
+    max-width: 380px; /* Optional: constrain image width on mobile */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .firm-overview .text-column {
+    text-align: center;
+  }
+  .firm-overview .text-column h2.elegant-heading {
+    text-align: center;
+  }
+  .firm-overview .text-column h2.elegant-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile Optimization - General CTA Section Buttons */
+@media (max-width: 768px) {
+  .cta-section .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3, 1rem);
+  }
+  .cta-section .btn {
+    width: 100%;
+    max-width: 320px;
+    padding-top: var(--space-3, 0.75rem);
+    padding-bottom: var(--space-3, 0.75rem);
+  }
+}
+
+/* Mobile Optimization for about.html - Values Grid Cards */
+@media (max-width: 768px) {
+  .values-grid .card {
+    text-align: center;
+  }
+  .values-grid .value-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .values-grid .value-icon img,
+  .values-grid .value-icon svg {
+    margin-left: auto; /* Center icon if it is a block or inline-block */
+    margin-right: auto;
+  }
+}
+
+/* Mobile Optimization for practice-areas.html - Practice Area Cards */
+@media (max-width: 768px) {
+  .practice-area-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .practice-area-card .practice-area-icon {
+    margin-right: 0;
+    margin-bottom: var(--space-4, 1rem);
+  }
+  .practice-area-card .practice-area-content {
+    text-align: center;
+  }
+  .practice-area-card .practice-area-content h3.elegant-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile Optimization for business-law.html (etc) - Jump Navigation */
+@media (max-width: 768px) {
+  .section-nav {
+    position: static; /* Override sticky */
+    margin-top: var(--space-6, 1.5rem);
+    margin-bottom: var(--space-6, 1.5rem);
+    box-shadow: none;
+    border-top: 1px solid var(--neutral-light, #e0e5eb); /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Added top border for separation blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    border-bottom: 1px solid var(--neutral-light, #e0e5eb);
+    border-radius: 0;
+    background-color: var(--neutral-lightest, #f7f9fc);
+  }
+  .section-nav .section-nav-list { /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Assuming this class is on the ul blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: var(--space-2, 0.5rem); /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Padding for scrollbar blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    padding-bottom: var(--space-2, 0.5rem);
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    border-bottom: none;
+    justify-content: flex-start; /* Align items to start */
+  }
+  .section-nav .section-nav-item { /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Assuming this class is on li if used blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .section-nav .section-nav-link {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+    display: inline-block; /* Ensure proper spacing and border */
+  }
+  .section-nav .section-nav-link:hover,
+  .section-nav .section-nav-link.active {
+    border-left: none;
+    border-bottom-color: var(--gold, #D4AF37);
+    background-color: transparent;
+    padding-left: var(--space-3, 0.75rem);
+    color: var(--primary, #1A365D);
+  }
+}
+
+/* Mobile Optimization for business-law.html (etc) - Content Grid */
+@media (max-width: 767px) { /* Using 767px to match firm-overview changes */
+  .content-grid {
+    grid-template-columns: 1fr; /* Stack columns */
+  }
+  .content-grid > .sidebar { /app /bin /bin.usr-is-merged /boot /dev /etc /home /lib /lib.usr-is-merged /lib64 /media /mnt /opt /proc /rom /root /run /sbin /sbin.usr-is-merged /srv /sys /tmp /usr /var Assuming direct child or specific class for sidebar blog/ components/ css/ docs/ favicon/ images/ js/ team/ templates/ videos/
+    margin-top: var(--space-6, 1.5rem);
+  }
+}
+
+/* Mobile Optimization for resources.html - Resource Filters */
+@media (max-width: 767px) { /* Max for 'sm' screens, before 'md' flex kicks in from main.css */
+  .resource-filters > .container {
+    flex-direction: column;
+    align-items: stretch; /* Make search bar full width too */
+  }
+  .resource-filters .category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: var(--space-4, 1rem);
+    gap: var(--space-2, 0.5rem);
+  }
+  .resource-filters .category-tab {
+    margin: 0; /* Removed individual margins as gap is used */
+  }
+  .resource-filters .search-bar input.form-control {
+    width: 100%;
+  }
+}
+
+/* Mobile Optimization for contact.html - Contact Section Grid */
+@media (max-width: 767px) {
+  .contact-section .grid {
+    grid-template-columns: 1fr; /* Ensure it stacks to one column */
+  }
+  .contact-section .grid > .sidebar {
+    margin-top: var(--space-6, 1.5rem);
+    /* order: -1; /* User can uncomment if contact info should appear first */
+  }
+}
+
+/* Mobile Optimization for contact.html - Map Height */
+@media (max-width: 768px) {
+  #contact-map {
+    height: 300px; /* Reduce height for mobile */
+  }
+}
+
+/* Mobile Optimization for contact.html - Form Elements */
+@media (max-width: 768px) {
+  .contact-form .btn {
+    width: 100%;
+    padding-top: var(--space-3, 0.75rem);
+    padding-bottom: var(--space-3, 0.75rem);
+  }
+}

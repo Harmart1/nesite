@@ -1,353 +1,51 @@
-/* NorthernEdge Legal Solutions - Animations Stylesheet
- *
- * This file contains animation definitions for various UI elements including:
- * - Page transition animations
- * - Hover effects
- * - Micro-interactions
- * - Loading states
- *
- * Animations are designed to be subtle and professional, enhancing the
- * user experience without being distracting or flashy.
- */
+/* Animation utilities for scroll animations */
 
-/* Global animation variables */
-:root {
-  --animation-speed-slow: 1.2s;
-  --animation-speed-medium: 0.8s;
-  --animation-speed-fast: 0.4s;
-  --animation-speed-very-fast: 0.2s;
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Form error styling */
+.form-error {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.input-error {
+  border-color: #e53e3e !important;
+  background-color: rgba(229, 62, 62, 0.05);
+}
+
+/* Form success styling */
+.form-success {
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.form-success h3 {
+  color: #38a169;
+  margin-bottom: var(--space-sm);
 }
 
 /* Respect user preferences for reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* ===== Page Load Animations ===== */
-
-/* Fade In */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity var(--animation-speed-medium) ease,
-              transform var(--animation-speed-medium) ease;
-}
-
-.fade-in.active,
-.fade-in:not(.delay-animation) {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Slide In from Right */
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(40px);
-  transition: opacity var(--animation-speed-medium) ease,
-              transform var(--animation-speed-medium) ease;
-}
-
-.slide-in-right.active,
-.slide-in-right:not(.delay-animation) {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Slide In from Left */
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity var(--animation-speed-medium) ease,
-              transform var(--animation-speed-medium) ease;
-}
-
-.slide-in-left.active,
-.slide-in-left:not(.delay-animation) {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Slide Up */
-.slide-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity var(--animation-speed-medium) ease,
-              transform var(--animation-speed-medium) ease;
-}
-
-.slide-up.active,
-.slide-up:not(.delay-animation) {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Scale In */
-.scale-in {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity var(--animation-speed-medium) ease,
-              transform var(--animation-speed-medium) ease;
-}
-
-.scale-in.active,
-.scale-in:not(.delay-animation) {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Staggered Fade In (for items in a grid) */
-.staggered-fade-in > * {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.staggered-fade-in.active > *,
-.staggered-fade-in:not(.delay-animation) > * {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.staggered-fade-in > *:nth-child(1) { transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s; }
-.staggered-fade-in > *:nth-child(2) { transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s; }
-.staggered-fade-in > *:nth-child(3) { transition: opacity 0.4s ease 0.3s, transform 0.4s ease 0.3s; }
-.staggered-fade-in > *:nth-child(4) { transition: opacity 0.4s ease 0.4s, transform 0.4s ease 0.4s; }
-.staggered-fade-in > *:nth-child(5) { transition: opacity 0.4s ease 0.5s, transform 0.4s ease 0.5s; }
-.staggered-fade-in > *:nth-child(6) { transition: opacity 0.4s ease 0.6s, transform 0.4s ease 0.6s; }
-.staggered-fade-in > *:nth-child(7) { transition: opacity 0.4s ease 0.7s, transform 0.4s ease 0.7s; }
-.staggered-fade-in > *:nth-child(8) { transition: opacity 0.4s ease 0.8s, transform 0.4s ease 0.8s; }
-.staggered-fade-in > *:nth-child(9) { transition: opacity 0.4s ease 0.9s, transform 0.4s ease 0.9s; }
-.staggered-fade-in > *:nth-child(n+10) { transition: opacity 0.4s ease 1s, transform 0.4s ease 1s; }
-
-/* ===== Hover Animations ===== */
-
-/* Float Up On Hover */
-.float-on-hover {
-  transition: transform var(--animation-speed-fast) ease, 
-              box-shadow var(--animation-speed-fast) ease;
-}
-
-.float-on-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Grow on Hover */
-.grow-on-hover {
-  transition: transform var(--animation-speed-fast) ease;
-}
-
-.grow-on-hover:hover {
-  transform: scale(1.03);
-}
-
-/* Glow on Hover (subtle) */
-.glow-on-hover {
-  transition: box-shadow var(--animation-speed-fast) ease;
-}
-
-.glow-on-hover:hover {
-  box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.3);
-}
-
-/* ===== Button Animations ===== */
-
-/* Pulse Animation for CTA buttons */
-.btn.pulse {
-  position: relative;
-  overflow: visible;
-}
-
-.btn.pulse::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  box-shadow: 0 0 0 0 rgba(232, 150, 58, 0.7);
-  animation: pulse 2s infinite;
-  z-index: -1;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(232, 150, 58, 0.7);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(232, 150, 58, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(232, 150, 58, 0);
-  }
-}
-
-/* ===== Icon Animations ===== */
-
-/* Rotate on Hover */
-.icon-rotate {
-  transition: transform var(--animation-speed-fast) ease;
-}
-
-.icon-rotate:hover {
-  transform: rotate(15deg);
-}
-
-/* Bounce Animation */
-.bounce {
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  .animate-on-scroll {
+    opacity: 1;
     transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
-/* Shake Animation for Highlighting */
-.shake {
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-}
-
-@keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
+    transition: none;
   }
   
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-3px, 0, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(3px, 0, 0);
-  }
-}
-
-/* ===== Loading States ===== */
-
-/* Spinner Animation */
-.spinner {
-  width: 24px;
-  height: 24px;
-  border: 3px solid rgba(var(--primary-rgb), 0.2);
-  border-top-color: var(--primary);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Loading Dots */
-.loading-dots::after {
-  content: '.';
-  animation: dots 1.5s steps(4, end) infinite;
-}
-
-@keyframes dots {
-  0%, 20% {
-    content: '.';
-  }
-  40% {
-    content: '..';
-  }
-  60% {
-    content: '...';
-  }
-  80%, 100% {
-    color: transparent;
-  }
-}
-
-/* Progress Bar */
-.progress-bar {
-  height: 4px;
-  width: 100%;
-  background-color: rgba(var(--primary-rgb), 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.progress-bar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 30%;
-  background-color: var(--primary);
-  animation: progress 2s ease infinite;
-}
-
-@keyframes progress {
-  0% {
-    left: -30%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-/* ===== Scroll-Based Animations ===== */
-
-/* For elements that appear when scrolled into view */
-.scroll-fade-in {
-  opacity: 0;
-  transition: opacity var(--animation-speed-medium) ease;
-}
-
-.scroll-fade-in.visible {
-  opacity: 1;
-}
-
-.scroll-slide-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity var(--animation-speed-medium) ease,
-              transform var(--animation-speed-medium) ease;
-}
-
-.scroll-slide-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== Media Query Adjustments ===== */
-
-/* Disable animations on smaller screens for better performance */
-@media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}
-
-/* Disable complex animations on mobile */
-@media screen and (max-width: 768px) {
-  .staggered-fade-in > * {
-    transition-delay: 0s !important;
   }
 }

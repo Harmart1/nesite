@@ -10,6 +10,12 @@ This guide provides instructions for implementing the new elegant visual design 
    - `elegant-design-system.css`: Core styling system with variables, typography, buttons, and layouts
    - `elegant-navigation.css`: Navigation components including header, dropdowns, and footer 
    - `typography-animations.css`: Typography enhancements and animation effects
+   - `critical.css`: Critical CSS for initial page load
+   - `variables.css`: CSS variables for consistent spacing and color palette
+   - `responsive.css`: Responsive design adjustments
+   - `visual-enhancements.css`: Micro-interactions and hover effects
+   - `accessibility-enhancements.css`: Accessibility improvements
+   - `accessibility.css`: Additional accessibility styles
 
 2. **Template Files**
    - `index-elegant.html`: Example implementation of the new design system
@@ -30,6 +36,16 @@ Add these CSS file references to the `<head>` section of all HTML files:
 <link rel="stylesheet" href="css/elegant-design-system.css">
 <link rel="stylesheet" href="css/elegant-navigation.css">
 <link rel="stylesheet" href="css/typography-animations.css">
+<link rel="stylesheet" href="css/main.css">
+< redesign-site-1
+<link rel="stylesheet" href="css/critical.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/visual-enhancements.css">
+<link rel="stylesheet" href="css/accessibility-enhancements.css">
+<link rel="stylesheet" href="css/accessibility.css">
+=======
+> redesign-site
 ```
 
 ### 2. Update Header Structure

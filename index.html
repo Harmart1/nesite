@@ -3,322 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NorthernEdge Legal Solutions | Modern Law Firm in Sault Ste. Marie, ON</title>
-    <meta name="description" content="NorthernEdge Legal Solutions provides expert legal services in civil litigation, business law, and technology law throughout Northern Ontario.">
+    <!-- START STANDARDIZED HEADER -->
+    <title>NorthernEdge Legal Solutions</title> 
+    <meta name="description" content="Expert legal services in civil litigation, business law, and technology law throughout Northern Ontario">
     
-    <!-- Favicon References -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a3c5a">
-    <meta name="msapplication-TileColor" content="#1a3c5a">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
     <meta name="theme-color" content="#ffffff">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/visual-enhancements.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/accessibility.css">
-    <link rel="stylesheet" href="css/navigation-enhancements.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
-    <link rel="stylesheet" href="css/cookie-consent.css">
-    <link rel="stylesheet" href="css/back-to-top.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <!-- Add the icon styles CSS -->
-    <link rel="stylesheet" href="css/icon-styles.css">
-    <!-- Splash Video Styling -->
-    <style>
-        /* Splash screen container styling */
-        #splash-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* Updated background color to match site palette */
-            background-color: #f5f8fb; /* Light blue-gray that matches website theme */
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 1s;
-        }
-        
-        #splash-container video {
-            width: 100%;
-            height: auto;
-            max-width: 800px;
-            /* Add subtle shadow for depth */
-            filter: drop-shadow(0 10px 15px rgba(26, 60, 90, 0.15));
-        }
-        
-        #splash-container .fallback-logo {
-            max-width: 300px;
-            margin: 0 auto;
-        }
-        
-        /* Hide main content initially */
-        body.splash-active main, 
-        body.splash-active header,
-        body.splash-active footer {
-            display: none;
-        }
-        
-        /* Skip splash link for accessibility */
-        .skip-splash {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255,255,255,0.85);
-            padding: 8px 15px;
-            border-radius: 4px;
-            color: #1a3c5a;
-            text-decoration: none;
-            font-size: 0.9rem;
-            z-index: 10000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .skip-splash:focus, 
-        .skip-splash:hover {
-            background: #fff;
-            text-decoration: underline;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-        }
 
-        /* Progress indicator for video */
-        .video-progress {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 2px;
-            overflow: hidden;
-        }
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background-color: #e8963a; /* Use accent color from website */
-            transition: width 0.1s linear;
-        }
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
 
-        /* Hero section video styling */
-        .hero-section video {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-    
-    <!-- JavaScript -->
-    <script src="js/main.js" defer></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- END STANDARDIZED HEADER -->
+
+    <!-- Page-specific CSS can be added here if needed -->
+    <!-- Removed redundant/old CSS links -->
+
 </head>
-<body class="splash-active">
-    <!-- Splash Screen with Video -->
-    <div id="splash-container">
-        <a href="#skip-to-content" class="skip-splash" id="skip-splash" aria-label="Skip Intro">Skip Intro</a>
-        <video id="logo-animation" autoplay muted playsinline preload="auto">
-            <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
-            <!-- Fallback for when video cannot be played -->
-            <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions" class="fallback-logo">
-        </video>
-        <!-- Added progress indicator -->
-        <div class="video-progress">
-            <div class="progress-bar" id="videoProgress"></div>
-        </div>
+<body>
+    <!-- START STANDARDIZED HEADER NAV -->
+
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
     </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html" class="active">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-idx" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-idx" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
 
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- END STANDARDIZED HEADER NAV -->
     
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-        </svg>
-    </a>
-    
-    <header class="site-header" id="skip-to-content">
-        <div class="container">
-            <div class="logo-container">
-                <a href="index.html"><img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo"></a>
-            </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="practice-areas.html">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero section-lg bg-primary-lightest text-center">
             <div class="container">
-                <div class="hero-content fade-in">
-                    <h1>Modern Legal Solutions for Today's Challenges</h1>
-                    <p class="lead">Expert legal guidance in Civil Litigation, Business Law, and Technology Law, serving clients throughout Northern Ontario and beyond.</p>
-                    <div class="hero-buttons">
-                        <!-- Fixed button with multiple approaches to ensure it works -->
-                        <a href="contact.html" class="btn btn-primary pulse" aria-label="Schedule a Consultation" onclick="window.location.href='contact.html'; return false;" id="consultation-btn">Schedule a Consultation</a>
-                        <a href="#services" class="btn btn-secondary" aria-label="Explore Our Services">Explore Our Services</a>
-                    </div>
-                    <!-- Embedded video -->
-                    <video src="videos/DynamicLogoAnimation.mp4" autoplay muted loop></video>
+                <h1 class="elegant-heading centered fade-in slide-down">Trusted Legal Expertise for Northern Ontario</h1>
+                <p class="hero-tagline text-lead fade-in slide-down delay-1">Innovative solutions for complex legal challenges in today's rapidly evolving business landscape</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary fade-in slide-up delay-2 pulse">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
+                    <a href="practice-areas.html" class="btn btn-secondary fade-in slide-up delay-2">Explore Our Services <i class="fas fa-briefcase"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- Page navigation dots - side navigation -->
-        <div class="page-navigation-dots">
-            <a href="#hero" class="dot active" data-section="hero" aria-label="Hero section"></a>
-            <a href="#services" class="dot" data-section="services" aria-label="Services section"></a>
-            <a href="#about" class="dot" data-section="about" aria-label="About section"></a>
-            <a href="#approach" class="dot" data-section="approach" aria-label="Approach section"></a>
-            <a href="#testimonials" class="dot" data-section="testimonials" aria-label="Testimonials section"></a>
-            <a href="#contact" class="dot" data-section="contact" aria-label="Contact section"></a>
-        </div>
-
-        <!-- Services Section -->
-        <section id="services" class="page-section services-section">
+        <section class="video-section section-lg bg-neutral-lightest fade-in text-center">
             <div class="container">
-                <h2 class="section-title text-center">Our Practice Areas</h2>
-                <p class="section-description text-center">Specialized legal services tailored to your specific needs.</p>
-                
-                <div class="services-grid staggered-fade-in">
-                    <a href="civil-litigation.html" class="practice-card float-on-hover">
-                        <div class="practice-icon">
-                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
+                <h2 class="elegant-heading centered">Our Dynamic Legal Solutions</h2>
+                <!-- Consolidated description -->
+                <p class="video-description text-lead text-center">
+                    Watch how NorthernEdge Legal Solutions brings innovation and expertise to your legal challenges. Witness our commitment to excellence through our dynamic visual identity, representing the intersection of traditional legal expertise and modern problem-solving strategies.
+                </p>
+                <div class="video-container">
+                    <div class="video-responsive">
+                        <!-- Consider adding track elements for captions/subtitles -->
+                        <!-- Example: <track label="English" kind="subtitles" srclang="en" src="captions/video-en.vtt" default> -->
+                        <video id="firm-video" controls autoplay muted loop>
+                            <source src="videos/DynamicLogoAnimation.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-controls">
+                            <button class="video-btn" id="play-pause-btn" aria-label="Play or pause video">
+                                <i class="fas fa-pause" id="play-pause-icon"></i>
+                            </button>
+                            <button class="video-btn" id="mute-unmute-btn" aria-label="Mute or unmute video">
+                                <i class="fas fa-volume-mute" id="mute-icon"></i>
+                            </button>
+                            <button class="video-btn" id="fullscreen-btn" aria-label="Toggle fullscreen">
+                                <i class="fas fa-expand"></i>
+                            </button>
                         </div>
-                        <h3>Civil Litigation</h3>
-                        <p>Strategic representation in disputes, lawsuits, and negotiations to protect your rights and achieve favorable outcomes.</p>
-                        <div class="card-action">
-                            <span class="btn-text">Learn More</span>
-                        </div>
-                    </a>
-                    
-                    <a href="business-law.html" class="practice-card float-on-hover">
-                        <div class="practice-icon">
-                            <img src="images/icons/business-icon.svg" alt="Business Law Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Business Law</h3>
-                        <p>Comprehensive legal support for businesses at every stage, from formation to growth, transactions, and compliance.</p>
-                        <div class="card-action">
-                            <span class="btn-text">Learn More</span>
-                        </div>
-                    </a>
-                    
-                    <a href="technology-law.html" class="practice-card float-on-hover">
-                        <div class="practice-icon">
-                            <img src="images/icons/technology-icon.svg" alt="Technology Law Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
-                        </div>
-                        <h3>Technology Law</h3>
-                        <p>Expert legal services for technology companies, including intellectual property, data protection, and regulatory compliance.</p>
-                        <div class="card-action">
-                            <span class="btn-text">Learn More</span>
-                        </div>
-                    </a>
+                    </div>
                 </div>
+                <!-- Removed redundant title and description from below the video -->
             </div>
         </section>
 
-        <section class="why-choose-us">
-            <!-- Value proposition section -->
-        </section>
-
-        <!-- Replace testimonials with industry expertise section -->
-        <section class="industry-expertise">
+        <section class="value-props section-lg bg-white fade-in">
             <div class="container">
-                <h2>Our Industry Expertise</h2>
-                <p class="section-intro">NorthernEdge Legal Solutions brings specialized knowledge to complex legal challenges across multiple industries.</p>
-                
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <div class="icon-container">
-                            <img src="images/icons/technology-icon.svg" alt="Technology Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="card fade-in slide-up delay-1">
+                        <div class="card-header">
+                            <div class="icon-circle">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3 class="elegant-heading">Expert Counsel</h3>
                         </div>
-                        <h3>Technology & Software</h3>
-                        <p>Navigating intellectual property, data protection, and regulatory compliance for tech companies.</p>
+                        <div class="card-body">
+                            <p>Backed by years of specialized experience in multiple practice areas</p>
+                        </div>
                     </div>
-                    
-                    <div class="expertise-card">
-                        <div class="icon-container">
-                            <img src="images/icons/business-icon.svg" alt="Business Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
+                    <div class="card fade-in slide-up delay-2">
+                        <div class="card-header">
+                            <div class="icon-circle">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3 class="elegant-heading">Client-Focused</h3>
                         </div>
-                        <h3>Business & Startups</h3>
-                        <p>Guiding businesses from formation through growth with strategic legal counsel.</p>
+                        <div class="card-body">
+                            <p>Your priorities are our priorities—we listen and deliver results</p>
+                        </div>
                     </div>
-                    
-                    <div class="expertise-card">
-                        <div class="icon-container">
-                            <img src="images/icons/litigation-icon.svg" alt="Litigation Icon" onerror="this.onerror=null; this.src='videos/NorthernEdge%20Legal%20Logo.jpg'; this.style.width='50px';">
+                    <div class="card fade-in slide-up delay-3">
+                        <div class="card-header">
+                            <div class="icon-circle">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="elegant-heading">Innovative Approach</h3>
                         </div>
-                        <h3>Civil Litigation</h3>
-                        <p>Resolving disputes with strategic representation focused on achieving optimal outcomes.</p>
+                        <div class="card-body">
+                            <p>Combining traditional expertise with modern legal solutions</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="recent-posts">
-            <!-- Blog preview -->
+        <section class="practice-areas-overview section-lg bg-neutral-lightest fade-in">
+            <div class="container">
+                <h2 class="elegant-heading centered">Specialized Legal Expertise</h2>
+                <p class="section-subtitle text-center">Comprehensive legal solutions tailored to your specific needs</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card fade-in slide-up delay-1">
+                        <div class="card-header">
+                            <div class="practice-area-icon">
+                                <img src="images/icons/business-icon.svg" alt="Business Law Icon">
+                            </div>
+                            <h3 class="elegant-heading">Business Law & Corporate Governance</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Navigate the complexities of modern business with confidence. Our expert team provides strategic guidance on mergers and acquisitions, regulatory compliance, contract negotiations, and all aspects of corporate governance to help your business thrive.</p>
+                            <a href="business-law.html" class="btn btn-secondary slide-btn">Explore Business Services <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card fade-in slide-up delay-2">
+                        <div class="card-header">
+                            <div class="practice-area-icon">
+                                <img src="images/icons/litigation-icon.svg" alt="Civil Litigation Icon">
+                            </div>
+                            <h3 class="elegant-heading">Civil Litigation & Dispute Resolution</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>When conflicts arise, our strategic litigation team stands ready to protect your interests. We combine thorough case preparation with persuasive advocacy to achieve favorable outcomes whether through negotiation, mediation, or in the courtroom.</p>
+                            <a href="civil-litigation.html" class="btn btn-secondary slide-btn">Learn About Litigation <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card fade-in slide-up">
+                        <div class="card-header">
+                            <div class="practice-area-icon">
+                                <img src="images/icons/technology-icon.svg" alt="Technology Law Icon">
+                            </div>
+                            <h3 class="elegant-heading">Technology Law & Cybersecurity</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>In today's digital economy, legal protection for your technology assets is essential. Our specialized team provides guidance on data privacy regulations, intellectual property protection, and cybersecurity compliance to safeguard your digital operations.</p>
+                            <a href="technology-law.html" class="btn btn-secondary slide-btn">Discover Tech Solutions <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="cta-section">
+        <section class="about-section section-lg bg-neutral-lightest fade-in">
             <div class="container">
-                <div class="cta-content fade-in">
-                    <h2>Ready to Discuss Your Legal Needs?</h2>
-                    <p>Our team provides expert guidance tailored to your unique situation.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary" id="cta-consultation-btn" onclick="window.location.href='contact.html'; return false;">Schedule a Consultation</a>
-                        <a href="tel:+17051234567" class="btn btn-secondary">(705) 123-4567</a>
+                <div class="text-center">
+                    <span class="eyebrow-text">WHO WE ARE</span>
+                    <h2 class="elegant-heading centered">Northern Ontario's Premier Legal Partner</h2>
+                    <p class="text-lead">At NorthernEdge Legal Solutions, we combine deep legal expertise with a profound understanding of Northern Ontario's unique business environment. Our team of dedicated professionals is committed to providing innovative legal strategies that address your specific challenges and opportunities.</p>
+                    <p class="text-lead">We pride ourselves on building lasting relationships with our clients, serving as trusted advisors through every phase of their business journey. Whether you're facing complex litigation, navigating regulatory requirements, or planning for future growth, we're here to guide you every step of the way.</p>
+ <a href="about.html" class="btn btn-primary fade-in delay-3 pulse">Discover Our Story <i class="fas fa-users"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section section-lg bg-neutral-lightest fade-in">
+            <div class="container">
+                <div class="text-center">
+                    <span class="eyebrow-text">GET IN TOUCH</span>
+                    <h2 class="elegant-heading centered">Ready to Discuss Your Legal Needs?</h2>
+                    <p class="text-lead">Our team is available to answer your questions and provide the expert guidance you're looking for. We're committed to responding to all inquiries within one business day.</p>
+                    <!-- Adjusted grid to better accommodate items, removed separate CTA card -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <h3 class="elegant-heading">Our Location</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>67 Hugill St.<br>Sault Ste. Marie, Ontario<br>P6A 4E6</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                                <h3 class="elegant-heading">Email Us</h3>
+                            </div>
+                            <div class="card-body">
+                                <p><a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
+                                <h3 class="elegant-heading">Call Us</h3>
+                            </div>
+                            <div class="card-body">
+                                <p><a href="tel:+17059993657">(705) 999-3657</a></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-icon"><i class="far fa-clock"></i></div>
+                                <h3 class="elegant-heading">Office Hours</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Moved CTA button below the grid -->
+                    <div class="mt-8">
+ <a href="contact.html" class="btn btn-primary fade-in delay-5 pulse">Schedule Your Consultation <i class="far fa-calendar-check"></i></a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- START STANDARDIZED FOOTER -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="videos/NorthernEdge%20Legal%20Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
-                    <p class="footer-tagline">Sophisticated legal solutions for modern challenges.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <div class="logo-container">
+                        <a href="/index.html">
+                            <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
                         </a>
                     </div>
                 </div>
@@ -326,19 +288,19 @@
                     <div class="footer-column">
                         <h3>Practice Areas</h3>
                         <ul>
-                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="business-law.html">Business Law</a></li>
-                            <li><a href="technology-law.html">Technology Law</a></li>
-                            <li><a href="general-practice.html">General Practice</a></li>
+                            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="/business-law.html">Business Law</a></li>
+                            <li><a href="/technology-law.html">Technology Law</a></li>
+                            <li><a href="/general-practice.html">General Practice</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="blog/index.html">Blog</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/resources.html">Resources</a></li>
+                            <li><a href="/blog/index.html">Blog</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -348,196 +310,54 @@
                             Sault Ste. Marie, Ontario<br>
                             P6A 4E6
                         </address>
-                        <p>Phone: <a href="tel:+17051234567">(705) 123-4567</a></p>
+                        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
                         <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
-                        
-                        <div class="newsletter">
-                            <h3>Subscribe to Updates</h3>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your email address" required>
-                                <button type="submit">Subscribe</button>
-                            </form>
-                            <p class="disclaimer">We respect your privacy and will never share your information.</p>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
+                <p>&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html">Privacy Policy</a> | 
-                    <a href="terms-of-use.html">Terms of Use</a> |
-                    <a href="sitemap.html">Sitemap</a>
+                    <a href="/privacy-policy.html">Privacy Policy</a> |
+                    <a href="/terms-of-use.html">Terms of Use</a>
                 </div>
             </div>
         </div>
-        
-        <!-- Back to top button for footer -->
-        <a href="#" class="back-to-top visible" aria-label="Back to top">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-            </svg>
-        </a>
     </footer>
+    <!-- END STANDARDIZED FOOTER -->
 
-    <!-- Cookie Consent JavaScript -->
-    <script src="js/cookie-consent.js" defer></script>
-    <script src="js/cookie-consent-fixed.js"></script>
-    <script src="js/back-to-top.js"></script>
+    <!-- START STANDARDIZED FOOTER SCRIPTS -->
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z" fill="white"/>
+        </svg>
+    </button>
 
-    <!-- Splash Video Script -->
+    <!-- Core JavaScript files deferred for performance -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navigation.js" defer></script> 
+    <script src="/js/back-to-top.js" defer></script>
+
+    <!-- Conditional/Page-specific scripts can be added below by the including page if needed -->
+    <!-- Example:
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Get references to elements
-            const splashContainer = document.getElementById('splash-container');
-            const logoAnimation = document.getElementById('logo-animation');
-            const skipSplash = document.getElementById('skip-splash');
-            const progressBar = document.getElementById('videoProgress');
-            
-            // Function to check if video exists and is accessible
-            function checkVideoExists() {
-                const videoSrc = logoAnimation.querySelector('source').src;
-                const http = new XMLHttpRequest();
-                http.open('HEAD', videoSrc, false);
-                try {
-                    http.send();
-                    return http.status !== 404;
-                } catch(e) {
-                    console.error("Error checking video file:", e);
-                    return false;
-                }
+            if (document.querySelector('form.contact-form')) { // Check for specific contact form
+                const formScript = document.createElement('script');
+                formScript.src = '/js/contact-form-validation.js'; // Use correct path
+                formScript.defer = true;
+                document.body.appendChild(formScript);
             }
-            
-            // Function to end splash and show main content
-            function endSplash() {
-                splashContainer.style.opacity = '0';
-                document.body.classList.remove('splash-active');
-                
-                // Remove splash container after fade out
-                setTimeout(() => {
-                    splashContainer.remove();
-                }, 1000);
-            }
-            
-            // End splash when video ends
-            logoAnimation.addEventListener('ended', endSplash);
-            
-            // Allow users to skip the splash
-            skipSplash.addEventListener('click', function(e) {
-                e.preventDefault();
-                endSplash();
-            });
-            
-            // If video fails to load, show the site immediately
-            logoAnimation.addEventListener('error', function() {
-                console.warn("Video error detected, showing fallback logo or ending splash");
-                // Check if we have a fallback logo
-                const fallbackLogo = document.querySelector('.fallback-logo');
-                if (fallbackLogo) {
-                    fallbackLogo.style.display = 'block';
-                    // Wait 3 seconds then end splash
-                    setTimeout(endSplash, 3000);
-                } else {
-                    endSplash();
-                }
-            });
-            
-            // Update progress bar
-            logoAnimation.addEventListener('timeupdate', function() {
-                if (logoAnimation.duration) {
-                    const percent = (logoAnimation.currentTime / logoAnimation.duration) * 100;
-                    progressBar.style.width = percent + '%';
-                }
-            });
-            
-            // Check if user prefers reduced motion
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                endSplash();
-            }
-            
-            // Set a maximum wait time (exactly 10 seconds as recommended)
-            setTimeout(endSplash, 10000);
+            // Add other conditional scripts here
+        });
+    </script>
+    -->
 
-            // Log video duration for reference
-            logoAnimation.addEventListener('loadedmetadata', function() {
-                console.log('Video duration:', logoAnimation.duration, 'seconds');
-                
-                // Add warning if video is significantly longer than recommended 10 seconds
-                if (logoAnimation.duration > 12) {
-                    console.warn('Video duration exceeds recommended 10 seconds. Consider shortening for better user experience.');
-                }
-            });
-            
-            // If video doesn't exist, show fallback or end splash
-            if (!checkVideoExists()) {
-                console.warn("Video file not found, showing fallback");
-                const fallbackLogo = document.createElement('img');
-                fallbackLogo.src = 'videos/NorthernEdge%20Legal%20Logo.jpg';
-                fallbackLogo.alt = 'NorthernEdge Legal Solutions';
-                fallbackLogo.className = 'fallback-logo';
-                logoAnimation.parentNode.replaceChild(fallbackLogo, logoAnimation);
-                // Wait 3 seconds then end splash
-                setTimeout(endSplash, 3000);
-            }
-        });
-    </script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Back to top button functionality
-            const backToTopButton = document.querySelector('.back-to-top');
-            
-            if (backToTopButton) {
-              // Hide initially
-              backToTopButton.style.opacity = 0;
-              backToTopButton.style.visibility = 'hidden';
-              
-              // Show only when scrolled down
-              window.addEventListener('scroll', function() {
-                if (window.scrollY > 300) {
-                  backToTopButton.style.opacity = 1;
-                  backToTopButton.style.visibility = 'visible';
-                } else {
-                  backToTopButton.style.opacity = 0;
-                  backToTopButton.style.visibility = 'hidden';
-                }
-              });
-              
-              // Scroll to top when clicked
-              backToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({top: 0, behavior: 'smooth'});
-              });
-            }
-            
-            // Fix for consultation buttons
-            const consultationBtns = document.querySelectorAll('a[href="contact.html"]');
-            consultationBtns.forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.location.href = 'contact.html';
-                });
-            });
-            
-            // Specifically target main hero CTA button
-            const mainCtaBtn = document.getElementById('consultation-btn');
-            if (mainCtaBtn) {
-                mainCtaBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    console.log("CTA button clicked, navigating to contact page");
-                    window.location.href = 'contact.html';
-                });
-            }
-            
-            // And CTA section button
-            const ctaBtn = document.getElementById('cta-consultation-btn');
-            if (ctaBtn) {
-                ctaBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.location.href = 'contact.html';
-                });
-            }
-        });
-    </script>
+    <!-- Cookie Consent Script (can also be loaded conditionally or with delay) -->
+    <script src="/js/cookie-consent.js" defer></script>
+    <!-- END STANDARDIZED FOOTER SCRIPTS -->
+
+    <!-- Removed old inline script and redundant script links -->
 </body>
 </html>

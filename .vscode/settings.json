@@ -23,5 +23,8 @@
   "liveServer.settings.donotShowInfoMsg": false,
   "liveServer.settings.donotVerifyTags": false,
   "liveServer.settings.useLocalIp": false,
-  "liveServer.settings.ChromeDebuggingAttachment": false
+  "liveServer.settings.ChromeDebuggingAttachment": false,
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main"
+  ]
 }

@@ -3,62 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PAGE-SPECIFIC TITLE -->
     <title>Tim J. Harmar | NorthernEdge Legal Solutions</title>
+    <!-- PAGE-SPECIFIC META DESCRIPTION -->
     <meta name="description" content="Meet Tim J. Harmar, Founder and Principal Lawyer at NorthernEdge Legal Solutions, specializing in business law, technology law, and intellectual property.">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/visual-enhancements.css">
-    <link rel="stylesheet" href="../css/animations.css">
-    <link rel="stylesheet" href="../css/accessibility.css">
-    <link rel="stylesheet" href="../css/navigation-enhancements.css">
-    <link rel="stylesheet" href="../css/print.css" media="print">
-    
-    <!-- JavaScript -->
-    <script src="../js/main.js" defer></script>
+    <!-- PAGE-SPECIFIC META KEYWORDS (if any) -->
+    <!-- PAGE-SPECIFIC CANONICAL LINK (if any) -->
+    <!-- PAGE-SPECIFIC OG/TWITTER META TAGS (if any) -->
+
+    <!-- Favicon (Standardized from index.html) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#1a365d">
+    <meta name="msapplication-TileColor" content="#1a365d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Main CSS Bundle -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PAGE-SPECIFIC CSS (e.g., Leaflet on contact.html) -->
+    <link rel="stylesheet" href="/css/navigation-enhancements.css">
+    <link rel="stylesheet" href="/css/print.css" media="print">
+    <style>
+        /* Date/Time and User Login Bar */
+        .user-info-bar {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .user-info-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .datetime, .user-welcome {
+            display: flex;
+            align-items: center;
+        }
+        
+        .datetime i, .user-welcome i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+        
+        #username {
+            font-weight: 600;
+            color: var(--accent);
+            margin-left: 4px;
+        }
+    </style>
+    <!-- PAGE-SPECIFIC JSON-LD SCHEMA (if any) -->
+
+    <!-- Comment for any other page-specific additions -->
+    <!-- Page-specific CSS can be added here if needed -->
 </head>
+
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <header class="site-header">
+    <!-- User info and date/time bar -->
+    <div class="user-info-bar">
         <div class="container">
-            <div class="logo-container">
-                <a href="../index.html"><img src="../images/northernedge-logo.svg" alt="NorthernEdge Legal Solutions Logo"></a>
+            <div class="datetime">
+                <i class="far fa-clock"></i> 
+                <span id="current-datetime">2025-03-27 00:24:38</span>
             </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html" class="active">About</a></li>
-                    <li class="dropdown">
-                        <a href="../practice-areas.html">Practice Areas</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="../business-law.html">Business Law</a></li>
-                            <li><a href="../technology-law.html">Technology Law</a></li>
-                            <li><a href="../general-practice.html">General Practice</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../resources.html">Resources</a></li>
-                    <li><a href="../blog/index.html">Blog</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="user-welcome">
+                <i class="far fa-user"></i> 
+                Welcome, <span id="username">Harmart1</span>
+            </div>
         </div>
-    </header>
+    </div>
+    
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="/index.html" aria-label="NorthernEdge Legal Solutions Homepage">
+        <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo">
+      </a>
+    </div>
+    <nav class="nav-wrapper" aria-label="Main Navigation">
+      <ul class="primary-nav">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html" class="active">About</a></li>
+    <li class="dropdown">
+        <a href="/practice-areas.html">Practice Areas</a>
+        <ul class="dropdown-menu">
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+    </li>
+    <li><a href="/resources.html">Resources</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li>
+        <form class="search-form" action="/search.html" method="get" role="search">
+            <label for="search-input-header-team-tim-harmar" class="sr-only">Search</label>
+            <input type="text" id="search-input-header-team-tim-harmar" name="q" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+</ul>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
 
     <main id="main-content">
         <!-- Breadcrumbs navigation -->
         <nav aria-label="Breadcrumb" class="breadcrumbs">
             <div class="container">
                 <ol class="breadcrumb-list">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
                     <li aria-current="page">Tim J. Harmar</li>
                 </ol>
             </div>
@@ -68,12 +147,12 @@
             <div class="container">
                 <div class="profile-header fade-in">
                     <div class="profile-image">
-                        <img src="../images/team/tim-harmar-large.jpg" alt="Tim J. Harmar - Founder & Principal Lawyer">
+                        <img src="/images/team/tim-harmar-large.jpg" alt="Tim J. Harmar - Founder & Principal Lawyer">
                     </div>
                     <div class="profile-intro">
                         <h1>Tim J. Harmar</h1>
                         <p class="profile-title">Founder & Principal Lawyer</p>
-                        <p class="profile-credentials">BA (HONS), JD, MBA, LLM, LLM, M.Eng., CAPP</p>
+                        <p class="profile-credentials">BA (HONS), JD, MBA, LLM, LLM, M.Eng.</p>
                         <div class="profile-contact">
                             <a href="mailto:tim.harmar@northernedgelegal.com" class="profile-email">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -81,11 +160,11 @@
                                 </svg>
                                 tim.harmar@northernedgelegal.com
                             </a>
-                            <a href="tel:+17051234567" class="profile-phone">
+                            <a href="tel:+17059993657" class="profile-phone">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
                                 </svg>
-                                (705) 123-4567
+                                (705) 999-3657
                             </a>
                         </div>
                     </div>
@@ -94,11 +173,11 @@
                 <div class="profile-content slide-in-right">
                     <div class="profile-section">
                         <h2>Professional Biography</h2>
-                        <p>I am Tim J. Harmar, Founder and Principal Lawyer at NorthernEdge Legal Solutions. With an extensive academic and professional background—including a BA (Hons), JD, MBA, two LLMs, and an M.Eng.—I have dedicated my career to providing award-winning legal services that span corporate and intellectual property law, as well as emerging areas of technology and cybersecurity.</p>
+                        <p>I am Tim J. Harmar, Founder and Principal Lawyer at NorthernEdge Legal Solutions. With an extensive academic and professional background—including a BA (Hons), JD, MBA, two LLM degrees, and a Master of Engineering—I bring a unique combination of legal expertise and technical knowledge to serve clients throughout Northern Ontario.</p>
                         
-                        <p>Throughout my career, I have built a reputation for innovative problem-solving, persuasive advocacy, and a commitment to excellence. My experience ranges from high-profile civil litigation, including appearances before the Supreme Court of Canada, to advising on complex corporate transactions and intellectual property matters. I have also contributed to academic institutions as a professor, enriching the field of law through teaching and community engagement.</p>
+                        <p>Throughout my career, I have built a reputation for innovative problem-solving, persuasive advocacy, and a commitment to excellence. My experience ranges from high-profile litigation cases to complex business transactions and cutting-edge technology law matters. This diverse background allows me to approach legal challenges with a multidisciplinary perspective.</p>
                         
-                        <p>At NorthernEdge Legal Solutions, I provide all legal services personally, ensuring that every client benefits from my direct involvement and a highly personalized approach. My practice is founded on the principles of integrity, diligence, and a relentless pursuit of favorable outcomes for every client, no matter the complexity of their case.</p>
+                        <p>At NorthernEdge Legal Solutions, I provide all legal services personally, ensuring that every client benefits from my direct involvement and a highly personalized approach. I believe in building long-term relationships with my clients based on trust, reliability, and delivering consistent results.</p>
                     </div>
                     
                     <div class="profile-section">
@@ -154,13 +233,6 @@
                     </div>
                     
                     <div class="profile-section">
-                        <h2>Professional Certifications</h2>
-                        <ul class="certifications-list">
-                            <li>Certified AI Privacy Professional (CAPP)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="profile-section">
                         <h2>Professional Activities</h2>
                         <ul class="activities-list">
                             <li>Professor, Sault College of Applied Arts and Technology</li>
@@ -175,19 +247,19 @@
                     <div class="sidebar-card">
                         <h3>Schedule a Consultation</h3>
                         <p>I'm available to discuss your legal needs and how I can assist with your specific situation.</p>
-                        <a href="../contact.html" class="btn btn-primary">Contact Me</a>
+                        <a href="/contact.html" class="btn btn-primary">Contact Me</a>
                     </div>
                     
                     <div class="sidebar-card">
                         <h3>Recent Publications</h3>
                         <ul class="publication-list">
                             <li>
-                                <a href="../blog/posts/ai-regulation-implications.html">AI Regulation: Implications for Technology Companies</a>
-                                <span class="publication-date">April 2024</span>
+                                <a href="/blog/posts/ai-regulation-implications.html">AI Regulation: Implications for Technology Companies</a>
+                                <span class="publication-date">April 2025</span>
                             </li>
                             <li>
-                                <a href="../blog/posts/virtual-courts-future.html">The Future of Virtual Courts in Ontario</a>
-                                <span class="publication-date">March 2024</span>
+                                <a href="/blog/posts/virtual-courts-future.html">The Future of Virtual Courts in Ontario</a>
+                                <span class="publication-date">March 2025</span>
                             </li>
                         </ul>
                     </div>
@@ -201,58 +273,119 @@
                     <h2>Ready to Work Together?</h2>
                     <p>I'm committed to providing personalized legal guidance that addresses your specific needs.</p>
                     <div class="cta-buttons">
-                        <a href="../contact.html" class="btn btn-primary">Schedule a Consultation</a>
+                        <a href="/contact.html" class="btn btn-primary">Schedule a Consultation</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="../images/northernedge-logo-white.svg" alt="NorthernEdge Legal Solutions Logo">
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3>Practice Areas</h3>
-                        <ul>
-                            <li><a href="../civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="../business-law.html">Business Law</a></li>
-                            <li><a href="../technology-law.html">Technology Law</a></li>
-                            <li><a href="../general-practice.html">General Practice</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="../about.html">About</a></li>
-                            <li><a href="../resources.html">Resources</a></li>
-                            <li><a href="../blog/index.html">Blog</a></li>
-                            <li><a href="../contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Contact</h3>
-                        <address>
-                            67 Hugill St.<br>
-                            Sault Ste. Marie, Ontario<br>
-                            P6A 4E6
-                        </address>
-                        <p>Phone: <a href="tel:+17051234567">(705) 123-4567</a></p>
-                        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 NorthernEdge Legal Solutions. All rights reserved.</p>
-                <div class="legal-links">
-                    <a href="../privacy-policy.html">Privacy Policy</a> | 
-                    <a href="../terms-of-use.html">Terms of Use</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+<footer class="py-12 bg-navy-dark text-white">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 footer-links">
+      <div class="footer-column">
+        <h3 class="elegant-heading text-lg">Practice Areas</h3>
+        <ul>
+            <li><a href="/civil-litigation.html">Civil Litigation</a></li>
+            <li><a href="/business-law.html">Business Law</a></li>
+            <li><a href="/technology-law.html">Technology Law</a></li>
+            <li><a href="/general-practice.html">General Practice</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3 class="elegant-heading text-lg">Quick Links</h3>
+        <ul>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/resources.html">Resources</a></li>
+            <li><a href="/blog/index.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3 class="elegant-heading text-lg">Contact</h3>
+        <address>
+            67 Hugill St.<br>
+            Sault Ste. Marie, Ontario<br>
+            P6A 4E6
+        </address>
+        <p>Phone: <a href="tel:+17059993657">(705) 999-3657</a></p>
+        <p>Email: <a href="mailto:info@northernedgelegal.com">info@northernedgelegal.com</a></p>
+      </div>
+      <div class="footer-column footer-logo-area">
+         <div class="logo-container">
+             <a href="/index.html">
+                 <img src="/NorthernEdge Legal Logo.jpg" alt="NorthernEdge Legal Solutions Logo" style="max-width: 200px; margin-bottom: 1rem;">
+             </a>
+         </div>
+         <p class="text-sm">NorthernEdge Legal Solutions: Providing expert legal services with a client-focused approach.</p>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-slate-dark text-center">
+      <p class="text-sm">&copy; 2025 NorthernEdge Legal Solutions. All rights reserved.</p>
+      <div class="legal-links text-sm">
+          <a href="/privacy-policy.html">Privacy Policy</a> |
+          <a href="/terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 4l-8 8h6v8h4v-8h6z" fill="white"/>
+        </svg>
+    </button>
+    <!-- Core JavaScript files deferred for performance -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navigation.js" defer></script>
+    <script src="/js/back-to-top.js" defer></script>
+    <script src="/js/visual-integration.js" defer></script>
+<script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Add dropdown functionality for mobile
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                if (window.innerWidth <= 1024) {
+                    dropdown.addEventListener('click', function(e) {
+                        if (e.target.parentNode.classList.contains('dropdown')) {
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                        }
+                    });
+                }
+            });
+            
+            // Keep the current date and time updated
+            function updateDateTime() {
+                const now = new Date();
+                const year = now.getUTCFullYear();
+                const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+                const day = String(now.getUTCDate()).padStart(2, '0');
+                const hours = String(now.getUTCHours()).padStart(2, '0');
+                const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+                const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+                
+                const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+                document.getElementById('current-datetime').textContent = formattedDateTime;
+            }
+            
+            // Update the time every second
+            setInterval(updateDateTime, 1000);
+        });
+    </script>
+<!-- Cookie Consent Script -->
+    <script src="/js/cookie-consent.js" defer></script>
 </body>
 </html>
